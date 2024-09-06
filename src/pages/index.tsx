@@ -1,14 +1,26 @@
 import Link from 'next/link';
-import { getPosts } from '../utils/mdx-utils';
-
-import Footer from '../components/Footer';
-import Header from '../components/Header';
-import Layout, { GradientBackground } from '../components/Layout';
-import ArrowIcon from '../components/ArrowIcon';
+import { getPosts } from '@/utils/mdx-utils';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import Layout, { GradientBackground } from '@/components/Layout';
+import ArrowIcon from '@/components/ArrowIcon';
 import { getGlobalData } from '../utils/global-data';
-import SEO from '../components/SEO';
+import SEO from '@/components/SEO';
+import { GlobalData, Post } from '@/types';
 
-export default function Index({ posts, globalData }) {
+type HomePageProps = {
+  posts: Post[];
+  globalData: GlobalData;
+};
+
+export function getStaticProps() {
+  const posts = getPosts();
+  const globalData = getGlobalData();
+
+  return { props: { posts, globalData } };
+}
+
+export default function Index({ posts, globalData }: HomePageProps) {
   return (
     <Layout>
       <SEO title={globalData.name} description={globalData.blogTitle} />
@@ -26,8 +38,8 @@ export default function Index({ posts, globalData }) {
               <Link
                 as={`/posts/${post.filePath.replace(/\.mdx?$/, '')}`}
                 href={`/posts/[slug]`}
-                className="block px-6 py-6 lg:py-10 lg:px-16 focus:outline-none focus:ring-4">
-
+                className="block px-6 py-6 lg:py-10 lg:px-16 focus:outline-none focus:ring-4"
+              >
                 {post.data.date && (
                   <p className="mb-3 font-bold uppercase opacity-60">
                     {post.data.date}
@@ -40,28 +52,14 @@ export default function Index({ posts, globalData }) {
                   </p>
                 )}
                 <ArrowIcon className="mt-4" />
-
               </Link>
             </li>
           ))}
         </ul>
       </main>
       <Footer copyrightText={globalData.footerText} />
-      <GradientBackground
-        variant="large"
-        className="fixed top-20 opacity-40 dark:opacity-60"
-      />
-      <GradientBackground
-        variant="small"
-        className="absolute bottom-0 opacity-20 dark:opacity-10"
-      />
+      <GradientBackground className="fixed top-20 opacity-40 dark:opacity-60" />
+      <GradientBackground className="absolute bottom-0 opacity-20 dark:opacity-10" />
     </Layout>
   );
-}
-
-export function getStaticProps() {
-  const posts = getPosts();
-  const globalData = getGlobalData();
-
-  return { props: { posts, globalData } };
 }
