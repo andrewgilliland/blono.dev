@@ -7,6 +7,7 @@ import ArrowIcon from '@/components/ArrowIcon';
 import { getGlobalData } from '../utils/global-data';
 import SEO from '@/components/SEO';
 import { GlobalData, Post } from '@/types';
+import Card from '@/components/Card';
 
 type HomePageProps = {
   posts: Post[];
@@ -29,7 +30,10 @@ const HomePage = ({ posts, globalData }: HomePageProps) => {
         <h1 className="mb-12 text-3xl text-center lg:text-5xl">
           {globalData.blogTitle}
         </h1>
-        <ul className="w-full">
+        <ul className="w-1/2 mx-auto">
+          <div className="mb-12">
+            <Card></Card>
+          </div>
           {posts.map((post) => (
             <li
               key={post.filePath}
