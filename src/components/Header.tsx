@@ -5,8 +5,17 @@ import NavLink from './NavLink';
 const Header = () => {
   const sections = ['Events', 'About Us', 'Contact'];
 
+  const darkBlueish = '#101F55';
+  const blueish = '#0B097C';
+  const pinkish = '#D041FF';
+
   return (
-    <header className="bg-purple-950 flex justify-between items-center px-[10%] py-4">
+    <header
+      style={{
+        backgroundImage: `radial-gradient(farthest-corner at -200px 0px, ${pinkish}, ${blueish} 45%, ${darkBlueish} 89%, ${darkBlueish})`,
+      }}
+      className="bg-purple-950 flex justify-between items-center px-[10%] py-4"
+    >
       <Link href="/">
         <Image
           src="/bnd-header-logo-white.svg"
