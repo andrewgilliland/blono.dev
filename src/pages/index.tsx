@@ -7,7 +7,7 @@ import ArrowIcon from '@/components/ArrowIcon';
 import { getGlobalData } from '../utils/global-data';
 import SEO from '@/components/SEO';
 import { GlobalData, Post } from '@/types';
-import Card from '@/components/Card';
+import EventCard from '@/components/EventCard';
 
 type HomePageProps = {
   posts: Post[];
@@ -22,6 +22,15 @@ export function getStaticProps() {
 }
 
 const HomePage = ({ posts, globalData }: HomePageProps) => {
+  const events = [
+    {
+      title: 'Developer Happy Hour',
+      location: 'Keg Grove Brewery',
+      description:
+        'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt doloribus iure sunt voluptatum dolores necessitatibus sit atque saepe tempora. Officia, culpa inventore.',
+    },
+  ];
+
   return (
     <Layout>
       <SEO title={globalData.name} description={globalData.blogTitle} />
@@ -32,7 +41,9 @@ const HomePage = ({ posts, globalData }: HomePageProps) => {
         </h1>
         <ul className="w-1/2 mx-auto">
           <div className="mb-12">
-            <Card></Card>
+            {events.map((event, index) => (
+              <EventCard key={index} event={event} />
+            ))}
           </div>
           {posts.map((post) => (
             <li
