@@ -26,6 +26,8 @@ const HomePage = ({ posts, globalData }: HomePageProps) => {
     {
       title: 'Developer Happy Hour',
       location: 'Keg Grove Brewery',
+      startTime: '5:00 PM',
+      endTime: '7:00 PM',
       description:
         'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt doloribus iure sunt voluptatum dolores necessitatibus sit atque saepe tempora. Officia, culpa inventore.',
     },
