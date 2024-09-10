@@ -1,13 +1,17 @@
 import classNames from 'classnames';
-import { useEffect } from 'react';
+import { FC, ReactNode, useEffect } from 'react';
 
-export function GradientBackground({ className }) {
+export function GradientBackground({ className }: { className?: string }) {
   const classes = classNames(className);
 
   return <div className={classes} />;
 }
 
-export default function Layout({ children }) {
+type LayoutProps = {
+  children: ReactNode;
+};
+
+const Layout: FC<LayoutProps> = ({ children }) => {
   const setAppTheme = () => {
     const darkMode = localStorage.getItem('theme') === 'dark';
     const lightMode = localStorage.getItem('theme') === 'light';
@@ -43,8 +47,10 @@ export default function Layout({ children }) {
   }, []);
 
   return (
-    <div className="relative pb-24 overflow-hidden">
-      <div className="flex flex-col w-full">{children}</div>
+    <div className="flex flex-col min-h-screen border-2 border-red-500">
+      {children}
     </div>
   );
-}
+};
+
+export default Layout;
