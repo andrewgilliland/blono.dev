@@ -16,7 +16,7 @@ const EventCard: FC<EventCardProps> = ({ event }) => {
   const { title, location, startTime, endTime, description } = event;
 
   return (
-    <div className="bg-gray-100 border border-gray-300 hover:shadow transition-all duration-300">
+    <div className="flex bg-gray-100 border border-gray-300 hover:shadow transition-all duration-300">
       <div className="flex px-6 py-10 gap-10">
         <div className="flex items-start mt-1">
           <div className="flex items-center">
@@ -34,6 +34,7 @@ const EventCard: FC<EventCardProps> = ({ event }) => {
           <div className="text-gray-900 text-base">{description}</div>
         </div>
       </div>
+      <div className="bg-purple-600 w-1/3"></div>
     </div>
   );
 };

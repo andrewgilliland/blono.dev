@@ -41,7 +41,7 @@ const HomePage = ({ posts, globalData }: HomePageProps) => {
         <h1 className="mb-12 text-3xl text-center lg:text-5xl">
           {globalData.blogTitle}
         </h1>
-        <ul className="w-1/2 mx-auto">
+        <ul className="w-3/4 mx-auto">
           <div className="mb-12">
             {events.map((event, index) => (
               <EventCard key={index} event={event} />
