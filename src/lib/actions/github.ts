@@ -31,16 +31,14 @@ const getDataFromJSONGithubRepo = async ({
       `https://api.github.com/repos/${org}/${repo}/contents/${file}.json`
     );
     const responseData = await response.json();
-
-    console.log(responseData);
     const content = Buffer.from(responseData.content, 'base64').toString(
       'utf-8'
     );
+    const data = await JSON.parse(content);
 
-    console.log(content);
-
-    const { data } = await JSON.parse(content);
-    console.log(data);
+    if (!Array.isArray(data)) {
+      throw new Error('The JSON content is not an array of objects');
+    }
 
     return data;
   } catch (error) {
