@@ -33,7 +33,7 @@ const HomePage = ({ posts, globalData, events }: HomePageProps) => {
     <Layout>
       <SEO title={globalData.name} description={globalData.blogTitle} />
       <Header />
-      <main className="w-full">
+      <main className="border border-red-500 max-w-4xl">
         <h1 className="mb-12 text-3xl text-center lg:text-5xl">
           {/* {globalData.blogTitle} */}
         </h1>
@@ -41,10 +41,15 @@ const HomePage = ({ posts, globalData, events }: HomePageProps) => {
         {/* Grid goes here */}
 
         <section>
-          <ul className="w-3/4 mx-auto">
-            <div className="mb-12">
+          <h2 className="font-bold font-brand text-purple-600 text-4xl mb-12">
+            Upcoming Events
+          </h2>
+          <ul className="">
+            <div>
               {events.map((event, index) => (
-                <EventCard key={index} event={event} />
+                <div key={index} className="mb-8">
+                  <EventCard event={event} />
+                </div>
               ))}
             </div>
           </ul>

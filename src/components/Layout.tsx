@@ -46,11 +46,7 @@ const Layout: FC<LayoutProps> = ({ children }) => {
     handleSystemThemeChange();
   }, []);
 
-  return (
-    <div className="flex flex-col min-h-screen border-2 border-red-500">
-      {children}
-    </div>
-  );
+  return <div className="flex flex-col min-h-screen">{children}</div>;
 };
 
 export default Layout;
