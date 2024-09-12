@@ -1,12 +1,5 @@
+import { Event } from '@/types';
 import { FC } from 'react';
-
-type Event = {
-  title: string;
-  location: string;
-  description: string;
-  startTime: string;
-  endTime: string;
-};
 
 type EventCardProps = {
   event: Event;

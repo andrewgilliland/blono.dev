@@ -12,5 +12,5 @@ module.exports = {
     },
   },
   darkMode: 'class', // or 'media' or 'class'
-  presets: [require('./src/utils/tailwind-preset')],
+  presets: [require('./src/lib/tailwind-preset')],
 };

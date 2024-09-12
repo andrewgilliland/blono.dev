@@ -1,22 +1,32 @@
 import Link from 'next/link';
-import { getPosts } from '@/utils/mdx-utils';
+import { getPosts } from '@/lib/mdx-utils';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Layout, { GradientBackground } from '@/components/Layout';
 import ArrowIcon from '@/components/ArrowIcon';
-import { getGlobalData } from '../utils/global-data';
+import { getGlobalData } from '../lib/global-data';
 import SEO from '@/components/SEO';
-import { GlobalData, Post } from '@/types';
+import { Event, GlobalData, Post } from '@/types';
 import EventCard from '@/components/EventCard';
+import { getDataFromJSONGithubRepo, getGithubRepo } from '@/lib/actions/github';
 
 type HomePageProps = {
   posts: Post[];
   globalData: GlobalData;
+  events: Event[];
 };
 
-export function getStaticProps() {
+export async function getStaticProps() {
   const posts = getPosts();
   const globalData = getGlobalData();
+
+  const events = await getDataFromJSONGithubRepo({
+    org: 'Bloomington-Normal-Developers',
+    repo: 'events',
+    file: 'index',
+  });
+
+  console.log('events: ', events);
 
   return { props: { posts, globalData } };
 }

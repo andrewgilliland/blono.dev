@@ -12,3 +12,11 @@ export type GlobalData = {
   blogTitle: string;
   footerText: string;
 };
+
+export type Event = {
+  title: string;
+  location: string;
+  description: string;
+  startTime: string;
+  endTime: string;
+};
