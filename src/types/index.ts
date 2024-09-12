@@ -16,7 +16,7 @@ export type GlobalData = {
 export type Event = {
   title: string;
   location: string;
-  description: string;
+  details: string;
   startTime: string;
   endTime: string;
 };
