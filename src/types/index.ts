@@ -10,6 +10,7 @@ export type Post = {
 export type GlobalData = {
   name: string;
   blogTitle: string;
+  heroTagline: string;
   footerText: string;
 };
 
