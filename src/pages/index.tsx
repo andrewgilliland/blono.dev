@@ -8,6 +8,7 @@ import SEO from '@/components/SEO';
 import { Event, GlobalData, Post } from '@/types';
 import EventCard from '@/components/EventCard';
 import { getDataFromJSONGithubRepo } from '@/lib/actions/github';
+import HeroGrid from '@/components/HeroGrid';
 
 type HomePageProps = {
   posts: Post[];
@@ -46,13 +47,16 @@ const HomePage = ({ posts, globalData, events }: HomePageProps) => {
           </div>
 
           {/* Grid goes here */}
-          <div className="grid grid-cols-6 gap-2 border h-96 mt-20">
-            <div className="bg-cyan-500 col-span-3"></div>
+
+          {/* <div className="grid grid-cols-6 gap-2 border h-96 mt-20">
+            <div className="bg-cyan-500 col-span-3 p-6"></div>
             <div className="bg-blue-600 col-span-3"></div>
             <div className="bg-sky-500 col-span-2"></div>
             <div className="bg-purple-500 col-span-2"></div>
             <div className="bg-indigo-500 col-span-2"></div>
-          </div>
+          </div> */}
+
+          <HeroGrid />
         </section>
 
         <section className="mt-24">
@@ -69,8 +73,8 @@ const HomePage = ({ posts, globalData, events }: HomePageProps) => {
         </section>
       </main>
       <Footer copyrightText={globalData.footerText} />
-      <GradientBackground className="fixed top-20 opacity-40 dark:opacity-60" />
-      <GradientBackground className="absolute bottom-0 opacity-20 dark:opacity-10" />
+      {/* <GradientBackground className="fixed top-20 opacity-40 dark:opacity-60" /> */}
+      {/* <GradientBackground className="absolute bottom-0 opacity-20 dark:opacity-10" /> */}
     </Layout>
   );
 };
