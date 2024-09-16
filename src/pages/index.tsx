@@ -1,8 +1,7 @@
-import Link from 'next/link';
 import { getPosts } from '@/lib/mdx-utils';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import Layout, { GradientBackground } from '@/components/Layout';
+import Layout from '@/components/Layout';
 import { getGlobalData } from '../lib/global-data';
 import SEO from '@/components/SEO';
 import { Event, GlobalData, Post } from '@/types';
@@ -29,7 +28,7 @@ export async function getStaticProps() {
   return { props: { posts, globalData, events } };
 }
 
-const HomePage = ({ posts, globalData, events }: HomePageProps) => {
+const HomePage = ({ globalData, events }: HomePageProps) => {
   return (
     <Layout>
       <SEO title={globalData.name} description={globalData.blogTitle} />
@@ -45,17 +44,6 @@ const HomePage = ({ posts, globalData, events }: HomePageProps) => {
               {globalData.heroTagline}
             </p>
           </div>
-
-          {/* Grid goes here */}
-
-          {/* <div className="grid grid-cols-6 gap-2 border h-96 mt-20">
-            <div className="bg-cyan-500 col-span-3 p-6"></div>
-            <div className="bg-blue-600 col-span-3"></div>
-            <div className="bg-sky-500 col-span-2"></div>
-            <div className="bg-purple-500 col-span-2"></div>
-            <div className="bg-indigo-500 col-span-2"></div>
-          </div> */}
-
           <HeroGrid />
         </section>
 

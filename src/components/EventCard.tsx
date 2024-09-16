@@ -6,8 +6,6 @@ type EventCardProps = {
 };
 
 const EventCard: FC<EventCardProps> = ({ event }) => {
-  console.log('event: ', event);
-
   const { title, location, startTime, endTime, details } = event;
 
   return (

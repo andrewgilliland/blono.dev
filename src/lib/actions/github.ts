@@ -17,6 +17,8 @@ const getGithubRepo = async ({ org, repo }: { org: string; repo: string }) => {
   }
 };
 
+// ! Rename this function
+// ! Write tests
 const getDataFromJSONGithubRepo = async ({
   org,
   repo,
