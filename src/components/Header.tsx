@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import NavLink from './NavLink';
 import { palette } from '@/styles/colors';
+import { mainLogo } from '@/lib/data/content';
 
 const Header = () => {
   const sections = ['Events', 'About Us', 'Contact'];
@@ -15,10 +16,10 @@ const Header = () => {
     >
       <Link href="/">
         <Image
-          src="/bnd-header-logo-white.svg"
+          src={mainLogo.src}
           width={190}
           height={100}
-          alt="Bloomington-Normal Developers Logo"
+          alt={mainLogo.alt}
           priority
         />
       </Link>

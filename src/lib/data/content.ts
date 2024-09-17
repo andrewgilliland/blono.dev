@@ -16,7 +16,24 @@ export type Content = {
   footerText: string;
 };
 
+export const mainLogo = {
+  src: '/bnd-header-logo-white.svg',
+  alt: 'Bloomington-Normal Developers Logo',
+};
+
 export const getContent = () => {
+  const header = {
+    logo: {
+      src: '/bnd-header-logo.svg',
+      alt: 'Bloomington-Normal Developers Logo',
+    },
+    navLinks: [
+      { href: '#', text: 'About' },
+      { href: '#', text: 'Events' },
+      { href: '#', text: 'Contact' },
+    ],
+  };
+
   const hero = {
     heading: 'Bloomington-Normal Developers',
     tagline:
@@ -84,6 +101,7 @@ export const getContent = () => {
   const footerText = 'All rights reserved.';
 
   return {
+    header,
     hero,
     heroGridContentItems,
     about,
