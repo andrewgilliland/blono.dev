@@ -44,7 +44,7 @@ const HomePage = ({ content, events }: HomePageProps) => {
           <HeroGrid contentItems={content.heroGridContentItems} />
         </section>
 
-        <section className="mt-24">
+        <section id="events" className="mt-24">
           <h2 className="font-bold font-brand text-purple-600 text-4xl mb-12">
             Upcoming Events
           </h2>
@@ -57,7 +57,7 @@ const HomePage = ({ content, events }: HomePageProps) => {
           </ul>
         </section>
 
-        <section className="mt-24">
+        <section id="about-us" className="mt-24">
           <h2 className="flex justify-end font-bold font-brand text-purple-600 text-4xl">
             {content.about.heading}
           </h2>
@@ -66,7 +66,11 @@ const HomePage = ({ content, events }: HomePageProps) => {
           </p>
         </section>
 
-        <section className="my-24"></section>
+        <section id="contact" className="my-24">
+          <h2 className="font-bold font-brand text-sky-500 text-4xl">
+            {content.contact.heading}
+          </h2>
+        </section>
       </main>
       <Footer copyrightText={content.footerText} />
       {/* <GradientBackground className="fixed top-20 opacity-40 dark:opacity-60" /> */}

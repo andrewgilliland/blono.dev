@@ -10,6 +10,9 @@ export type Content = {
     heading: string;
     description: string;
   };
+  contact: {
+    heading: string;
+  };
   footerText: string;
 };
 
@@ -74,12 +77,17 @@ export const getContent = () => {
       'Join us for the quirkiest software developer meetup in Bloomington-Normal, Illinois, where code and coffee flow in equal measure! Whether you\'re a Pythonista, a Java junkie, or just someone who thinks "Hello World" is a great conversation starter, you\'ll fit right in. Come for the tech talks, stay for the inevitable debate on tabs vs. spaces – and maybe even win a prize for the best debugging horror story!',
   };
 
+  const contact = {
+    heading: 'Contact',
+  };
+
   const footerText = 'All rights reserved.';
 
   return {
     hero,
     heroGridContentItems,
     about,
+    contact,
     footerText,
   };
 };
