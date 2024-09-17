@@ -1,4 +1,4 @@
-import { getGlobalData } from '../../lib/global-data';
+import { getContent } from '../../lib/data/content';
 import {
   getNextPostBySlug,
   getPostBySlug,
@@ -101,7 +101,7 @@ export default function PostPage({
 }
 
 export const getStaticProps = async ({ params }) => {
-  const globalData = getGlobalData();
+  const globalData = getContent();
   const { mdxSource, data } = await getPostBySlug(params.slug);
   const prevPost = getPreviousPostBySlug(params.slug);
   const nextPost = getNextPostBySlug(params.slug);

@@ -27,7 +27,9 @@ const EventCard: FC<EventCardProps> = ({ event }) => {
           <div className="text-gray-900 text-base">{details}</div>
         </div>
       </div>
-      <div className="bg-purple-600 w-1/3"></div>
+      <div className="bg-purple-600 w-1/3 px-10 py-8">
+        <div className="bg-violet-200 w-full h-full" />
+      </div>
     </div>
   );
 };

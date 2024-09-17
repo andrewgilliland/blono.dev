@@ -6,7 +6,7 @@ type ImageProps = {
   alt: string;
 };
 
-type HeroGridCardProps = {
+export type HeroGridCardProps = {
   color: string;
   span: string;
   image: ImageProps;
