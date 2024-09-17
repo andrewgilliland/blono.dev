@@ -26,11 +26,13 @@ export async function getStaticProps() {
 }
 
 const HomePage = ({ content, events }: HomePageProps) => {
+  const HEADER_HEIGHT = 106;
+
   return (
     <Layout>
       <SEO title={content.hero.heading} description={content.hero.tagline} />
       <Header />
-      <main className="max-w-5xl mx-auto">
+      <main style={{ marginTop: HEADER_HEIGHT }} className="max-w-5xl mx-auto">
         <section>
           <div className="flex mt-20 gap-20">
             <h1 className="font-bold font-brand text-blue-600 text-4xl w-1/2">

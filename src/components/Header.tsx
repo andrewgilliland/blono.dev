@@ -1,20 +1,17 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import NavLink from './NavLink';
+import { palette } from '@/styles/colors';
 
 const Header = () => {
   const sections = ['Events', 'About Us', 'Contact'];
 
-  const darkBlueish = '#101F55';
-  const blueish = '#0B097C';
-  const pinkish = '#D041FF';
-
   return (
     <header
       style={{
-        backgroundImage: `radial-gradient(farthest-corner at -200px 0px, ${pinkish}, ${blueish} 45%, ${darkBlueish} 89%, ${darkBlueish})`,
+        backgroundImage: `radial-gradient(farthest-corner at -200px 0px, ${palette.pinkish}, ${palette.blueish} 45%, ${palette.darkBlueish} 89%, ${palette.darkBlueish})`,
       }}
-      className="bg-purple-950 flex justify-between items-center px-[10%] py-4"
+      className="bg-purple-950 fixed flex justify-between items-center w-full px-[10%] py-4"
     >
       <Link href="/">
         <Image
@@ -25,7 +22,7 @@ const Header = () => {
           priority
         />
       </Link>
-      {/* <div className="block w-12 h-12 mx-auto mb-4 rounded-full bg-gradient-conic from-gradient-3 to-gradient-4" /> */}
+
       <div className="flex gap-12">
         {sections.map((title) => (
           <NavLink key={title} title={title} />
