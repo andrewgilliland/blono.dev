@@ -21,7 +21,7 @@ const Header = () => {
           src="/bnd-header-logo-white.svg"
           width={190}
           height={100}
-          alt="Andrew Gilliland"
+          alt="Bloomington-Normal Developers Logo"
           priority
         />
       </Link>
