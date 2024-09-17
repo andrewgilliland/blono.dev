@@ -109,3 +109,14 @@ export const getContent = () => {
     footerText,
   };
 };
+
+export const footerContent = {
+  links: [
+    {
+      href: 'https://www.linkedin.com/company/bloomington-normal-developers',
+      text: 'LinkedIn',
+    },
+    { href: 'https://discord.gg/5XfdtzHrjH', text: 'Discord' },
+    { href: 'https://www.meetup.com/blonodev', text: 'Meetup' },
+  ],
+};
