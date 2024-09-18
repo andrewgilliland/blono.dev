@@ -12,6 +12,8 @@ export type Content = {
   };
   contact: {
     heading: string;
+    subHeading: string;
+    description: string;
   };
   footerText: string;
 };
@@ -95,7 +97,10 @@ export const getContent = () => {
   };
 
   const contact = {
-    heading: 'Contact',
+    heading: 'Contact Us',
+    subHeading: 'Get in touch!',
+    description:
+      "We'd love to hear from you! Send us a message on our LinkedIn page or join the conversation on our Discord!",
   };
 
   const footerText = 'All rights reserved.';

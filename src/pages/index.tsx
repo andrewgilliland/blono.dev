@@ -7,6 +7,7 @@ import { Event } from '@/types';
 import EventCard from '@/components/EventCard';
 import { getDataFromJSONGithubRepo } from '@/lib/actions/github';
 import HeroGrid from '@/components/HeroGrid';
+import ButtonLink from '@/components/ButtonLink';
 
 type HomePageProps = {
   content: Content;
@@ -63,15 +64,37 @@ const HomePage = ({ content, events }: HomePageProps) => {
           <h2 className="flex justify-end font-bold font-brand text-purple-600 text-4xl">
             {content.about.heading}
           </h2>
-          <p className="font-semibold text-base w-2/3">
+          <p className="font-semibold text-base text-gray-900 w-2/3">
             {content.about.description}
           </p>
         </section>
 
         <section id="contact" className="my-24">
-          <h2 className="font-bold font-brand text-sky-500 text-4xl">
-            {content.contact.heading}
-          </h2>
+          <div className="border flex">
+            <div className="w-1/2 px-16 py-24">
+              <p className="font-semibold text-base text-violet-600">
+                {content.contact.subHeading}
+              </p>
+              <h2 className="font-bold font-brand text-sky-500 text-4xl mt-4">
+                {content.contact.heading}
+              </h2>
+              <div className="font-semibold text-base text-gray-900 mt-8">
+                {content.contact.description}
+              </div>
+              <div className="flex gap-6 mt-8">
+                <ButtonLink
+                  href="https://www.linkedin.com/company/bloomington-normal-developers"
+                  openInNewTab
+                >
+                  Message Us
+                </ButtonLink>
+                <ButtonLink href="https://discord.gg/5XfdtzHrjH" openInNewTab>
+                  Join Discord
+                </ButtonLink>
+              </div>
+            </div>
+            <div className="bg-purple-600 w-1/2"></div>
+          </div>
         </section>
       </main>
       <Footer copyrightText={content.footerText} />
