@@ -33,8 +33,8 @@ const HomePage = ({ content, events }: HomePageProps) => {
     <Layout>
       <SEO title={content.hero.heading} description={content.hero.tagline} />
       <Header />
-      <main style={{ marginTop: HEADER_HEIGHT }} className="max-w-5xl mx-auto">
-        <section>
+      <main style={{ marginTop: HEADER_HEIGHT }}>
+        <section id="hero" className="max-w-5xl mx-auto">
           <div className="flex mt-20 gap-20">
             <h1 className="font-bold font-brand text-blue-600 text-4xl w-1/2">
               {content.hero.heading}
@@ -47,7 +47,7 @@ const HomePage = ({ content, events }: HomePageProps) => {
           <HeroGrid contentItems={content.heroGridContentItems} />
         </section>
 
-        <section id="events" className="mt-24">
+        <section id="events" className="max-w-5xl mx-auto mt-24">
           <h2 className="font-bold font-brand text-purple-600 text-4xl mb-12">
             Upcoming Events
           </h2>
@@ -60,16 +60,19 @@ const HomePage = ({ content, events }: HomePageProps) => {
           </ul>
         </section>
 
-        <section id="about-us" className="mt-24">
-          <h2 className="flex justify-end font-bold font-brand text-purple-600 text-4xl">
-            {content.about.heading}
-          </h2>
-          <p className="font-semibold text-base text-gray-900 w-2/3">
-            {content.about.description}
-          </p>
+        <section id="about-us" className="mt-24 bg-purple-600 py-28">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="flex justify-end font-bold font-brand text-white text-4xl">
+              {content.about.heading}
+            </h2>
+            <p className="font-semibold text-base text-white w-2/3">
+              {content.about.description}
+            </p>
+          </div>
+          <div></div>
         </section>
 
-        <section id="contact" className="my-24">
+        <section id="contact" className="max-w-5xl mx-auto my-24">
           <div className="border flex">
             <div className="w-1/2 px-16 py-24">
               <p className="font-semibold text-base text-violet-600">
