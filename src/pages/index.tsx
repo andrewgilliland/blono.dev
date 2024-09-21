@@ -1,8 +1,5 @@
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
 import Layout from '@/components/Layout';
 import { getContent, Content } from '../lib/data/content';
-import SEO from '@/components/SEO';
 import { Event } from '@/types';
 import EventCard from '@/components/EventCard';
 import { getDataFromJSONGithubRepo } from '@/lib/actions/github';
@@ -30,10 +27,8 @@ const HomePage = ({ content, events }: HomePageProps) => {
   const HEADER_HEIGHT = 106;
 
   return (
-    <Layout>
-      <SEO title={content.hero.heading} description={content.hero.tagline} />
-      <Header />
-      <main style={{ marginTop: HEADER_HEIGHT }}>
+    <Layout content={content}>
+      <div>
         <section id="hero" className="max-w-5xl mx-auto">
           <div className="flex mt-20 gap-20">
             <h1 className="font-bold font-brand text-blue-600 text-4xl w-1/2">
@@ -51,13 +46,13 @@ const HomePage = ({ content, events }: HomePageProps) => {
           <h2 className="font-bold font-brand text-purple-600 text-4xl mb-12">
             Upcoming Events
           </h2>
-          <ul className="">
+          <div>
             {events.map((event, index) => (
               <div key={index} className="mb-8">
                 <EventCard event={event} />
               </div>
             ))}
-          </ul>
+          </div>
         </section>
 
         <section id="about-us" className="mt-24 bg-purple-600 py-28">
@@ -99,10 +94,7 @@ const HomePage = ({ content, events }: HomePageProps) => {
             <div className="bg-purple-600 w-1/2"></div>
           </div>
         </section>
-      </main>
-      <Footer copyrightText={content.footerText} />
-      {/* <GradientBackground className="fixed top-20 opacity-40 dark:opacity-60" /> */}
-      {/* <GradientBackground className="absolute bottom-0 opacity-20 dark:opacity-10" /> */}
+      </div>
     </Layout>
   );
 };
