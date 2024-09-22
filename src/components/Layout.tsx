@@ -2,10 +2,10 @@ import { FC, ReactNode } from 'react';
 import SEO from './SEO';
 import Header from './Header';
 import Footer from './Footer';
-import { ContentType } from '../../content';
+import { Content } from '../../content';
 
 type LayoutProps = {
-  content: ContentType;
+  content: Content;
   children: ReactNode;
 };
 

@@ -1,4 +1,4 @@
-export type ContentType = {
+export type Content = {
   header: {
     logo: {
       src: string;
@@ -43,7 +43,7 @@ export type ContentType = {
   };
 };
 
-export const content: ContentType = {
+export const content: Content = {
   header: {
     logo: {
       src: '/bnd-header-logo-white.svg',

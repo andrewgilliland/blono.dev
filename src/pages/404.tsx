@@ -1,11 +1,8 @@
 import { FC } from 'react';
 import Layout from '@/components/Layout';
-import { Content } from '@/types';
 import { content } from '../../content';
 
-type FourOhFourPageProps = {
-  content: Content;
-};
+type FourOhFourPageProps = {};
 
 const FourOhFourPage: FC<FourOhFourPageProps> = () => {
   return (
