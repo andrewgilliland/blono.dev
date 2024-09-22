@@ -16,10 +16,10 @@ const FourOhFourPage: FC<FourOhFourPageProps> = () => {
             {content.pages[404].description}
           </p>
           <a
-            className="group flex flex-col items-center font-semibold text-blue-600 text-base"
+            className="group flex flex-col items-center font-semibold text-blue-600 text-base mt-2"
             href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404"
           >
-            <div>Knowledge</div>
+            <div>404 Not Found - HTTP | MDN</div>
             <div className="text-3xl opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition duration-500">
               ☝️
             </div>
