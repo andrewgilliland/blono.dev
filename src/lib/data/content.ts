@@ -1,23 +1,3 @@
-import { HeroGridCardProps } from '@/components/HeroGridCard';
-
-export type Content = {
-  hero: {
-    heading: string;
-    tagline: string;
-  };
-  heroGridContentItems: HeroGridCardProps[];
-  about: {
-    heading: string;
-    description: string;
-  };
-  contact: {
-    heading: string;
-    subHeading: string;
-    description: string;
-  };
-  footerText: string;
-};
-
 export const mainLogo = {
   src: '/bnd-header-logo-white.svg',
   alt: 'Bloomington-Normal Developers Logo',

@@ -1,6 +1,6 @@
 import Layout from '@/components/Layout';
-import { getContent, Content } from '../lib/data/content';
-import { Event } from '@/types';
+import { getContent } from '../lib/data/content';
+import { Content, Event } from '@/types';
 import EventCard from '@/components/EventCard';
 import { getDataFromJSONGithubRepo } from '@/lib/actions/github';
 import HeroGrid from '@/components/HeroGrid';
@@ -24,8 +24,6 @@ export async function getStaticProps() {
 }
 
 const HomePage = ({ content, events }: HomePageProps) => {
-  const HEADER_HEIGHT = 106;
-
   return (
     <Layout content={content}>
       <div>

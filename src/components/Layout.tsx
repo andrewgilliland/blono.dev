@@ -2,7 +2,7 @@ import { FC, ReactNode } from 'react';
 import SEO from './SEO';
 import Header from './Header';
 import Footer from './Footer';
-import { Content } from '@/lib/data/content';
+import { Content } from '@/types';
 
 type LayoutProps = {
   content: Content;

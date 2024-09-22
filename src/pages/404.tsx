@@ -1,5 +1,6 @@
 import Layout from '@/components/Layout';
-import { Content, getContent } from '@/lib/data/content';
+import { getContent } from '@/lib/data/content';
+import { Content } from '@/types';
 import { FC } from 'react';
 
 type FourOhFourPageProps = {
