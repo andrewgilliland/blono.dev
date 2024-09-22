@@ -12,7 +12,18 @@ const FourOhFourPage: FC<FourOhFourPageProps> = () => {
           <h2 className="font-bold text-purple-600 text-3xl">
             {content.pages[404].heading}
           </h2>
-          <p className="mt-8">{content.pages[404].description}</p>
+          <p className="font-semibold text-gray-900 text-base mt-8">
+            {content.pages[404].description}
+          </p>
+          <a
+            className="group flex flex-col items-center font-semibold text-blue-600 text-base"
+            href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404"
+          >
+            <div>Knowledge</div>
+            <div className="text-3xl opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition duration-500">
+              ☝️
+            </div>
+          </a>
         </div>
       </div>
     </Layout>
