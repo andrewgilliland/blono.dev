@@ -2,10 +2,10 @@ import { FC, ReactNode } from 'react';
 import SEO from './SEO';
 import Header from './Header';
 import Footer from './Footer';
-import { Content } from '@/types';
+import { ContentType } from '../../content';
 
 type LayoutProps = {
-  content: Content;
+  content: ContentType;
   children: ReactNode;
 };
 
@@ -14,12 +14,15 @@ const Layout: FC<LayoutProps> = ({ content, children }) => {
 
   return (
     <div className="flex flex-col">
-      <SEO title={content.hero.heading} description={content.hero.tagline} />
+      <SEO
+        title={content.pages.home.hero.heading}
+        description={content.pages.home.hero.tagline}
+      />
       <Header />
       <main className="min-h-screen" style={{ marginTop: HEADER_HEIGHT }}>
         {children}
       </main>
-      <Footer copyrightText={content.footerText} />
+      <Footer copyrightText={content.footer.copyright} />
     </div>
   );
 };
