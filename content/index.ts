@@ -10,7 +10,7 @@ export type Content = {
       src: string;
       alt: string;
     };
-    navLinks: { href: string; text: string }[];
+    links: { href: string; text: string }[];
   };
   pages: {
     home: {
@@ -61,9 +61,9 @@ export const content: Content = {
       src: '/bnd-header-logo-white.svg',
       alt: 'Bloomington-Normal Developers Logo',
     },
-    navLinks: [
-      { href: '#', text: 'About' },
+    links: [
       { href: '#', text: 'Events' },
+      { href: '#', text: 'About' },
       { href: '#', text: 'Contact' },
     ],
   },

@@ -1,10 +1,9 @@
+import { FC } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import NavLink from './NavLink';
 import { palette } from '@/styles/colors';
-
 import { Content } from '../../content';
-import { FC } from 'react';
 
 type HeaderProps = {
   content: Content;
@@ -12,7 +11,7 @@ type HeaderProps = {
 
 const Header: FC<HeaderProps> = ({ content }) => {
   const { mainLogo } = content.global;
-  const sections = ['Events', 'About Us', 'Contact'];
+  const { links } = content.header;
 
   return (
     <header
@@ -32,8 +31,8 @@ const Header: FC<HeaderProps> = ({ content }) => {
       </Link>
 
       <div className="flex gap-12">
-        {sections.map((title) => (
-          <NavLink key={title} title={title} />
+        {links.map((link) => (
+          <NavLink key={link.text} link={link} />
         ))}
       </div>
     </header>
