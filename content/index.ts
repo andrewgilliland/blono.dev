@@ -1,4 +1,10 @@
 export type Content = {
+  global: {
+    mainLogo: {
+      src: string;
+      alt: string;
+    };
+  };
   header: {
     logo: {
       src: string;
@@ -44,6 +50,12 @@ export type Content = {
 };
 
 export const content: Content = {
+  global: {
+    mainLogo: {
+      src: '/bnd-header-logo-white.svg',
+      alt: 'Bloomington-Normal Developers Logo',
+    },
+  },
   header: {
     logo: {
       src: '/bnd-header-logo-white.svg',

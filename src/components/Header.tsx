@@ -2,9 +2,16 @@ import Image from 'next/image';
 import Link from 'next/link';
 import NavLink from './NavLink';
 import { palette } from '@/styles/colors';
-import { mainLogo } from '@/lib/data/content';
 
-const Header = () => {
+import { Content } from '../../content';
+import { FC } from 'react';
+
+type HeaderProps = {
+  content: Content;
+};
+
+const Header: FC<HeaderProps> = ({ content }) => {
+  const { mainLogo } = content.global;
   const sections = ['Events', 'About Us', 'Contact'];
 
   return (

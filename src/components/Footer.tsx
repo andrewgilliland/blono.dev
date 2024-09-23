@@ -1,15 +1,16 @@
-import { footerContent, mainLogo } from '@/lib/data/content';
 import { palette } from '@/styles/colors';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FC } from 'react';
+import { Content } from '../../content';
 
 type FooterProps = {
-  copyrightText: string;
+  content: Content;
 };
 
-const Footer: FC<FooterProps> = ({ copyrightText }) => {
-  const { links } = footerContent;
+const Footer: FC<FooterProps> = ({ content }) => {
+  const { mainLogo } = content.global;
+  const { links, copyright } = content.footer;
 
   return (
     <footer
@@ -36,7 +37,7 @@ const Footer: FC<FooterProps> = ({ copyrightText }) => {
       </div>
       <div className="flex justify-center mt-12">
         <p className="text-gray-100 mb-3 font-bold uppercase opacity-50">
-          {copyrightText}
+          {copyright}
         </p>
       </div>
     </footer>

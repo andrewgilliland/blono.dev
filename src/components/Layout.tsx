@@ -18,11 +18,11 @@ const Layout: FC<LayoutProps> = ({ content, children }) => {
         title={content.pages.home.hero.heading}
         description={content.pages.home.hero.tagline}
       />
-      <Header />
+      <Header content={content} />
       <main className="min-h-screen" style={{ marginTop: HEADER_HEIGHT }}>
         {children}
       </main>
-      <Footer copyrightText={content.footer.copyright} />
+      <Footer content={content} />
     </div>
   );
 };
