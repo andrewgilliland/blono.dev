@@ -1,11 +1,10 @@
 import Layout, { HEADER_HEIGHT } from '@/components/Layout';
 import { Event } from '@/types';
-import EventCard from '@/components/EventCard';
 import { getDataFromJSONGithubRepo } from '@/lib/actions/github';
 import HeroGrid from '@/components/HeroGrid';
 import ButtonLink from '@/components/ButtonLink';
 import { content } from '../../content';
-import { useState } from 'react';
+import EventSection from '@/components/EventSection';
 
 type HomePageProps = {
   events: Event[];
@@ -22,12 +21,7 @@ export async function getStaticProps() {
 }
 
 const HomePage = ({ events }: HomePageProps) => {
-  const [numberOfEventsToShow, setNumberOfEventsToShow] = useState(3);
   const { hero, about, contact } = content.pages.home;
-  const now = new Date();
-  const upcomingEvents = events.filter((event) => new Date(event.date) > now);
-  const pastEvents = events.filter((event) => new Date(event.date) < now);
-  const filteredPastEvents = pastEvents.slice(0, numberOfEventsToShow);
 
   return (
     <Layout content={content}>
@@ -45,58 +39,7 @@ const HomePage = ({ events }: HomePageProps) => {
           <HeroGrid contentItems={hero.heroGridContentItems} />
         </section>
 
-        <section
-          id="events"
-          style={{ paddingTop: HEADER_HEIGHT + 24 }}
-          className="max-w-5xl mx-auto mt-24"
-        >
-          <div>
-            <h2 className="font-bold font-brand text-purple-600 text-4xl mb-12">
-              Upcoming Events
-            </h2>
-            <div>
-              {upcomingEvents.map((event, index) => (
-                <div key={index} className="mb-8">
-                  <EventCard event={event} />
-                </div>
-              ))}
-            </div>
-          </div>
-          <div>
-            <h2 className="font-bold font-brand text-purple-600 text-4xl mb-12">
-              Past Events
-            </h2>
-            <div>
-              {filteredPastEvents.map((event, index) => (
-                <div key={index} className="mb-8">
-                  <EventCard event={event} />
-                </div>
-              ))}
-            </div>
-            <div className="flex justify-center gap-4">
-              {numberOfEventsToShow < pastEvents.length && (
-                <button
-                  onClick={() =>
-                    setNumberOfEventsToShow(numberOfEventsToShow + 5)
-                  }
-                  className="border border-black px-4 py-2 hover:bg-purple-600 hover:text-white transition"
-                >
-                  Show More
-                </button>
-              )}
-              {numberOfEventsToShow > 3 && (
-                <button
-                  onClick={() =>
-                    setNumberOfEventsToShow(numberOfEventsToShow - 5)
-                  }
-                  className="border border-black px-4 py-2"
-                >
-                  Show Less
-                </button>
-              )}
-            </div>
-          </div>
-        </section>
+        <EventSection events={events} />
 
         <section
           id="about"
