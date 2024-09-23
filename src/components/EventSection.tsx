@@ -2,6 +2,7 @@ import { Event } from '@/types';
 import { FC, useState } from 'react';
 import EventCard from './EventCard';
 import { HEADER_HEIGHT } from './Layout';
+import Button from './Button';
 
 type EventSectionProps = {
   events: Event[];
@@ -46,20 +47,18 @@ const EventSection: FC<EventSectionProps> = ({ events }) => {
         </div>
         <div className="flex justify-center gap-4">
           {numberOfEventsToShow < pastEvents.length && (
-            <button
+            <Button
               onClick={() => setNumberOfEventsToShow(numberOfEventsToShow + 5)}
-              className="border border-black px-4 py-2 hover:bg-purple-600 hover:text-white transition"
             >
               Show More
-            </button>
+            </Button>
           )}
           {numberOfEventsToShow > 3 && (
-            <button
+            <Button
               onClick={() => setNumberOfEventsToShow(numberOfEventsToShow - 5)}
-              className="border border-black px-4 py-2"
             >
               Show Less
-            </button>
+            </Button>
           )}
         </div>
       </div>
