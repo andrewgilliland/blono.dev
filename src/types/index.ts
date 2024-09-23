@@ -11,6 +11,7 @@ export type Event = {
   title: string;
   location: string;
   details: string;
+  date: string;
   startTime: string;
   endTime: string;
 };
