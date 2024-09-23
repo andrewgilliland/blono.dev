@@ -5,6 +5,7 @@ import HeroGrid from '@/components/HeroGrid';
 import ButtonLink from '@/components/ButtonLink';
 import { content } from '../../content';
 import EventSection from '@/components/EventSection';
+import BioCard from '@/components/BioCard';
 
 type HomePageProps = {
   events: Event[];
@@ -47,14 +48,20 @@ const HomePage = ({ events }: HomePageProps) => {
           className="bg-purple-600 mt-24 py-24"
         >
           <div className="max-w-5xl mx-auto">
-            <h2 className="flex justify-end font-bold font-brand text-white text-4xl">
-              {about.heading}
-            </h2>
-            <p className="font-semibold text-base text-white w-2/3">
-              {about.description}
-            </p>
+            <div className="border">
+              <h2 className="flex justify-end font-bold font-brand text-white text-4xl">
+                {about.heading}
+              </h2>
+              <p className="font-semibold text-base text-white w-2/3">
+                {about.description}
+              </p>
+            </div>
+            <div className="grid grid-cols-3 gap-8 mt-8">
+              <BioCard />
+              <BioCard />
+              <BioCard />
+            </div>
           </div>
-          <div></div>
         </section>
 
         <section

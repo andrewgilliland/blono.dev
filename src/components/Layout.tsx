@@ -13,7 +13,7 @@ export const HEADER_HEIGHT = 106;
 
 const Layout: FC<LayoutProps> = ({ content, children }) => {
   return (
-    <div className="flex flex-col bg-gray-50">
+    <div className="flex flex-col bg-gray-100">
       <SEO
         title={content.pages.home.hero.heading}
         description={content.pages.home.hero.tagline}
