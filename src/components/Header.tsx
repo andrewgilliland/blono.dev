@@ -18,7 +18,7 @@ const Header: FC<HeaderProps> = ({ content }) => {
       style={{
         backgroundImage: `radial-gradient(farthest-corner at -200px 0px, ${palette.pinkish}, ${palette.blueish} 45%, ${palette.darkBlueish} 89%, ${palette.darkBlueish})`,
       }}
-      className="bg-purple-950 fixed flex justify-between items-center w-full px-[10%] py-4"
+      className="fixed z-10 bg-purple-950 flex justify-between items-center w-full px-[10%] py-4"
     >
       <Link href="/">
         <Image
