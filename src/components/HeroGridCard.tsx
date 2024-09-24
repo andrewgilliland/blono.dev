@@ -1,10 +1,6 @@
+import { ImageProps } from '@/types';
 import Image from 'next/image';
 import { FC } from 'react';
-
-type ImageProps = {
-  src: string;
-  alt: string;
-};
 
 export type HeroGridCardProps = {
   color: string;

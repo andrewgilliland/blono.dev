@@ -60,6 +60,10 @@ const HomePage = ({ events }: HomePageProps) => {
               {[
                 {
                   developer: {
+                    image: {
+                      src: '/andre-ellis-jr.jpg',
+                      alt: 'Andre Ellis Jr.',
+                    },
                     role: 'Front End',
                     skills: ['React', 'JavaScript'],
                     name: 'Andre Ellis Jr.',
@@ -69,12 +73,29 @@ const HomePage = ({ events }: HomePageProps) => {
                 },
                 {
                   developer: {
+                    image: {
+                      src: '/andrew-gilliland.jpg',
+                      alt: 'Andrew Gilliland',
+                    },
                     role: 'Mobile',
                     skills: ['React Native', 'JavaScript'],
                     name: 'Andrew Gilliland',
                     bio: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit rem fugit nostrum voluptatem odit saepe magnam alias incidunt hic. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit rem fugit nostrum voluptatem odit saepe magnam alias incidunt hic.',
                   },
                   color: 'purple',
+                },
+                {
+                  developer: {
+                    image: {
+                      src: '/jake-barbush.jpg',
+                      alt: 'Jake Barbush',
+                    },
+                    role: 'Back End',
+                    skills: ['Node.js', 'JavaScript'],
+                    name: 'Jake Barbush',
+                    bio: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit rem fugit nostrum voluptatem odit saepe magnam alias incidunt hic. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit rem fugit nostrum voluptatem odit saepe magnam alias incidunt hic.',
+                  },
+                  color: 'cyan',
                 },
               ].map(({ developer, color }, index) => (
                 <DeveloperCard

@@ -1,3 +1,8 @@
+export type ImageProps = {
+  src: string;
+  alt: string;
+};
+
 export type Post = {
   filePath: string;
   data: {
@@ -14,4 +19,12 @@ export type Event = {
   date: string;
   startTime: string;
   endTime: string;
+};
+
+export type Developer = {
+  image: ImageProps;
+  role: string;
+  skills: string[];
+  name: string;
+  bio: string;
 };

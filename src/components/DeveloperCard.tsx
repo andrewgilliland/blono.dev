@@ -1,11 +1,6 @@
+import { Developer, ImageProps } from '@/types';
+import Image from 'next/image';
 import { FC } from 'react';
-
-type Developer = {
-  role: string;
-  skills: string[];
-  name: string;
-  bio: string;
-};
 
 type DeveloperCardProps = {
   developer: Developer;
@@ -13,14 +8,27 @@ type DeveloperCardProps = {
 };
 
 const DeveloperCard: FC<DeveloperCardProps> = ({ developer, color }) => {
-  const { role, skills, name, bio } = developer;
+  const {
+    image: { src, alt },
+    role,
+    skills,
+    name,
+    bio,
+  } = developer;
 
   return (
-    <div className="border">
+    <div className="border bg-white">
       <div className={`flex justify-center bg-${color}-500 py-10`}>
-        <div className={`bg-${color}-100 h-48 w-48 rounded-full`} />
+        <Image
+          className="object-cover h-48 w-48 border rounded-full"
+          src={src}
+          width={192}
+          height={192}
+          alt={alt}
+          priority
+        />
       </div>
-      <div className="bg-white p-6">
+      <div className="p-6">
         <div className="flex flex-wrap gap-2">
           <div
             className={`bg-${color}-500 font-semibold text-white text-xs px-2 py-1`}
