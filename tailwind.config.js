@@ -13,4 +13,10 @@ module.exports = {
   },
   darkMode: 'class', // or 'media' or 'class'
   presets: [require('./src/lib/tailwind-preset')],
+  safelist: [
+    {
+      pattern:
+        /(bg|text)-(cyan|sky|blue|indigo|violet|purple)-(100|200|300|400|500|600|700|800|900)/,
+    },
+  ],
 };
