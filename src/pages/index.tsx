@@ -6,6 +6,7 @@ import ButtonLink from '@/components/ButtonLink';
 import { content } from '../../content';
 import EventSection from '@/components/EventSection';
 import DeveloperCard from '@/components/DeveloperCard';
+import AboutSection from '@/components/AboutSection';
 
 type HomePageProps = {
   events: Event[];
@@ -41,72 +42,7 @@ const HomePage = ({ events }: HomePageProps) => {
         </section>
 
         <EventSection events={events} />
-
-        <section
-          id="about"
-          style={{ paddingTop: HEADER_HEIGHT + 24 }}
-          className="bg-gray-100 mt-24 py-24"
-        >
-          <div className="max-w-5xl mx-auto">
-            <div className="border">
-              <h2 className="flex font-bold font-brand text-purple-600 text-4xl">
-                {about.heading}
-              </h2>
-              <p className="font-normal text-base text-gray-700 w-2/3">
-                {about.description}
-              </p>
-            </div>
-            <div className="grid grid-cols-3 gap-8 mt-8">
-              {[
-                {
-                  developer: {
-                    image: {
-                      src: '/andre-ellis-jr.jpg',
-                      alt: 'Andre Ellis Jr.',
-                    },
-                    role: 'Front End',
-                    skills: ['React', 'JavaScript'],
-                    name: 'Andre Ellis Jr.',
-                    bio: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit rem fugit nostrum voluptatem odit saepe magnam alias incidunt hic .',
-                  },
-                  color: 'blue',
-                },
-                {
-                  developer: {
-                    image: {
-                      src: '/andrew-gilliland.jpg',
-                      alt: 'Andrew Gilliland',
-                    },
-                    role: 'Mobile',
-                    skills: ['React Native', 'JavaScript'],
-                    name: 'Andrew Gilliland',
-                    bio: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit rem fugit nostrum voluptatem odit saepe magnam alias incidunt hic. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit rem fugit nostrum voluptatem odit saepe magnam alias incidunt hic.',
-                  },
-                  color: 'purple',
-                },
-                {
-                  developer: {
-                    image: {
-                      src: '/jake-barbush.jpg',
-                      alt: 'Jake Barbush',
-                    },
-                    role: 'Back End',
-                    skills: ['Node.js', 'JavaScript'],
-                    name: 'Jake Barbush',
-                    bio: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit rem fugit nostrum voluptatem odit saepe magnam alias incidunt hic. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit rem fugit nostrum voluptatem odit saepe magnam alias incidunt hic.',
-                  },
-                  color: 'cyan',
-                },
-              ].map(({ developer, color }, index) => (
-                <DeveloperCard
-                  key={index}
-                  developer={developer}
-                  color={color}
-                />
-              ))}
-            </div>
-          </div>
-        </section>
+        <AboutSection content={about} />
 
         <section
           id="contact"

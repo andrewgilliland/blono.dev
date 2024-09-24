@@ -1,3 +1,14 @@
+import { Developer } from '@/types';
+
+export type AboutContent = {
+  heading: string;
+  description: string;
+  developerCards: {
+    developer: Developer;
+    color: string;
+  }[];
+};
+
 export type Content = {
   global: {
     mainLogo: {
@@ -28,10 +39,7 @@ export type Content = {
           tagline: string;
         }[];
       };
-      about: {
-        heading: string;
-        description: string;
-      };
+      about: AboutContent;
       contact: {
         heading: string;
         subHeading: string;
@@ -130,6 +138,47 @@ export const content: Content = {
         heading: 'About Us',
         description:
           'Join us for the quirkiest software developer meetup in Bloomington-Normal, Illinois, where code and coffee flow in equal measure! Whether you\'re a Pythonista, a Java junkie, or just someone who thinks "Hello World" is a great conversation starter, you\'ll fit right in. Come for the tech talks, stay for the inevitable debate on tabs vs. spaces – and maybe even win a prize for the best debugging horror story!',
+        developerCards: [
+          {
+            developer: {
+              image: {
+                src: '/andre-ellis-jr.jpg',
+                alt: 'Andre Ellis Jr.',
+              },
+              role: 'Front End',
+              skills: ['React', 'JavaScript'],
+              name: 'Andre Ellis Jr.',
+              bio: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit rem fugit nostrum voluptatem odit saepe magnam alias incidunt hic .',
+            },
+            color: 'blue',
+          },
+          {
+            developer: {
+              image: {
+                src: '/andrew-gilliland.jpg',
+                alt: 'Andrew Gilliland',
+              },
+              role: 'Mobile',
+              skills: ['React Native', 'JavaScript'],
+              name: 'Andrew Gilliland',
+              bio: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit rem fugit nostrum voluptatem odit saepe magnam alias incidunt hic. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit rem fugit nostrum voluptatem odit saepe magnam alias incidunt hic.',
+            },
+            color: 'purple',
+          },
+          {
+            developer: {
+              image: {
+                src: '/jake-barbush.jpg',
+                alt: 'Jake Barbush',
+              },
+              role: 'Back End',
+              skills: ['Node.js', 'JavaScript'],
+              name: 'Jake Barbush',
+              bio: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit rem fugit nostrum voluptatem odit saepe magnam alias incidunt hic. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit rem fugit nostrum voluptatem odit saepe magnam alias incidunt hic.',
+            },
+            color: 'cyan',
+          },
+        ],
       },
 
       contact: {
