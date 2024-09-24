@@ -15,11 +15,11 @@ const AboutSection: FC<AboutSectionProps> = ({ content }) => {
       className="bg-gray-100 mt-24 py-24"
     >
       <div className="max-w-5xl mx-auto">
-        <div className="border">
+        <div>
           <h2 className="flex font-bold font-brand text-purple-600 text-4xl">
             {content.heading}
           </h2>
-          <p className="font-normal text-base text-gray-700 w-2/3">
+          <p className="font-brand font-semibold text-base text-gray-800 w-2/3 mt-4">
             {content.description}
           </p>
         </div>

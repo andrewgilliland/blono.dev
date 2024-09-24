@@ -34,7 +34,7 @@ const HomePage = ({ events }: HomePageProps) => {
               {hero.heading}
             </h1>
 
-            <p className="font-brand font-semibold text-base w-1/2">
+            <p className="font-brand font-semibold text-base text-gray-800 w-1/2">
               {hero.tagline}
             </p>
           </div>
