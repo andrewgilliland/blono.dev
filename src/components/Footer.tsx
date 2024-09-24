@@ -3,6 +3,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { FC } from 'react';
 import { Content } from '../../content';
+import LinkedInIcon from './icons/LinkedInIcon';
+import DiscordIcon from './icons/DiscordIcon';
+import MeetupIcon from './icons/MeetupIcon';
 
 type FooterProps = {
   content: Content;
@@ -33,6 +36,11 @@ const Footer: FC<FooterProps> = ({ content }) => {
               {link.text}
             </a>
           ))}
+        </div>
+        <div className="flex flex-col gap-4">
+          <LinkedInIcon />
+          <DiscordIcon />
+          <MeetupIcon />
         </div>
       </div>
       <div className="flex justify-center mt-12">
