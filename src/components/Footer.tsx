@@ -32,8 +32,13 @@ const Footer: FC<FooterProps> = ({ content }) => {
         </Link>
         <div className="flex gap-4 text-gray-200">
           {links.map((link) => (
-            <a key={link.href} href={link.href}>
-              {link.text}
+            <a
+              className="hover:scale-110 transition"
+              key={link.href}
+              href={link.href}
+            >
+              <LinkedInIcon />
+              {/* {link.text} */}
             </a>
           ))}
         </div>

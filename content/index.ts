@@ -53,7 +53,7 @@ export type Content = {
   };
   footer: {
     copyright: string;
-    links: { href: string; text: string }[];
+    links: { href: string; text: string; icon: string }[];
   };
 };
 
@@ -199,9 +199,18 @@ export const content: Content = {
       {
         href: 'https://www.linkedin.com/company/bloomington-normal-developers',
         text: 'LinkedIn',
+        icon: 'LinkedInIcon',
       },
-      { href: 'https://discord.gg/5XfdtzHrjH', text: 'Discord' },
-      { href: 'https://www.meetup.com/blonodev', text: 'Meetup' },
+      {
+        href: 'https://discord.gg/5XfdtzHrjH',
+        text: 'Discord',
+        icon: 'DiscordIcon',
+      },
+      {
+        href: 'https://www.meetup.com/blonodev',
+        text: 'Meetup',
+        icon: 'MeetupIcon',
+      },
     ],
   },
 };
