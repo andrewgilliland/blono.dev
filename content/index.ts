@@ -1,3 +1,6 @@
+import DiscordIcon from '@/components/icons/DiscordIcon';
+import LinkedInIcon from '@/components/icons/LinkedInIcon';
+import MeetupIcon from '@/components/icons/MeetupIcon';
 import { Developer } from '@/types';
 
 export type AboutContent = {
@@ -53,7 +56,7 @@ export type Content = {
   };
   footer: {
     copyright: string;
-    links: { href: string; text: string; icon: string }[];
+    links: { href: string; text: string; icon: () => JSX.Element }[];
   };
 };
 
@@ -197,19 +200,19 @@ export const content: Content = {
     copyright: 'All rights reserved.',
     links: [
       {
-        href: 'https://www.linkedin.com/company/bloomington-normal-developers',
-        text: 'LinkedIn',
-        icon: 'LinkedInIcon',
-      },
-      {
         href: 'https://discord.gg/5XfdtzHrjH',
         text: 'Discord',
-        icon: 'DiscordIcon',
+        icon: DiscordIcon,
+      },
+      {
+        href: 'https://www.linkedin.com/company/bloomington-normal-developers',
+        text: 'LinkedIn',
+        icon: LinkedInIcon,
       },
       {
         href: 'https://www.meetup.com/blonodev',
         text: 'Meetup',
-        icon: 'MeetupIcon',
+        icon: MeetupIcon,
       },
     ],
   },

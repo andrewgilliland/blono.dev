@@ -31,21 +31,11 @@ const Footer: FC<FooterProps> = ({ content }) => {
           />
         </Link>
         <div className="flex gap-4 text-gray-200">
-          {links.map((link) => (
-            <a
-              className="hover:scale-110 transition"
-              key={link.href}
-              href={link.href}
-            >
-              <LinkedInIcon />
-              {/* {link.text} */}
+          {links.map(({ href, icon }) => (
+            <a className="hover:scale-110 transition" key={href} href={href}>
+              {icon()}
             </a>
           ))}
-        </div>
-        <div className="flex flex-col gap-4">
-          <LinkedInIcon />
-          <DiscordIcon />
-          <MeetupIcon />
         </div>
       </div>
       <div className="flex justify-center mt-12">
