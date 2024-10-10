@@ -51,7 +51,9 @@ const MobileHeader: FC<MobileHeaderProps> = ({ content }) => {
           style={{
             backgroundColor: palette.darkBlueish,
             top: 106 + index * 64,
-            transitionDelay: `${index * 0.1}s`,
+            transitionDelay: `${
+              (isOpen ? index : links.length - index) * 0.1
+            }s`,
           }}
           className={`flex justify-center items-center text-white absolute h-24 w-full ${
             isOpen ? 'translate-x-0' : 'translate-x-full'
@@ -60,12 +62,6 @@ const MobileHeader: FC<MobileHeaderProps> = ({ content }) => {
           <NavLink link={link} />
         </div>
       ))}
-
-      {/* <div className="flex gap-12">
-        {links.map((link) => (
-          <NavLink key={link.text} link={link} />
-        ))}
-      </div> */}
     </header>
   );
 };
