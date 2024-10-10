@@ -21,6 +21,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@heroicons/react": "^2.1.5",
     "@mapbox/rehype-prism": "^0.9.0",
     "@tailwindcss/typography": "^0.5.12",
     "classnames": "^2.3.1",
