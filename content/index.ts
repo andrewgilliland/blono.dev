@@ -12,6 +12,21 @@ export type AboutContent = {
   }[];
 };
 
+export type HeroSectionType = {
+  heading: string;
+  tagline: string;
+  heroGridContentItems: {
+    color: string;
+    span: string;
+    image: {
+      src: string;
+      alt: string;
+    };
+    heading: string;
+    tagline: string;
+  }[];
+};
+
 export type Content = {
   global: {
     mainLogo: {
@@ -28,20 +43,7 @@ export type Content = {
   };
   pages: {
     home: {
-      hero: {
-        heading: string;
-        tagline: string;
-        heroGridContentItems: {
-          color: string;
-          span: string;
-          image: {
-            src: string;
-            alt: string;
-          };
-          heading: string;
-          tagline: string;
-        }[];
-      };
+      hero: HeroSectionType;
       about: AboutContent;
       contact: {
         heading: string;
