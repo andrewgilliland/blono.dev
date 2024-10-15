@@ -19,9 +19,10 @@ const HeroGridCard: FC<HeroGridCardProps> = ({
 }) => {
   return (
     <div
-      className={`relative flex flex-col justify-between col-span-1 ${span}`}
+      className={`group relative flex flex-col justify-between col-span-1 ${span}`}
     >
-      <div className="absolute top-2 left-2 w-full h-full border z-0" />
+      <div className="absolute top-2 left-2 w-full h-full border z-0 group-hover:-translate-x-2 group-hover:-translate-y-2 transition-transform duration-1000" />
+      <div className="absolute -top-2 -left-2 w-full h-full border z-0 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-1000" />
       <div className={`px-8 py-10 h-full ${color} z-10`}>
         <div className="h-40 w-40 bg-cyan-100">
           <Image
