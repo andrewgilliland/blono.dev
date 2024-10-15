@@ -16,10 +16,12 @@ const HeroSection: FC<HeroSectionProps> = ({ hero }) => {
         >
           {hero.heading}
         </h1>
-
-        <p className="font-brand font-semibold text-base text-gray-800 w-full md:w-1/2">
-          {hero.tagline}
-        </p>
+        <div className="flex relative">
+          <div className="absolute top-2 left-2 border h-full w-full"></div>
+          <p className="font-brand font-semibold text-base text-gray-800 border p-2 w-full md:w-1/2">
+            {hero.tagline}
+          </p>
+        </div>
       </div>
       <HeroGrid contentItems={hero.heroGridContentItems} />
     </section>
