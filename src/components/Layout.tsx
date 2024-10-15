@@ -19,7 +19,7 @@ const Layout: FC<LayoutProps> = ({ content, children }) => {
         description={content.pages.home.hero.tagline}
       />
       <Header content={content} />
-      <main className="min-h-screen" style={{ marginTop: HEADER_HEIGHT }}>
+      <main className="min-h-screen px-8" style={{ marginTop: HEADER_HEIGHT }}>
         {children}
       </main>
       <Footer content={content} />
