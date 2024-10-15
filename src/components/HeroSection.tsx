@@ -16,9 +16,9 @@ const HeroSection: FC<HeroSectionProps> = ({ hero }) => {
         >
           {hero.heading}
         </h1>
-        <div className="flex relative">
-          <div className="absolute top-2 left-2 border h-full w-full"></div>
-          <p className="font-brand font-semibold text-base text-gray-800 border p-2 w-full md:w-1/2">
+        <div className="flex relative w-full md:w-1/2">
+          <div className="absolute top-2 left-2 border h-full w-full" />
+          <p className="font-brand font-semibold text-base text-gray-800 border p-2 ">
             {hero.tagline}
           </p>
         </div>

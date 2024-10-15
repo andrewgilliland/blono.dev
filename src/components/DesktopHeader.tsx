@@ -18,7 +18,7 @@ const DesktopHeader: FC<DesktopHeaderProps> = ({ content }) => {
       style={{
         backgroundImage: `radial-gradient(farthest-corner at -200px 0px, ${palette.pinkish}, ${palette.blueish} 45%, ${palette.darkBlueish} 89%, ${palette.darkBlueish})`,
       }}
-      className="hidden md:flex justify-between items-center fixed z-10 bg-purple-950  w-full px-[10%] py-4"
+      className="hidden md:flex justify-between items-center fixed bg-purple-950  w-full px-[10%] py-4"
     >
       <Link href="/">
         <Image

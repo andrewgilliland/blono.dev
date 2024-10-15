@@ -17,7 +17,7 @@ const MobileHeader: FC<MobileHeaderProps> = ({ content }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="fixed z-10 w-full bg-purple-950">
+    <header className="fixed w-full bg-purple-950">
       <div
         style={{
           backgroundImage: `radial-gradient(farthest-corner at -200px 0px, ${palette.pinkish}, ${palette.blueish} 45%, ${palette.darkBlueish} 89%, ${palette.darkBlueish})`,

@@ -9,10 +9,10 @@ type HeaderProps = {
 
 const Header: FC<HeaderProps> = ({ content }) => {
   return (
-    <>
+    <div className="z-20">
       <MobileHeader content={content} />
       <DesktopHeader content={content} />
-    </>
+    </div>
   );
 };
 
