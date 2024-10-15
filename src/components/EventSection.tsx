@@ -23,7 +23,10 @@ const EventSection: FC<EventSectionProps> = ({ events }) => {
       className="max-w-5xl mx-auto mt-24"
     >
       <div>
-        <h2 className="font-bold font-brand text-purple-600 text-4xl mb-12">
+        <h2
+          className="font-bold font-brand text-purple-600 text-4xl mb-12"
+          style={{ textShadow: '2px 2px 0px rgba(0, 0, 0, 0.1)' }}
+        >
           Upcoming Events
         </h2>
         <div>
@@ -35,7 +38,10 @@ const EventSection: FC<EventSectionProps> = ({ events }) => {
         </div>
       </div>
       <div>
-        <h2 className="font-bold font-brand text-purple-600 text-4xl mb-12">
+        <h2
+          className="font-bold font-brand text-purple-600 text-4xl mb-12"
+          style={{ textShadow: '2px 2px 0px rgba(0, 0, 0, 0.1)' }}
+        >
           Past Events
         </h2>
         <div>

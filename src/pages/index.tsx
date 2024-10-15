@@ -41,7 +41,10 @@ const HomePage = ({ events }: HomePageProps) => {
               <p className="font-semibold text-base text-violet-600">
                 {contact.subHeading}
               </p>
-              <h2 className="font-bold font-brand text-sky-500 text-4xl mt-4">
+              <h2
+                className="font-bold font-brand text-sky-500 text-4xl mt-4"
+                style={{ textShadow: '2px 2px 0px rgba(0, 0, 0, 0.1)' }}
+              >
                 {contact.heading}
               </h2>
               <div className="font-semibold text-base text-gray-900 mt-8">

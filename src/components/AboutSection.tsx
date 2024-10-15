@@ -16,7 +16,10 @@ const AboutSection: FC<AboutSectionProps> = ({ content }) => {
     >
       <div className="max-w-5xl mx-auto">
         <div>
-          <h2 className="flex font-bold font-brand text-purple-600 text-4xl">
+          <h2
+            className="flex font-bold font-brand text-purple-600 text-4xl"
+            style={{ textShadow: '2px 2px 0px rgba(0, 0, 0, 0.1)' }}
+          >
             {content.heading}
           </h2>
           <p className="font-brand font-semibold text-base text-gray-800 w-2/3 mt-4">
