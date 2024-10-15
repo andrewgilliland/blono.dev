@@ -19,7 +19,7 @@ const HeroGridCard: FC<HeroGridCardProps> = ({
 }) => {
   return (
     <div
-      className={`flex flex-col justify-between px-8 py-10 ${color} ${span}`}
+      className={`flex flex-col justify-between px-8 py-10 ${color} col-span-1 ${span}`}
     >
       <div className="h-40 w-40 bg-cyan-100">
         <Image

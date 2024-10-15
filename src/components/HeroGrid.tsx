@@ -9,7 +9,7 @@ const HeroGrid: FC<HeroGridProps> = ({ contentItems }) => {
   const heroGridContentItems = [
     {
       color: 'bg-cyan-500',
-      span: 'col-span-3',
+      span: 'md:col-span-3',
       image: {
         src: '/bnd-peeps-1.jpg',
         alt: 'Bloomington-Normal Developers Meetup People',
@@ -20,7 +20,7 @@ const HeroGrid: FC<HeroGridProps> = ({ contentItems }) => {
     },
     {
       color: 'bg-blue-600',
-      span: 'col-span-3',
+      span: 'md:col-span-3',
       image: {
         src: '/bloomington-1.jpg',
         alt: 'Bloomington, Illinois',
@@ -31,7 +31,7 @@ const HeroGrid: FC<HeroGridProps> = ({ contentItems }) => {
     },
     {
       color: 'bg-sky-500',
-      span: 'col-span-2',
+      span: 'md:col-span-2',
       image: { src: '/tech-bros-1.avif', alt: 'Tech Bros in Meeting' },
       heading: 'Workshops',
       tagline:
@@ -39,7 +39,7 @@ const HeroGrid: FC<HeroGridProps> = ({ contentItems }) => {
     },
     {
       color: 'bg-purple-500',
-      span: 'col-span-2',
+      span: 'md:col-span-2',
       image: { src: '/tech-people-1.avif', alt: 'Tech People at Coffee Shop' },
       heading: 'Career Development',
       tagline:
@@ -47,7 +47,7 @@ const HeroGrid: FC<HeroGridProps> = ({ contentItems }) => {
     },
     {
       color: 'bg-indigo-500',
-      span: 'col-span-2',
+      span: 'md:col-span-2',
       image: { src: '/normal-1.jpeg', alt: 'Normal, Illinois' },
       heading: 'Community Support',
       tagline:
@@ -55,7 +55,7 @@ const HeroGrid: FC<HeroGridProps> = ({ contentItems }) => {
     },
   ];
   return (
-    <div className="grid grid-cols-6 gap-2 mt-20">
+    <div className="grid grid-cols-1 md:grid-cols-6 gap-2 mt-20">
       {heroGridContentItems.map((contentItem, index) => (
         <HeroGridCard key={index} {...contentItem} />
       ))}
