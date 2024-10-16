@@ -11,7 +11,6 @@ const EventCard: FC<EventCardProps> = ({ event }) => {
   const dateObj = new Date(date);
   const month = dateObj.toLocaleString('default', { month: 'short' });
   const day = dateObj.getDate();
-  // get day of the week
   const dayOfWeek = dateObj.toLocaleString('default', { weekday: 'short' });
 
   return (
@@ -29,7 +28,7 @@ const EventCard: FC<EventCardProps> = ({ event }) => {
             </div>
           </div>
           <div className="flex flex-col gap-3 items-start max-w-2xl">
-            <h3 className="text-blue-700 text-xl font-bold font-brand">
+            <h3 className="font-bold font-brand text-blue-700 text-xl text-shadow">
               {title}
             </h3>
             <div
