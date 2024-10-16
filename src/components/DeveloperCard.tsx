@@ -44,9 +44,7 @@ const DeveloperCard: FC<DeveloperCardProps> = ({ developer, color }) => {
             </div>
           ))}
         </div>
-        <h3 className="font-bold text-blue-800 text-2xl text-shadow-sm mt-4">
-          {name}
-        </h3>
+        <h3 className="text-heading-tertiary mt-4">{name}</h3>
         <p className="text-copy mt-4">{bio}</p>
       </div>
     </div>

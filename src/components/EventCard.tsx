@@ -28,9 +28,7 @@ const EventCard: FC<EventCardProps> = ({ event }) => {
             </div>
           </div>
           <div className="flex flex-col gap-3 items-start max-w-2xl">
-            <h3 className="font-bold font-brand text-blue-700 text-xl text-shadow-sm">
-              {title}
-            </h3>
+            <h3 className="text-heading-tertiary">{title}</h3>
             <div
               className={`bg-purple-500 font-semibold text-white text-xs px-2 py-1`}
             >

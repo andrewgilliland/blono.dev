@@ -16,12 +16,7 @@ const AboutSection: FC<AboutSectionProps> = ({ content }) => {
     >
       <div className="max-w-5xl mx-auto">
         <div>
-          <h2
-            className="flex font-bold font-brand text-purple-600 text-4xl"
-            style={{ textShadow: '2px 2px 0px rgba(0, 0, 0, 0.1)' }}
-          >
-            {content.heading}
-          </h2>
+          <h2 className="text-heading-secondary">{content.heading}</h2>
           <p className="text-copy md:w-2/3 mt-4">{content.description}</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">

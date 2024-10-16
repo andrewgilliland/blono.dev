@@ -23,9 +23,7 @@ const EventSection: FC<EventSectionProps> = ({ events }) => {
       className="max-w-5xl mx-auto mt-24"
     >
       <div>
-        <h2 className="font-bold font-brand text-purple-600 text-4xl text-shadow mb-12">
-          Upcoming Events
-        </h2>
+        <h2 className="text-heading-secondary mb-12">Upcoming Events</h2>
         <div className="grid gap-6">
           {upcomingEvents.map((event, index) => (
             <EventCard key={index} event={event} />
@@ -33,9 +31,7 @@ const EventSection: FC<EventSectionProps> = ({ events }) => {
         </div>
       </div>
       <div>
-        <h2 className="font-bold font-brand text-purple-600 text-4xl text-shadow mb-12">
-          Past Events
-        </h2>
+        <h2 className="text-heading-secondary mb-12">Past Events</h2>
         <div className="grid gap-6">
           {filteredPastEvents.map((event, index) => (
             <EventCard key={index} event={event} />

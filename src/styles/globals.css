@@ -17,6 +17,14 @@ body {
 }
 
 @layer components {
+  .text-heading-secondary {
+    @apply font-brand font-bold text-purple-600 text-4xl text-shadow;
+  }
+
+  .text-heading-tertiary {
+    @apply font-brand font-bold text-blue-600 text-2xl text-shadow-sm;
+  }
+
   .text-copy {
     @apply font-brand font-semibold text-base text-gray-700;
   }
