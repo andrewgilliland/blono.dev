@@ -29,11 +29,9 @@ const EventSection: FC<EventSectionProps> = ({ events }) => {
         >
           Upcoming Events
         </h2>
-        <div>
+        <div className="grid gap-6">
           {upcomingEvents.map((event, index) => (
-            <div key={index} className="mb-8">
-              <EventCard event={event} />
-            </div>
+            <EventCard key={index} event={event} />
           ))}
         </div>
       </div>
@@ -44,11 +42,9 @@ const EventSection: FC<EventSectionProps> = ({ events }) => {
         >
           Past Events
         </h2>
-        <div>
+        <div className="grid gap-6">
           {filteredPastEvents.map((event, index) => (
-            <div key={index} className="mb-8">
-              <EventCard event={event} />
-            </div>
+            <EventCard key={index} event={event} />
           ))}
         </div>
         <div className="flex justify-center gap-4">

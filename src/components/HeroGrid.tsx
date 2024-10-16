@@ -55,7 +55,7 @@ const HeroGrid: FC<HeroGridProps> = ({ contentItems }) => {
     },
   ];
   return (
-    <div className="grid grid-cols-1 md:grid-cols-6 gap-4 mt-20">
+    <div className="grid grid-cols-1 md:grid-cols-6 gap-6 mt-20">
       {heroGridContentItems.map((contentItem, index) => (
         <HeroGridCard key={index} {...contentItem} />
       ))}
