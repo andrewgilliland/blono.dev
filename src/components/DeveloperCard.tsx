@@ -1,4 +1,4 @@
-import { Developer, ImageProps } from '@/types';
+import { Developer } from '@/types';
 import Image from 'next/image';
 import { FC } from 'react';
 
@@ -45,7 +45,7 @@ const DeveloperCard: FC<DeveloperCardProps> = ({ developer, color }) => {
           ))}
         </div>
         <h3 className="font-bold text-blue-800 text-2xl mt-4">{name}</h3>
-        <p className="text-gray-700 text-base mt-4">{bio}</p>
+        <p className="text-copy mt-4">{bio}</p>
       </div>
     </div>
   );

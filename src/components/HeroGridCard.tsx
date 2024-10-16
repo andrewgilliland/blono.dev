@@ -35,7 +35,7 @@ const HeroGridCard: FC<HeroGridCardProps> = ({
           />
         </div>
         <div className="mt-12">
-          <p className="font-semibold text-white text-base">{tagline}</p>
+          <p className="text-copy-white">{tagline}</p>
           <h3 className="font-brand font-bold text-white text-2xl mt-4">
             {heading}
           </h3>

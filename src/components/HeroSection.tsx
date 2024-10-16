@@ -19,9 +19,7 @@ const HeroSection: FC<HeroSectionProps> = ({ hero }) => {
         <div className="group flex relative w-full md:w-1/2">
           <div className="absolute top-2 left-2 border h-full w-full group-hover:-translate-x-2 group-hover:-translate-y-2 transition-transform duration-1000" />
           <div className="absolute -top-2 -left-2 border h-full w-full group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-1000" />
-          <p className="font-brand font-semibold text-base text-gray-800 border p-2 ">
-            {hero.tagline}
-          </p>
+          <p className="text-copy border p-2 ">{hero.tagline}</p>
         </div>
       </div>
       <HeroGrid contentItems={hero.heroGridContentItems} />

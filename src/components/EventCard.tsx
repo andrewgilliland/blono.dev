@@ -37,7 +37,7 @@ const EventCard: FC<EventCardProps> = ({ event }) => {
             >
               {location}
             </div>
-            <div className="text-gray-900 text-base">{details}</div>
+            <div className="text-copy">{details}</div>
           </div>
         </div>
         <div className="flex justify-center items-center bg-purple-600 w-full md:w-1/3 px-10 py-8">

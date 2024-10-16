@@ -22,11 +22,9 @@ const AboutSection: FC<AboutSectionProps> = ({ content }) => {
           >
             {content.heading}
           </h2>
-          <p className="font-brand font-semibold text-base text-gray-800 w-2/3 mt-4">
-            {content.description}
-          </p>
+          <p className="text-copy md:w-2/3 mt-4">{content.description}</p>
         </div>
-        <div className="grid grid-cols-3 gap-8 mt-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
           {content.developerCards.map(({ developer, color }, index) => (
             <DeveloperCard key={index} developer={developer} color={color} />
           ))}

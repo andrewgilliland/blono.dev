@@ -15,3 +15,13 @@ h6 {
 body {
   font-family: var(--font-secondary);
 }
+
+@layer components {
+  .text-copy {
+    @apply font-brand font-semibold text-base text-gray-700;
+  }
+
+  .text-copy-white {
+    @apply font-brand font-semibold text-base text-white;
+  }
+}

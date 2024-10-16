@@ -47,9 +47,7 @@ const HomePage = ({ events }: HomePageProps) => {
               >
                 {contact.heading}
               </h2>
-              <div className="font-semibold text-base text-gray-900 mt-8">
-                {contact.description}
-              </div>
+              <div className="text-copy mt-8">{contact.description}</div>
               <div className="flex gap-6 mt-8">
                 <ButtonLink
                   href="https://www.linkedin.com/company/bloomington-normal-developers"
