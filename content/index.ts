@@ -3,15 +3,6 @@ import LinkedInIcon from '@/components/icons/LinkedInIcon';
 import MeetupIcon from '@/components/icons/MeetupIcon';
 import { Developer } from '@/types';
 
-export type AboutContent = {
-  heading: string;
-  description: string;
-  developerCards: {
-    developer: Developer;
-    color: string;
-  }[];
-};
-
 export type HeroSectionType = {
   heading: string;
   tagline: string;
@@ -25,6 +16,21 @@ export type HeroSectionType = {
     heading: string;
     tagline: string;
   }[];
+};
+
+export type AboutSectionType = {
+  heading: string;
+  description: string;
+  developerCards: {
+    developer: Developer;
+    color: string;
+  }[];
+};
+
+export type ContactSectionType = {
+  heading: string;
+  subHeading: string;
+  description: string;
 };
 
 export type Content = {
@@ -44,12 +50,8 @@ export type Content = {
   pages: {
     home: {
       hero: HeroSectionType;
-      about: AboutContent;
-      contact: {
-        heading: string;
-        subHeading: string;
-        description: string;
-      };
+      about: AboutSectionType;
+      contact: ContactSectionType;
     };
     ['404']: {
       heading: string;

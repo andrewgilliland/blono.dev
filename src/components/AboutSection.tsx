@@ -1,10 +1,10 @@
 import { FC } from 'react';
-import { AboutContent } from '../../content';
+import { AboutSectionType } from '../../content';
 import DeveloperCard from './DeveloperCard';
 import { HEADER_HEIGHT } from './Layout';
 
 type AboutSectionProps = {
-  content: AboutContent;
+  content: AboutSectionType;
 };
 
 const AboutSection: FC<AboutSectionProps> = ({ content }) => {

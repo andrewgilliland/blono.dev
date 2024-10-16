@@ -1,9 +1,10 @@
 import { FC } from 'react';
 import ButtonLink from './ButtonLink';
 import { HEADER_HEIGHT } from './Layout';
+import { ContactSectionType } from '../../content';
 
 type ContactSectionProps = {
-  contact: any;
+  contact: ContactSectionType;
 };
 
 const ContactSection: FC<ContactSectionProps> = ({ contact }) => {
