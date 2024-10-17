@@ -1,0 +1,245 @@
+[
+  {
+    "title": "Developer Happy Hour",
+    "date": "12-17-24",
+    "startTime": "5PM",
+    "endTime": "7PM",
+    "details": "Join us at Keg Grove Brewery to mingle with local software developers and discuss the tech that excites you! We welcome coders and tech enthusiasts of all skill levels.",
+    "location": "Keg Grove Brewery",
+    "address": "712 E Empire Street, Bloomington, IL"
+  },
+  {
+    "title": "Developer Happy Hour",
+    "date": "11-19-24",
+    "startTime": "5PM",
+    "endTime": "7PM",
+    "details": "Join us at Keg Grove Brewery to mingle with local software developers and discuss the tech that excites you! We welcome coders and tech enthusiasts of all skill levels.",
+    "location": "Keg Grove Brewery",
+    "address": "712 E Empire Street, Bloomington, IL"
+  },
+  {
+    "title": "Developer Happy Hour",
+    "date": "10-22-24",
+    "startTime": "5PM",
+    "endTime": "7PM",
+    "details": "Join us at Keg Grove Brewery to mingle with local software developers and discuss the tech that excites you! We welcome coders and tech enthusiasts of all skill levels.",
+    "location": "Keg Grove Brewery",
+    "address": "712 E Empire Street, Bloomington, IL"
+  },
+  {
+    "title": "Developer Happy Hour",
+    "date": "9-24-24",
+    "startTime": "5PM",
+    "endTime": "7PM",
+    "details": "Join us at Keg Grove Brewery to mingle with local software developers and discuss the tech that excites you! We welcome coders and tech enthusiasts of all skill levels.",
+    "location": "Keg Grove Brewery",
+    "address": "712 E Empire Street, Bloomington, IL"
+  },
+  {
+    "title": "Developer Happy Hour",
+    "date": "8-27-24",
+    "startTime": "5PM",
+    "endTime": "7PM",
+    "details": "Come hang out, meet other developers in the area, and talk about whatever tech piques your interest! Coders and tech enthusiasts of all levels are invited.",
+    "location": "Crafted",
+    "address": "1101 Airport Road, Bloomington, IL"
+  },
+  {
+    "title": "July Developer Meetup",
+    "date": "7-16-24",
+    "startTime": "5PM",
+    "endTime": "7PM",
+    "details": "Come hang out, talk about what you've been coding, and get to know other developers in BloNo!",
+    "location": "Crafted",
+    "address": "1101 Airport Road, Bloomington, IL"
+  },
+  {
+    "title": "Coding Social",
+    "date": "3-5-24",
+    "startTime": "6PM",
+    "endTime": "8PM",
+    "details": "We're going back to CRAFTED in Bloomington! Coders of all levels feel free to come talk projects, share resources, or just learn more about people in the community.",
+    "location": "Crafted",
+    "address": "1101 Airport Road, Bloomington, IL"
+  },
+  {
+    "title": "Coding Social",
+    "date": "2-6-24",
+    "startTime": "6PM",
+    "endTime": "8PM",
+    "details": "We're going back to CRAFTED in Bloomington! Coders of all levels feel free to come talk projects, share resources, or just learn more about people in the community.",
+    "location": "Crafted",
+    "address": "1101 Airport Road, Bloomington, IL"
+  },
+  {
+    "title": "Coding Social",
+    "date": "1-23-24",
+    "startTime": "6PM",
+    "endTime": "8PM",
+    "details": "We're going back to CRAFTED in Bloomington! Coders of all levels feel free to come talk projects, share resources, or just learn more about people in the community.",
+    "location": "Crafted",
+    "address": "1101 Airport Road, Bloomington, IL"
+  },
+  {
+    "title": "Biweekly Coding Social",
+    "date": "1-9-24",
+    "startTime": "6PM",
+    "endTime": "8PM",
+    "details": "Come hang out at the Destihl Brewery in Bloomington! Coders of all levels feel free to come talk projects, share resources, or just learn more about people in the community.",
+    "location": "Destihl Brewery",
+    "address": "1200 Greenbriar Dr, Normal, IL"
+  },
+  {
+    "title": "Biweekly Coding Social",
+    "date": "11-28-23",
+    "startTime": "6PM",
+    "endTime": "8PM",
+    "details": "Come hang out at the Destihl Brewery in Bloomington! Coders of all levels feel free to come talk projects, share resources, or just learn more about people in the community.",
+    "location": "Destihl Brewery",
+    "address": "1200 Greenbriar Dr, Normal, IL"
+  },
+  {
+    "title": "Biweekly Coding Social",
+    "date": "11-14-23",
+    "startTime": "6PM",
+    "endTime": "8PM",
+    "details": "Come hang out at the Destihl Brewery in Bloomington! Coders of all levels feel free to come talk projects, share resources, or just learn more about people in the community.",
+    "location": "Destihl Brewery",
+    "address": "1200 Greenbriar Dr, Normal, IL"
+  },
+  {
+    "title": "Biweekly Coding Social",
+    "date": "11-1-23",
+    "startTime": "6PM",
+    "endTime": "8PM",
+    "details": "Different location! Event moved bc I didn't realize I planned one on Halloween 🎃 Come hang out at the Crafted in Bloomington! Coders of all levels feel free to come talk projects, share resources, or just learn more about people in the community.",
+    "location": "Crafted",
+    "address": "1101 Airport Road, Bloomington, IL"
+  },
+  {
+    "title": "Biweekly Coding Social",
+    "date": "10-17-23",
+    "startTime": "6PM",
+    "endTime": "8PM",
+    "details": "Come hang out at the Destihl Brewery in Bloomington! Coders of all levels feel free to come talk projects, share resources, or just learn more about people in the community.",
+    "location": "Destihl Brewery",
+    "address": "1200 Greenbriar Dr, Normal, IL"
+  },
+  {
+    "title": "Biweekly Coding Social",
+    "date": "9-19-23",
+    "startTime": "6PM",
+    "endTime": "8PM",
+    "details": "Come hang out at the Destihl Brewery in Bloomington! Coders of all levels feel free to come talk projects, share resources, or just learn more about people in the community.",
+    "location": "Destihl Brewery",
+    "address": "1200 Greenbriar Dr, Normal, IL"
+  },
+  {
+    "title": "Biweekly Coding Social",
+    "date": "9-5-23",
+    "startTime": "6PM",
+    "endTime": "8PM",
+    "details": "Come hang out at the Destihl Brewery in Bloomington! Coders of all levels feel free to come talk projects, share resources, or just learn more about people in the community.",
+    "location": "Destihl Brewery",
+    "address": "1200 Greenbriar Dr, Normal, IL"
+  },
+  {
+    "title": "Biweekly Coding Social",
+    "date": "8-8-23",
+    "startTime": "6PM",
+    "endTime": "8PM",
+    "details": "Come one come all to Destihl Brewery in Normal! This week there's an optional focus to talk about, share, and work on any non-work projects you've made/are interested in coding up yourself. Coders of all levels feel free to come and share resources or get to know others people in the community.",
+    "location": "Destihl Brewery",
+    "address": "1200 Greenbriar Dr, Normal, IL"
+  },
+  {
+    "title": "Biweekly Coding Social",
+    "date": "7-25-23",
+    "startTime": "6PM",
+    "endTime": "8PM",
+    "details": "Come hang out at the Destihl Brewery in Bloomington! Coders of all levels feel free to come talk projects, share resources, or just learn more about people in the community.",
+    "location": "Destihl Brewery",
+    "address": "1200 Greenbriar Dr, Normal, IL"
+  },
+  {
+    "title": "Biweekly Coding Social",
+    "date": "4-25-23",
+    "startTime": "6PM",
+    "endTime": "8PM",
+    "details": "Come hang out at the Destihl Brewery in Bloomington! Coders of all levels feel free to come talk projects, share resources, or just learn more about people in the community.",
+    "location": "Destihl Brewery",
+    "address": "1200 Greenbriar Dr, Normal, IL"
+  },
+  {
+    "title": "Coding Workshop",
+    "date": "4-11-23",
+    "startTime": "6PM",
+    "endTime": "8PM",
+    "details": "This is a night dedicated to playing with and discussing the data visualization tool D3.js. Come by to hear presentations from fellow coders. Anyone is welcome to be an audience member -- reach out to me if there's a topic you'd like to hear about or present on!",
+    "location": "1401 Commerce Pkwy",
+    "address": "1401 Commerce Pkwy, Bloomington, IL"
+  },
+  {
+    "title": "Coding Social",
+    "date": "2-27-23",
+    "startTime": "6PM",
+    "endTime": "8PM",
+    "details": "Coding social for anyone in Bloomington-Normal and beyond. Come hang out, talk about your passions, and talk trash about Objective-C (if you wish). I doubled checked to make sure there wasn't trivia on this night. Bring ideas for what you'd like to get out of this group - whether it be demos, workshops, questions, personal projects, networking, school, general interest, or what have you",
+    "location": "Crafted",
+    "address": "1101 Airport Road, Bloomington, IL"
+  },
+  {
+    "title": "Coding Social",
+    "date": "1-24-23",
+    "startTime": "6PM",
+    "endTime": "8PM",
+    "details": "Coding social for anyone in Bloomington-Normal and beyond. Come hang out, talk about your passions, and talk trash about Objective-C (if you wish). I doubled checked to make sure there wasn't trivia on this night. Bring ideas for what you'd like to get out of this group - whether it be demos, workshops, questions, personal projects, networking, school, general interest, or what have you",
+    "location": "Crafted",
+    "address": "1101 Airport Road, Bloomington, IL"
+  },
+  {
+    "title": "Coding Social",
+    "date": "9-22-22",
+    "startTime": "530PM",
+    "endTime": "730PM",
+    "details": "Come hang out and talk shop! Veteran and newbie coders feel free to come talk projects, share resources, and cut loose!",
+    "location": "Keg Grove Brewing Company",
+    "address": "712 E Empire St Suite 2, Bloomington, IL"
+  },
+  {
+    "title": "Coding Social",
+    "date": "8-25-22",
+    "startTime": "530PM",
+    "endTime": "730PM",
+    "details": "Come hang out and talk shop! Veteran and newbie coders feel free to come talk projects, share resources, and cut loose!",
+    "location": "Keg Grove Brewing Company",
+    "address": "712 E Empire St Suite 2, Bloomington, IL"
+  },
+  {
+    "title": "Coding Social",
+    "date": "6-16-22",
+    "startTime": "530PM",
+    "endTime": "730PM",
+    "details": "Come hang out and talk shop! Veteran and newbie coders feel free to come talk projects, share resources, and cut loose!",
+    "location": "Keg Grove Brewing Company",
+    "address": "712 E Empire St Suite 2, Bloomington, IL"
+  },
+  {
+    "title": "Coding Social",
+    "date": "4-26-22",
+    "startTime": "530PM",
+    "endTime": "730PM",
+    "details": "Come hang out and talk shop! Veteran and newbie coders feel free to come talk projects, share resources, and cut loose!",
+    "location": "Keg Grove Brewing Company",
+    "address": "712 E Empire St Suite 2, Bloomington, IL"
+  },
+  {
+    "title": "Coding Social",
+    "date": "3-23-22",
+    "startTime": "600PM",
+    "endTime": "800PM",
+    "details": "Come hang out and talk shop! Veteran and newbie coders feel free to come talk projects, share resources, and cut loose!",
+    "location": "Keg Grove Brewing Company",
+    "address": "712 E Empire St Suite 2, Bloomington, IL"
+  }
+]

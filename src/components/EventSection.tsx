@@ -12,7 +12,12 @@ const EventSection: FC<EventSectionProps> = ({ events }) => {
   const [numberOfEventsToShow, setNumberOfEventsToShow] = useState(3);
 
   const now = new Date();
+
   const upcomingEvents = events.filter((event) => new Date(event.date) > now);
+  upcomingEvents.sort(
+    (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()
+  );
+
   const pastEvents = events.filter((event) => new Date(event.date) < now);
   const filteredPastEvents = pastEvents.slice(0, numberOfEventsToShow);
 
@@ -30,14 +35,14 @@ const EventSection: FC<EventSectionProps> = ({ events }) => {
           ))}
         </div>
       </div>
-      <div>
+      <div className="mt-20">
         <h2 className="text-heading-secondary mb-12">Past Events</h2>
         <div className="grid gap-6">
           {filteredPastEvents.map((event, index) => (
             <EventCard key={index} event={event} />
           ))}
         </div>
-        <div className="flex justify-center gap-4">
+        <div className="flex justify-center gap-4 mt-16">
           {numberOfEventsToShow < pastEvents.length && (
             <Button
               onClick={() => setNumberOfEventsToShow(numberOfEventsToShow + 5)}

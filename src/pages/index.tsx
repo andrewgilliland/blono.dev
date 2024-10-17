@@ -1,6 +1,7 @@
+import fs from 'fs';
+import path from 'path';
 import Layout from '@/components/Layout';
 import { Event } from '@/types';
-import { getDataFromJSONGithubRepo } from '@/lib/actions/github';
 import { content } from '../../content';
 import HeroSection from '@/components/HeroSection';
 import AboutSection from '@/components/AboutSection';
@@ -12,11 +13,9 @@ type HomePageProps = {
 };
 
 export async function getStaticProps() {
-  const events = await getDataFromJSONGithubRepo({
-    org: 'Bloomington-Normal-Developers',
-    repo: 'events',
-    file: 'index',
-  });
+  const filePath = path.join(process.cwd(), 'data', 'events.json');
+  const jsonData = fs.readFileSync(filePath, 'utf-8');
+  const events: Event[] = JSON.parse(jsonData);
 
   return { props: { events } };
 }
