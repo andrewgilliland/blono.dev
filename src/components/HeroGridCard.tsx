@@ -24,9 +24,10 @@ const HeroGridCard: FC<HeroGridCardProps> = ({
       <div className="absolute top-2 left-2 w-full h-full border group-hover:-translate-x-2 group-hover:-translate-y-2 transition-transform duration-1000" />
       <div className="absolute -top-2 -left-2 w-full h-full border group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-1000" />
       <div className={`relative px-8 py-10 h-full ${color}`}>
-        <div className="h-40 w-40 bg-cyan-100">
+        <div className="relative h-40 w-40 bg-cyan-100">
+          <div className="absolute border border-pink-300 w-full h-full translate-x-1 translate-y-1" />
           <Image
-            className="object-cover h-full w-full"
+            className="relative object-cover h-full w-full"
             src={src}
             width={160}
             height={160}
