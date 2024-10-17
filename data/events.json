@@ -6,6 +6,10 @@
     "endTime": "7PM",
     "details": "Join us at Keg Grove Brewery to mingle with local software developers and discuss the tech that excites you! We welcome coders and tech enthusiasts of all skill levels.",
     "location": "Keg Grove Brewery",
+    "image": {
+      "src": "/keg-grove-outside-1.jpg",
+      "alt": "Keg Grove Brewery"
+    },
     "address": "712 E Empire Street, Bloomington, IL"
   },
   {
@@ -15,6 +19,10 @@
     "endTime": "7PM",
     "details": "Join us at Keg Grove Brewery to mingle with local software developers and discuss the tech that excites you! We welcome coders and tech enthusiasts of all skill levels.",
     "location": "Keg Grove Brewery",
+    "image": {
+      "src": "/keg-grove-outside-dusk-1.jpg",
+      "alt": "Keg Grove Brewery"
+    },
     "address": "712 E Empire Street, Bloomington, IL"
   },
   {
@@ -24,6 +32,10 @@
     "endTime": "7PM",
     "details": "Join us at Keg Grove Brewery to mingle with local software developers and discuss the tech that excites you! We welcome coders and tech enthusiasts of all skill levels.",
     "location": "Keg Grove Brewery",
+    "image": {
+      "src": "/keg-grove-inside-1.webp",
+      "alt": "Keg Grove Brewery"
+    },
     "address": "712 E Empire Street, Bloomington, IL"
   },
   {
@@ -33,6 +45,10 @@
     "endTime": "7PM",
     "details": "Join us at Keg Grove Brewery to mingle with local software developers and discuss the tech that excites you! We welcome coders and tech enthusiasts of all skill levels.",
     "location": "Keg Grove Brewery",
+    "image": {
+      "src": "/keg-grove-inside-2.jpg",
+      "alt": "Keg Grove Brewery"
+    },
     "address": "712 E Empire Street, Bloomington, IL"
   },
   {
@@ -42,6 +58,10 @@
     "endTime": "7PM",
     "details": "Come hang out, meet other developers in the area, and talk about whatever tech piques your interest! Coders and tech enthusiasts of all levels are invited.",
     "location": "Crafted",
+    "image": {
+      "src": "/crafted-inside-1.jpg",
+      "alt": "Crafted"
+    },
     "address": "1101 Airport Road, Bloomington, IL"
   },
   {
@@ -51,6 +71,10 @@
     "endTime": "7PM",
     "details": "Come hang out, talk about what you've been coding, and get to know other developers in BloNo!",
     "location": "Crafted",
+    "image": {
+      "src": "/crafted-outside-2.jpg",
+      "alt": "Crafted"
+    },
     "address": "1101 Airport Road, Bloomington, IL"
   },
   {
@@ -60,6 +84,7 @@
     "endTime": "8PM",
     "details": "We're going back to CRAFTED in Bloomington! Coders of all levels feel free to come talk projects, share resources, or just learn more about people in the community.",
     "location": "Crafted",
+
     "address": "1101 Airport Road, Bloomington, IL"
   },
   {

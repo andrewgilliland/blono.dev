@@ -1,17 +1,20 @@
-import { Event } from '@/types';
 import { FC } from 'react';
+import { Event } from '@/types';
+import Image from 'next/image';
 
 type EventCardProps = {
   event: Event;
 };
 
 const EventCard: FC<EventCardProps> = ({ event }) => {
-  const { title, date, location, startTime, endTime, details } = event;
+  const { title, date, location, startTime, endTime, details, image } = event;
 
   const dateObj = new Date(date);
   const month = dateObj.toLocaleString('default', { month: 'short' });
   const day = dateObj.getDate();
   const dayOfWeek = dateObj.toLocaleString('default', { weekday: 'short' });
+
+  console.log('image: ', image);
 
   return (
     <div className="group relative">
@@ -33,7 +36,21 @@ const EventCard: FC<EventCardProps> = ({ event }) => {
           </div>
         </div>
         <div className="flex justify-center items-center bg-purple-600 w-full md:w-1/3 px-10 py-8">
-          <div className="bg-violet-200 w-48 h-32" />
+          {image ? (
+            <div className="relative">
+              <div className="absolute border border-purple-300 w-full h-full translate-x-1 translate-y-1" />
+              <Image
+                className="relative object-cover"
+                src={image.src}
+                width={160}
+                height={160}
+                alt={image.alt}
+                priority
+              />
+            </div>
+          ) : (
+            <div className="bg-violet-100 w-48 h-32" />
+          )}
         </div>
       </div>
     </div>

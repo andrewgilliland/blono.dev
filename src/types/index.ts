@@ -19,6 +19,7 @@ export type Event = {
   date: string;
   startTime: string;
   endTime: string;
+  image?: ImageProps;
 };
 
 export type Developer = {
