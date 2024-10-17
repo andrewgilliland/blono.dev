@@ -1,10 +1,11 @@
 import { Developer } from '@/types';
 import Image from 'next/image';
 import { FC } from 'react';
+import Badge, { BadgeTheme } from './Badge';
 
 type DeveloperCardProps = {
   developer: Developer;
-  color: string;
+  color: BadgeTheme;
 };
 
 const DeveloperCard: FC<DeveloperCardProps> = ({ developer, color }) => {
@@ -30,18 +31,11 @@ const DeveloperCard: FC<DeveloperCardProps> = ({ developer, color }) => {
       </div>
       <div className="p-6">
         <div className="flex flex-wrap gap-2">
-          <div
-            className={`bg-${color}-500 font-semibold text-white text-xs px-2 py-1`}
-          >
-            {role}
-          </div>
+          <Badge theme={color}>{role}</Badge>
           {skills.map((skill, index) => (
-            <div
-              key={index}
-              className="bg-gray-200 text-gray-500 text-xs px-2 py-1"
-            >
+            <Badge key={index} theme="gray">
               {skill}
-            </div>
+            </Badge>
           ))}
         </div>
         <h3 className="text-heading-tertiary mt-4">{name}</h3>

@@ -1,3 +1,4 @@
+import { BadgeTheme } from '@/components/Badge';
 import DiscordIcon from '@/components/icons/DiscordIcon';
 import LinkedInIcon from '@/components/icons/LinkedInIcon';
 import MeetupIcon from '@/components/icons/MeetupIcon';
@@ -23,7 +24,7 @@ export type AboutSectionType = {
   description: string;
   developerCards: {
     developer: Developer;
-    color: string;
+    color: BadgeTheme;
   }[];
 };
 
