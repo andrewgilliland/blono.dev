@@ -20,14 +20,17 @@ const DeveloperCard: FC<DeveloperCardProps> = ({ developer, color }) => {
   return (
     <div className="border bg-white">
       <div className={`flex justify-center bg-${color}-500 py-10`}>
-        <Image
-          className="object-cover h-48 w-48 border rounded-full"
-          src={src}
-          width={192}
-          height={192}
-          alt={alt}
-          priority
-        />
+        <div className="relative">
+          <div className="absolute border border-pink-300 rounded-full w-full h-full translate-x-1 translate-y-1" />
+          <Image
+            className="relative bg-blue-300 object-cover h-48 w-48 border rounded-full"
+            src={src}
+            width={192}
+            height={192}
+            alt={alt}
+            priority
+          />
+        </div>
       </div>
       <div className="p-6">
         <div className="flex flex-wrap gap-2">

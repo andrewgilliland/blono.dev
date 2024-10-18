@@ -2,6 +2,7 @@ import { FC } from 'react';
 import { Event } from '@/types';
 import Image from 'next/image';
 import Badge from './Badge';
+import { CalendarIcon, MapPinIcon } from '@heroicons/react/24/solid';
 
 type EventCardProps = {
   event: Event;
@@ -23,10 +24,22 @@ const EventCard: FC<EventCardProps> = ({ event }) => {
         <div className="flex flex-col md:flex-row px-6 py-10 gap-10">
           <div className="flex flex-col gap-3 items-start max-w-2xl">
             <div className="flex flex-wrap gap-3">
-              <Badge theme="purple">
-                {dayOfWeek}, {month} {day} · {startTime} - {endTime} CST
-              </Badge>
-              <Badge theme="gray">{location}</Badge>
+              {/* ! TODO Add to Calendar */}
+              <a href="" title="Add To Calendar">
+                <Badge theme="purple">
+                  <CalendarIcon className="h-4 w-4 inline-block mr-1" />
+                  <p>
+                    {dayOfWeek}, {month} {day} · {startTime} - {endTime} CST
+                  </p>
+                </Badge>
+              </a>
+              {/* ! TODO Link to Google Map Location */}
+              <a href="" title={`${location}'s Location`}>
+                <Badge theme="gray">
+                  <MapPinIcon className="h-4 w-4 inline-block mr-1" />
+                  <p>{location}</p>
+                </Badge>
+              </a>
             </div>
             <h3 className="text-heading-tertiary">{title}</h3>
             <div className="text-copy">{details}</div>

@@ -16,7 +16,9 @@ const Badge: FC<BadgeProps> = ({ children, theme }) => {
   };
 
   return (
-    <div className={`${themeOptions[theme]} font-semibold text-xs px-2 py-1`}>
+    <div
+      className={`${themeOptions[theme]} flex justify-center items-center font-semibold text-xs px-2 py-1`}
+    >
       {children}
     </div>
   );
