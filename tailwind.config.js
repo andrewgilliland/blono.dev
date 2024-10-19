@@ -6,6 +6,19 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        dark: '#141313',
+        purp: '#7400B8',
+        'purp-light': '#D041FF',
+        'purple-heart': '#6930C3',
+        'theme-indigo': '#5E60CE',
+        'havelock-blue': {
+          1: '#4EA8DE',
+          2: '#5390D9',
+        },
+        'picton-blue': '#48BFE3',
+        'viking-blue': '#56CFE1',
+      },
       fontFamily: {
         brand: ['var(--font-poppins)'],
       },
