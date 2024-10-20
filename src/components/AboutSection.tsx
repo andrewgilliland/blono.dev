@@ -12,7 +12,7 @@ const AboutSection: FC<AboutSectionProps> = ({ content }) => {
     <section
       id="about"
       style={{ paddingTop: HEADER_HEIGHT + 24 }}
-      className="bg-gray-100 mt-24 py-24"
+      className="bg-purp mt-24 py-24"
     >
       <div className="max-w-5xl mx-auto">
         <div>
