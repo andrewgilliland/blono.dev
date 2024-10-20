@@ -17,6 +17,7 @@ const DesktopHeader: FC<DesktopHeaderProps> = ({ content }) => {
     <div className="hidden md:flex justify-between items-center px-[10%] py-4">
       <Link href="/">
         <Image
+          className="h-12"
           src={mainLogo.src}
           width={190}
           height={100}

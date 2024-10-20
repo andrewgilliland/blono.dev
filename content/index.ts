@@ -2,9 +2,10 @@ import { BadgeTheme } from '@/components/Badge';
 import DiscordIcon from '@/components/icons/DiscordIcon';
 import LinkedInIcon from '@/components/icons/LinkedInIcon';
 import MeetupIcon from '@/components/icons/MeetupIcon';
-import { Developer } from '@/types';
+import { Developer, ImageProps } from '@/types';
 
 export type HeroSectionType = {
+  logo: ImageProps;
   heading: string;
   tagline: string;
   heroGridContentItems: {
@@ -68,7 +69,7 @@ export type Content = {
 export const content: Content = {
   global: {
     mainLogo: {
-      src: '/bnd-header-logo-white.svg',
+      src: '/bn-logo-1.svg',
       alt: 'Bloomington-Normal Developers Logo',
     },
   },
@@ -86,6 +87,10 @@ export const content: Content = {
   pages: {
     home: {
       hero: {
+        logo: {
+          src: '/bn-logo-1.svg',
+          alt: 'Bloomington-Normal Developers Logo',
+        },
         heading: 'Bloomington-Normal Developers',
         tagline:
           "Bloomington-Normal's group for professional software developers and designers.",

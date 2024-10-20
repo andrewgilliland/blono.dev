@@ -21,8 +21,9 @@ const MobileHeader: FC<MobileHeaderProps> = ({ content }) => {
       <div className="flex justify-between items-center w-full px-[10%] py-4">
         <Link href="/">
           <Image
+            className="h-12"
             src={mainLogo.src}
-            width={190}
+            width={80}
             height={100}
             alt={mainLogo.alt}
             priority
