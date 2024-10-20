@@ -45,7 +45,7 @@ const EventCard: FC<EventCardProps> = ({ event }) => {
             <div className="text-copy">{details}</div>
           </div>
         </div>
-        <div className="flex justify-center items-center bg-purp w-full rounded-r-[10px] md:w-1/3 px-10 py-8">
+        <div className="flex justify-center items-center bg-purp w-full rounded-t-[10px] md:rounded-tl-none md:rounded-r-[10px] md:w-1/3 px-10 py-8">
           {image ? (
             <div className="relative">
               <div className="absolute bg-purp-light rounded-[10px] w-full h-full translate-x-1 translate-y-1" />

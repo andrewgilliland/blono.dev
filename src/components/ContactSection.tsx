@@ -17,9 +17,9 @@ const ContactSection: FC<ContactSectionProps> = ({ contact }) => {
       style={{ paddingTop: HEADER_HEIGHT + 24 }}
       className="max-w-5xl mx-auto my-24"
     >
-      <div className="flex flex-col-reverse md:flex-row bg-white border">
+      <div className="flex flex-col-reverse md:flex-row bg-darker border border-light border-opacity-75 rounded-[10px]">
         <div className="px-4 py-8 md:w-1/2 md:px-16 md:py-24">
-          <p className="font-semibold text-base text-violet-600 text-shadow-sm">
+          <p className="font-semibold text-base text-purp text-shadow-sm">
             {subHeading}
           </p>
           <h2 className="font-bold font-brand text-sky-500 text-4xl text-shadow mt-4">
@@ -38,11 +38,11 @@ const ContactSection: FC<ContactSectionProps> = ({ contact }) => {
             </ButtonLink>
           </div>
         </div>
-        <div className="flex justify-center items-center bg-purple-600 p-16 md:w-1/2">
+        <div className="flex justify-center items-center bg-purp rounded-t-[10px] md:rounded-tl-none md:rounded-r-[10px] p-16 md:w-1/2">
           <div className="relative">
-            <div className="absolute border border-pink-300 w-full h-full translate-x-1 translate-y-1" />
+            <div className="absolute bg-purp-light rounded-[10px] w-full h-full translate-x-1 translate-y-1" />
             <Image
-              className="relative object-cover max-w-40 md:max-w-96"
+              className="relative object-cover rounded-[10px] max-w-40 md:max-w-96"
               src="/revenge-of-the-nerds-1.avif"
               width={350}
               height={350}
