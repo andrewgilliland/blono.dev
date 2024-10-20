@@ -88,7 +88,7 @@ export const content: Content = {
       hero: {
         heading: 'Bloomington-Normal Developers',
         tagline:
-          "Bloomington-Normal's group for professional web or application designers or developers and want to network with others in the industry, learn about new and up-and-coming technologies, and anyone who wants to learn about web or application development. All skill levels welcome.",
+          "Bloomington-Normal's group for professional software developers and designers.",
         heroGridContentItems: [
           {
             color: 'bg-cyan-500',

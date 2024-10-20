@@ -18,19 +18,19 @@ body {
 
 @layer components {
   .text-heading-primary {
-    @apply font-brand font-bold text-blue-600 text-4xl text-shadow;
+    @apply font-brand font-bold text-blue-600 text-4xl;
   }
 
   .text-heading-secondary {
-    @apply font-brand font-bold text-purple-600 text-4xl text-shadow;
+    @apply font-brand font-bold text-purp-light text-4xl;
   }
 
   .text-heading-tertiary {
-    @apply font-brand font-bold text-blue-600 text-2xl text-shadow-sm;
+    @apply font-brand font-bold text-purp-light text-2xl;
   }
 
   .text-copy {
-    @apply font-brand font-semibold text-base text-gray-700;
+    @apply font-brand font-semibold text-base text-white;
   }
 
   .text-copy-white {

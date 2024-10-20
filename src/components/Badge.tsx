@@ -9,7 +9,7 @@ type BadgeProps = {
 
 const Badge: FC<BadgeProps> = ({ children, theme }) => {
   const themeOptions: Record<BadgeTheme, string> = {
-    purple: 'bg-purple-500 text-white',
+    purple: 'bg-purp text-white',
     blue: 'bg-blue-500 text-white',
     cyan: 'bg-cyan-500 text-white',
     gray: 'bg-gray-200 text-gray-500',
@@ -17,7 +17,7 @@ const Badge: FC<BadgeProps> = ({ children, theme }) => {
 
   return (
     <div
-      className={`${themeOptions[theme]} flex justify-center items-center font-semibold text-xs px-2 py-1`}
+      className={`${themeOptions[theme]} flex justify-center items-center font-semibold text-xs rounded-[10px] px-2 py-1`}
     >
       {children}
     </div>
