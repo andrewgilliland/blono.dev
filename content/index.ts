@@ -66,13 +66,15 @@ export type Content = {
   };
 };
 
-export const content: Content = {
-  global: {
-    mainLogo: {
-      src: '/bn-logo-1.svg',
-      alt: 'Bloomington-Normal Developers Logo',
-    },
+const global: { mainLogo: ImageProps } = {
+  mainLogo: {
+    src: '/bn-logo-1.svg',
+    alt: 'Bloomington-Normal Developers Logo',
   },
+};
+
+export const content: Content = {
+  global: global,
   header: {
     logo: {
       src: '/bnd-header-logo-white.svg',
@@ -87,10 +89,7 @@ export const content: Content = {
   pages: {
     home: {
       hero: {
-        logo: {
-          src: '/bn-logo-1.svg',
-          alt: 'Bloomington-Normal Developers Logo',
-        },
+        logo: global.mainLogo,
         heading: 'Bloomington-Normal Developers',
         tagline:
           "Bloomington-Normal's group for professional software developers and designers.",
