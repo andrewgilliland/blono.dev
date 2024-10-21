@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import HeroGrid from './HeroGrid';
-import { HeroSectionType } from '../../content';
 import Image from 'next/image';
+import { HeroSectionType } from '../../content/pages/home';
 
 type HeroSectionProps = {
   hero: HeroSectionType;

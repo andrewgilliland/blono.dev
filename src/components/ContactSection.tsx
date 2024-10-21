@@ -1,8 +1,8 @@
 import { FC } from 'react';
 import ButtonLink from './ButtonLink';
 import { HEADER_HEIGHT } from './Layout';
-import { ContactSectionType } from '../../content';
 import Image from 'next/image';
+import { ContactSectionType } from '../../content/pages/home';
 
 type ContactSectionProps = {
   contact: ContactSectionType;
