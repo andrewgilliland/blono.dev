@@ -12,6 +12,7 @@ module.exports = {
         darker: '#1E1E1E',
         purp: '#7400B8',
         'purp-light': '#D041FF',
+        'purp-dark': '#651F7D',
         'purple-heart': '#6930C3',
         'theme-indigo': '#5E60CE',
         'havelock-blue': {
