@@ -3,6 +3,7 @@ import { FC, useState } from 'react';
 import EventCard from './EventCard';
 import { HEADER_HEIGHT } from './Layout';
 import Button from './Button';
+import Circle from './icons/Circle';
 
 type EventSectionProps = {
   events: Event[];
@@ -28,7 +29,25 @@ const EventSection: FC<EventSectionProps> = ({ events }) => {
       className="max-w-5xl mx-auto mt-24"
     >
       <div>
-        <h2 className="text-heading-secondary mb-12">Upcoming Events</h2>
+        <div className="relative">
+          <div>
+            <Circle
+              size={250}
+              className="absolute fill-purp-dark -translate-x-24 -translate-y-24 opacity-20"
+            />
+            <Circle
+              size={100}
+              className="absolute fill-purp-dark translate-x-64 -translate-y-12 opacity-20"
+            />
+            <Circle
+              size={100}
+              className="absolute fill-purp-dark translate-x-40 translate-y-12 opacity-20"
+            />
+          </div>
+          <h2 className="relative text-heading-secondary mb-12">
+            Upcoming Events
+          </h2>
+        </div>
         <div className="grid gap-6">
           {upcomingEvents.map((event, index) => (
             <EventCard key={index} event={event} />
@@ -57,6 +76,20 @@ const EventSection: FC<EventSectionProps> = ({ events }) => {
               Show Less
             </Button>
           )}
+        </div>
+        <div className="relative flex justify-center">
+          <Circle
+            size={125}
+            className="absolute fill-purp-dark translate-x-64 -translate-y-12 opacity-20"
+          />
+          <Circle
+            size={200}
+            className="absolute fill-purp-dark translate-x-12 translate-y-8 opacity-20"
+          />
+          <Circle
+            size={150}
+            className="absolute fill-purp-dark -translate-x-24 -translate-y-24  opacity-20"
+          />
         </div>
       </div>
     </section>
