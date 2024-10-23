@@ -2,6 +2,7 @@ import { FC } from 'react';
 import HeroGrid from './HeroGrid';
 import Image from 'next/image';
 import { HeroSectionType } from '../../content/pages/home';
+import Circle from './icons/Circle';
 
 type HeroSectionProps = {
   hero: HeroSectionType;
@@ -11,27 +12,19 @@ const HeroSection: FC<HeroSectionProps> = ({ hero }) => (
   <section id="hero" className="max-w-5xl mx-auto">
     <div className="flex justify-center flex-col md:flex-row mt-20 gap-12 md:gap-20">
       <div className="relative">
-        <svg
-          className="absolute fill-purp-dark -translate-x-24 -translate-y-24 opacity-20"
-          width="200"
-          height="200"
-        >
-          <circle cx="100" cy="100" r="100" />
-        </svg>
-        <svg
-          className="absolute fill-purp-dark translate-x-40 translate-y-20 opacity-20"
-          width="100"
-          height="100"
-        >
-          <circle cx="50" cy="50" r="50" />
-        </svg>
-        <svg
-          className="absolute fill-purp-dark translate-x-32 -translate-y-20 opacity-20"
-          width="100"
-          height="100"
-        >
-          <circle cx="50" cy="50" r="50" />
-        </svg>
+        <Circle
+          size={434}
+          className="absolute fill-purp-dark -translate-x-[325px] -translate-y-[325px] opacity-20"
+        />
+        <Circle
+          size={100}
+          className="absolute fill-purp-dark translate-x-32 -translate-y-12 opacity-20"
+        />
+        <Circle
+          size={100}
+          className="absolute fill-purp-dark translate-x-36 translate-y-20 opacity-20"
+        />
+
         <Image
           className="relative"
           src={hero.logo.src}

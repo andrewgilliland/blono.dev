@@ -7,12 +7,8 @@ type CircleProps = {
 
 const Circle: FC<CircleProps> = ({ size, className }) => {
   return (
-    <svg
-      className="absolute fill-purp-dark -translate-x-24 -translate-y-24 opacity-20"
-      width="200"
-      height="200"
-    >
-      <circle cx="100" cy="100" r="100" />
+    <svg className={className} width={size} height={size}>
+      <circle cx={size / 2} cy={size / 2} r={size / 2} />
     </svg>
   );
 };
