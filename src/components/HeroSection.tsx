@@ -25,6 +25,13 @@ const HeroSection: FC<HeroSectionProps> = ({ hero }) => (
         >
           <circle cx="50" cy="50" r="50" />
         </svg>
+        <svg
+          className="absolute fill-purp-dark translate-x-32 -translate-y-20 opacity-20"
+          width="100"
+          height="100"
+        >
+          <circle cx="50" cy="50" r="50" />
+        </svg>
         <Image
           className="relative"
           src={hero.logo.src}
