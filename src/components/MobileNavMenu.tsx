@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import { palette } from '@/styles/colors';
 import NavLink from './NavLink';
+import { HEADER_HEIGHT } from './Layout';
 
 type MobileNavMenuProps = {
   links: { href: string; text: string }[];
@@ -15,7 +16,7 @@ const MobileNavMenu: FC<MobileNavMenuProps> = ({ links, isOpen }) => {
           key={link.text}
           style={{
             backgroundColor: palette.darkBlueish,
-            top: 106 + index * 64,
+            top: HEADER_HEIGHT + index * 64,
             transitionDelay: `${
               (isOpen ? index : links.length - index) * 0.1
             }s`,

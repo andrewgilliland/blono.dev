@@ -34,8 +34,14 @@ const HeroSection: FC<HeroSectionProps> = ({ hero }) => (
           priority
         />
       </div>
-      <div className="group flex relative w-full md:w-1/2">
-        <p className="font-semibold text-2xl text-white p-2">{hero.tagline}</p>
+      <div className="relative group flex w-full md:w-1/2">
+        <Circle
+          size={250}
+          className="absolute fill-theme-indigo -translate-x-5 md:-translate-y-20 opacity-20"
+        />
+        <p className="relative font-semibold text-2xl text-white p-2">
+          {hero.tagline}
+        </p>
       </div>
     </div>
     <HeroGrid contentItems={hero.heroGridContentItems} />

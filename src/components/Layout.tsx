@@ -9,7 +9,7 @@ type LayoutProps = {
   children: ReactNode;
 };
 
-export const HEADER_HEIGHT = 106;
+export const HEADER_HEIGHT = 80;
 
 const Layout: FC<LayoutProps> = ({ content, children }) => {
   return (
