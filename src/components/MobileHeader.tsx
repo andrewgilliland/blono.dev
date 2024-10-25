@@ -1,7 +1,6 @@
 import { FC, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { palette } from '@/styles/colors';
 import { Content } from '../../content';
 import OpenClose from './icons/OpenClose';
 import MobileNavMenu from './MobileNavMenu';
@@ -19,7 +18,7 @@ const MobileHeader: FC<MobileHeaderProps> = ({ content }) => {
   return (
     <div className="md:hidden">
       <div className="flex justify-between items-center w-full px-[10%] py-4">
-        <Link href="/">
+        <Link className="z-10" href="/">
           <Image
             className="h-12"
             src={mainLogo.src}

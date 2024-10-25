@@ -15,16 +15,17 @@ const MobileNavMenu: FC<MobileNavMenuProps> = ({ links, isOpen }) => {
         <div
           key={link.text}
           style={{
-            backgroundColor: palette.darkBlueish,
+            // backgroundColor: palette.darkBlueish,
             top: HEADER_HEIGHT + index * 64,
             transitionDelay: `${
               (isOpen ? index : links.length - index) * 0.1
             }s`,
           }}
-          className={`flex justify-center items-center text-white absolute h-24 w-full ${
+          className={`flex justify-center items-center bg-black text-white absolute h-24 w-full ${
             isOpen ? 'translate-x-0' : 'translate-x-full'
           } transition-transform`}
         >
+          <div className="absolute bg-dark-blue h-full w-full opacity-50 z-0" />
           <NavLink link={link} />
         </div>
       ))}

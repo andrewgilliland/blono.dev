@@ -8,7 +8,7 @@ const NavLink: FC<NavLinkProps> = ({ link }) => {
   const { text } = link;
   return (
     <a
-      className="group"
+      className="group z-10"
       href={`/#${text.toLocaleLowerCase().replace(' ', '-')}`}
     >
       <div className="font-semibold text-white">{text}</div>
