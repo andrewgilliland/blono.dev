@@ -39,7 +39,7 @@ const HeroSection: FC<HeroSectionProps> = ({ hero }) => (
           size={250}
           className="absolute fill-theme-indigo -translate-x-5 md:-translate-y-20 opacity-20"
         />
-        <p className="relative font-semibold text-2xl text-white p-2">
+        <p className="relative font-semibold text-2xl text-white md:mt-10">
           {hero.tagline}
         </p>
       </div>
