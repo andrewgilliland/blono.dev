@@ -1,6 +1,12 @@
 import Head from 'next/head';
+import { FC } from 'react';
 
-export default function SEO({ title, description }) {
+type SEOProps = {
+  title: string;
+  description: string;
+};
+
+const SEO: FC<SEOProps> = ({ title, description }) => {
   return (
     <Head>
       <title>{title}</title>
@@ -8,4 +14,6 @@ export default function SEO({ title, description }) {
       <meta property="og:title" content={title} />
     </Head>
   );
-}
+};
+
+export default SEO;
