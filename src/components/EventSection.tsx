@@ -14,6 +14,9 @@ const EventSection: FC<EventSectionProps> = ({ events }) => {
 
   const now = new Date();
 
+  // console.log("events: ", events);
+  // console.log("now: ", now);
+
   const upcomingEvents = events.filter((event) => new Date(event.date) > now);
   upcomingEvents.sort(
     (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()
