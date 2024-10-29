@@ -4,4 +4,6 @@ module.exports = {
   singleQuote: true,
   tabWidth: 2,
   useTabs: false,
+  plugins: ["prettier-plugin-tailwindcss"],
+  tailwindConfig: "./tailwind.config.ts",
 };
