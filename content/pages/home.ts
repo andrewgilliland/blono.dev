@@ -107,11 +107,11 @@ export const home: HomePageContent = {
         developer: {
           image: {
             src: '/andre-ellis-jr.jpg',
-            alt: 'Andre Ellis Jr.',
+            alt: 'André Ellis Jr.',
           },
           role: 'Front End',
           skills: ['React', 'JavaScript'],
-          name: 'Andre Ellis Jr.',
+          name: 'André Ellis Jr.',
           bio: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit rem fugit nostrum voluptatem odit saepe magnam alias incidunt hic .',
         },
         color: 'blue',
