@@ -106,7 +106,7 @@ export const home: HomePageContent = {
       {
         developer: {
           image: {
-            src: "/andre-ellis-jr.jpg",
+            src: "/andre-1.png",
             alt: "André Ellis Jr.",
           },
           role: "Front End",
@@ -119,7 +119,7 @@ export const home: HomePageContent = {
       {
         developer: {
           image: {
-            src: "/andrew-gilliland.jpg",
+            src: "/andy-2.jpg",
             alt: "Andrew Gilliland",
           },
           role: "Mobile",
@@ -132,7 +132,7 @@ export const home: HomePageContent = {
       {
         developer: {
           image: {
-            src: "/jake-barbush.jpg",
+            src: "/jake-1.jpeg",
             alt: "Jake Barbush",
           },
           role: "Back End",

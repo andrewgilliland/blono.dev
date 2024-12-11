@@ -1,7 +1,7 @@
-import { Developer } from '@/types';
-import Image from 'next/image';
-import { FC } from 'react';
-import Badge, { BadgeTheme } from './Badge';
+import { Developer } from "@/types";
+import Image from "next/image";
+import { FC } from "react";
+import Badge, { BadgeTheme } from "./Badge";
 
 type DeveloperCardProps = {
   developer: Developer;
@@ -18,14 +18,14 @@ const DeveloperCard: FC<DeveloperCardProps> = ({ developer, color }) => {
   } = developer;
 
   return (
-    <div className="border border-light border-opacity-75 rounded-[10px] bg-darker">
+    <div className="border border-light border-opacity-75 rounded-[10px] bg-darker shadow-lg">
       <div
         className={`flex justify-center bg-${color}-500 py-10 rounded-t-[10px]`}
       >
         <div className="relative">
           <div className="absolute bg-purp-light rounded-full w-full h-full translate-x-1 translate-y-1" />
           <Image
-            className="relative bg-blue-300 object-cover h-48 w-48 border rounded-full"
+            className="relative bg-blue-300 object-cover h-48 w-48 rounded-full"
             src={src}
             width={192}
             height={192}
