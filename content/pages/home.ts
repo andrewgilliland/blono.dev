@@ -107,12 +107,12 @@ export const home: HomePageContent = {
         developer: {
           image: {
             src: "/andre-ellis-jr.jpg",
-            alt: "Andre Ellis Jr.",
+            alt: "André Ellis Jr.",
           },
           role: "Front End",
           skills: ["React", "JavaScript"],
-          name: "Andre Ellis Jr.",
-          bio: 'Andre is a professional hug enthusiast, known for his patented "bear hug with a dash of awkwardness" technique. When he\'s not busy spreading joy with his arms, he\'s probably Googling "how to hug without crushing people."',
+          name: "André Ellis Jr.",
+          bio: 'André is a professional hug enthusiast, known for his patented "bear hug with a dash of awkwardness" technique. When he\'s not busy spreading joy with his arms, he\'s probably Googling "how to hug without crushing people."',
         },
         color: "blue",
       },
