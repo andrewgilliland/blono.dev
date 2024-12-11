@@ -1,6 +1,6 @@
-import { FC } from 'react';
-import Layout from '@/components/Layout';
-import { content } from '../../content';
+import { FC } from "react";
+import Layout from "@/components/Layout";
+import { content } from "../../content";
 
 type FourOhFourPageProps = {};
 
@@ -12,7 +12,7 @@ const FourOhFourPage: FC<FourOhFourPageProps> = () => {
           <h2 className="font-bold text-purple-600 text-3xl">
             {content.pages[404].heading}
           </h2>
-          <p className="font-semibold text-gray-900 text-base mt-8">
+          <p className="font-semibold text-gray-100 text-base mt-8">
             {content.pages[404].description}
           </p>
           <a
