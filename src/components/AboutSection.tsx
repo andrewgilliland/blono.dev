@@ -1,7 +1,7 @@
-import { FC } from 'react';
-import DeveloperCard from './DeveloperCard';
-import { HEADER_HEIGHT } from './Layout';
-import { AboutSectionType } from '../../content/pages/home';
+import { FC } from "react";
+import DeveloperCard from "./DeveloperCard";
+import { HEADER_HEIGHT } from "./Layout";
+import { AboutSectionType } from "../../content/pages/home";
 
 type AboutSectionProps = {
   content: AboutSectionType;
@@ -12,7 +12,7 @@ const AboutSection: FC<AboutSectionProps> = ({ content }) => {
     <section
       id="about"
       style={{ paddingTop: HEADER_HEIGHT + 24 }}
-      className="relative bg-purp mt-24 py-24"
+      className="relative mt-24 py-24"
     >
       <div className="max-w-5xl mx-auto">
         <div>

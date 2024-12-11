@@ -1,9 +1,9 @@
-import { Event } from '@/types';
-import { FC, useState } from 'react';
-import EventCard from './EventCard';
-import { HEADER_HEIGHT } from './Layout';
-import Button from './Button';
-import Circle from './icons/Circle';
+import { Event } from "@/types";
+import { FC, useState } from "react";
+import EventCard from "./EventCard";
+import { HEADER_HEIGHT } from "./Layout";
+import Button from "./Button";
+import Circle from "./icons/Circle";
 
 type EventSectionProps = {
   events: Event[];
@@ -83,7 +83,7 @@ const EventSection: FC<EventSectionProps> = ({ events }) => {
         <div className="relative flex justify-center">
           <Circle
             size={125}
-            className="absolute fill-purp-dark translate-x-64 -translate-y-12 opacity-20"
+            className="absolute fill-purp-dark translate-x-64 -translate-y-12 opacity-20 hidden md:block"
           />
           <Circle
             size={200}
