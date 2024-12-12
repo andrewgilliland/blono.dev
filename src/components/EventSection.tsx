@@ -40,11 +40,11 @@ const EventSection: FC<EventSectionProps> = ({ events }) => {
             />
             <Circle
               size={100}
-              className="absolute fill-purp-dark translate-x-64 -translate-y-12 opacity-20"
+              className="absolute fill-purp-dark translate-x-40 translate-y-12 opacity-20"
             />
             <Circle
               size={100}
-              className="absolute fill-purp-dark translate-x-40 translate-y-12 opacity-20"
+              className="absolute fill-purp-dark translate-x-64 -translate-y-12 opacity-20 hidden md:block"
             />
           </div>
           <h2 className="relative text-heading-secondary mb-12">
