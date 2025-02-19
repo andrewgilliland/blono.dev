@@ -1,8 +1,8 @@
-import { FC } from 'react';
-import { Event } from '@/types';
-import Image from 'next/image';
-import Badge from './Badge';
-import { CalendarIcon, MapPinIcon } from '@heroicons/react/24/solid';
+import { FC } from "react";
+import { Event } from "@/types";
+import Image from "next/image";
+import Badge from "./Badge";
+import { CalendarIcon, MapPinIcon, PhotoIcon } from "@heroicons/react/24/solid";
 
 type EventCardProps = {
   event: Event;
@@ -12,9 +12,9 @@ const EventCard: FC<EventCardProps> = ({ event }) => {
   const { title, date, location, startTime, endTime, details, image } = event;
 
   const dateObj = new Date(date);
-  const month = dateObj.toLocaleString('default', { month: 'short' });
+  const month = dateObj.toLocaleString("default", { month: "short" });
   const day = dateObj.getDate();
-  const dayOfWeek = dateObj.toLocaleString('default', { weekday: 'short' });
+  const dayOfWeek = dateObj.toLocaleString("default", { weekday: "short" });
 
   return (
     <div className="group relative">
@@ -59,7 +59,12 @@ const EventCard: FC<EventCardProps> = ({ event }) => {
               />
             </div>
           ) : (
-            <div className="bg-violet-100 w-48 h-32" />
+            <div className="relative">
+              <div className="absolute bg-purp-light rounded-[10px] w-full h-full translate-x-1 translate-y-1" />
+              <div className="relative bg-violet-400 w-40 h-[120px] rounded-[10px] grid place-items-center">
+                <PhotoIcon className="text-violet-200 w-24 h-24 mx-auto" />
+              </div>
+            </div>
           )}
         </div>
       </div>
