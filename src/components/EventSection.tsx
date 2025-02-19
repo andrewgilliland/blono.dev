@@ -11,11 +11,8 @@ type EventSectionProps = {
 
 const EventSection: FC<EventSectionProps> = ({ events }) => {
   const [numberOfEventsToShow, setNumberOfEventsToShow] = useState(3);
-
+  const increment = 5;
   const now = new Date();
-
-  // console.log("events: ", events);
-  // console.log("now: ", now);
 
   const upcomingEvents = events.filter((event) => new Date(event.date) > now);
   upcomingEvents.sort(
@@ -67,14 +64,18 @@ const EventSection: FC<EventSectionProps> = ({ events }) => {
         <div className="flex justify-center gap-4 mt-16">
           {numberOfEventsToShow < pastEvents.length && (
             <Button
-              onClick={() => setNumberOfEventsToShow(numberOfEventsToShow + 5)}
+              onClick={() =>
+                setNumberOfEventsToShow(numberOfEventsToShow + increment)
+              }
             >
               Show More
             </Button>
           )}
           {numberOfEventsToShow > 3 && (
             <Button
-              onClick={() => setNumberOfEventsToShow(numberOfEventsToShow - 5)}
+              onClick={() =>
+                setNumberOfEventsToShow(numberOfEventsToShow - increment)
+              }
             >
               Show Less
             </Button>
