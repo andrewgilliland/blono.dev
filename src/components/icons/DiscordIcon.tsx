@@ -1,7 +1,7 @@
 const DiscordIcon = () => {
   return (
     <svg
-      className="fill-white w-6 h-6"
+      className="fill-white w-10 h-10"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 127.14 96.36"
       width="24"

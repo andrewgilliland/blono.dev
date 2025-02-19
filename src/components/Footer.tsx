@@ -1,11 +1,11 @@
-import { palette } from '@/styles/colors';
-import Image from 'next/image';
-import Link from 'next/link';
-import { FC } from 'react';
-import { Content } from '../../content';
-import LinkedInIcon from './icons/LinkedInIcon';
-import DiscordIcon from './icons/DiscordIcon';
-import MeetupIcon from './icons/MeetupIcon';
+import { palette } from "@/styles/colors";
+import Image from "next/image";
+import Link from "next/link";
+import { FC } from "react";
+import DiscordIcon from "@/components/icons/DiscordIcon";
+import LinkedInIcon from "@/components/icons/LinkedInIcon";
+import MeetupIcon from "@/components/icons/MeetupIcon";
+import { Content } from "../../content";
 
 type FooterProps = {
   content: Content;
@@ -13,7 +13,24 @@ type FooterProps = {
 
 const Footer: FC<FooterProps> = ({ content }) => {
   const { mainLogo } = content.global;
-  const { links, copyright } = content.footer;
+  const { copyright } = content.footer;
+  const links = [
+    {
+      href: "https://discord.gg/5XfdtzHrjH",
+      text: "Discord",
+      icon: <DiscordIcon />,
+    },
+    {
+      href: "https://www.linkedin.com/company/bloomington-normal-developers",
+      text: "LinkedIn",
+      icon: <LinkedInIcon />,
+    },
+    {
+      href: "https://www.meetup.com/blonodev",
+      text: "Meetup",
+      icon: <MeetupIcon />,
+    },
+  ];
 
   return (
     <footer
@@ -24,23 +41,39 @@ const Footer: FC<FooterProps> = ({ content }) => {
         <Link href="/">
           <Image
             src={mainLogo.src}
-            width={190}
+            width={120}
             height={100}
             alt={mainLogo.alt}
             priority
           />
         </Link>
-        <div className="flex gap-4 text-gray-200">
+        <div className="flex gap-5">
           {links.map(({ href, icon }) => (
-            <a className="hover:scale-110 transition" key={href} href={href}>
-              {icon()}
+            <a
+              className="hover:scale-110 hover:rotate-12 transition-transform"
+              key={href}
+              href={href}
+            >
+              {icon}
             </a>
           ))}
         </div>
       </div>
-      <div className="flex justify-center mt-12">
-        <p className="text-gray-100 mb-3 font-bold uppercase opacity-50">
-          {copyright}
+      <div className="flex flex-col items-center mt-12">
+        <p className="text-gray-300 mb-3 font-bold uppercase text-center">
+          © Bloomington-Normal Developers. {copyright}
+        </p>
+
+        <p className="text-gray-100 text-sm text-center">
+          Design by{" "}
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-semibold underline text-gray-50"
+            href="https://www.haileynfetting.com/"
+          >
+            Hailey Fetting
+          </a>
         </p>
       </div>
     </footer>
