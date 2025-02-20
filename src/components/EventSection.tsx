@@ -14,10 +14,17 @@ const EventSection: FC<EventSectionProps> = ({ events }) => {
   const increment = 5;
   const now = new Date();
 
-  const upcomingEvents = events.filter((event) => new Date(event.date) > now);
+  const upcomingEvents = events.filter((event) => {
+    console.log(new Date(event.date));
+
+    return new Date(event.date) > now;
+  });
+
   upcomingEvents.sort(
     (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()
   );
+
+  console.log(upcomingEvents);
 
   const pastEvents = events.filter((event) => new Date(event.date) < now);
   const filteredPastEvents = pastEvents.slice(0, numberOfEventsToShow);
