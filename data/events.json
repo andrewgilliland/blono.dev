@@ -1,6 +1,45 @@
 [
   {
     "title": "Developer Happy Hour",
+    "date": "2025-03-22T23:00:00.000Z",
+    "startTime": "5PM",
+    "endTime": "7PM",
+    "details": "Join us at Keg Grove Brewery to mingle with local software developers and discuss the tech that excites you! We welcome coders and tech enthusiasts of all skill levels.",
+    "location": "Keg Grove Brewery",
+    "image": {
+      "src": "/keg-grove-inside-1.webp",
+      "alt": "Keg Grove Brewery"
+    },
+    "address": "712 E Empire Street, Bloomington, IL"
+  },
+  {
+    "title": "Developer Happy Hour",
+    "date": "2025-02-25T23:00:00.000Z",
+    "startTime": "5PM",
+    "endTime": "7PM",
+    "details": "Join us at Keg Grove Brewery to mingle with local software developers and discuss the tech that excites you! We welcome coders and tech enthusiasts of all skill levels.",
+    "location": "Keg Grove Brewery",
+    "image": {
+      "src": "/keg-grove-outside-dusk-1.jpg",
+      "alt": "Keg Grove Brewery"
+    },
+    "address": "712 E Empire Street, Bloomington, IL"
+  },
+  {
+    "title": "Developer Happy Hour",
+    "date": "2025-01-25T23:00:00.000Z",
+    "startTime": "5PM",
+    "endTime": "7PM",
+    "details": "Join us at Keg Grove Brewery to mingle with local software developers and discuss the tech that excites you! We welcome coders and tech enthusiasts of all skill levels.",
+    "location": "Keg Grove Brewery",
+    "image": {
+      "src": "/keg-grove-outside-1.jpg",
+      "alt": "Keg Grove Brewery"
+    },
+    "address": "712 E Empire Street, Bloomington, IL"
+  },
+  {
+    "title": "Developer Happy Hour",
     "date": "2024-12-17T23:00:00.000Z",
     "startTime": "5PM",
     "endTime": "7PM",
@@ -40,7 +79,7 @@
   },
   {
     "title": "Developer Happy Hour",
-    "date": "2024-9-24T23:00:00.000Z",
+    "date": "2024-09-24T23:00:00.000Z",
     "startTime": "5PM",
     "endTime": "7PM",
     "details": "Join us at Keg Grove Brewery to mingle with local software developers and discuss the tech that excites you! We welcome coders and tech enthusiasts of all skill levels.",
@@ -53,7 +92,7 @@
   },
   {
     "title": "Developer Happy Hour",
-    "date": "2024-8-27T23:00:00.000Z",
+    "date": "2024-08-27T23:00:00.000Z",
     "startTime": "5PM",
     "endTime": "7PM",
     "details": "Come hang out, meet other developers in the area, and talk about whatever tech piques your interest! Coders and tech enthusiasts of all levels are invited.",
@@ -66,7 +105,7 @@
   },
   {
     "title": "July Developer Meetup",
-    "date": "2024-7-16T23:00:00.000Z",
+    "date": "2024-07-16T23:00:00.000Z",
     "startTime": "5PM",
     "endTime": "7PM",
     "details": "Come hang out, talk about what you've been coding, and get to know other developers in BloNo!",
@@ -79,7 +118,7 @@
   },
   {
     "title": "Coding Social",
-    "date": "2024-3-5T23:00:00.000Z",
+    "date": "2024-03-05T23:00:00.000Z",
     "startTime": "6PM",
     "endTime": "8PM",
     "details": "We're going back to CRAFTED in Bloomington! Coders of all levels feel free to come talk projects, share resources, or just learn more about people in the community.",
@@ -89,7 +128,7 @@
   },
   {
     "title": "Coding Social",
-    "date": "2024-2-6T23:00:00.000Z",
+    "date": "2024-02-06T23:00:00.000Z",
     "startTime": "6PM",
     "endTime": "8PM",
     "details": "We're going back to CRAFTED in Bloomington! Coders of all levels feel free to come talk projects, share resources, or just learn more about people in the community.",
@@ -98,7 +137,7 @@
   },
   {
     "title": "Coding Social",
-    "date": "2024-1-23T23:00:00.000Z",
+    "date": "2024-01-23T23:00:00.000Z",
     "startTime": "6PM",
     "endTime": "8PM",
     "details": "We're going back to CRAFTED in Bloomington! Coders of all levels feel free to come talk projects, share resources, or just learn more about people in the community.",
@@ -107,7 +146,7 @@
   },
   {
     "title": "Biweekly Coding Social",
-    "date": "2024-1-9T23:00:00.000Z",
+    "date": "2024-01-09T23:00:00.000Z",
     "startTime": "6PM",
     "endTime": "8PM",
     "details": "Come hang out at the Destihl Brewery in Bloomington! Coders of all levels feel free to come talk projects, share resources, or just learn more about people in the community.",
@@ -134,7 +173,7 @@
   },
   {
     "title": "Biweekly Coding Social",
-    "date": "2023-11-1T23:00:00.000Z",
+    "date": "2023-11-01T23:00:00.000Z",
     "startTime": "6PM",
     "endTime": "8PM",
     "details": "Different location! Event moved bc I didn't realize I planned one on Halloween 🎃 Come hang out at the Crafted in Bloomington! Coders of all levels feel free to come talk projects, share resources, or just learn more about people in the community.",
@@ -152,7 +191,7 @@
   },
   {
     "title": "Biweekly Coding Social",
-    "date": "2023-9-19T23:00:00.000Z",
+    "date": "2023-09-19T23:00:00.000Z",
     "startTime": "6PM",
     "endTime": "8PM",
     "details": "Come hang out at the Destihl Brewery in Bloomington! Coders of all levels feel free to come talk projects, share resources, or just learn more about people in the community.",
@@ -161,7 +200,7 @@
   },
   {
     "title": "Biweekly Coding Social",
-    "date": "2023-9-5T23:00:00.000Z",
+    "date": "2023-09-05T23:00:00.000Z",
     "startTime": "6PM",
     "endTime": "8PM",
     "details": "Come hang out at the Destihl Brewery in Bloomington! Coders of all levels feel free to come talk projects, share resources, or just learn more about people in the community.",
@@ -170,7 +209,7 @@
   },
   {
     "title": "Biweekly Coding Social",
-    "date": "2023-8-8T23:00:00.000Z",
+    "date": "2023-08-08T23:00:00.000Z",
     "startTime": "6PM",
     "endTime": "8PM",
     "details": "Come one come all to Destihl Brewery in Normal! This week there's an optional focus to talk about, share, and work on any non-work projects you've made/are interested in coding up yourself. Coders of all levels feel free to come and share resources or get to know others people in the community.",
@@ -179,7 +218,7 @@
   },
   {
     "title": "Biweekly Coding Social",
-    "date": "2023-7-25T23:00:00.000Z",
+    "date": "2023-07-25T23:00:00.000Z",
     "startTime": "6PM",
     "endTime": "8PM",
     "details": "Come hang out at the Destihl Brewery in Bloomington! Coders of all levels feel free to come talk projects, share resources, or just learn more about people in the community.",
@@ -188,7 +227,7 @@
   },
   {
     "title": "Biweekly Coding Social",
-    "date": "2023-4-25T23:00:00.000Z",
+    "date": "2023-04-25T23:00:00.000Z",
     "startTime": "6PM",
     "endTime": "8PM",
     "details": "Come hang out at the Destihl Brewery in Bloomington! Coders of all levels feel free to come talk projects, share resources, or just learn more about people in the community.",
@@ -197,7 +236,7 @@
   },
   {
     "title": "Coding Workshop",
-    "date": "2023-4-11T23:00:00.000Z",
+    "date": "2023-04-11T23:00:00.000Z",
     "startTime": "6PM",
     "endTime": "8PM",
     "details": "This is a night dedicated to playing with and discussing the data visualization tool D3.js. Come by to hear presentations from fellow coders. Anyone is welcome to be an audience member -- reach out to me if there's a topic you'd like to hear about or present on!",
@@ -206,7 +245,7 @@
   },
   {
     "title": "Coding Social",
-    "date": "2023-2-27T23:00:00.000Z",
+    "date": "2023-02-27T23:00:00.000Z",
     "startTime": "6PM",
     "endTime": "8PM",
     "details": "Coding social for anyone in Bloomington-Normal and beyond. Come hang out, talk about your passions, and talk trash about Objective-C (if you wish). I doubled checked to make sure there wasn't trivia on this night. Bring ideas for what you'd like to get out of this group - whether it be demos, workshops, questions, personal projects, networking, school, general interest, or what have you",
@@ -215,7 +254,7 @@
   },
   {
     "title": "Coding Social",
-    "date": "2023-1-24T23:00:00.000Z",
+    "date": "2023-01-24T23:00:00.000Z",
     "startTime": "6PM",
     "endTime": "8PM",
     "details": "Coding social for anyone in Bloomington-Normal and beyond. Come hang out, talk about your passions, and talk trash about Objective-C (if you wish). I doubled checked to make sure there wasn't trivia on this night. Bring ideas for what you'd like to get out of this group - whether it be demos, workshops, questions, personal projects, networking, school, general interest, or what have you",
@@ -224,7 +263,7 @@
   },
   {
     "title": "Coding Social",
-    "date": "2022-9-22T23:00:00.000Z",
+    "date": "2022-09-22T23:00:00.000Z",
     "startTime": "530PM",
     "endTime": "730PM",
     "details": "Come hang out and talk shop! Veteran and newbie coders feel free to come talk projects, share resources, and cut loose!",
@@ -233,7 +272,7 @@
   },
   {
     "title": "Coding Social",
-    "date": "2022-8-25T23:00:00.000Z",
+    "date": "2022-08-25T23:00:00.000Z",
     "startTime": "530PM",
     "endTime": "730PM",
     "details": "Come hang out and talk shop! Veteran and newbie coders feel free to come talk projects, share resources, and cut loose!",
@@ -242,7 +281,7 @@
   },
   {
     "title": "Coding Social",
-    "date": "2022-6-16T23:00:00.000Z",
+    "date": "2022-06-16T23:00:00.000Z",
     "startTime": "530PM",
     "endTime": "730PM",
     "details": "Come hang out and talk shop! Veteran and newbie coders feel free to come talk projects, share resources, and cut loose!",
@@ -251,7 +290,7 @@
   },
   {
     "title": "Coding Social",
-    "date": "2022-4-26T23:00:00.000Z",
+    "date": "2022-04-26T23:00:00.000Z",
     "startTime": "530PM",
     "endTime": "730PM",
     "details": "Come hang out and talk shop! Veteran and newbie coders feel free to come talk projects, share resources, and cut loose!",
@@ -260,7 +299,7 @@
   },
   {
     "title": "Coding Social",
-    "date": "2022-3-23T23:00:00.000Z",
+    "date": "2022-03-23T23:00:00.000Z",
     "startTime": "600PM",
     "endTime": "800PM",
     "details": "Come hang out and talk shop! Veteran and newbie coders feel free to come talk projects, share resources, and cut loose!",
