@@ -25,6 +25,7 @@
     "@heroicons/react": "^2.1.5",
     "@mapbox/rehype-prism": "^0.9.0",
     "@tailwindcss/typography": "^0.5.12",
+    "calendar-link": "^2.8.0",
     "classnames": "^2.3.1",
     "gray-matter": "^4.0.3",
     "next": "^14.1.4",

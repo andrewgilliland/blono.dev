@@ -2,6 +2,7 @@ import { FC } from "react";
 import { Event } from "@/types";
 import Image from "next/image";
 import Badge from "./Badge";
+import { google } from "calendar-link";
 import { CalendarIcon, MapPinIcon, PhotoIcon } from "@heroicons/react/24/solid";
 
 type EventCardProps = {
@@ -16,23 +17,31 @@ const EventCard: FC<EventCardProps> = ({ event }) => {
   const day = dateObj.getDate();
   const dayOfWeek = dateObj.toLocaleString("default", { weekday: "short" });
 
+  const addToGoogleCalendar = () => {
+    google({
+      title,
+      location,
+      description: details,
+      start: new Date(date),
+      end: new Date(date),
+    });
+  };
+
   return (
     <div className="group relative">
-      {/* <div className="absolute top-2 left-2 w-full h-full border group-hover:-translate-x-2 group-hover:-translate-y-2 transition-transform duration-1000" /> */}
-      {/* <div className="absolute -top-2 -left-2 border h-full w-full group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-1000" /> */}
       <div className="relative flex flex-col-reverse md:flex-row bg-darker border border-light border-opacity-75 rounded-[10px]">
         <div className="flex flex-col md:flex-row px-6 py-10 gap-10">
           <div className="flex flex-col gap-3 items-start max-w-2xl">
             <div className="flex flex-wrap gap-3">
               {/* ! TODO Add to Calendar */}
-              <a href="" title="Add To Calendar">
+              <button onClick={addToGoogleCalendar} title="Add To Calendar">
                 <Badge theme="purple">
                   <CalendarIcon className="h-4 w-4 inline-block mr-1" />
                   <p>
                     {dayOfWeek}, {month} {day} · {startTime} - {endTime} CST
                   </p>
                 </Badge>
-              </a>
+              </button>
               {/* ! TODO Link to Google Map Location */}
               <a href="" title={`${location}'s Location`}>
                 <Badge theme="gray">
