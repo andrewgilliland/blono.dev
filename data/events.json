@@ -5,10 +5,10 @@
     "startTime": "5PM",
     "endTime": "7PM",
     "details": "Join us at Keg Grove Brewery to mingle with local software developers and discuss the tech that excites you! We welcome coders and tech enthusiasts of all skill levels.",
-    "location": "Keg Grove Brewery",
+    "location": "Keg Grove Brewing Company",
     "image": {
       "src": "/keg-grove-inside-1.webp",
-      "alt": "Keg Grove Brewery"
+      "alt": "Keg Grove Brewing Company"
     },
     "address": "712 E Empire Street, Bloomington, IL"
   },

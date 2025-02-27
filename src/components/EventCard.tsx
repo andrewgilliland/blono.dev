@@ -4,6 +4,7 @@ import Image from "next/image";
 import Badge from "./Badge";
 import { google } from "calendar-link";
 import { CalendarIcon, MapPinIcon, PhotoIcon } from "@heroicons/react/24/solid";
+import Button from "./Button";
 
 type EventCardProps = {
   event: Event;
@@ -16,39 +17,49 @@ const EventCard: FC<EventCardProps> = ({ event }) => {
   const month = dateObj.toLocaleString("default", { month: "short" });
   const day = dateObj.getDate();
   const dayOfWeek = dateObj.toLocaleString("default", { weekday: "short" });
-
-  const addToGoogleCalendar = () => {
-    google({
-      title,
-      location,
-      description: details,
-      start: new Date(date),
-      end: new Date(date),
-    });
-  };
+  const isFutureEvent = new Date() < dateObj;
 
   return (
-    <div className="group relative">
+    <div className="relative">
       <div className="relative flex flex-col-reverse md:flex-row bg-darker border border-light border-opacity-75 rounded-[10px]">
         <div className="flex flex-col md:flex-row px-6 py-10 gap-10">
           <div className="flex flex-col gap-3 items-start max-w-2xl">
-            <div className="flex flex-wrap gap-3">
-              {/* ! TODO Add to Calendar */}
-              <button onClick={addToGoogleCalendar} title="Add To Calendar">
+            <div className="flex flex-wrap gap-3 items-start">
+              <div className="flex flex-col gap-3">
                 <Badge theme="purple">
                   <CalendarIcon className="h-4 w-4 inline-block mr-1" />
                   <p>
                     {dayOfWeek}, {month} {day} · {startTime} - {endTime} CST
                   </p>
                 </Badge>
-              </button>
+
+                {isFutureEvent && (
+                  <Button
+                    title="Add to Calendar"
+                    size="xs"
+                    theme="green"
+                    onClick={() =>
+                      window.open(
+                        google({
+                          title,
+                          location,
+                          description: details,
+                          start: new Date(date),
+                          end: new Date(date),
+                        }),
+                        "_blank"
+                      )
+                    }
+                  >
+                    Add To Calendar
+                  </Button>
+                )}
+              </div>
               {/* ! TODO Link to Google Map Location */}
-              <a href="" title={`${location}'s Location`}>
-                <Badge theme="gray">
-                  <MapPinIcon className="h-4 w-4 inline-block mr-1" />
-                  <p>{location}</p>
-                </Badge>
-              </a>
+              <Badge theme="gray">
+                <MapPinIcon className="h-4 w-4 inline-block mr-1" />
+                <p>{location}</p>
+              </Badge>
             </div>
             <h3 className="text-heading-tertiary">{title}</h3>
             <div className="text-copy">{details}</div>
