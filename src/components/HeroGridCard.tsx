@@ -1,9 +1,8 @@
-import { ImageProps } from '@/types';
-import Image from 'next/image';
-import { FC } from 'react';
+import { ImageProps } from "@/types";
+import Image from "next/image";
+import { FC } from "react";
 
 export type HeroGridCardProps = {
-  color: string;
   span: string;
   image: ImageProps;
   heading: string;
@@ -11,7 +10,6 @@ export type HeroGridCardProps = {
 };
 
 const HeroGridCard: FC<HeroGridCardProps> = ({
-  color,
   span,
   image: { src, alt },
   heading,
@@ -21,8 +19,6 @@ const HeroGridCard: FC<HeroGridCardProps> = ({
     <div
       className={`group relative flex flex-col justify-between col-span-1 ${span}`}
     >
-      {/* <div className="absolute top-2 left-2 w-full h-full border group-hover:-translate-x-2 group-hover:-translate-y-2 transition-transform duration-1000" /> */}
-      {/* <div className="absolute -top-2 -left-2 w-full h-full border group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-1000" /> */}
       <div
         className={`relative px-8 py-10 h-full bg-purp border border-light border-opacity-75 rounded-[10px]`}
       >

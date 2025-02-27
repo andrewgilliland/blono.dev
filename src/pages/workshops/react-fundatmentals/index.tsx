@@ -4,7 +4,9 @@ import { content } from "../../../../content";
 const WorkShopPage = () => {
   return (
     <Layout content={content}>
-      <div> React WorkShopPage</div>
+      <section>
+        <h1 className="text-green-400 font-semibold">React Fundamentals</h1>
+      </section>
     </Layout>
   );
 };
