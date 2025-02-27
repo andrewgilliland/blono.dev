@@ -1,7 +1,7 @@
 import Layout from "@/components/Layout";
 import { content } from "../../../../content";
 
-const WorkShopPage = () => {
+const WorkshopPage = () => {
   return (
     <Layout content={content}>
       <section>
@@ -11,4 +11,4 @@ const WorkShopPage = () => {
   );
 };
 
-export default WorkShopPage;
+export default WorkshopPage;

@@ -2,7 +2,6 @@ import { FC } from "react";
 import ButtonLink from "./ButtonLink";
 import { HEADER_HEIGHT } from "./Layout";
 import Image from "next/image";
-import { ContactSectionType } from "../../content/pages/home";
 
 type ContactSectionProps = {};
 
@@ -18,7 +17,7 @@ const ContactSection: FC<ContactSectionProps> = () => {
           <p className="font-semibold text-base text-purp-light text-shadow-sm">
             Get in touch!
           </p>
-          <h2 className="font-bold font-brand text-green-400 text-4xl text-shadow mt-4">
+          <h2 className="font-bold text-green-500 text-4xl text-shadow mt-4">
             Contact Us
           </h2>
           <div className="text-copy mt-8">
