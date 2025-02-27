@@ -28,7 +28,7 @@ const HomePage = ({ events }: HomePageProps) => {
       <HeroSection hero={hero} />
       <EventSection events={events} />
       <AboutSection content={about} />
-      <ContactSection contact={contact} />
+      <ContactSection />
     </Layout>
   );
 };
