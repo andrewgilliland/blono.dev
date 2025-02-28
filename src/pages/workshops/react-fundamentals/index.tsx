@@ -1,8 +1,36 @@
 import Layout from "@/components/Layout";
 import Circle from "@/components/icons/Circle";
 import { content } from "../../../../content";
+import LessonCard from "@/components/LessonCard";
 
 const WorkshopPage = () => {
+  const lessons = [
+    {
+      title: "Creating a React Component",
+      slug: "creating-a-react-component",
+      description: "Learn how to create a React component.",
+      number: 1,
+    },
+    {
+      title: "Importing and Exporting Components",
+      slug: "importing-and-exporting-components",
+      description: "Learn how to import and export components in React.",
+      number: 2,
+    },
+    {
+      title: "What is JSX?",
+      slug: "what-is-jsx",
+      description: "Learn what JSX is and how to use it in React.",
+      number: 3,
+    },
+    {
+      title: "JavaScript in JSX",
+      slug: "javascript-in-jsx",
+      description: "Learn how to use JavaScript in JSX.",
+      number: 4,
+    },
+  ];
+
   return (
     <Layout content={content}>
       <section id="hero" className="max-w-5xl mx-auto">
@@ -37,20 +65,10 @@ const WorkshopPage = () => {
         </div>
       </section>
       <section id="lessons" className="max-w-5xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
-          <div className="relative px-8 py-10 h-full bg-purp border border-light border-opacity-75 rounded-[10px]">
-            <h2 className="text-green-500 font-bold text-2xl mt-20">
-              Lesson 1
-            </h2>
-            <div className="flex flex-col gap-4 mt-8">
-              <a
-                href="/workshops/react-fundamentals/creating-a-react-component"
-                className="text-white font-semibold text-lg"
-              >
-                Creating a React Component
-              </a>
-            </div>
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-12">
+          {lessons.map((lesson, index) => (
+            <LessonCard key={index} lesson={lesson} />
+          ))}
         </div>
       </section>
     </Layout>
@@ -58,3 +76,5 @@ const WorkshopPage = () => {
 };
 
 export default WorkshopPage;
+
+// iUSjMh27@p1hzf%w

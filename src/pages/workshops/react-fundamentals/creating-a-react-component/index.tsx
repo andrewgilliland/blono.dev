@@ -3,6 +3,8 @@ import Circle from "@/components/icons/Circle";
 import { content } from "../../../../../content";
 
 const LessonPage = () => {
+  const lessons = {};
+
   return (
     <Layout content={content}>
       <section id="hero" className="max-w-5xl mx-auto">
