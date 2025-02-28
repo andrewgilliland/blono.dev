@@ -3,6 +3,10 @@ import Circle from "@/components/icons/Circle";
 import { content } from "../../../../../content";
 
 const LessonPage = () => {
+  // import index.md that is in the same directory as this file
+  // convert index.md to html
+  // render html
+
   return (
     <Layout content={content}>
       <section id="hero" className="max-w-5xl mx-auto">
