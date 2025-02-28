@@ -1,8 +1,8 @@
 import Layout from "@/components/Layout";
 import Circle from "@/components/icons/Circle";
-import { content } from "../../../../content";
+import { content } from "../../../../../content";
 
-const WorkshopPage = () => {
+const LessonPage = () => {
   return (
     <Layout content={content}>
       <section id="hero" className="max-w-5xl mx-auto">
@@ -21,7 +21,7 @@ const WorkshopPage = () => {
               className="absolute fill-purp-dark translate-x-36 translate-y-20 opacity-20"
             />
             <h1 className="relative text-green-500 font-bold text-4xl">
-              React Fundamentals
+              Creating a React Component
             </h1>
           </div>
           <div className="relative group flex w-full md:w-1/2">
@@ -36,25 +36,8 @@ const WorkshopPage = () => {
           </div>
         </div>
       </section>
-      <section id="lessons" className="max-w-5xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
-          <div className="relative px-8 py-10 h-full bg-purp border border-light border-opacity-75 rounded-[10px]">
-            <h2 className="text-green-500 font-bold text-2xl mt-20">
-              Lesson 1
-            </h2>
-            <div className="flex flex-col gap-4 mt-8">
-              <a
-                href="/workshops/react-fundamentals/creating-a-react-component"
-                className="text-white font-semibold text-lg"
-              >
-                Creating a React Component
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
     </Layout>
   );
 };
 
-export default WorkshopPage;
+export default LessonPage;
