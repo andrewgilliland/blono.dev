@@ -29,6 +29,36 @@ const WorkshopPage = () => {
       description: "Learn how to use JavaScript in JSX.",
       number: 4,
     },
+    {
+      title: "What are Props?",
+      slug: "what-are-props",
+      description: "Learn what props are and how to use them.",
+      number: 5,
+    },
+    {
+      title: "Condtional Rendering",
+      slug: "conditional-rendering",
+      description: "Learn how to conditionally render elements in React.",
+      number: 6,
+    },
+    {
+      title: "Rendering Lists",
+      slug: "rendering-lists",
+      description: "Learn how to render lists in React.",
+      number: 7,
+    },
+    {
+      title: "Pure Components",
+      slug: "pure-components",
+      description: "Learn how to create pure components in React.",
+      number: 8,
+    },
+    {
+      title: "React Render Tree",
+      slug: "react-render-tree",
+      description: "Learn how the React render tree works.",
+      number: 9,
+    },
   ];
 
   return (
