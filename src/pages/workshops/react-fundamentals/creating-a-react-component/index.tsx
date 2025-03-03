@@ -1,11 +1,22 @@
 import Layout from "@/components/Layout";
 import Circle from "@/components/icons/Circle";
 import { content } from "../../../../../content";
+import { getMarkdownContent } from "@/lib/mdx-utils";
 
-const LessonPage = () => {
-  // import index.md that is in the same directory as this file
-  // convert index.md to html
-  // render html
+export async function getStaticProps() {
+  const markdown = getMarkdownContent("./index.md");
+
+  return {
+    props: {
+      markdown,
+    },
+  };
+}
+
+const LessonPage = ({ markdown }) => {
+  const {
+    frontMatter: { title, description },
+  } = markdown;
 
   return (
     <Layout content={content}>
@@ -25,7 +36,7 @@ const LessonPage = () => {
               className="absolute fill-purp-dark translate-x-36 translate-y-20 opacity-20"
             />
             <h1 className="relative text-green-500 font-bold text-4xl">
-              Creating a React Component
+              {title}
             </h1>
           </div>
           <div className="relative group flex w-full md:w-1/2">
@@ -34,8 +45,7 @@ const LessonPage = () => {
               className="absolute fill-theme-indigo -translate-x-5 md:-translate-y-20 opacity-20"
             />
             <p className="relative font-semibold text-2xl text-white md:mt-10">
-              Get some hands on programming knowledge with Bloomington-Normal
-              Developer&apos;s workshops.
+              {description}
             </p>
           </div>
         </div>
