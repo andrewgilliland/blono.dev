@@ -5,7 +5,7 @@ import LessonCard from "@/components/LessonCard";
 
 type Lesson = {
   title: string;
-  slug: string;
+  slug: string; // !This must be the same as the file name!
   description: string;
   number: number;
 };

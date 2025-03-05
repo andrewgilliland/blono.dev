@@ -6,10 +6,9 @@ import rehypePrism from "@mapbox/rehype-prism";
 import remarkGfm from "remark-gfm";
 
 // POSTS_PATH is useful when you want to get the path to a specific file
-export const LESSONS_PATH = path.join(
-  process.cwd(),
-  "src/pages/workshops/react-fundamentals/creating-a-react-component"
-);
+export const LESSONS_PATH = path.join(process.cwd(), "src/markdown/workshops/");
+// ! This is what it should be !
+// src/markdown/workshops/[workshop]/[lesson]
 
 export const getMarkdownContent = async (filePath: string) => {
   const source = fs.readFileSync(path.join(LESSONS_PATH, filePath));
@@ -26,8 +25,6 @@ export const getMarkdownContent = async (filePath: string) => {
     },
     scope: data,
   });
-
-  console.log("mdxSource: ", mdxSource);
 
   return { frontMatter: data, mdxSource };
 };

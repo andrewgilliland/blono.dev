@@ -2,8 +2,9 @@ import { FC } from "react";
 import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
 import Layout from "@/components/Layout";
 import Circle from "@/components/icons/Circle";
-import { content } from "../../../../../content";
+import { content } from "../../../../content";
 import { getMarkdownContent } from "@/lib/mdx-utils";
+import { GetStaticPaths, GetStaticProps } from "next";
 
 type LessonPageProps = {
   markdown: {
@@ -17,15 +18,72 @@ type LessonPageProps = {
   };
 };
 
-export async function getStaticProps() {
-  const markdown = await getMarkdownContent("./index.md");
+export const getStaticPaths: GetStaticPaths = async () => {
+  return {
+    paths: [
+      {
+        params: {
+          slug: "creating-a-react-component",
+        },
+      },
+      {
+        params: {
+          slug: "importing-and-exporting-components",
+        },
+      },
+      {
+        params: {
+          slug: "what-is-jsx",
+        },
+      },
+      {
+        params: {
+          slug: "javascript-in-jsx",
+        },
+      },
+      {
+        params: {
+          slug: "what-are-props",
+        },
+      },
+      {
+        params: {
+          slug: "conditional-rendering",
+        },
+      },
+      {
+        params: {
+          slug: "rendering-lists",
+        },
+      },
+      {
+        params: {
+          slug: "pure-components",
+        },
+      },
+      {
+        params: {
+          slug: "react-render-tree",
+        },
+      },
+    ],
+    fallback: false,
+  };
+};
+
+export const getStaticProps: GetStaticProps<any> = async ({ params }) => {
+  // get value from url params [slug]
+  const { slug } = params;
+  console.log("slug: ", slug);
+
+  const markdown = await getMarkdownContent(`./react-fundamentals/${slug}.md`);
 
   return {
     props: {
       markdown,
     },
   };
-}
+};
 
 const LessonPage: FC<LessonPageProps> = ({ markdown }) => {
   const {
