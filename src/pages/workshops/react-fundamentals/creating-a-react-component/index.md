@@ -50,3 +50,7 @@ To create a React component, follow these steps:
    ```
 
 By following these steps, you can create and use a React component in your application.
+
+<div style={{display: "flex", justifyContent: "flex-end"}}>
+[Next Lesson](/workshops/react-fundamentals/importing-and-exporting-components)
+</div>

@@ -3,8 +3,15 @@ import Circle from "@/components/icons/Circle";
 import { content } from "../../../../content";
 import LessonCard from "@/components/LessonCard";
 
-const WorkshopPage = () => {
-  const lessons = [
+type Lesson = {
+  title: string;
+  slug: string;
+  description: string;
+  number: number;
+};
+
+const WorkshopPage: React.FC = () => {
+  const lessons: Lesson[] = [
     {
       title: "Creating a React Component",
       slug: "creating-a-react-component",

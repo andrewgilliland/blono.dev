@@ -1,10 +1,24 @@
+import { FC } from "react";
+import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
 import Layout from "@/components/Layout";
 import Circle from "@/components/icons/Circle";
 import { content } from "../../../../../content";
 import { getMarkdownContent } from "@/lib/mdx-utils";
 
+type LessonPageProps = {
+  markdown: {
+    frontMatter: {
+      title: string;
+      slug: string;
+      description: string;
+      number: number;
+    };
+    mdxSource: MDXRemoteSerializeResult;
+  };
+};
+
 export async function getStaticProps() {
-  const markdown = getMarkdownContent("./index.md");
+  const markdown = await getMarkdownContent("./index.md");
 
   return {
     props: {
@@ -13,14 +27,15 @@ export async function getStaticProps() {
   };
 }
 
-const LessonPage = ({ markdown }) => {
+const LessonPage: FC<LessonPageProps> = ({ markdown }) => {
   const {
-    frontMatter: { title, description },
+    frontMatter: { title, description, number },
+    mdxSource,
   } = markdown;
 
   return (
     <Layout content={content}>
-      <section id="hero" className="max-w-5xl mx-auto">
+      <section id="hero" className="max-w-2xl mx-auto">
         <div className="flex justify-center items-center flex-col md:flex-row mt-20 gap-12 md:gap-20">
           <div className="relative">
             <Circle
@@ -35,9 +50,13 @@ const LessonPage = ({ markdown }) => {
               size={100}
               className="absolute fill-purp-dark translate-x-36 translate-y-20 opacity-20"
             />
-            <h1 className="relative text-green-500 font-bold text-4xl">
-              {title}
-            </h1>
+            <div>
+              <h2 className="text-copy">Lesson {number}</h2>
+
+              <h1 className="relative text-green-500 font-bold text-4xl">
+                {title}
+              </h1>
+            </div>
           </div>
           <div className="relative group flex w-full md:w-1/2">
             <Circle
@@ -48,6 +67,14 @@ const LessonPage = ({ markdown }) => {
               {description}
             </p>
           </div>
+        </div>
+      </section>
+      <section
+        id="content"
+        className="max-w-5xl mx-auto my-20 flex justify-center"
+      >
+        <div className="border prose prose-lg prose-h2:text-purp prose-p:text-gray-100 prose-strong:text-purple-heart prose-a:text-green-500 prose-a:font-semibold prose-a:no-underline">
+          <MDXRemote {...mdxSource} />
         </div>
       </section>
     </Layout>
