@@ -1,6 +1,6 @@
 ---
 title: "What are Props?"
 slug: "what-are-props"
-description: "Learn how to create a React component."
+description: "Learn what props are and how to use them."
 number: 5
 ---

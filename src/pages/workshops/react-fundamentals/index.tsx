@@ -2,71 +2,26 @@ import Layout from "@/components/Layout";
 import Circle from "@/components/icons/Circle";
 import { content } from "../../../../content";
 import LessonCard from "@/components/LessonCard";
+import { FC } from "react";
+import { getMarkdownFilesFrontMatter } from "@/lib/mdx-utils";
+import { Lesson } from "@/lib/types";
 
-type Lesson = {
-  title: string;
-  slug: string; // !This must be the same as the file name!
-  description: string;
-  number: number;
+type WorkshopPageProps = {
+  lessons: Lesson[];
 };
 
-const WorkshopPage: React.FC = () => {
-  const lessons: Lesson[] = [
-    {
-      title: "Creating a React Component",
-      slug: "creating-a-react-component",
-      description: "Learn how to create a React component.",
-      number: 1,
+export const getStaticProps = async () => {
+  const lessons = await getMarkdownFilesFrontMatter("react-fundamentals");
+
+  return {
+    props: {
+      lessons,
     },
-    {
-      title: "Importing and Exporting Components",
-      slug: "importing-and-exporting-components",
-      description: "Learn how to import and export components in React.",
-      number: 2,
-    },
-    {
-      title: "What is JSX?",
-      slug: "what-is-jsx",
-      description: "Learn what JSX is and how to use it in React.",
-      number: 3,
-    },
-    {
-      title: "JavaScript in JSX",
-      slug: "javascript-in-jsx",
-      description: "Learn how to use JavaScript in JSX.",
-      number: 4,
-    },
-    {
-      title: "What are Props?",
-      slug: "what-are-props",
-      description: "Learn what props are and how to use them.",
-      number: 5,
-    },
-    {
-      title: "Condtional Rendering",
-      slug: "conditional-rendering",
-      description: "Learn how to conditionally render elements in React.",
-      number: 6,
-    },
-    {
-      title: "Rendering Lists",
-      slug: "rendering-lists",
-      description: "Learn how to render lists in React.",
-      number: 7,
-    },
-    {
-      title: "Pure Components",
-      slug: "pure-components",
-      description: "Learn how to create pure components in React.",
-      number: 8,
-    },
-    {
-      title: "React Render Tree",
-      slug: "react-render-tree",
-      description: "Learn how the React render tree works.",
-      number: 9,
-    },
-  ];
+  };
+};
+
+const WorkshopPage: FC<WorkshopPageProps> = ({ lessons }) => {
+  const sortedLessons = lessons.slice().sort((a, b) => a.number - b.number);
 
   return (
     <Layout content={content}>
@@ -103,7 +58,7 @@ const WorkshopPage: React.FC = () => {
       </section>
       <section id="lessons" className="max-w-5xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-12">
-          {lessons.map((lesson, index) => (
+          {sortedLessons.map((lesson, index) => (
             <LessonCard key={index} lesson={lesson} />
           ))}
         </div>

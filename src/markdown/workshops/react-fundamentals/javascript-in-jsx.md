@@ -1,6 +1,6 @@
 ---
 title: "JavaScript is JSX"
 slug: "javascript-in-jsx"
-description: "Learn how to create a React component."
+description: "Learn how to use JavaScript in JSX."
 number: 4
 ---

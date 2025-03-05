@@ -8,6 +8,24 @@ import remarkGfm from "remark-gfm";
 // POSTS_PATH is useful when you want to get the path to a specific file
 export const LESSONS_PATH = path.join(process.cwd(), "src/markdown/workshops/");
 
+export const getMarkdownFiles = async (workshop: string) => {
+  const files = fs.readdirSync(path.join(LESSONS_PATH, workshop));
+
+  return files;
+};
+
+export const getMarkdownFilesFrontMatter = async (workshop: string) => {
+  const files = await getMarkdownFiles(workshop);
+
+  const frontMatters = files.map((file) => {
+    const source = fs.readFileSync(path.join(LESSONS_PATH, workshop, file));
+    const { data } = matter(source);
+    return data;
+  });
+
+  return frontMatters;
+};
+
 export const getMarkdownContent = async (filePath: string) => {
   const source = fs.readFileSync(path.join(LESSONS_PATH, filePath));
 
@@ -25,10 +43,4 @@ export const getMarkdownContent = async (filePath: string) => {
   });
 
   return { frontMatter: data, mdxSource };
-};
-
-export const getMarkdownFiles = async (workshop: string) => {
-  const files = fs.readdirSync(path.join(LESSONS_PATH, workshop));
-
-  return files;
 };

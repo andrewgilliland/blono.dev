@@ -1,6 +1,6 @@
 ---
 title: "Pure Components"
 slug: "pure-components"
-description: "Learn how to create a React component."
+description: "Learn how to create pure components in React."
 number: 8
 ---

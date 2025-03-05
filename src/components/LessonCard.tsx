@@ -21,8 +21,9 @@ const LessonCard: FC<LessonCardProps> = ({ lesson }) => {
       <div>
         <h2 className="text-copy">Lesson {number}</h2>
         <h3 className="text-heading-tertiary">{title}</h3>
+        <p className="text-base text-gray-100">{description}</p>
       </div>
-      <div className="flex flex-col gap-4 mt-8">
+      <div className="flex flex-col gap-4 mt-6">
         <Link
           href={`/workshops/react-fundamentals/${slug}`}
           className="text-white font-semibold text-lg"
