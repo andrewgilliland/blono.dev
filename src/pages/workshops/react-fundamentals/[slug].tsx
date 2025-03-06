@@ -3,7 +3,7 @@ import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
 import Layout from "@/components/Layout";
 import Circle from "@/components/icons/Circle";
 import { content } from "../../../../content";
-import { getMarkdownContent, getMarkdownFiles } from "@/lib/mdx-utils";
+import { getMarkdownContent, getMarkdownFiles } from "@/lib/utils/mdx-utils";
 import { GetStaticPaths, GetStaticProps } from "next";
 
 type LessonPageProps = {
@@ -89,7 +89,7 @@ const LessonPage: FC<LessonPageProps> = ({ markdown }) => {
         id="content"
         className="max-w-5xl mx-auto my-20 flex justify-center"
       >
-        <div className="border prose prose-lg prose-h2:text-purp prose-p:text-gray-100 prose-strong:text-purple-heart prose-a:text-green-500 prose-a:font-semibold prose-a:no-underline">
+        <div className="prose prose-lg prose-h2:text-purp prose-p:text-gray-100 prose-strong:text-purple-heart prose-a:text-green-500 prose-a:font-semibold prose-a:no-underline">
           <MDXRemote {...mdxSource} />
         </div>
       </section>

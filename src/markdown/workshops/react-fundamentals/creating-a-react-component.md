@@ -5,7 +5,9 @@ description: "Learn how to create a React component."
 number: 1
 ---
 
-## How to Create a React Component
+## What is a Component?
+
+Components are the building blocks of every user interface. In React, they are reusable pieces of code that represent just a part of your overall user interface. On the web, we build the structure of these components with HTML elements. This allows you to split up a user interface into independent, reusable, and isolated pieces.
 
 To create a React component, follow these steps:
 

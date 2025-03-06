@@ -3,7 +3,7 @@ import Circle from "@/components/icons/Circle";
 import { content } from "../../../../content";
 import LessonCard from "@/components/LessonCard";
 import { FC } from "react";
-import { getMarkdownFilesFrontMatter } from "@/lib/mdx-utils";
+import { getMarkdownFilesFrontMatter } from "@/lib/utils/mdx-utils";
 import { Lesson } from "@/lib/types";
 
 type WorkshopPageProps = {
