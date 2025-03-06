@@ -24,7 +24,7 @@ const WorkshopCard = () => {
           </div>
         </div>
         <div className="mt-8">
-          <p className="text-copy-white">
+          <p className="text-copy">
             Learn the basics of React with Bloomington-Normal Developers. This
             workshop is perfect for beginners with React.
           </p>

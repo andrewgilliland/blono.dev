@@ -22,9 +22,7 @@ const WorkshopsPage = () => {
               size={100}
               className="absolute fill-purp-dark translate-x-36 translate-y-20 opacity-20"
             />
-            <h1 className="relative text-green-500 font-bold text-4xl">
-              Workshops
-            </h1>
+            <h1 className="relative">Workshops</h1>
           </div>
           <div className="relative group flex w-full md:w-1/2">
             <Circle

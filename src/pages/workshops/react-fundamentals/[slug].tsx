@@ -71,9 +71,7 @@ const LessonPage: FC<LessonPageProps> = ({ markdown }) => {
             <div>
               <h2 className="text-copy">Lesson {number}</h2>
 
-              <h1 className="relative text-green-500 font-bold text-4xl">
-                {title}
-              </h1>
+              <h1 className="relative">{title}</h1>
             </div>
           </div>
           <div className="relative group flex w-full md:w-1/2">
