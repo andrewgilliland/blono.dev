@@ -1,6 +1,7 @@
 import { FC } from "react";
 import Link from "next/link";
 import Button from "./Button";
+import Badge from "./Badge";
 
 type Lesson = {
   title: string;
@@ -18,10 +19,10 @@ const LessonCard: FC<LessonCardProps> = ({ lesson }) => {
 
   return (
     <div className="relative flex flex-col justify-between px-8 py-10 h-full bg-darker border border-light border-opacity-75 rounded-[10px]">
-      <div>
-        <h2 className="text-copy">Lesson {number}</h2>
-        <h3 className="text-heading-tertiary">{title}</h3>
-        <p className="text-base text-gray-100">{description}</p>
+      <div className="flex flex-col items-start">
+        <Badge theme="purple">Lesson {number}</Badge>
+        <h3 className="text-heading-tertiary mt-2">{title}</h3>
+        <p className="text-copy mt-2">{description}</p>
       </div>
       <div className="flex flex-col gap-4 mt-6">
         <Link
