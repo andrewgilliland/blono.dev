@@ -1,0 +1,8 @@
+---
+title: "What is React?"
+slug: "what-is-react"
+description: "Learn about React."
+number: 0
+---
+
+React is a JavaScript library for building user interfaces. It was developed by Meta and is maintained by Meta and a community of individual developers and companies. React allows you to build applications that can render efficiently in response to data changes.

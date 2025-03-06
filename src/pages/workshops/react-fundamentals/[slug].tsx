@@ -89,7 +89,7 @@ const LessonPage: FC<LessonPageProps> = ({ markdown }) => {
         id="content"
         className="max-w-5xl mx-auto my-20 flex justify-center"
       >
-        <div className="prose prose-lg prose-h2:text-purp prose-p:text-gray-100 prose-strong:text-purple-heart prose-a:text-green-500 prose-a:font-semibold prose-a:no-underline">
+        <div className="prose prose-lg prose-h2:text-purp prose-p:text-gray-100 prose-strong:text-purple-heart prose-em:text-green-500 prose-em:font-semibold prose-a:text-green-500 prose-a:font-semibold prose-a:no-underline">
           <MDXRemote {...mdxSource} />
         </div>
       </section>
