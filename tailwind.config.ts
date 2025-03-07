@@ -26,6 +26,24 @@ module.exports = {
       fontFamily: {
         brand: ["var(--font-poppins)"],
       },
+      typography: (theme) => ({
+        DEFAULT: {
+          css: {
+            code: {
+              color: theme("colors.green.500"),
+              backgroundColor: theme("colors.green.900"),
+              borderRadius: theme("borderRadius.lg"),
+              padding: theme("padding.1"),
+            },
+            "code::before": {
+              content: "none",
+            },
+            "code::after": {
+              content: "none",
+            },
+          },
+        },
+      }),
     },
   },
   darkMode: "class", // or 'media' or 'class'
