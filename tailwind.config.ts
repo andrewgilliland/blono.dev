@@ -31,7 +31,7 @@ module.exports = {
           css: {
             code: {
               color: theme("colors.green.500"),
-              backgroundColor: theme("colors.green.900"),
+              backgroundColor: theme("colors.darker"),
               borderRadius: theme("borderRadius.lg"),
               padding: theme("padding.1"),
             },

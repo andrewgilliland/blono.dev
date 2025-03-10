@@ -15,6 +15,8 @@ JSX (JavaScript XML) is a syntax extension that allows you to write HTML-like co
 
 ## Syntax Extension
 
+JSX is not standard JavaScript, it extends the JavaScript syntax. This makes it easier for you to describe what your user insterface should look like. JSX is transformed into regular JavaScript code that browsers can understand. Transformation is generally done with tools like [Babel](https://babeljs.io/).
+
 ## HTML-like Structure
 
 ## Embedding JavaScript
