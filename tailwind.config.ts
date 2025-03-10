@@ -41,6 +41,9 @@ module.exports = {
             "code::after": {
               content: "none",
             },
+            li: {
+              color: theme("colors.gray.100"),
+            },
           },
         },
       }),
