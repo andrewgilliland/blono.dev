@@ -65,7 +65,7 @@ Check out [here](https://react.dev/reference/react/Fragment) for more info on `F
 
 ### Close All Tags
 
-JSX requires all tags to be explicitly closed. Self-closing tags like `<img>` must be written as `<img/>`. The same is true fro React components. A component named `ReactCard` would have to contain a self-closing tag when used in code like `<ReactCard />`.
+JSX requires all tags to be explicitly closed. Self-closing tags like `<img>` must be written as `<img/>`, or with a corresponding close tag like `<p></p>`. The same is true for React components. A component named `ReactCard` would have to contain a self-closing tag when used in code like `<ReactCard />`.
 
 ### Camel Case for Attributes
 

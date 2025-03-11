@@ -21,8 +21,6 @@ export const getStaticProps = async () => {
 };
 
 const WorkshopPage: FC<WorkshopPageProps> = ({ lessons }) => {
-  const sortedLessons = lessons.slice().sort((a, b) => a.number - b.number);
-
   return (
     <Layout content={content}>
       <section id="hero" className="max-w-5xl mx-auto">
@@ -56,7 +54,7 @@ const WorkshopPage: FC<WorkshopPageProps> = ({ lessons }) => {
       </section>
       <section id="lessons" className="max-w-5xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-12">
-          {sortedLessons.map((lesson, index) => (
+          {lessons.map((lesson, index) => (
             <LessonCard key={index} lesson={lesson} />
           ))}
         </div>

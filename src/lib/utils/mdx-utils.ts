@@ -23,6 +23,9 @@ export const getMarkdownFilesFrontMatter = async (workshop: string) => {
     return data;
   });
 
+  // ! If frontMatter contains a number property, sort by that number
+  frontMatters.sort((a, b) => a.number - b.number);
+
   return frontMatters;
 };
 

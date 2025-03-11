@@ -3,7 +3,11 @@ import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
 import Layout from "@/components/Layout";
 import Circle from "@/components/icons/Circle";
 import { content } from "../../../../content";
-import { getMarkdownContent, getMarkdownFiles } from "@/lib/utils/mdx-utils";
+import {
+  getMarkdownContent,
+  getMarkdownFiles,
+  getMarkdownFilesFrontMatter,
+} from "@/lib/utils/mdx-utils";
 import { GetStaticPaths, GetStaticProps } from "next";
 
 type LessonPageProps = {
@@ -37,6 +41,9 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const { slug } = params as { slug: string };
 
   const markdown = await getMarkdownContent(`./react-fundamentals/${slug}.md`);
+  const lessons = await getMarkdownFilesFrontMatter("react-fundamentals");
+
+  console.log("lessons: ", lessons);
 
   return {
     props: {
@@ -87,10 +94,14 @@ const LessonPage: FC<LessonPageProps> = ({ markdown }) => {
       </section>
       <section
         id="content"
-        className="max-w-5xl mx-auto my-20 flex justify-center"
+        className="max-w-5xl mx-auto my-20 flex flex-col items-center"
       >
         <div className="prose prose-lg prose-h2:text-purp prose-h3:text-purp prose-h4:text-purp prose-p:text-gray-100 prose-strong:text-purple-heart prose-em:text-green-500 prose-em:font-semibold prose-a:text-green-500 prose-a:font-semibold prose-a:no-underline">
           <MDXRemote {...mdxSource} />
+        </div>
+        <div className="flex text-white justify-between w-full mt-10">
+          <div>Prev</div>
+          <div>Next</div>
         </div>
       </section>
     </Layout>
