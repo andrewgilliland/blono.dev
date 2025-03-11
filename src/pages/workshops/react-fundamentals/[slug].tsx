@@ -1,5 +1,6 @@
 import { FC } from "react";
 import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
+import Link from "next/link";
 import Layout from "@/components/Layout";
 import Circle from "@/components/icons/Circle";
 import { content } from "../../../../content";
@@ -109,12 +110,30 @@ const LessonPage: FC<LessonPageProps> = ({
         id="content"
         className="max-w-3xl mx-auto my-20 flex flex-col items-center"
       >
-        <div className="border max-w-3xl prose prose-lg prose-h2:text-purp prose-h3:text-purp prose-h4:text-purp prose-p:text-gray-100 prose-strong:text-purple-heart prose-em:text-green-500 prose-em:font-semibold prose-a:text-green-500 prose-a:font-semibold prose-a:no-underline">
+        <div className="max-w-3xl prose prose-lg prose-h2:text-purp prose-h3:text-purp prose-h4:text-purp prose-p:text-gray-100 prose-strong:text-purple-heart prose-em:text-green-500 prose-em:font-semibold prose-a:text-green-500 prose-a:font-semibold prose-a:no-underline">
           <MDXRemote {...mdxSource} />
         </div>
-        <div className="flex text-white justify-between w-full mt-10">
-          <div>{prevLesson?.title}</div>
-          <div>{nextLesson?.title}</div>
+        <div className="flex justify-between w-full mt-10">
+          {prevLesson ? (
+            <Link
+              href={`/workshops/react-fundamentals/${prevLesson?.slug}`}
+              className="text-green-500 font-semibold text-lg hover:underline hover:underline-green-500"
+            >
+              Prev Lesson
+            </Link>
+          ) : (
+            <div />
+          )}
+          {nextLesson ? (
+            <Link
+              href={`/workshops/react-fundamentals/${nextLesson?.slug}`}
+              className="text-green-500 font-semibold text-lg hover:underline hover:underline-green-500"
+            >
+              Next Lesson
+            </Link>
+          ) : (
+            <div />
+          )}
         </div>
       </section>
     </Layout>

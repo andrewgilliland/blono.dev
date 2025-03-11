@@ -29,22 +29,22 @@ To create a React component, follow these steps:
 
 3. **Add the Markup**: Create a function that returns JSX. This function is your component
 
-```jsx
-return (
-  <div>
-    <h1>Woah, React!</h1>
-    <p>Check me out, I am a React component.</p>
-  </div>
-);
-```
+   ```jsx
+   return (
+     <div>
+       <h1>Woah, React!</h1>
+       <p>Check me out, I am a React component.</p>
+     </div>
+   );
+   ```
 
-3. **Export the Component**: Export the component so it can be used in other parts of your application.
+4. **Export the Component**: Export the component so it can be used in other parts of your application.
 
    ```jsx
    export default ReactCard;
    ```
 
-4. **Use the Component**: Import and use your component in another file.
+5. **Use the Component**: Import and use your component in another file.
 
    ```jsx
    import ReactCard from "./ReactCard";
@@ -61,7 +61,3 @@ return (
    ```
 
 By following these steps, you can create and use a React component in your application.
-
-<div style={{display: "flex", justifyContent: "flex-end"}}>
-[Next Lesson](/workshops/react-fundamentals/importing-and-exporting-components)
-</div>

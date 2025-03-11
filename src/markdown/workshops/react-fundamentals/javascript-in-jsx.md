@@ -35,8 +35,8 @@ export default function Avatar() {
 }
 ```
 
-## Reference a JavaScript Variable in JSX
+## JavaScript Variables in JSX
 
-## Reference a JavaScript Function in JSX
+## JavaScript Functions in JSX
 
-## Reference a JavaScript Object in JSX
+## JavaScript Objects in JSX
