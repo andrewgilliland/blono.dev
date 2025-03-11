@@ -9,6 +9,7 @@ import {
   getMarkdownFilesFrontMatter,
 } from "@/lib/utils/mdx-utils";
 import { GetStaticPaths, GetStaticProps } from "next";
+import { Lesson } from "@/lib/types";
 
 type LessonPageProps = {
   markdown: {
@@ -20,6 +21,8 @@ type LessonPageProps = {
     };
     mdxSource: MDXRemoteSerializeResult;
   };
+  prevLesson: Lesson | null;
+  nextLesson: Lesson | null;
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
@@ -43,16 +46,26 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const markdown = await getMarkdownContent(`./react-fundamentals/${slug}.md`);
   const lessons = await getMarkdownFilesFrontMatter("react-fundamentals");
 
-  console.log("lessons: ", lessons);
+  const currentLessonIndex = lessons.findIndex(
+    (lesson) => lesson.slug === slug
+  );
+  const prevLesson = lessons[currentLessonIndex - 1] || null;
+  const nextLesson = lessons[currentLessonIndex + 1] || null;
 
   return {
     props: {
       markdown,
+      prevLesson,
+      nextLesson,
     },
   };
 };
 
-const LessonPage: FC<LessonPageProps> = ({ markdown }) => {
+const LessonPage: FC<LessonPageProps> = ({
+  markdown,
+  prevLesson,
+  nextLesson,
+}) => {
   const {
     frontMatter: { title, description, number },
     mdxSource,
@@ -94,14 +107,14 @@ const LessonPage: FC<LessonPageProps> = ({ markdown }) => {
       </section>
       <section
         id="content"
-        className="max-w-5xl mx-auto my-20 flex flex-col items-center"
+        className="max-w-3xl mx-auto my-20 flex flex-col items-center"
       >
-        <div className="prose prose-lg prose-h2:text-purp prose-h3:text-purp prose-h4:text-purp prose-p:text-gray-100 prose-strong:text-purple-heart prose-em:text-green-500 prose-em:font-semibold prose-a:text-green-500 prose-a:font-semibold prose-a:no-underline">
+        <div className="border max-w-3xl prose prose-lg prose-h2:text-purp prose-h3:text-purp prose-h4:text-purp prose-p:text-gray-100 prose-strong:text-purple-heart prose-em:text-green-500 prose-em:font-semibold prose-a:text-green-500 prose-a:font-semibold prose-a:no-underline">
           <MDXRemote {...mdxSource} />
         </div>
         <div className="flex text-white justify-between w-full mt-10">
-          <div>Prev</div>
-          <div>Next</div>
+          <div>{prevLesson?.title}</div>
+          <div>{nextLesson?.title}</div>
         </div>
       </section>
     </Layout>
