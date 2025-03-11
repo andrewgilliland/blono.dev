@@ -44,6 +44,9 @@ module.exports = {
             li: {
               color: theme("colors.gray.100"),
             },
+            pre: {
+              border: `1px solid ${theme("colors.light")}`,
+            },
           },
         },
       }),
