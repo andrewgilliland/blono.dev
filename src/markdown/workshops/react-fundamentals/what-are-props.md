@@ -20,12 +20,12 @@ const Card = () => {
 }
 ```
 
-We want to pass a string value called `url` and a number value called `size` to `CardImage`. We can add the props to the `CardImage` like this:
+We want to pass a string value called `src` and a string value called `size` to `CardImage`. We can add the props to the `CardImage` like this:
 
 ```jsx
 const Card = () => {
     return (
-        <CardImage url="https://picsum.photos/200" size={100}/>
+        <CardImage url="https://picsum.photos/200" size={200}/>
         <CardBody />
     )
 }
@@ -33,15 +33,20 @@ const Card = () => {
 
 ## How to Read Props
 
+You now read those props inside the `CardImage` component as such:
+
 ```jsx
-function Howdy(props) {
-  return <h1>Howdy, {props.name}</h1>;
+const CardImage = ({src, size}) => {
+    return (
+        <img
+            src={src}
+            height={size}
+            width={size}
+            alt="Random Image"
+        >
+    )
 }
-
-const element = <Howdy name="Biff" />;
 ```
-
-In this example, the `Howdy` component receives a `name` prop and uses it to render a greeting message. The `element` renders the `Welcome` component with the `name` prop set to "Biff".
 
 ## Default Values for Props
 
