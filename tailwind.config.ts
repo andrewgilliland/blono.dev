@@ -26,6 +26,30 @@ module.exports = {
       fontFamily: {
         brand: ["var(--font-poppins)"],
       },
+      typography: (theme) => ({
+        DEFAULT: {
+          css: {
+            code: {
+              color: theme("colors.green.500"),
+              backgroundColor: theme("colors.darker"),
+              borderRadius: theme("borderRadius.lg"),
+              padding: theme("padding.1"),
+            },
+            "code::before": {
+              content: "none",
+            },
+            "code::after": {
+              content: "none",
+            },
+            li: {
+              color: theme("colors.gray.100"),
+            },
+            pre: {
+              border: `1px solid ${theme("colors.light")}`,
+            },
+          },
+        },
+      }),
     },
   },
   darkMode: "class", // or 'media' or 'class'
@@ -33,7 +57,7 @@ module.exports = {
   safelist: [
     {
       pattern:
-        /(bg|text)-(cyan|sky|blue|indigo|violet|purple)-(100|200|300|400|500|600|700|800|900)/,
+        /(bg|text|border)-(cyan|sky|blue|indigo|violet|purple|green)-(100|200|300|400|500|600|700|800|900)/,
     },
   ],
 };

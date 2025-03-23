@@ -1,14 +1,16 @@
 import { FC, ReactNode } from "react";
 
 type ButtonProps = {
+  className?: string;
   title?: string;
-  onClick: () => void;
+  onClick?: () => void;
   children: ReactNode;
   size?: "xs" | "sm" | "md" | "lg";
   theme?: "purp" | "green" | "gray";
 };
 
 const Button: FC<ButtonProps> = ({
+  className = "",
   title = "",
   children,
   size = "lg",
@@ -29,9 +31,13 @@ const Button: FC<ButtonProps> = ({
   };
 
   return (
-    <button title={title} onClick={onClick} className="group relative">
+    <button
+      title={title}
+      onClick={onClick}
+      className={`group relative ${className}`}
+    >
       <div
-        className={`absolute bg-transparent border-2 border-purp rounded-[10px] w-full h-full bottom-0 ${themeOptions[theme].border}`}
+        className={`absolute bg-transparent border-2 rounded-[10px] w-full h-full bottom-0 ${themeOptions[theme].border}`}
       />
       <div
         className={`font-semibold rounded-[10px] transform-gpu transition group-hover:-translate-x-1 group-hover:-translate-y-1 group-active:translate-x-0 group-active:translate-y-0 ${sizeOptions[size]} ${themeOptions[theme].container}`}

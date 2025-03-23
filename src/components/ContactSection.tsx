@@ -1,16 +1,11 @@
-import { FC } from 'react';
-import ButtonLink from './ButtonLink';
-import { HEADER_HEIGHT } from './Layout';
-import Image from 'next/image';
-import { ContactSectionType } from '../../content/pages/home';
+import { FC } from "react";
+import ButtonLink from "./ButtonLink";
+import { HEADER_HEIGHT } from "./Layout";
+import Image from "next/image";
 
-type ContactSectionProps = {
-  contact: ContactSectionType;
-};
+type ContactSectionProps = {};
 
-const ContactSection: FC<ContactSectionProps> = ({ contact }) => {
-  const { subHeading, heading, description } = contact;
-
+const ContactSection: FC<ContactSectionProps> = () => {
   return (
     <section
       id="contact"
@@ -19,13 +14,16 @@ const ContactSection: FC<ContactSectionProps> = ({ contact }) => {
     >
       <div className="flex flex-col-reverse md:flex-row bg-darker border border-light border-opacity-75 rounded-[10px]">
         <div className="px-4 py-8 md:w-1/2 md:px-16 md:py-24">
-          <p className="font-semibold text-base text-purp text-shadow-sm">
-            {subHeading}
+          <p className="font-semibold text-base text-purp-light text-shadow-sm">
+            Get in touch!
           </p>
-          <h2 className="font-bold font-brand text-sky-500 text-4xl text-shadow mt-4">
-            {heading}
+          <h2 className="font-bold text-green-500 text-4xl text-shadow mt-4">
+            Contact Us
           </h2>
-          <div className="text-copy mt-8">{description}</div>
+          <div className="text-copy mt-8">
+            We&apos;d love to hear from you! Send us a message on our LinkedIn
+            page or join the conversation on our Discord!
+          </div>
           <div className="flex gap-6 mt-8">
             <ButtonLink
               href="https://www.linkedin.com/company/bloomington-normal-developers"

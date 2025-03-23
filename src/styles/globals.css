@@ -16,11 +16,11 @@ body {
   font-family: var(--font-secondary);
 }
 
-@layer components {
-  .text-heading-primary {
-    @apply font-brand font-bold text-blue-600 text-4xl;
-  }
+h1 {
+  @apply text-green-500 font-bold text-4xl;
+}
 
+@layer components {
   .text-heading-secondary {
     @apply font-brand font-bold text-purp-light text-4xl;
   }
