@@ -23,9 +23,6 @@ const WorkshopCard = () => {
           </h3>
         </div>
         <div className="mt-6 flex flex-col gap-4 items-start">
-          {/* <h4 className="text-gray-300 text-sm font-semibold mt-4">
-            12 Lessons
-          </h4> */}
           <Badge theme="gray">12 Lessons</Badge>
           <p className="text-copy">
             Learn the basics of React with Bloomington-Normal Developers. This
