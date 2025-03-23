@@ -74,7 +74,7 @@ const LessonPage: FC<LessonPageProps> = ({
 
   return (
     <Layout content={content}>
-      <section id="hero" className="max-w-2xl mx-auto">
+      <section id="hero" className="max-w-[30ch] md:max-w-[65ch] mx-auto">
         <div className="flex justify-center items-center flex-col md:flex-row mt-20 gap-12 md:gap-20">
           <div className="relative">
             <Circle
@@ -108,9 +108,9 @@ const LessonPage: FC<LessonPageProps> = ({
       </section>
       <section
         id="content"
-        className="max-w-3xl mx-auto my-20 flex flex-col items-center"
+        className="mx-auto my-20 flex flex-col items-center"
       >
-        <div className="max-w-3xl prose prose-lg prose-h2:text-purp prose-h3:text-purp prose-h4:text-purp prose-p:text-gray-100 prose-strong:text-purple-heart prose-em:text-green-500 prose-em:font-semibold prose-a:text-green-500 prose-a:font-semibold prose-a:no-underline">
+        <div className="prose md:prose-lg prose-h2:text-purp prose-h3:text-purp prose-h4:text-purp prose-p:text-gray-100 prose-strong:text-purple-heart prose-em:text-green-500 prose-em:font-semibold prose-a:text-green-500 prose-a:font-semibold prose-a:no-underline">
           <MDXRemote {...mdxSource} />
         </div>
         <div className="flex justify-between w-full mt-10">

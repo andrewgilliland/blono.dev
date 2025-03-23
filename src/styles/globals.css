@@ -37,3 +37,10 @@ h1 {
     @apply font-brand font-semibold text-base text-white;
   }
 }
+
+/* prose class has a default max-width of 65ch */
+@media (max-width: 768px) {
+  .prose {
+    max-width: 30ch;
+  }
+}
