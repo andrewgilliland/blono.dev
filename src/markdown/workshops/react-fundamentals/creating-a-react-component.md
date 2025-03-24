@@ -13,51 +13,79 @@ Like HTML elements, React components allow you to compose, order and nest compon
 
 ## Creating a Component
 
+First, go to the `src` directory and open up the `App.jsx` file. Inside you should see:
+
+```jsx
+function App() {
+  return (
+    <div>
+      <h1>React Fundamentals</h1>
+    </div>
+  );
+}
+
+export default App;
+```
+
 To create a React component, follow these steps:
 
-1. **Import React**: Start by importing React from the 'react' library.
+1. **Import React**: Start by importing React from the 'react' library. _Note:_ Starting in React 17, the JSX Transform feature eliminated the need to explicitly import React in files that use JSX.
 
    ```jsx
    import React from "react";
    ```
 
-2. **Define the Function**: Define a JavaScript function with any name you chose, here we are naming the component _ReactCard_.
+2. **Define the Function**: Define a JavaScript function with any name you chose, here we are naming the component _Card_.
 
    ```jsx
-   const ReactCard = () => {};
+   function Card() {}
    ```
 
 3. **Add the Markup**: Create a function that returns JSX. This function is your component
 
    ```jsx
-   return (
-     <div>
-       <h1>Woah, React!</h1>
-       <p>Check me out, I am a React component.</p>
-     </div>
-   );
-   ```
-
-4. **Export the Component**: Export the component so it can be used in other parts of your application.
-
-   ```jsx
-   export default ReactCard;
-   ```
-
-5. **Use the Component**: Import and use your component in another file.
-
-   ```jsx
-   import ReactCard from "./ReactCard";
-
-   const App = () => {
+   function Card() {
      return (
        <div>
-         <ReactCard />
+         <img src="https://picsum.photos/200" />
+         <h2>Lorem, Ipsum.</h2>
+         <p>
+           Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet,
+           necessitatibus veniam facilis optio rerum consequatur iure omnis
+           velit. Optio, nobis!
+         </p>
        </div>
      );
-   };
+   }
+   ```
+
+4. **Use the Component**: Import and use your component in another file.
+
+   ```jsx
+   function App() {
+     return (
+       <div>
+         <h1>React Fundamentals</h1>
+         <Card />
+       </div>
+     );
+   }
 
    export default App;
    ```
 
-By following these steps, you can create and use a React component in your application.
+You've just created and used your first React component!
+
+_Note:_ In JavaScript you can write functions in two ways:
+
+1. **Function Declarations**: They are defined using the `function` keyword. They are hoisted, meaning they can be called before their definition in the code.
+
+```jsx
+function Card {} { ... }
+```
+
+2. **Function Expressions**: They are functions assigned to variables, including arrow functions. They are not hoisted and can only be called after their definition.
+
+```jsx
+const Card = () => { ... }
+```
