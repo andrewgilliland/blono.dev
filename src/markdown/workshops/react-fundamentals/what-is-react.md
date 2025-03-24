@@ -68,3 +68,5 @@ After you have installed you dependencies, run the project with:
 ```bash
 npm run dev
 ```
+
+Then open a browser and enter [http://localhost:5173/](http://localhost:5173/) into the url bar. You should see your React application running.
