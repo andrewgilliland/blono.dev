@@ -2,7 +2,7 @@
 title: "Pure Components"
 slug: "pure-components"
 description: "Learn how to create pure components in React."
-number: 8
+number: 10
 ---
 
 ## What are Pure Functions?
