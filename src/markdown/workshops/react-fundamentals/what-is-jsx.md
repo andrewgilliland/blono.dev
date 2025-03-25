@@ -13,7 +13,7 @@ JSX makes it easier to visualize the structure of your UI components. And by com
 
 ## Syntax Extension
 
-JSX is not standard JavaScript, it extends the JavaScript syntax. This makes it easier for you to describe what your user insterface should look like. JSX is transformed into regular JavaScript code that browsers can understand. Transformation is generally done with tools like [Babel](https://babeljs.io/).
+JSX is not standard JavaScript, it extends the JavaScript syntax. This makes it easier for you to describe what your user interface should look like. JSX is transformed into regular JavaScript code that browsers can understand. Transformation is generally done with tools like [Babel](https://babeljs.io/).
 
 ## HTML-like Structure
 
@@ -31,53 +31,63 @@ JSX creates React "elements", which are the building blocks of React user interf
 
 ### Return a Single Root Element
 
-If you need to return multiple elements in a component, they need to be children of a single root element. Here the `h1` and `p` elements are children of the `div` element.
+If you need to return multiple elements in a component, they need to be children of a single root element. Notice how the `Card` component has all of it's elements children of the `div` element. What happens if you get rid of it.
 
 ```jsx
-const ReactCard = () => {
-  return (
-    <div>
-      <h1>Woah, React!</h1>
-      <p>Check me out, I am a React component.</p>
-    </div>
-  );
-};
+function Card() {
+  return <div>...</div>;
+}
 ```
+
+### Fragments
 
 Alternatively you can wrap elements in an empty element known as a `Fragment`. The syntax looks like this `<>` for an opening tag and `</>` for a closing tag.
 
 ```jsx
-const TodoList = () => {
+function Card() {
   return (
-    <>
-      <h1>Todos:</h1>
-      <ul>
-        <li>Walk the dog</li>
-        <li>Eat a sandwich</li>
-        <li>Walk the cats?</li>
-      </ul>
-    </>
+    <div>
+      <img src="https://picsum.photos/200" />
+      {/* This is a Fragment */}
+      <>
+        <h2>Lorem, Ipsum.</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet,
+          necessitatibus veniam facilis optio rerum consequatur iure omnis
+          velit. Optio, nobis!
+        </p>
+      </>
+    </div>
   );
-};
+}
 ```
 
 Check out [here](https://react.dev/reference/react/Fragment) for more info on `Fragments`.
 
 ### Close All Tags
 
-JSX requires all tags to be explicitly closed. Self-closing tags like `<img>` must be written as `<img/>`, or with a corresponding close tag like `<p></p>`. The same is true for React components. A component named `ReactCard` would have to contain a self-closing tag when used in code like `<ReactCard />`.
+JSX requires all tags to be explicitly closed. Self-closing tags like `<img>` must be written as `<img/>`, or with a corresponding close tag like `<p></p>`. The same is true for React components. A component named `ReactCard` would have to contain a self-closing tag when used in code like `<Card />`.
 
 ### Camel Case for Attributes
 
 JSX turns into JavaScript and attributes written in JSX become keys of JavaScript objects. JavaScript has limitations on variable names so you can't use dashes or reserved keywords. Many HTML and SVG attributes are written in camel case. for example, `class` is a reserved keyword, so in React you use `className` instead.
 
 ```jsx
-const ReactCard = () => {
+function Card() {
   return (
+    // Most attributes are camelCase, and className is used because class is a reserved keyword in JavaScript
     <div className="card">
-      <h1 className="heading">Woah, React!</h1>
-      <p className="copy">Check me out, I am a React component.</p>
+      <img src="https://picsum.photos/200" />
+      {/* This is a Fragment */}
+      <>
+        <h2>Lorem, Ipsum.</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet,
+          necessitatibus veniam facilis optio rerum consequatur iure omnis
+          velit. Optio, nobis!
+        </p>
+      </>
     </div>
   );
-};
+}
 ```
