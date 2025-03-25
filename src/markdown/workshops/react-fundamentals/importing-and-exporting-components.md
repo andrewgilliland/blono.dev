@@ -27,6 +27,8 @@ function Card() {
 }
 ```
 
+_Note:_ You may see some JSX files with the `.js` extension. This is because JSX is a syntax extension of JavaScript, and tools like Babel or TypeScript can transpile JSX into standard JavaScript. Using `.jsx` helps provide clarity of what is contained in the file.
+
 ## Exporting a Component
 
 In JavaScript to export a function, you can use either named exports or default exports using the `export` keyword. So you may see React components exported either way.
