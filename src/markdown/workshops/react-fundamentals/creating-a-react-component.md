@@ -76,7 +76,7 @@ To create a React component, follow these steps:
 
 You've just created and used your first React component!
 
-_Note:_ In JavaScript you can write functions in two ways:
+_Note:_ In JavaScript you can write functions in two ways, so you might see React components declared either way:
 
 1. **Function Declarations**: They are defined using the `function` keyword. They are hoisted, meaning they can be called before their definition in the code.
 
