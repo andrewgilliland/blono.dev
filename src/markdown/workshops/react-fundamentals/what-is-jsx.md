@@ -48,7 +48,6 @@ function Card() {
   return (
     <div>
       <img src="https://picsum.photos/200" />
-      {/* This is a Fragment */}
       <>
         <h2>Lorem, Ipsum.</h2>
         <p>
@@ -75,10 +74,8 @@ JSX turns into JavaScript and attributes written in JSX become keys of JavaScrip
 ```jsx
 function Card() {
   return (
-    // Most attributes are camelCase, and className is used because class is a reserved keyword in JavaScript
     <div className="card">
       <img src="https://picsum.photos/200" />
-      {/* This is a Fragment */}
       <>
         <h2>Lorem, Ipsum.</h2>
         <p>

@@ -115,6 +115,6 @@ export default function greet() {
 }
 
 // Import
-import greetFunction from "./module";
+import greetFunction from "./file";
 greetFunction();
 ```

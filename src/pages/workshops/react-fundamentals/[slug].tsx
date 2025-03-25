@@ -108,7 +108,7 @@ const LessonPage: FC<LessonPageProps> = ({
       </section>
       <section
         id="content"
-        className="mx-auto my-20 flex flex-col items-center"
+        className="max-w-[30ch] md:max-w-[65ch] mx-auto my-20 flex flex-col items-center"
       >
         <div className="prose md:prose-lg prose-h2:text-purp prose-h3:text-purp prose-h4:text-purp prose-p:text-gray-100 prose-strong:text-purple-heart prose-em:text-green-500 prose-em:font-semibold prose-a:text-blue-500 prose-a:font-semibold prose-a:no-underline">
           <MDXRemote {...mdxSource} />
@@ -117,7 +117,7 @@ const LessonPage: FC<LessonPageProps> = ({
           {prevLesson ? (
             <Link
               href={`/workshops/react-fundamentals/${prevLesson?.slug}`}
-              className="text-green-500 font-semibold text-lg hover:underline hover:underline-green-500"
+              className="text-green-500 font-semibold text-lg hover:underline hover:underline-green-500 border-green-500 border-2 px-2 py-1 rounded-[10px]"
             >
               Prev Lesson
             </Link>
@@ -127,7 +127,7 @@ const LessonPage: FC<LessonPageProps> = ({
           {nextLesson ? (
             <Link
               href={`/workshops/react-fundamentals/${nextLesson?.slug}`}
-              className="text-green-500 font-semibold text-lg hover:underline hover:underline-green-500"
+              className="text-green-500 font-semibold text-lg hover:underline hover:underline-green-500 border-green-500 border-2 px-2 py-1 rounded-[10px]"
             >
               Next Lesson
             </Link>
