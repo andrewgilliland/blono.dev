@@ -5,46 +5,51 @@ description: "Learn how to import and export components in React."
 number: 2
 ---
 
-In React, components can be imported and exported to be reused across different parts of your application. This helps in maintaining a modular code structure.
+In React, components are generally kept in their own files to promote better organization, readibility, and maintainability of your codebase. This allows you to separate concerns, and make it easier to locate, test, and resuse components. Since they are in different files, components need to be imported and exported to be reused across different parts of your application.
 
-### Exporting a Component
+## Create a new JSX file
 
-To export a component, you can use either named exports or default exports.
-
-#### Named Export
+Go into your `src` directory and add a directory named, you guessed it, `components`. And then inside the directory create a file called `Card.jsx`. Add the following to the file:
 
 ```jsx
-// MyComponent.js
-export const MyComponent = () => {
-  return <div>Hello, World!</div>;
-};
+function Card() {
+  return (
+    <div>
+      <img src="https://picsum.photos/200" />
+      <h2>Lorem, Ipsum.</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet,
+        necessitatibus veniam facilis optio rerum consequatur iure omnis velit.
+        Optio, nobis!
+      </p>
+    </div>
+  );
+}
 ```
 
-#### Default Export
+## Exporting a Component
+
+In JavaScript to export a function, you can use either named exports or default exports using the `export` keyword. So you may see React components exported either way.
+
+####Named Export
+
+Add the `export` keyword in front of `function`:
 
 ```jsx
-// MyComponent.js
-const MyComponent = () => {
-  return <div>Hello, World!</div>;
-};
-
-export default MyComponent;
+export function Card() { ... }
 ```
 
-### Importing a Component
-
-To import a component, you use the `import` statement.
-
-#### Importing a Named Export
+### Importing a Named Export
 
 ```jsx
-// App.js
-import { MyComponent } from "./MyComponent";
+// App.jsx
+import { Card } from "./components/Card";
 
 const App = () => {
   return (
     <div>
-      <MyComponent />
+      <h1>React Fundamentals</h1>
+      <Card />
     </div>
   );
 };
@@ -52,16 +57,25 @@ const App = () => {
 export default App;
 ```
 
-#### Importing a Default Export
+### Default Export
 
 ```jsx
-// App.js
-import MyComponent from "./MyComponent";
+export function Card() { ... }
+
+export default Card;
+```
+
+### Importing a Default Export
+
+```jsx
+// App.jsx
+import Card from "./components/Card";
 
 const App = () => {
   return (
     <div>
-      <MyComponent />
+      <h1>React Fundamentals</h1>
+      <Card />
     </div>
   );
 };
@@ -70,3 +84,35 @@ export default App;
 ```
 
 By using named and default exports, you can organize and reuse your components efficiently in a React application.
+
+## What's the Difference? 🤷‍♀️
+
+### Named Exports
+
+1. You can export multiple values from a file using named exports.
+2. You must use the exact names of the exported values when importing.
+
+```js
+// Export
+export const greet = () => console.log("Hello!");
+export const farewell = () => console.log("Goodbye!");
+
+// Import
+import { greet, farewell } from "./file";
+```
+
+### Default Exports
+
+1. A file can only have one default export.
+2. You can use any name to refer to the the default export.
+
+```js
+// Export
+export default function greet() {
+  console.log("Hello!");
+}
+
+// Import
+import greetFunction from "./module";
+greetFunction();
+```
