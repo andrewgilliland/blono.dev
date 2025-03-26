@@ -54,6 +54,43 @@ function Button({ message }) {
 }
 ```
 
-What you pass to `useState` is the initial state of your variable. Here we passed `0`.
+What you pass to `useState` is the initial state of your variable. Here we passed `0`. `useState` gives you an array containing two values. First, the state variable. Here we named it `count`. Second, the state setter function. Here we named it `setCount`. The state setter function does two tasks. It updates the state variable and then triggers a render of the component in React.
+
+_Note:_ Just as you are able to destruct objects in JavaScript, you are also able to destruct arrays like you see with `useState`. This allows you to unpack values from an array an assign them to variables in a concise way. Here is an example.
+
+```js
+const numbers = [10, 20, 30];
+
+const [first, second] = numbers;
+
+console.log(first); // 10
+console.log(second); // 20
+```
+
+Now let's see how we can trigger a state update in our `Button` component. We will update our `Button` component like so:
+
+```jsx
+// Button.jsx
+function Button({ message }) {
+  const [count, setCount] = useState(0);
+
+  function incrementCount() {
+    setCount(count + 1);
+  }
+
+  return (
+    <button
+      onClick={() => {
+        console.log(message);
+        incrementCount();
+      }}
+    >
+      {count}
+    </button>
+  );
+}
+```
+
+Here we are calling `setCount` and passing it `count + 1`. This increments `count` by `1` every time we trigger the event handler.
 
 ## Multiple State Variables
