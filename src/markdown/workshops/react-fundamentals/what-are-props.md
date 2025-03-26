@@ -68,10 +68,28 @@ function Card(props) {
 }
 ```
 
-To clean the code up a bit, we can destructor the `props` value and use the `card` variable directly:
+To clean the code up a bit, we can destruct the `props` object and use the `card` variable directly:
 
 ```jsx
 function Card({card}) { ... }
+```
+
+_Note:_ In JavaScript, object destructuring is a syntax that allows you to extract specific properties from an object and assign them to variables in a concise way. Here's an example:
+
+```js
+const user = {
+  name: "Biff",
+  age: 30,
+  location: "Bloomington",
+};
+
+// Object destructuring
+const { name, age, location } = user;
+
+console.log(name); // "Biff"
+console.log(age); // 30
+console.log(location); // "Bloomginton"
+// ...existing code...
 ```
 
 In the code we can access the `src`, `title`, and `description` values directly on the `card` object.
@@ -128,4 +146,40 @@ Now if we do not set the `backgroundColor` it will default to this value. But we
 
 ## How to Pass JSX to a Component
 
-We can also use JSX to nest other components in the components we have built. Wrapper or layout components are great for this!
+Just like we can nest HTML elements inside each other, we can also use JSX to nest other components in the components we have built. Wrapper or layout components are great for this! First, let's open the `components` directory and create a file called `Section.jsx`. Inside this file add the following code:
+
+```jsx
+function Section(props) {
+  return <section></section>;
+}
+
+export default Section;
+```
+
+On the `props` object is a property called `children`. We can destruct the `children` property from `props` and use in our markup:
+
+```jsx
+function Section({ children }) {
+  return <section>{children}</section>;
+}
+```
+
+Now we can nest another component inside our `Section` component. Go to `App.jsx` and we can nest the `Card` component inside the `Section` component, and don't forget to import the `Section` component.
+
+```jsx
+import Section from "./components/Section";
+
+function App() {
+    {...}
+  return (
+    <div>
+      <h1>React Fundamentals</h1>
+      <Section>
+        <Card card={card} backgroundColor="rebeccapurple" />
+      </Section>
+    </div>
+  );
+}
+```
+
+Notice how there is an opening tag `<Section>` and closing tag `</Section>` used to wrap the `Card` component.
