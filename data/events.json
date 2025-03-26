@@ -1,6 +1,19 @@
 [
   {
     "title": "Developer Happy Hour",
+    "date": "2025-04-22T23:00:00.000Z",
+    "startTime": "5PM",
+    "endTime": "7PM",
+    "details": "Join us at Keg Grove Brewery to mingle with local software developers and discuss the tech that excites you! We welcome coders and tech enthusiasts of all skill levels.",
+    "location": "Keg Grove Brewing Company",
+    "image": {
+      "src": "/keg-grove-inside-2.jpg",
+      "alt": "Keg Grove Brewing Company"
+    },
+    "address": "712 E Empire Street, Bloomington, IL"
+  },
+  {
+    "title": "Developer Happy Hour",
     "date": "2025-03-25T23:00:00.000Z",
     "startTime": "5PM",
     "endTime": "7PM",
