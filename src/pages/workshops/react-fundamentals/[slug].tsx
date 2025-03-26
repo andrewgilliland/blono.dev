@@ -110,7 +110,7 @@ const LessonPage: FC<LessonPageProps> = ({
         id="content"
         className="max-w-[30ch] md:max-w-[65ch] mx-auto my-20 flex flex-col items-center"
       >
-        <div className="prose md:prose-lg prose-h2:text-purp prose-h3:text-purp prose-h4:text-purp prose-p:text-gray-100 prose-strong:text-purple-heart prose-em:text-green-500 prose-em:font-semibold prose-a:text-blue-500 prose-a:font-semibold prose-a:no-underline">
+        <div className="prose md:prose-lg prose-h2:text-purp prose-h3:text-purp prose-h4:text-purp prose-p:text-gray-100 prose-strong:text-purple-heart prose-em:text-orange-500 prose-em:font-semibold prose-a:text-blue-500 prose-a:font-semibold prose-a:no-underline">
           <MDXRemote {...mdxSource} />
         </div>
         <div className="flex justify-between w-full mt-10">
