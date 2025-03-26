@@ -153,4 +153,26 @@ function TodoItem({ name, completed }) {
 
 You now notice all the `TodoItem` components that are `completed` will return the JSX with the `line-through` CSS class applied.
 
-## Conditionally Assigning JSX to a Variable
+_Note:_ There may be times you do not want to return anything. For these cases you can use the JavaScript `null` keyword and return nothing. Here is an example in our `TodoItem` if we want to not return anything if it is `completed`:
+
+```jsx
+function TodoItem({ name, completed }) {
+  if (completed) {
+    return null;
+  } else {
+    return <li>{name}</li>;
+  }
+}
+```
+
+## Conditionally Assigning ClassNames
+
+You may have noticed the only difference between the elements that are return in `TodoItem` is the `className="line-through"`. There are many cases where you have the same component but want different CSS classes applied based on a condition. We can update `TodoItem` to add the `line-through` class only if it is `completed`. We will use what are call template literals by using backticks (\`) to surround a string. Then with string interpolation we can use JavaScript expressions and variables in that string with `${expression}`. With string interpolation, we can use a ternary operator in the string template literal. Lets update `TodoItem`.
+
+```jsx
+function TodoItem({ name, completed }) {
+  return <li className={`${completed ? "line-through" : ""}`}>{name}</li>;
+}
+```
+
+_Note:_ In a JSX file, you use `{}` to wrap template literals (\`) because JSX requires JavaScript expression to be enclosed in curly braces.
