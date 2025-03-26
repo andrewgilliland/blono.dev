@@ -75,6 +75,82 @@ Sometimes you may see a logical AND operator (`&&`) used if you want to render a
 </h2>
 ```
 
-## Conditionally Including JSX
+## Conditionally Returning JSX
+
+There are times you may want to some JSX based on a condition. Let's create a new component called `TodoList`. Add the file `TodoList.jsx` to the `components` directory and add the following code:
+
+```jsx
+function TodoList() {
+  return (
+    <div>
+      <h2>Todo List</h2>
+      <ul></ul>
+    </div>
+  );
+}
+
+export default TodoList;
+```
+
+Inside `TodoList.jsx` we will also add a `TodoItem` component with a string prop `name` and a boolean prop `completed`.
+
+```jsx
+// TodoList.jsx
+function TodoItem({ name, completed }) {
+  return <li>{name}</li>;
+}
+
+function TodoList() {
+  ...
+}
+```
+
+Then we will add a few `TodoItem` components to the `TodoList`.
+
+```jsx
+function TodoList() {
+  return (
+    <div>
+      <h2>Todo List</h2>
+      <ul>
+        <TodoItem name="Work out" completed={true} />
+        <TodoItem name="Read Clean Code" completed={false} />
+        <TodoItem name="Learn React" completed={true} />
+      </ul>
+    </div>
+  );
+}
+```
+
+And let's use the `TodoList` component in `App.jsx` and wrap it in a `Section` component.
+
+```jsx
+// App.jsx
+return (
+  <div>
+    <h1>React Fundamentals</h1>
+    <Section>
+      <Card card={card} backgroundColor="rebeccapurple" favorited={true} />
+    </Section>
+    <Section>
+      <TodoList />
+    </Section>
+  </div>
+);
+```
+
+Let's show different JSX in the `TodoItem` based off the value of `completed`. In the `if` block we will return an `li` element with a `className="line-through"`, and in the `else` block we will return the same `li` element.
+
+```jsx
+function TodoItem({ name, completed }) {
+  if (completed) {
+    return <li className="line-through">{name}</li>;
+  } else {
+    return <li>{name}</li>;
+  }
+}
+```
+
+You now notice all the `TodoItem` components that are `completed` will return the JSX with the `line-through` CSS class applied.
 
 ## Conditionally Assigning JSX to a Variable
