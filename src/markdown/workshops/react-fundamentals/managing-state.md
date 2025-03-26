@@ -94,3 +94,32 @@ function Button({ message }) {
 Here we are calling `setCount` and passing it `count + 1`. This increments `count` by `1` every time we trigger the event handler.
 
 ## Multiple State Variables
+
+Let's say we need another state variable in our `Button` component, we just need to define another `useState` hook. Here we will set a state variale as a boolean to `false`.
+
+```jsx
+// Button.jsx
+function Button({ message }) {
+  const [count, setCount] = useState(0);
+  const [on, setOn] = useState(false);
+
+  function incrementCount() {
+    setCount(count + 1);
+  }
+
+  return (
+    <button
+      style={{ backgroundColor: on ? "green" : "red" }}
+      onClick={() => {
+        console.log(message);
+        incrementCount();
+        setOn(!on);
+      }}
+    >
+      {count}
+    </button>
+  );
+}
+```
+
+It is a good idea to have multiple state values if their state is unrelated. But in cases, like a form where you have many fields, it is best practice to use a single state variable that holds and object. But that is a deeper dive into state management.
