@@ -23,7 +23,7 @@ const WorkshopCard = () => {
           </h3>
         </div>
         <div className="mt-6 flex flex-col gap-4 items-start">
-          <Badge theme="gray">12 Lessons</Badge>
+          <Badge theme="gray">10 Lessons</Badge>
           <p className="text-copy">
             Learn the fundamental concepts of React. React is an open source
             JavaScript UI library. This workshop is perfect for beginners with

@@ -46,8 +46,9 @@ const WorkshopPage: FC<WorkshopPageProps> = ({ lessons }) => {
               className="absolute fill-theme-indigo -translate-x-5 md:-translate-y-20 opacity-20"
             />
             <p className="relative font-semibold text-2xl text-white md:mt-10">
-              Get some hands on programming knowledge with Bloomington-Normal
-              Developer&apos;s workshops.
+              Learn the fundamental concepts of React. React is an open source
+              JavaScript UI library. This workshop is perfect for beginners with
+              React and JavaScript.
             </p>
           </div>
         </div>
