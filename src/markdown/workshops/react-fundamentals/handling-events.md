@@ -138,3 +138,27 @@ function Button({ message }) {
 ```
 
 ## Pass Functions, Don't Call Functions
+
+Take note when you are passing functions to event handlers, the functions must be passed and not called. What's the difference? Let's call the function in the `onClick` prop in `Button` by following `handleClick` with `()`.
+
+```jsx
+function Button() {
+  function handleClick() {
+    console.log("Woah!");
+  }
+
+  return <button onClick={handleClick()}>Click me!</button>;
+}
+```
+
+If you look in the console, you will see that the function was called immediately. This is because JavaScript inside `{}` will execute right away. If the `handleClick` function is pass as an `onClick` event handler, React will remember it and only call it when a click happens. So with event handlers remember:
+
+```jsx
+// Do this - pass the function
+<button onClick={handleClick}>Click me!</button>
+
+// Not this - call the function
+<button onClick={handleClick()}>Click me!</button>
+```
+
+_Note:_ React logs twice in development mode due to React Strict Mode, which helps identify side effects by intentionally invoking certain methods and effects twice.
