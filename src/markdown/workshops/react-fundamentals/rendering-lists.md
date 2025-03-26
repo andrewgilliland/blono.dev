@@ -23,19 +23,21 @@ In `App.jsx` we have one `Card` component, but say we have two more `Card` compo
 That's not too bad, but let's say we have more `Card` components we need to render that all have different data. Then this might get problematic. So let's put this data into an array. Luckily there is already an array called `cards` in the `variables.js` file that is being exported. Import `cards` into `App.jsx`.
 
 ```jsx
+// App.jsx
 import { cards } from "./variables";
 ```
 
 Then delete the `Card` components in the `Section` component. Here we are going to use a `map` array method on the `cards` array. In between the `Section` tags add the following:
 
 ```jsx
-{
-  cards.map((card) => {
+// App.jsx
+<Section>
+  {cards.map((card) => {
     return (
       <Card card={card} backgroundColor="rebeccapurple" favorited={true} />
     );
-  });
-}
+  })}
+</Section>
 ```
 
 _Note:_ The JavaScript array `map` method creates a new array by applying logic that iterates over each element of the array. Here's an example:
@@ -55,11 +57,11 @@ You may have noticed that the `cards` array data is not fully being rendered as 
 
 ```jsx
 // App.jsx
-{
-  cards.map((card) => {
+<Section>
+  {cards.map((card) => {
     return <Card card={card} />;
-  });
-}
+  })}
+</Section>
 ```
 
 ```jsx
@@ -149,3 +151,32 @@ return (
 Now we should only be rendering the `todos` that have their `completed` value set to false.
 
 ## Keys
+
+If you open up your developer tools in your browser and look at the `Console` tab, you should see this warning `Each child in a list should have a unique "key" prop.` twice. And it says to `Check the render  method` of `App` and `TodoList`. To fix this, you need to give each array item a `key` prop that unquely identifies it from every other item in that array. Add the following in `App.jsx` to fix this:
+
+```jsx
+// App.jsx
+<Section>
+  {cards.map((card) => {
+    return <Card key={card.id} card={card} />;
+  })}
+</Section>
+```
+
+And in `TodoList.jsx`:
+
+```jsx
+<ul>
+  {incompleteTodos.map((todo) => {
+    return (
+      <TodoItem key={todo.id} name={todo.name} completed={todo.completed} />
+    );
+  })}
+</ul>
+```
+
+If you look in the `Console` again, those warnings should be gone. So why do we need the `key` prop? It is React's way off keeping track of each component. This is important if the items in your array move from getting sorted, new items get inserted, or items get deleted. This helps React update the correct component. A few rules to follow with keys:
+
+- JSX elements inside a map must always have keys.
+- Keys must be unique in an array that is being rendered.
+- Keys must not change. Do not generate them while rendering.
