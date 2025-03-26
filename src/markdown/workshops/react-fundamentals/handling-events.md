@@ -42,7 +42,7 @@ function App() {
 }
 ```
 
-Now in `Button.jsx` lets add a function called `handleClick` that calls `console.log("Woah!")`. Then add `onClick={handleClick}` to the `button` element. A convention to follow when creating event handlers is to start with `handle` and follow with the name of the event.
+Now in `Button.jsx` lets add a function called `handleClick` that calls `console.log("Woah!")`. Then add `onClick={handleClick}` to the `button` element. A convention to follow when creating event handlers is to start with `handle` and follow with the name of the event. And event handlers are generally defined inside the components you use them in\*.
 
 ```jsx
 // Button.jsx
@@ -104,5 +104,37 @@ _Note:_ When you use the syntax for a JavaScript function that looks like this:
 It is called an anonymous arrow function. You might have noticed that syntax in our array methods.
 
 ## Passing Props to Event Handlers
+
+Since you declared your event handler inside you `Button` component, you have access to props. So lets add a `message` prop and use it within our event handler.
+
+```jsx
+// App.jsx
+function App() {
+  return (
+    <div>
+      <h1>React Fundamentals</h1>
+      <Section>
+        <Button message="You really did click me!" />
+      </Section>
+      ...
+    </div>
+  );
+}
+```
+
+```jsx
+// Button.jsx
+function Button({ message }) {
+  return (
+    <button
+      onClick={() => {
+        console.log(message);
+      }}
+    >
+      Click me!
+    </button>
+  );
+}
+```
 
 ## Pass Functions, Don't Call Functions
