@@ -87,4 +87,65 @@ Now we should see the `cards` array data being rendered as expected.
 
 ## Rendering Filtered Arrays
 
+Let's say you have a list of data you want to filter through condition. You need to get data that has a certain boolean value, role, or product type. We can filter through array data with the JavaScript array `filter` method. Let's try an example in the `TodoList` component. In `TodoList.jsx`, import `todos` from `variables.js`.
+
+```jsx
+// TodoList.jsx
+import { todos } from "../variables";
+```
+
+Then before we return the markup in `TodoList`, we will create a `incompleteTodos` array using the `filter` array method.
+
+```jsx
+// TodoList.jsx
+function TodoList() {
+    const incompleteTodos = todos.filter((todo) => {
+        return !todo.completed;
+    });
+
+    return ( ... );
+}
+```
+
+_Note:_ The JavaScript `filter()` array method creates a new array containing only the elements of the original array that satisfy a given condition. So only elements that return the boolean value `true` will be contained in the new array. Here's an example:
+
+```js
+const numbers = [1, 2, 3, 4, 5];
+
+// Use filter to create a new array with only even numbers
+const evens = numbers.filter((number) => {
+  return number % 2 === 0;
+});
+
+console.log(evens); // [2, 4]
+```
+
+_Note:_ Here we are also using the `!` operator, also known as the logical NOT operator. This inverts the truthiness of a value. Here's an example:
+
+```jsx
+const isLoggedIn = false;
+
+// Use the ! operator to invert the value
+if (!isLoggedIn) {
+  console.log("User is not logged in.");
+}
+```
+
+Now we can update the `TodoList` to use the `incompleteTodos` array and `map` over the `TodoItem` component:
+
+```jsx
+return (
+  <div>
+    <h2>Todo List</h2>
+    <ul>
+      {incompleteTodos.map((todo) => {
+        return <TodoItem name={todo.name} completed={todo.completed} />;
+      })}
+    </ul>
+  </div>
+);
+```
+
+Now we should only be rendering the `todos` that have their `completed` value set to false.
+
 ## Keys
