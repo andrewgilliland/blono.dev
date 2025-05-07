@@ -21,7 +21,7 @@ export async function getStaticProps() {
 }
 
 const HomePage = ({ events }: HomePageProps) => {
-  const { hero, about, contact } = content.pages.home;
+  const { hero, about } = content.pages.home;
 
   return (
     <Layout content={content}>
