@@ -6,6 +6,7 @@ import { content } from "../../content";
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import EventSection from "@/components/EventSection";
+import UpcomingEventsSection from "@/components/UpcomingEventsSection";
 import ContactSection from "@/components/ContactSection";
 
 type HomePageProps = {
@@ -26,7 +27,7 @@ const HomePage = ({ events }: HomePageProps) => {
   return (
     <Layout content={content}>
       <HeroSection hero={hero} />
-      <EventSection events={events} />
+      <UpcomingEventsSection events={events} />
       <AboutSection content={about} />
       <ContactSection />
     </Layout>
