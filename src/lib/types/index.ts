@@ -5,4 +5,18 @@ type Lesson = {
   number: number;
 };
 
-export type { Lesson };
+type Event = {
+  title: string;
+  date: string;
+  startTime: string;
+  endTime: string;
+  details: string;
+  location: string;
+  image: {
+    src: string;
+    alt: string;
+  };
+  address: string;
+};
+
+export type { Lesson, Event };

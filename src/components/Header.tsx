@@ -5,12 +5,14 @@ import MobileHeader from "./MobileHeader";
 import { palette } from "@/styles/colors";
 import { HEADER_HEIGHT } from "./Layout";
 import HeaderBanner from "./HeaderBanner";
+import { Event } from "@/types";
 
 type HeaderProps = {
+  events: Event[];
   content: Content;
 };
 
-const Header: FC<HeaderProps> = ({ content }) => {
+const Header: FC<HeaderProps> = ({ events, content }) => {
   return (
     <>
       <header className="fixed z-20 w-full bg-black">
@@ -23,7 +25,7 @@ const Header: FC<HeaderProps> = ({ content }) => {
         />
         <MobileHeader content={content} />
         <DesktopHeader content={content} />
-        <HeaderBanner />
+        <HeaderBanner events={events} />
       </header>
     </>
   );

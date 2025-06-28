@@ -22,7 +22,7 @@ const HomePage = ({ events }: HomePageProps) => {
   const { hero, about } = content.pages.home;
 
   return (
-    <Layout content={content}>
+    <Layout events={events} content={content}>
       <HeroSection hero={hero} />
       <UpcomingEventsSection events={events} />
       <AboutSection content={about} />
