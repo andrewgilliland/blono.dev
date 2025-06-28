@@ -1,22 +1,19 @@
-import fs from "fs";
-import path from "path";
 import Layout from "@/components/Layout";
 import { Event } from "@/types";
 import { content } from "../../content";
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
-import EventSection from "@/components/EventSection";
+// import EventSection from "@/components/EventSection";
 import UpcomingEventsSection from "@/components/UpcomingEventsSection";
 import ContactSection from "@/components/ContactSection";
+import { getAllEvents } from "@/lib/actions/events";
 
 type HomePageProps = {
   events: Event[];
 };
 
 export async function getStaticProps() {
-  const filePath = path.join(process.cwd(), "data", "events.json");
-  const jsonData = fs.readFileSync(filePath, "utf-8");
-  const events: Event[] = JSON.parse(jsonData);
+  const events = getAllEvents();
 
   return { props: { events } };
 }
