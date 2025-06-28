@@ -6,7 +6,7 @@ import { Content } from "../../content";
 import { Event } from "@/types";
 
 type LayoutProps = {
-  events: Event[];
+  events?: Event[];
   content: Content;
   children: ReactNode;
 };

@@ -8,7 +8,7 @@ import HeaderBanner from "./HeaderBanner";
 import { Event } from "@/types";
 
 type HeaderProps = {
-  events: Event[];
+  events?: Event[];
   content: Content;
 };
 

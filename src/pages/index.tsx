@@ -3,10 +3,10 @@ import { Event } from "@/types";
 import { content } from "../../content";
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
-// import EventSection from "@/components/EventSection";
 import UpcomingEventsSection from "@/components/UpcomingEventsSection";
 import ContactSection from "@/components/ContactSection";
 import { getAllEvents } from "@/lib/actions/events";
+// import EventSection from "@/components/EventSection";
 
 type HomePageProps = {
   events: Event[];
