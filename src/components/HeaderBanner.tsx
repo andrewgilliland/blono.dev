@@ -34,11 +34,14 @@ const HeaderBanner: FC<HeaderBannerProps> = ({ events }) => {
   }
 
   return (
-    <div className="text-center bg-green-500 font-semibold text-balance text-sm text-black px-[10%] py-1">
-      <a href="#events" className="hover:underline">
-        {getNextEventDate(events)
-          ? `Bloomington-Normal Developer's next event is on ${getNextEventDate(events)}`
-          : "No upcoming events"}
+    <div className="flex justify-center bg-green-500 px-[10%] pt-2 pb-1">
+      <a className="group" href="#events">
+        <div className="font-semibold text-balance text-center text-sm text-black">
+          {getNextEventDate(events)
+            ? `Bloomington-Normal Developer's next event is on ${getNextEventDate(events)}`
+            : "No upcoming events"}
+        </div>
+        <div className="bg-black h-[2px] w-[0%] rounded-full group-hover:w-full transition-all" />
       </a>
     </div>
   );
