@@ -4,7 +4,7 @@ import { content } from "../../../../content";
 import LessonCard from "@/components/LessonCard";
 import { FC } from "react";
 import { getMarkdownFilesFrontMatter } from "@/lib/utils/mdx-utils";
-import { Lesson } from "@/lib/types";
+import { Lesson } from "@/types";
 
 type WorkshopPageProps = {
   lessons: Lesson[];

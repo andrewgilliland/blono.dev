@@ -10,7 +10,7 @@ import {
   getMarkdownFilesFrontMatter,
 } from "@/lib/utils/mdx-utils";
 import { GetStaticPaths, GetStaticProps } from "next";
-import { Lesson } from "@/lib/types";
+import { Lesson } from "@/types";
 
 type LessonPageProps = {
   markdown: {
