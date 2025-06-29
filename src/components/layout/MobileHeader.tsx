@@ -1,8 +1,8 @@
 import { FC, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import OpenClose from "./icons/OpenClose";
 import MobileNavMenu from "./MobileNavMenu";
+import OpenClose from "../icons/OpenClose";
 import { ImageType, NavLinkType } from "@/types";
 
 type MobileHeaderProps = {

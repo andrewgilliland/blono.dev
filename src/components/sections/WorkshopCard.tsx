@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
-import Button from "@/components/Button";
-import Badge from "./Badge";
+import Button from "@/components/ui/Button";
+import Badge from "../ui/Badge";
 
 const WorkshopCard = () => {
   return (

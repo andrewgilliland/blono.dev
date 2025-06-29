@@ -1,9 +1,9 @@
-import Layout from "@/components/Layout";
-import Circle from "@/components/icons/Circle";
-import LessonCard from "@/components/LessonCard";
 import { FC } from "react";
+import Layout from "@/components/layout/Layout";
+import Circle from "@/components/icons/Circle";
 import { getMarkdownFilesFrontMatter } from "@/lib/utils/mdx-utils";
 import { LessonType } from "@/types";
+import LessonCard from "@/components/sections/LessonCard";
 
 type WorkshopPageProps = {
   lessons: LessonType[];

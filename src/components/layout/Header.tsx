@@ -1,8 +1,8 @@
 import { FC } from "react";
-import DesktopHeader from "./DesktopHeader";
-import MobileHeader from "./MobileHeader";
 import { palette } from "@/styles/colors";
 import { HEADER_HEIGHT } from "./Layout";
+import MobileHeader from "./MobileHeader";
+import DesktopHeader from "./DesktopHeader";
 import HeaderBanner from "./HeaderBanner";
 import { EventType, NavLinkType } from "@/types";
 

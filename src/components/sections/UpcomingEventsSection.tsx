@@ -1,8 +1,8 @@
-import { EventType } from "@/types";
 import { FC } from "react";
+import { EventType } from "@/types";
 import EventCard from "./EventCard";
-import { HEADER_HEIGHT } from "./Layout";
-import Circle from "./icons/Circle";
+import Circle from "../icons/Circle";
+import { HEADER_HEIGHT } from "../layout/Layout";
 
 type EventSectionProps = {
   events: EventType[];

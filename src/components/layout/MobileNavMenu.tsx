@@ -1,6 +1,6 @@
-import { FC } from 'react';
-import NavLink from './NavLink';
-import { HEADER_HEIGHT } from './Layout';
+import { FC } from "react";
+import NavLink from "./NavLink";
+import { HEADER_HEIGHT } from "./Layout";
 
 type MobileNavMenuProps = {
   links: { href: string; text: string }[];
@@ -20,7 +20,7 @@ const MobileNavMenu: FC<MobileNavMenuProps> = ({ links, isOpen }) => {
             }s`,
           }}
           className={`flex justify-center items-center bg-black text-white absolute h-24 w-full ${
-            isOpen ? 'translate-x-0' : 'translate-x-full'
+            isOpen ? "translate-x-0" : "translate-x-full"
           } transition-transform`}
         >
           <div className="absolute bg-dark-blue h-full w-full opacity-50 z-0" />

@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
 import Link from "next/link";
-import Layout from "@/components/Layout";
+import Layout from "@/components/layout/Layout";
 import Circle from "@/components/icons/Circle";
 import {
   getMarkdownContent,

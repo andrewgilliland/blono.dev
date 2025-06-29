@@ -1,7 +1,7 @@
-import Layout from "@/components/Layout";
-import ContactSection from "@/components/ContactSection";
 import Circle from "@/components/icons/Circle";
-import WorkshopCard from "@/components/WorkshopCard";
+import Layout from "@/components/layout/Layout";
+import ContactSection from "@/components/sections/ContactSection";
+import WorkshopCard from "@/components/sections/WorkshopCard";
 
 const WorkshopsPage = () => {
   return (

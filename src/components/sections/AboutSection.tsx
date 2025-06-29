@@ -1,7 +1,7 @@
 import { FC } from "react";
+import { BadgeTheme } from "../ui/Badge";
+import { HEADER_HEIGHT } from "../layout/Layout";
 import DeveloperCard from "./DeveloperCard";
-import { HEADER_HEIGHT } from "./Layout";
-import { BadgeTheme } from "./Badge";
 
 type AboutSectionProps = {};
 

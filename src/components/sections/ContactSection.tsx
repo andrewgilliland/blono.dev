@@ -1,7 +1,7 @@
 import { FC } from "react";
-import ButtonLink from "./ButtonLink";
-import { HEADER_HEIGHT } from "./Layout";
 import Image from "next/image";
+import { HEADER_HEIGHT } from "../layout/Layout";
+import ButtonLink from "../ui/ButtonLink";
 
 type ContactSectionProps = {};
 

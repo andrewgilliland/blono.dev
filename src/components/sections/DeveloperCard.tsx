@@ -1,7 +1,7 @@
 import { DeveloperType } from "@/types";
 import Image from "next/image";
 import { FC } from "react";
-import Badge, { BadgeTheme } from "./Badge";
+import Badge, { BadgeTheme } from "../ui/Badge";
 
 type DeveloperCardProps = {
   developer: DeveloperType;
