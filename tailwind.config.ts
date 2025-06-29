@@ -1,3 +1,5 @@
+const pluginTypography = require("@tailwindcss/typography");
+
 module.exports = {
   mode: "jit",
   content: [
@@ -59,4 +61,5 @@ module.exports = {
         /(bg|text|border)-(cyan|sky|blue|indigo|violet|purple|green)-(100|200|300|400|500|600|700|800|900)/,
     },
   ],
+  plugins: [pluginTypography],
 };
