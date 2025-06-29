@@ -19,11 +19,11 @@ export async function getStaticProps() {
 }
 
 const HomePage = ({ events }: HomePageProps) => {
-  const { hero, about } = content.pages.home;
+  const { about } = content.pages.home;
 
   return (
-    <Layout events={events} content={content}>
-      <HeroSection hero={hero} />
+    <Layout events={events}>
+      <HeroSection />
       <UpcomingEventsSection events={events} />
       <AboutSection content={about} />
       <ContactSection />

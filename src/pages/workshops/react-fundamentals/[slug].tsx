@@ -3,7 +3,6 @@ import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
 import Link from "next/link";
 import Layout from "@/components/Layout";
 import Circle from "@/components/icons/Circle";
-import { content } from "../../../../content";
 import {
   getMarkdownContent,
   getMarkdownFiles,
@@ -73,7 +72,7 @@ const LessonPage: FC<LessonPageProps> = ({
   } = markdown;
 
   return (
-    <Layout content={content}>
+    <Layout>
       <section id="hero" className="max-w-[30ch] md:max-w-[65ch] mx-auto">
         <div className="flex justify-center items-center flex-col md:flex-row mt-20 gap-12 md:gap-20">
           <div className="relative">

@@ -1,12 +1,9 @@
 import { FC } from "react";
 import HeroGrid from "./HeroGrid";
 import Image from "next/image";
-import { HeroSectionType } from "../../content/pages/home";
 import Circle from "./icons/Circle";
 
-type HeroSectionProps = {
-  hero: HeroSectionType;
-};
+type HeroSectionProps = {};
 
 const HeroSection: FC<HeroSectionProps> = () => {
   return (

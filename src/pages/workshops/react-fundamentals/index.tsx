@@ -1,6 +1,5 @@
 import Layout from "@/components/Layout";
 import Circle from "@/components/icons/Circle";
-import { content } from "../../../../content";
 import LessonCard from "@/components/LessonCard";
 import { FC } from "react";
 import { getMarkdownFilesFrontMatter } from "@/lib/utils/mdx-utils";
@@ -22,7 +21,7 @@ export const getStaticProps = async () => {
 
 const WorkshopPage: FC<WorkshopPageProps> = ({ lessons }) => {
   return (
-    <Layout content={content}>
+    <Layout>
       <section id="hero" className="max-w-5xl mx-auto">
         <div className="flex justify-center items-center flex-col md:flex-row mt-20 gap-12 md:gap-20">
           <div className="relative">

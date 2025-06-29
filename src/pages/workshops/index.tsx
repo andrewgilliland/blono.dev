@@ -1,12 +1,11 @@
 import Layout from "@/components/Layout";
-import { content } from "../../../content";
 import ContactSection from "@/components/ContactSection";
 import Circle from "@/components/icons/Circle";
 import WorkshopCard from "@/components/WorkshopCard";
 
 const WorkshopsPage = () => {
   return (
-    <Layout content={content}>
+    <Layout>
       <section id="hero" className="max-w-5xl mx-auto">
         <div className="flex justify-center items-center flex-col md:flex-row mt-20 gap-12 md:gap-20">
           <div className="relative">

@@ -2,23 +2,24 @@ import { FC, ReactNode } from "react";
 import SEO from "./SEO";
 import Header from "./Header";
 import Footer from "./Footer";
-import { Content } from "../../content";
 import { EventType } from "@/types";
 
 type LayoutProps = {
   events?: EventType[];
-  content: Content;
+
   children: ReactNode;
 };
 
 export const HEADER_HEIGHT = 80;
 
-const Layout: FC<LayoutProps> = ({ events, content, children }) => {
+const Layout: FC<LayoutProps> = ({ events, children }) => {
   return (
     <div className="flex flex-col bg-dark">
       <SEO
-        title={content.pages.home.hero.heading}
-        description={content.pages.home.hero.tagline}
+        title={"Bloomington-Normal Developers"}
+        description={
+          "Bloomington-Normal's group for professional software developers and designers."
+        }
       />
       <Header events={events} />
       <main className="min-h-screen px-8" style={{ marginTop: HEADER_HEIGHT }}>
