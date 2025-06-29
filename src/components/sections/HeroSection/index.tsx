@@ -1,6 +1,6 @@
 import { FC } from "react";
 import Image from "next/image";
-import Circle from "../icons/Circle";
+import Circle from "../../icons/Circle";
 import HeroGrid from "./HeroGrid";
 
 type HeroSectionProps = {};
