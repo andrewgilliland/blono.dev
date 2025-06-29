@@ -53,7 +53,6 @@ module.exports = {
     },
   },
   darkMode: "class", // or 'media' or 'class'
-  presets: [require("./src/lib/tailwind-preset")],
   safelist: [
     {
       pattern:
