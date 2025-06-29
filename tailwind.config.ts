@@ -1,4 +1,4 @@
-const pluginTypography = require("@tailwindcss/typography");
+import pluginTypography from "@tailwindcss/typography";
 
 module.exports = {
   mode: "jit",
