@@ -1,20 +1,20 @@
+import { FC } from "react";
 import { palette } from "@/styles/colors";
 import Image from "next/image";
 import Link from "next/link";
-import { FC } from "react";
 import DiscordIcon from "@/components/icons/DiscordIcon";
 import LinkedInIcon from "@/components/icons/LinkedInIcon";
 import MeetupIcon from "@/components/icons/MeetupIcon";
-import { Content } from "../../content";
 
-type FooterProps = {
-  content: Content;
-};
+type FooterProps = {};
 
-const Footer: FC<FooterProps> = ({ content }) => {
-  const { mainLogo } = content.global;
-  const { copyright } = content.footer;
-  const links = [
+const Footer: FC<FooterProps> = () => {
+  const mainLogo = {
+    src: "/bn-logo-1.svg",
+    alt: "Bloomington-Normal Developers Logo",
+  };
+
+  const socialLinks = [
     {
       href: "https://discord.gg/5XfdtzHrjH",
       text: "Discord",
@@ -32,6 +32,8 @@ const Footer: FC<FooterProps> = ({ content }) => {
     },
   ];
 
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer
       style={{ backgroundColor: palette.darkBlueish }}
@@ -48,7 +50,7 @@ const Footer: FC<FooterProps> = ({ content }) => {
           />
         </Link>
         <div className="flex gap-5">
-          {links.map(({ href, icon }) => (
+          {socialLinks.map(({ href, icon }) => (
             <a
               className="hover:scale-110 hover:rotate-12 transition-transform"
               key={href}
@@ -61,7 +63,7 @@ const Footer: FC<FooterProps> = ({ content }) => {
       </div>
       <div className="flex flex-col items-center mt-12">
         <p className="text-gray-300 mb-3 font-bold uppercase text-center">
-          © Bloomington-Normal Developers. {copyright}
+          {`© ${currentYear} Bloomington-Normal Developers. All rights reserved.`}
         </p>
 
         <p className="text-gray-100 text-sm text-center">

@@ -24,7 +24,7 @@ const Layout: FC<LayoutProps> = ({ events, content, children }) => {
       <main className="min-h-screen px-8" style={{ marginTop: HEADER_HEIGHT }}>
         {children}
       </main>
-      <Footer content={content} />
+      <Footer />
     </div>
   );
 };

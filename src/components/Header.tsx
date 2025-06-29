@@ -12,7 +12,7 @@ type HeaderProps = {
 
 const Header: FC<HeaderProps> = ({ events }) => {
   const mainLogo = {
-    src: "/bnd-header-logo-white.svg",
+    src: "/bn-logo-1.svg",
     alt: "Bloomington-Normal Developers Logo",
   };
 
