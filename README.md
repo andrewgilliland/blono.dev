@@ -5,3 +5,5 @@ A web app built with [Next.js](https://nextjs.org/). This project uses the Pages
 ## Live Demo
 
 🌐 [https://blono.dev](https://blono.dev)
+
+updates updates updates
