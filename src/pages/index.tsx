@@ -1,6 +1,5 @@
 import Layout from "@/components/Layout";
 import { EventType } from "@/types";
-import { content } from "../../content";
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import UpcomingEventsSection from "@/components/UpcomingEventsSection";
@@ -19,13 +18,11 @@ export async function getStaticProps() {
 }
 
 const HomePage = ({ events }: HomePageProps) => {
-  const { about } = content.pages.home;
-
   return (
     <Layout events={events}>
       <HeroSection />
       <UpcomingEventsSection events={events} />
-      <AboutSection content={about} />
+      <AboutSection />
       <ContactSection />
     </Layout>
   );
