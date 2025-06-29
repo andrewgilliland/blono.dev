@@ -1,18 +1,28 @@
 import { FC } from "react";
-import { Content } from "../../content";
 import DesktopHeader from "./DesktopHeader";
 import MobileHeader from "./MobileHeader";
 import { palette } from "@/styles/colors";
 import { HEADER_HEIGHT } from "./Layout";
 import HeaderBanner from "./HeaderBanner";
-import { Event } from "@/types";
+import { Event, NavLink } from "@/types";
 
 type HeaderProps = {
   events?: Event[];
-  content: Content;
 };
 
-const Header: FC<HeaderProps> = ({ events, content }) => {
+const Header: FC<HeaderProps> = ({ events }) => {
+  const mainLogo = {
+    src: "/bnd-header-logo-white.svg",
+    alt: "Bloomington-Normal Developers Logo",
+  };
+
+  const navLinks: NavLink[] = [
+    { href: "/#events", text: "Events" },
+    { href: "/workshops", text: "Workshops" },
+    { href: "/#about", text: "About" },
+    { href: "/#contact", text: "Contact" },
+  ];
+
   return (
     <>
       <header className="fixed z-20 w-full bg-black">
@@ -23,8 +33,8 @@ const Header: FC<HeaderProps> = ({ events, content }) => {
             height: HEADER_HEIGHT,
           }}
         />
-        <MobileHeader content={content} />
-        <DesktopHeader content={content} />
+        <MobileHeader logo={mainLogo} navLinks={navLinks} />
+        <DesktopHeader logo={mainLogo} navLinks={navLinks} />
         <HeaderBanner events={events} />
       </header>
     </>

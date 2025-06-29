@@ -20,7 +20,7 @@ const Layout: FC<LayoutProps> = ({ events, content, children }) => {
         title={content.pages.home.hero.heading}
         description={content.pages.home.hero.tagline}
       />
-      <Header events={events} content={content} />
+      <Header events={events} />
       <main className="min-h-screen px-8" style={{ marginTop: HEADER_HEIGHT }}>
         {children}
       </main>

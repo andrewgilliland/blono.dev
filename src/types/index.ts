@@ -3,6 +3,11 @@ export type ImageProps = {
   alt: string;
 };
 
+export type NavLink = {
+  href: string;
+  text: string;
+};
+
 export type Post = {
   filePath: string;
   data: {

@@ -6,13 +6,7 @@ import { global, GlobalContent } from "./global";
 
 export type Content = {
   global: GlobalContent;
-  header: {
-    logo: {
-      src: string;
-      alt: string;
-    };
-    links: { href: string; text: string }[];
-  };
+
   pages: {
     home: HomePageContent;
     ["404"]: {
@@ -28,18 +22,7 @@ export type Content = {
 
 export const content: Content = {
   global: global,
-  header: {
-    logo: {
-      src: "/bnd-header-logo-white.svg",
-      alt: "Bloomington-Normal Developers Logo",
-    },
-    links: [
-      { href: "/#events", text: "Events" },
-      { href: "/workshops", text: "Workshops" },
-      { href: "/#about", text: "About" },
-      { href: "/#contact", text: "Contact" },
-    ],
-  },
+
   pages: {
     home: home,
     ["404"]: {

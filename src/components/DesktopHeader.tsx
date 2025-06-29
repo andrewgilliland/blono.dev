@@ -1,32 +1,30 @@
-import { FC } from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
-import NavLink from './NavLink';
-import { Content } from '../../content';
+import { FC } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import NavLink from "./NavLink";
+import { ImageProps, NavLink as NavLinkType } from "@/types";
 
 type DesktopHeaderProps = {
-  content: Content;
+  logo: ImageProps;
+  navLinks: NavLinkType[];
 };
 
-const DesktopHeader: FC<DesktopHeaderProps> = ({ content }) => {
-  const { mainLogo } = content.global;
-  const { links } = content.header;
-
+const DesktopHeader: FC<DesktopHeaderProps> = ({ logo, navLinks }) => {
   return (
     <div className="hidden md:flex justify-between items-center px-[10%] py-4">
       <Link className="z-10" href="/">
         <Image
           className="h-12"
-          src={mainLogo.src}
+          src={logo.src}
           width={190}
           height={100}
-          alt={mainLogo.alt}
+          alt={logo.alt}
           priority
         />
       </Link>
 
       <div className="flex gap-12">
-        {links.map((link) => (
+        {navLinks.map((link) => (
           <NavLink key={link.text} link={link} />
         ))}
       </div>
