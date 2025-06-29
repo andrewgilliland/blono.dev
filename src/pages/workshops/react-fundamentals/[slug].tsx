@@ -10,7 +10,7 @@ import {
   getMarkdownFilesFrontMatter,
 } from "@/lib/utils/mdx-utils";
 import { GetStaticPaths, GetStaticProps } from "next";
-import { Lesson } from "@/types";
+import { LessonType } from "@/types";
 
 type LessonPageProps = {
   markdown: {
@@ -22,8 +22,8 @@ type LessonPageProps = {
     };
     mdxSource: MDXRemoteSerializeResult;
   };
-  prevLesson: Lesson | null;
-  nextLesson: Lesson | null;
+  prevLesson: LessonType | null;
+  nextLesson: LessonType | null;
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {

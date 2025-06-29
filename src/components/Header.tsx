@@ -4,10 +4,10 @@ import MobileHeader from "./MobileHeader";
 import { palette } from "@/styles/colors";
 import { HEADER_HEIGHT } from "./Layout";
 import HeaderBanner from "./HeaderBanner";
-import { Event, NavLink } from "@/types";
+import { EventType, NavLinkType } from "@/types";
 
 type HeaderProps = {
-  events?: Event[];
+  events?: EventType[];
 };
 
 const Header: FC<HeaderProps> = ({ events }) => {
@@ -16,7 +16,7 @@ const Header: FC<HeaderProps> = ({ events }) => {
     alt: "Bloomington-Normal Developers Logo",
   };
 
-  const navLinks: NavLink[] = [
+  const navLinks: NavLinkType[] = [
     { href: "/#events", text: "Events" },
     { href: "/workshops", text: "Workshops" },
     { href: "/#about", text: "About" },

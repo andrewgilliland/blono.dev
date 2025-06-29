@@ -1,5 +1,5 @@
 import Layout from "@/components/Layout";
-import { Event } from "@/types";
+import { EventType } from "@/types";
 import { content } from "../../content";
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
@@ -9,7 +9,7 @@ import { getAllEvents } from "@/lib/actions/events";
 // import EventSection from "@/components/EventSection";
 
 type HomePageProps = {
-  events: Event[];
+  events: EventType[];
 };
 
 export async function getStaticProps() {

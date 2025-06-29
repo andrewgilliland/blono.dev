@@ -2,10 +2,10 @@ import { FC } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import NavLink from "./NavLink";
-import { ImageProps, NavLink as NavLinkType } from "@/types";
+import { ImageType, NavLinkType } from "@/types";
 
 type DesktopHeaderProps = {
-  logo: ImageProps;
+  logo: ImageType;
   navLinks: NavLinkType[];
 };
 

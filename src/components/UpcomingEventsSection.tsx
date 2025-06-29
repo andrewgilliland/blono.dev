@@ -1,11 +1,11 @@
-import { Event } from "@/types";
+import { EventType } from "@/types";
 import { FC } from "react";
 import EventCard from "./EventCard";
 import { HEADER_HEIGHT } from "./Layout";
 import Circle from "./icons/Circle";
 
 type EventSectionProps = {
-  events: Event[];
+  events: EventType[];
 };
 
 const UpcomingEventsSection: FC<EventSectionProps> = ({ events }) => {

@@ -1,12 +1,12 @@
-import { ImageProps } from '@/types';
+import { ImageType } from "@/types";
 
 export type GlobalContent = {
-  mainLogo: ImageProps;
+  mainLogo: ImageType;
 };
 
 export const global: GlobalContent = {
   mainLogo: {
-    src: '/bn-logo-1.svg',
-    alt: 'Bloomington-Normal Developers Logo',
+    src: "/bn-logo-1.svg",
+    alt: "Bloomington-Normal Developers Logo",
   },
 };

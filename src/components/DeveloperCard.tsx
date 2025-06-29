@@ -1,10 +1,10 @@
-import { Developer } from "@/types";
+import { DeveloperType } from "@/types";
 import Image from "next/image";
 import { FC } from "react";
 import Badge, { BadgeTheme } from "./Badge";
 
 type DeveloperCardProps = {
-  developer: Developer;
+  developer: DeveloperType;
   color: BadgeTheme;
 };
 

@@ -3,11 +3,11 @@ import Image from "next/image";
 import Link from "next/link";
 import OpenClose from "./icons/OpenClose";
 import MobileNavMenu from "./MobileNavMenu";
-import { ImageProps, NavLink } from "@/types";
+import { ImageType, NavLinkType } from "@/types";
 
 type MobileHeaderProps = {
-  logo: ImageProps;
-  navLinks: NavLink[];
+  logo: ImageType;
+  navLinks: NavLinkType[];
 };
 
 const MobileHeader: FC<MobileHeaderProps> = ({ logo, navLinks }) => {

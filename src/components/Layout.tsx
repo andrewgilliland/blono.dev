@@ -3,10 +3,10 @@ import SEO from "./SEO";
 import Header from "./Header";
 import Footer from "./Footer";
 import { Content } from "../../content";
-import { Event } from "@/types";
+import { EventType } from "@/types";
 
 type LayoutProps = {
-  events?: Event[];
+  events?: EventType[];
   content: Content;
   children: ReactNode;
 };

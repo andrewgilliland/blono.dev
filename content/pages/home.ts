@@ -1,9 +1,9 @@
-import { Developer, ImageProps } from "@/types";
+import { DeveloperType, ImageType } from "@/types";
 import { global } from "../global";
 import { BadgeTheme } from "@/components/Badge";
 
 export type HeroSectionType = {
-  logo: ImageProps;
+  logo: ImageType;
   heading: string;
   tagline: string;
   heroGridContentItems: {
@@ -22,7 +22,7 @@ export type AboutSectionType = {
   heading: string;
   description: string;
   developerCards: {
-    developer: Developer;
+    developer: DeveloperType;
     color: BadgeTheme;
   }[];
 };

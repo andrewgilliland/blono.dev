@@ -1,9 +1,9 @@
-export type ImageProps = {
+export type ImageType = {
   src: string;
   alt: string;
 };
 
-export type NavLink = {
+export type NavLinkType = {
   href: string;
   text: string;
 };
@@ -17,25 +17,25 @@ export type Post = {
   };
 };
 
-export type Event = {
+export type EventType = {
   title: string;
   location: string;
   details: string;
   date: string;
   startTime: string;
   endTime: string;
-  image?: ImageProps;
+  image?: ImageType;
 };
 
-export type Developer = {
-  image: ImageProps;
+export type DeveloperType = {
+  image: ImageType;
   role: string;
   skills: string[];
   name: string;
   bio: string;
 };
 
-export type Lesson = {
+export type LessonType = {
   title: string;
   slug: string; // !This must be the same as the file name!
   description: string;
