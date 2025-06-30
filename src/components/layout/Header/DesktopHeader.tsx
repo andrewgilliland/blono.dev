@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import NavLink from "./NavLink";
 import { ImageType, NavLinkType } from "@/types";
-import Container from "./Container";
+import Container from "../Container";
 
 type DesktopHeaderProps = {
   logo: ImageType;

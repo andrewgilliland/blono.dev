@@ -1,9 +1,10 @@
 import { FC } from "react";
-import NavLink from "./NavLink";
 import { HEADER_HEIGHT } from "@/lib/constants";
+import NavLink from "./NavLink";
+import { NavLinkType } from "@/types";
 
 type MobileNavMenuProps = {
-  links: { href: string; text: string }[];
+  links: NavLinkType[];
   isOpen: boolean;
 };
 
