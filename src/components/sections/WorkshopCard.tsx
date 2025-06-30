@@ -1,11 +1,11 @@
 import Link from "next/link";
 import Image from "next/image";
-import Button from "@/components/Button";
-import Badge from "./Badge";
+import Button from "@/components/ui/Button";
+import Badge from "../ui/Badge";
 
 const WorkshopCard = () => {
   return (
-    <div className="max-w-3xl mt-16 mx-auto">
+    <div className="max-w-3xl mx-auto">
       <div className="relative px-8 py-10 h-full bg-purp border border-light border-opacity-75 rounded-[10px]">
         <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
           <div className="border bg-dark p-2 rounded-[10px]">

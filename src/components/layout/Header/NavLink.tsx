@@ -1,7 +1,8 @@
+import { NavLinkType } from "@/types";
 import { FC } from "react";
 
 type NavLinkProps = {
-  link: { href: string; text: string };
+  link: NavLinkType;
 };
 
 const NavLink: FC<NavLinkProps> = ({ link }) => {

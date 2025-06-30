@@ -1,7 +1,7 @@
 import { FC } from "react";
 import Link from "next/link";
-import Button from "./Button";
-import Badge from "./Badge";
+import Badge from "../../ui/Badge";
+import Button from "../../ui/Button";
 
 type Lesson = {
   title: string;

@@ -1,12 +1,12 @@
-import { Event } from "@/types";
+import { EventType } from "@/types";
 import { FC } from "react";
 
 type HeaderBannerProps = {
-  events?: Event[];
+  events?: EventType[];
 };
 
 const HeaderBanner: FC<HeaderBannerProps> = ({ events }) => {
-  const getNextEventDate = (events: Event[]) => {
+  const getNextEventDate = (events: EventType[]) => {
     // Filter out past events
     events = events.filter((event) => new Date(event.date) > new Date());
 

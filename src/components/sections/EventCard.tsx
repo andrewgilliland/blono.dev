@@ -1,13 +1,13 @@
 import { FC } from "react";
-import { Event } from "@/types";
+import { EventType } from "@/types";
 import Image from "next/image";
-import Badge from "./Badge";
 import { google } from "calendar-link";
 import { CalendarIcon, MapPinIcon, PhotoIcon } from "@heroicons/react/24/solid";
-import Button from "./Button";
+import Badge from "../ui/Badge";
+import Button from "../ui/Button";
 
 type EventCardProps = {
-  event: Event;
+  event: EventType;
 };
 
 const EventCard: FC<EventCardProps> = ({ event }) => {
