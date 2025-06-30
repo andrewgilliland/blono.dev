@@ -1,3 +1,5 @@
+import pluginTypography from "@tailwindcss/typography";
+
 module.exports = {
   mode: "jit",
   content: [
@@ -22,6 +24,9 @@ module.exports = {
         },
         "picton-blue": "#48BFE3",
         "viking-blue": "#56CFE1",
+        "darkish-blue": "#101F55",
+        blueish: "#0B097C",
+        pinkish: "#D041FF",
       },
       fontFamily: {
         brand: ["var(--font-poppins)"],
@@ -53,11 +58,11 @@ module.exports = {
     },
   },
   darkMode: "class", // or 'media' or 'class'
-  presets: [require("./src/lib/tailwind-preset")],
   safelist: [
     {
       pattern:
         /(bg|text|border)-(cyan|sky|blue|indigo|violet|purple|green)-(100|200|300|400|500|600|700|800|900)/,
     },
   ],
+  plugins: [pluginTypography],
 };

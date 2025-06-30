@@ -1,19 +1,18 @@
 import { FC } from "react";
-import Layout from "@/components/Layout";
-import { content } from "../../content";
+import Layout from "@/components/layout/Layout";
 
 type FourOhFourPageProps = {};
 
 const FourOhFourPage: FC<FourOhFourPageProps> = () => {
   return (
-    <Layout content={content}>
+    <Layout>
       <div className="flex justify-center items-center h-screen">
         <div className="flex flex-col items-center">
           <h2 className="font-bold text-purple-600 text-3xl">
-            {content.pages[404].heading}
+            404 - Page Not Found
           </h2>
           <p className="font-semibold text-gray-100 text-base mt-8">
-            {content.pages[404].description}
+            Don&apos;t know what a 404 is? Here is some knowledge.
           </p>
           <a
             className="group flex flex-col items-center font-semibold text-blue-600 text-base mt-2"

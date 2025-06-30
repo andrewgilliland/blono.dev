@@ -1,12 +1,12 @@
-import { Event } from "@/types";
+import { EventType } from "@/types";
 import { FC, useState } from "react";
+import Button from "../ui/Button";
+import Circle from "../icons/Circle";
 import EventCard from "./EventCard";
-import { HEADER_HEIGHT } from "./Layout";
-import Button from "./Button";
-import Circle from "./icons/Circle";
+import { SECTION_TOP_PADDING_OFFSET } from "@/lib/constants";
 
 type EventSectionProps = {
-  events: Event[];
+  events: EventType[];
 };
 
 const EventSection: FC<EventSectionProps> = ({ events }) => {
@@ -25,7 +25,7 @@ const EventSection: FC<EventSectionProps> = ({ events }) => {
   return (
     <section
       id="events"
-      style={{ paddingTop: HEADER_HEIGHT + 24 }}
+      style={{ paddingTop: SECTION_TOP_PADDING_OFFSET }}
       className="max-w-5xl mx-auto mt-24"
     >
       <div>

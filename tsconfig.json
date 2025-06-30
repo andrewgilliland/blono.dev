@@ -17,7 +17,9 @@
     "noEmit": true,
     "incremental": true,
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@components/*": ["./src/components/*"],
+      "@lib/*": ["./src/lib/*"]
     }
   },
   "include": ["src"],

@@ -37,7 +37,7 @@ To get the most out of this workshop, you will need to install some software and
 
 - Git
 
-  Git is a distributed version control system that allows you to track changes in your code, collaborate, and manage your project history efficiently. It enables branching, merging, and reverting changes of your code in projects. Download git [git](https://git-scm.com/downloads).
+  Git is a distributed version control system that allows you to track changes in your code, collaborate, and manage your project history efficiently. It enables branching, merging, and reverting changes of your code in projects. Download git [here](https://git-scm.com/downloads).
 
 - A GitHub account
 

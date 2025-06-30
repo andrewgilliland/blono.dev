@@ -1,18 +1,16 @@
-import { FC, useState } from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
-import { Content } from '../../content';
-import OpenClose from './icons/OpenClose';
-import MobileNavMenu from './MobileNavMenu';
+import { FC, useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { ImageType, NavLinkType } from "@/types";
+import MobileNavMenu from "./MobileNavMenu";
+import OpenClose from "../../icons/OpenClose";
 
 type MobileHeaderProps = {
-  content: Content;
+  logo: ImageType;
+  navLinks: NavLinkType[];
 };
 
-const MobileHeader: FC<MobileHeaderProps> = ({ content }) => {
-  const { mainLogo } = content.global;
-  const { links } = content.header;
-
+const MobileHeader: FC<MobileHeaderProps> = ({ logo, navLinks }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -21,10 +19,10 @@ const MobileHeader: FC<MobileHeaderProps> = ({ content }) => {
         <Link className="z-10" href="/">
           <Image
             className="h-12"
-            src={mainLogo.src}
+            src={logo.src}
             width={80}
             height={100}
-            alt={mainLogo.alt}
+            alt={logo.alt}
             priority
           />
         </Link>
@@ -33,7 +31,7 @@ const MobileHeader: FC<MobileHeaderProps> = ({ content }) => {
         </button>
       </div>
 
-      <MobileNavMenu links={links} isOpen={isOpen} />
+      <MobileNavMenu links={navLinks} isOpen={isOpen} />
     </div>
   );
 };

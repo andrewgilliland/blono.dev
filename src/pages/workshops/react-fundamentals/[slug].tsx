@@ -1,16 +1,16 @@
 import { FC } from "react";
 import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
 import Link from "next/link";
-import Layout from "@/components/Layout";
+import Layout from "@/components/layout/Layout";
 import Circle from "@/components/icons/Circle";
-import { content } from "../../../../content";
 import {
   getMarkdownContent,
   getMarkdownFiles,
   getMarkdownFilesFrontMatter,
 } from "@/lib/utils/mdx-utils";
 import { GetStaticPaths, GetStaticProps } from "next";
-import { Lesson } from "@/types";
+import { LessonType } from "@/types";
+import Container from "@/components/layout/Container";
 
 type LessonPageProps = {
   markdown: {
@@ -22,8 +22,8 @@ type LessonPageProps = {
     };
     mdxSource: MDXRemoteSerializeResult;
   };
-  prevLesson: Lesson | null;
-  nextLesson: Lesson | null;
+  prevLesson: LessonType | null;
+  nextLesson: LessonType | null;
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
@@ -73,38 +73,39 @@ const LessonPage: FC<LessonPageProps> = ({
   } = markdown;
 
   return (
-    <Layout content={content}>
-      <section id="hero" className="max-w-[30ch] md:max-w-[65ch] mx-auto">
-        <div className="flex justify-center items-center flex-col md:flex-row mt-20 gap-12 md:gap-20">
-          <div className="relative">
-            <Circle
-              size={434}
-              className="absolute fill-purp-dark -translate-x-[325px] -translate-y-[325px] opacity-20"
-            />
-            <Circle
-              size={100}
-              className="absolute fill-purp-dark translate-x-32 -translate-y-12 opacity-20"
-            />
-            <Circle
-              size={100}
-              className="absolute fill-purp-dark translate-x-36 translate-y-20 opacity-20"
-            />
-            <div>
-              <h2 className="text-copy">Lesson {number}</h2>
-
-              <h1 className="relative">{title}</h1>
+    <Layout>
+      <section id="hero">
+        <Container className="max-w-[30ch] md:max-w-[65ch]">
+          <div className="flex justify-center items-center flex-col md:flex-row mt-20 gap-12 md:gap-20">
+            <div className="relative">
+              <Circle
+                size={434}
+                className="absolute fill-purp-dark -translate-x-[325px] -translate-y-[325px] opacity-20"
+              />
+              <Circle
+                size={100}
+                className="absolute fill-purp-dark translate-x-32 -translate-y-12 opacity-20"
+              />
+              <Circle
+                size={100}
+                className="absolute fill-purp-dark translate-x-36 translate-y-20 opacity-20"
+              />
+              <div>
+                <h2 className="text-copy">Lesson {number}</h2>
+                <h1 className="relative">{title}</h1>
+              </div>
+            </div>
+            <div className="relative group flex w-full md:w-1/2">
+              <Circle
+                size={250}
+                className="absolute fill-theme-indigo -translate-x-5 md:-translate-y-20 opacity-20"
+              />
+              <p className="relative font-semibold text-2xl text-white md:mt-10">
+                {description}
+              </p>
             </div>
           </div>
-          <div className="relative group flex w-full md:w-1/2">
-            <Circle
-              size={250}
-              className="absolute fill-theme-indigo -translate-x-5 md:-translate-y-20 opacity-20"
-            />
-            <p className="relative font-semibold text-2xl text-white md:mt-10">
-              {description}
-            </p>
-          </div>
-        </div>
+        </Container>
       </section>
       <section
         id="content"

@@ -1,10 +1,10 @@
-import { ImageProps } from "@/types";
+import { ImageType } from "@/types";
 import Image from "next/image";
 import { FC } from "react";
 
 export type HeroGridCardProps = {
   span: string;
-  image: ImageProps;
+  image: ImageType;
   heading: string;
   tagline: string;
 };

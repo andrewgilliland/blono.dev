@@ -1,15 +1,13 @@
-import Layout from "@/components/Layout";
-import { Event } from "@/types";
-import { content } from "../../content";
-import HeroSection from "@/components/HeroSection";
-import AboutSection from "@/components/AboutSection";
-import UpcomingEventsSection from "@/components/UpcomingEventsSection";
-import ContactSection from "@/components/ContactSection";
+import { EventType } from "@/types";
+import AboutSection from "@/components/sections/AboutSection";
+import UpcomingEventsSection from "@/components/sections/UpcomingEventsSection";
 import { getAllEvents } from "@/lib/actions/events";
-// import EventSection from "@/components/EventSection";
+import Layout from "@/components/layout/Layout";
+import HeroSection from "@/components/sections/HeroSection";
+import ContactSection from "@/components/sections/ContactSection";
 
 type HomePageProps = {
-  events: Event[];
+  events: EventType[];
 };
 
 export async function getStaticProps() {
@@ -19,13 +17,11 @@ export async function getStaticProps() {
 }
 
 const HomePage = ({ events }: HomePageProps) => {
-  const { hero, about } = content.pages.home;
-
   return (
-    <Layout events={events} content={content}>
-      <HeroSection hero={hero} />
+    <Layout events={events}>
+      <HeroSection />
       <UpcomingEventsSection events={events} />
-      <AboutSection content={about} />
+      <AboutSection />
       <ContactSection />
     </Layout>
   );
