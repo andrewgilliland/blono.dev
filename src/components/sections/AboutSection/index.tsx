@@ -2,6 +2,7 @@ import { FC } from "react";
 import { BadgeTheme } from "../../ui/Badge";
 import { HEADER_HEIGHT } from "../../layout/Layout";
 import DeveloperCard from "./DeveloperCard";
+import Container from "@/components/layout/Container";
 
 type AboutSectionProps = {};
 
@@ -52,9 +53,9 @@ const AboutSection: FC<AboutSectionProps> = () => {
     <section
       id="about"
       style={{ paddingTop: HEADER_HEIGHT + 24 }}
-      className="relative mt-24 py-24"
+      className="relative"
     >
-      <div className="max-w-5xl mx-auto">
+      <Container className="mt-24">
         <div>
           <h2 className="text-heading-secondary">About Us</h2>
           <p className="text-copy md:w-2/3 mt-4">
@@ -76,7 +77,7 @@ const AboutSection: FC<AboutSectionProps> = () => {
             />
           ))}
         </div>
-      </div>
+      </Container>
     </section>
   );
 };

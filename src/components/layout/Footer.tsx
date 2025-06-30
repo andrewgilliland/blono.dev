@@ -5,6 +5,7 @@ import Link from "next/link";
 import DiscordIcon from "@/components/icons/DiscordIcon";
 import LinkedInIcon from "@/components/icons/LinkedInIcon";
 import MeetupIcon from "@/components/icons/MeetupIcon";
+import Container from "./Container";
 
 type FooterProps = {};
 
@@ -35,49 +36,48 @@ const Footer: FC<FooterProps> = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer
-      style={{ backgroundColor: palette.darkBlueish }}
-      className="flex flex-col px-[10%] py-20"
-    >
-      <div className="flex justify-between items-center">
-        <Link href="/">
-          <Image
-            src={mainLogo.src}
-            width={120}
-            height={100}
-            alt={mainLogo.alt}
-            priority
-          />
-        </Link>
-        <div className="flex gap-5">
-          {socialLinks.map(({ href, icon }) => (
-            <a
-              className="hover:scale-110 hover:rotate-12 transition-transform"
-              key={href}
-              href={href}
-            >
-              {icon}
-            </a>
-          ))}
+    <footer style={{ backgroundColor: palette.darkBlueish }}>
+      <Container className="flex flex-col w-full py-20">
+        <div className="flex justify-between items-center">
+          <Link href="/">
+            <Image
+              src={mainLogo.src}
+              width={120}
+              height={100}
+              alt={mainLogo.alt}
+              priority
+            />
+          </Link>
+          <div className="flex gap-5">
+            {socialLinks.map(({ href, icon }) => (
+              <a
+                className="hover:scale-110 hover:rotate-12 transition-transform"
+                key={href}
+                href={href}
+              >
+                {icon}
+              </a>
+            ))}
+          </div>
         </div>
-      </div>
-      <div className="flex flex-col items-center mt-12">
-        <p className="text-gray-300 mb-3 font-bold uppercase text-center">
-          {`© ${currentYear} Bloomington-Normal Developers. All rights reserved.`}
-        </p>
+        <div className="flex flex-col items-center mt-12">
+          <p className="text-gray-300 mb-3 font-bold uppercase text-center">
+            {`© ${currentYear} Bloomington-Normal Developers. All rights reserved.`}
+          </p>
 
-        <p className="text-gray-100 text-sm text-center">
-          Design by{" "}
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-semibold underline text-gray-50"
-            href="https://www.haileynfetting.com/"
-          >
-            Hailey Fetting
-          </a>
-        </p>
-      </div>
+          <p className="text-gray-100 text-sm text-center">
+            Design by{" "}
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold underline text-gray-50"
+              href="https://www.haileynfetting.com/"
+            >
+              Hailey Fetting
+            </a>
+          </p>
+        </div>
+      </Container>
     </footer>
   );
 };
