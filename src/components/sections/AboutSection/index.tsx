@@ -1,8 +1,8 @@
 import { FC } from "react";
 import { BadgeTheme } from "../../ui/Badge";
-import { HEADER_HEIGHT } from "../../layout/Layout";
-import DeveloperCard from "./DeveloperCard";
+import { HEADER_HEIGHT, SECTION_TOP_PADDING_OFFSET } from "@/lib/constants";
 import Container from "@/components/layout/Container";
+import DeveloperCard from "./DeveloperCard";
 
 type AboutSectionProps = {};
 
@@ -52,7 +52,7 @@ const AboutSection: FC<AboutSectionProps> = () => {
   return (
     <section
       id="about"
-      style={{ paddingTop: HEADER_HEIGHT + 24 }}
+      style={{ paddingTop: SECTION_TOP_PADDING_OFFSET }}
       className="relative"
     >
       <Container className="mt-24">

@@ -1,0 +1,5 @@
+export const HEADER_HEIGHT = 80;
+
+export const SCROLL_OFFSET = 24;
+
+export const SECTION_TOP_PADDING_OFFSET = HEADER_HEIGHT + SCROLL_OFFSET;

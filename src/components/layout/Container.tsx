@@ -4,11 +4,7 @@ type ContainerProps = {
 };
 
 const Container = ({ className = "", children }: ContainerProps) => {
-  return (
-    <div className={`max-w-5xl mx-auto border border-red-500 ${className}`}>
-      {children}
-    </div>
-  );
+  return <div className={`max-w-5xl mx-auto ${className}`}>{children}</div>;
 };
 
 export default Container;

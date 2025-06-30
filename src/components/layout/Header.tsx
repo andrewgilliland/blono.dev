@@ -1,10 +1,10 @@
 import { FC } from "react";
 import { palette } from "@/styles/colors";
-import { HEADER_HEIGHT } from "./Layout";
 import MobileHeader from "./MobileHeader";
 import DesktopHeader from "./DesktopHeader";
 import HeaderBanner from "./HeaderBanner";
 import { EventType, NavLinkType } from "@/types";
+import { HEADER_HEIGHT } from "@/lib/constants";
 
 type HeaderProps = {
   events?: EventType[];

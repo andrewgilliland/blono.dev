@@ -1,6 +1,6 @@
 import { FC } from "react";
 import NavLink from "./NavLink";
-import { HEADER_HEIGHT } from "./Layout";
+import { HEADER_HEIGHT } from "@/lib/constants";
 
 type MobileNavMenuProps = {
   links: { href: string; text: string }[];

@@ -3,14 +3,12 @@ import SEO from "./SEO";
 import Header from "./Header";
 import Footer from "./Footer";
 import { EventType } from "@/types";
+import { HEADER_HEIGHT } from "@/lib/constants";
 
 type LayoutProps = {
   events?: EventType[];
-
   children: ReactNode;
 };
-
-export const HEADER_HEIGHT = 80;
 
 const Layout: FC<LayoutProps> = ({ events, children }) => {
   return (

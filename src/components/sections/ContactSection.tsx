@@ -1,14 +1,14 @@
 import { FC } from "react";
 import Image from "next/image";
-import { HEADER_HEIGHT } from "../layout/Layout";
 import ButtonLink from "../ui/ButtonLink";
 import Container from "../layout/Container";
+import { SECTION_TOP_PADDING_OFFSET } from "@/lib/constants";
 
 type ContactSectionProps = {};
 
 const ContactSection: FC<ContactSectionProps> = () => {
   return (
-    <section id="contact" style={{ paddingTop: HEADER_HEIGHT + 24 }}>
+    <section id="contact" style={{ paddingTop: SECTION_TOP_PADDING_OFFSET }}>
       <Container className="my-24">
         <div className="flex flex-col-reverse md:flex-row bg-darker border border-light border-opacity-75 rounded-[10px]">
           <div className="px-4 py-8 md:w-1/2 md:px-16 md:py-24">

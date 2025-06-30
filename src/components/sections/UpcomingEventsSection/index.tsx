@@ -1,9 +1,9 @@
 import { FC } from "react";
 import { EventType } from "@/types";
 import Circle from "@/components/icons/Circle";
-import { HEADER_HEIGHT } from "@/components/layout/Layout";
 import EventCard from "../EventCard";
 import Container from "@/components/layout/Container";
+import { SECTION_TOP_PADDING_OFFSET } from "@/lib/constants";
 
 type EventSectionProps = {
   events: EventType[];
@@ -18,7 +18,7 @@ const UpcomingEventsSection: FC<EventSectionProps> = ({ events }) => {
   );
 
   return (
-    <section id="events" style={{ paddingTop: HEADER_HEIGHT + 24 }}>
+    <section id="events" style={{ paddingTop: SECTION_TOP_PADDING_OFFSET }}>
       <Container className="mt-24">
         <div>
           <div className="relative">
