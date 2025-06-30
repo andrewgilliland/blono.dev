@@ -3,8 +3,9 @@ import Layout from "@/components/layout/Layout";
 import Circle from "@/components/icons/Circle";
 import { getMarkdownFilesFrontMatter } from "@/lib/utils/mdx-utils";
 import { LessonType } from "@/types";
-import LessonCard from "@/components/sections/LessonCard";
+import LessonCard from "@/components/sections/LessonsSection/LessonCard";
 import Container from "@/components/layout/Container";
+import LessonsSection from "@/components/sections/LessonsSection";
 
 type WorkshopPageProps = {
   lessons: LessonType[];
@@ -55,15 +56,7 @@ const WorkshopPage: FC<WorkshopPageProps> = ({ lessons }) => {
           </div>
         </Container>
       </section>
-      <section id="lessons">
-        <Container>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-12">
-            {lessons.map((lesson, index) => (
-              <LessonCard key={index} lesson={lesson} />
-            ))}
-          </div>
-        </Container>
-      </section>
+      <LessonsSection lessons={lessons} />
     </Layout>
   );
 };
