@@ -24,6 +24,9 @@ module.exports = {
         },
         "picton-blue": "#48BFE3",
         "viking-blue": "#56CFE1",
+        "darkish-blue": "#101F55",
+        blueish: "#0B097C",
+        pinkish: "#D041FF",
       },
       fontFamily: {
         brand: ["var(--font-poppins)"],

@@ -1,5 +1,4 @@
 import { FC } from "react";
-import { palette } from "@/styles/colors";
 import Image from "next/image";
 import Link from "next/link";
 import DiscordIcon from "@/components/icons/DiscordIcon";
@@ -36,7 +35,7 @@ const Footer: FC<FooterProps> = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer style={{ backgroundColor: palette.darkBlueish }}>
+    <footer className="bg-darkish-blue/50">
       <Container className="flex flex-col w-full py-20">
         <div className="flex justify-between items-center">
           <Link href="/">
