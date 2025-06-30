@@ -1,5 +1,5 @@
-import { EventType } from "@/types";
-import { FC } from "react";
+import { EventType } from '@/types';
+import { FC } from 'react';
 
 type HeaderBannerProps = {
   events?: EventType[];
@@ -12,15 +12,15 @@ const HeaderBanner: FC<HeaderBannerProps> = ({ events }) => {
 
     // Sort by date
     events.sort(
-      (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()
+      (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime(),
     );
 
     const nextEvent = events[0];
 
     const options: Intl.DateTimeFormatOptions = {
-      month: "long",
-      day: "numeric",
-      weekday: "long",
+      month: 'long',
+      day: 'numeric',
+      weekday: 'long',
     };
 
     return nextEvent
@@ -34,14 +34,14 @@ const HeaderBanner: FC<HeaderBannerProps> = ({ events }) => {
   }
 
   return (
-    <div className="flex justify-center bg-green-500 px-[10%] pt-2 pb-1">
+    <div className="flex justify-center bg-green-500 px-[10%] pb-1 pt-2">
       <a className="group" href="#events">
-        <div className="font-semibold text-balance text-center text-sm text-black">
+        <div className="text-balance text-center text-sm font-semibold text-black">
           {getNextEventDate(events)
             ? `Bloomington-Normal Developer's next event is on ${getNextEventDate(events)}`
-            : "No upcoming events"}
+            : 'No upcoming events'}
         </div>
-        <div className="bg-black h-[2px] w-[0%] rounded-full group-hover:w-full transition-all" />
+        <div className="h-[2px] w-[0%] rounded-full bg-black transition-all group-hover:w-full" />
       </a>
     </div>
   );
