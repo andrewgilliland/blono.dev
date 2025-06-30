@@ -32,10 +32,6 @@ h1 {
   .text-copy {
     @apply font-brand font-semibold text-base text-white;
   }
-
-  .text-copy-white {
-    @apply font-brand font-semibold text-base text-white;
-  }
 }
 
 /* prose class has a default max-width of 65ch */
