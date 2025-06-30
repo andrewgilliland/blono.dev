@@ -1,10 +1,10 @@
 import { FC } from "react";
-import HeroGridCard, { HeroGridCardProps } from "./HeroGridCard";
+import HeroGridCard from "./HeroGridCard";
 
 type HeroGridProps = {};
 
 const HeroGrid: FC<HeroGridProps> = () => {
-  const heroGridContentItems = [
+  const heroGridItems = [
     {
       span: "md:col-span-3",
       image: {
@@ -49,7 +49,7 @@ const HeroGrid: FC<HeroGridProps> = () => {
   ];
   return (
     <div className="grid grid-cols-1 md:grid-cols-6 gap-6 mt-20">
-      {heroGridContentItems.map((contentItem, index) => (
+      {heroGridItems.map((contentItem, index) => (
         <HeroGridCard key={index} {...contentItem} />
       ))}
     </div>
