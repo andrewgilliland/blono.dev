@@ -6,7 +6,7 @@ import Layout from '@/components/layout/Layout';
 import HeroSection from '@/components/sections/HeroSection';
 import ContactSection from '@/components/sections/ContactSection';
 
-export default function Page() {
+export default function HomePage() {
   const events = getAllEvents();
   return (
     <Layout events={events}>

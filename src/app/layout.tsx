@@ -24,7 +24,7 @@ type RootLayoutProps = {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" className={`${poppins.variable} scroll-smooth font-brand`}>
-      <body className="leading-base bg-white text-lg antialiased dark:bg-gray-900 dark:text-white">
+      <body className="leading-base bg-gray-900 text-lg text-white antialiased">
         {children}
       </body>
     </html>
