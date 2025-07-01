@@ -21,6 +21,7 @@ export type EventType = {
   id: string;
   title: string;
   location: string;
+  address: string;
   details: string;
   date: string;
   startTime: string;

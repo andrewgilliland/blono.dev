@@ -8,8 +8,8 @@ type EventPageProps = {
 };
 
 const EventPage = async ({ params }: EventPageProps) => {
-  const eventId = (await params).id;
-  const event = getEventById(eventId);
+  const { id } = await params;
+  const event = getEventById(id);
 
   if (!event) {
     return (
@@ -20,21 +20,40 @@ const EventPage = async ({ params }: EventPageProps) => {
     );
   }
 
-  const { title, location, details, image } = event;
+  const { title, location, address, details, image } = event;
 
   return (
     <>
       <section>
         <Container className="mt-24">
-          {image && (
-            <Image src={image.src} alt={image.alt} width={600} height={400} />
-          )}
-          <h1>{title}</h1>
-          <p>{details}</p>
-          <p>{location}</p>
+          <div
+            style={{ gridTemplateColumns: 'repeat(6, minmax(0, 1fr))' }}
+            className="grid gap-8"
+          >
+            <div style={{ gridColumn: 'span 4' }}>
+              <h1 className="border">{title}</h1>
+              {image && (
+                <Image
+                  className="mt-12 border"
+                  src={image.src}
+                  alt={image.alt}
+                  width={250}
+                  height={250}
+                />
+              )}
+
+              <div className="mt-10 border">
+                <h2 className="font-bold text-gray-400">Details</h2>
+                <p className="mt-4 text-base">{details}</p>
+              </div>
+            </div>
+            <div style={{ gridColumn: 'span 2' }} className="border">
+              <p>{location}</p>
+              <p>{address}</p>
+            </div>
+          </div>
         </Container>
       </section>
-
       <ContactSection />
     </>
   );
