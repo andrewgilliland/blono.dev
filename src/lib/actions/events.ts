@@ -9,3 +9,10 @@ export const getAllEvents = () => {
 
   return events;
 };
+
+export const getEventById = (id: string): EventType | null => {
+  const events = getAllEvents();
+  const event = events.find((event) => event.id === id);
+
+  return event || null;
+};

@@ -7,13 +7,15 @@ import { google } from 'calendar-link';
 import { CalendarIcon, MapPinIcon, PhotoIcon } from '@heroicons/react/24/solid';
 import Badge from '../ui/Badge';
 import Button from '../ui/Button';
+import Link from 'next/link';
 
 type EventCardProps = {
   event: EventType;
 };
 
 const EventCard: FC<EventCardProps> = ({ event }) => {
-  const { title, date, location, startTime, endTime, details, image } = event;
+  const { id, title, date, location, startTime, endTime, details, image } =
+    event;
 
   const dateObj = new Date(date);
   const month = dateObj.toLocaleString('default', { month: 'short' });
@@ -22,7 +24,7 @@ const EventCard: FC<EventCardProps> = ({ event }) => {
   const isFutureEvent = new Date() < dateObj;
 
   return (
-    <div className="relative">
+    <Link href={`/events/${id}`} className="relative">
       <div className="relative flex h-full flex-col-reverse rounded-[10px] border border-light border-opacity-75 bg-darker md:flex-row">
         <div className="flex flex-col gap-10 px-6 py-10 md:flex-row">
           <div className="flex max-w-2xl flex-col items-start gap-3">
@@ -72,7 +74,7 @@ const EventCard: FC<EventCardProps> = ({ event }) => {
             <div className="relative">
               <div className="absolute h-full w-full translate-x-1 translate-y-1 rounded-[10px] bg-purp-light" />
               <Image
-                className="relative rounded-[10px] object-cover"
+                className="relative min-w-24 rounded-[10px] object-cover"
                 src={image.src}
                 width={160}
                 height={160}
@@ -83,14 +85,14 @@ const EventCard: FC<EventCardProps> = ({ event }) => {
           ) : (
             <div className="relative">
               <div className="absolute h-full w-full translate-x-1 translate-y-1 rounded-[10px] bg-purp-light" />
-              <div className="relative grid h-[120px] w-40 place-items-center rounded-[10px] bg-violet-400">
-                <PhotoIcon className="mx-auto h-24 w-24 text-violet-200" />
+              <div className="relative grid h-[120px] w-28 place-items-center rounded-[10px] bg-violet-400">
+                <PhotoIcon className="mx-auto size-20 text-violet-200" />
               </div>
             </div>
           )}
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

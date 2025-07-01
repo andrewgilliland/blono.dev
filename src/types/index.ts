@@ -18,6 +18,7 @@ export type Post = {
 };
 
 export type EventType = {
+  id: string;
   title: string;
   location: string;
   details: string;
