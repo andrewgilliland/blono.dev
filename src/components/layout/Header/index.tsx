@@ -16,7 +16,7 @@ const Header: FC<HeaderProps> = ({ events }) => {
   };
 
   const navLinks: NavLinkType[] = [
-    { href: '/#events', text: 'Events' },
+    { href: '/events', text: 'Events' },
     { href: '/workshops', text: 'Workshops' },
     { href: '/#about', text: 'About' },
     { href: '/#contact', text: 'Contact' },

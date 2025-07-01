@@ -23,7 +23,7 @@ const EventCard: FC<EventCardProps> = ({ event }) => {
 
   return (
     <div className="relative">
-      <div className="relative flex flex-col-reverse rounded-[10px] border border-light border-opacity-75 bg-darker md:flex-row">
+      <div className="relative flex h-full flex-col-reverse rounded-[10px] border border-light border-opacity-75 bg-darker md:flex-row">
         <div className="flex flex-col gap-10 px-6 py-10 md:flex-row">
           <div className="flex max-w-2xl flex-col items-start gap-3">
             <div className="flex flex-wrap items-start gap-3">

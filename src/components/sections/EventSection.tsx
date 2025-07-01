@@ -1,50 +1,43 @@
-import { EventType } from "@/types";
-import { FC, useState } from "react";
-import Button from "../ui/Button";
-import Circle from "../icons/Circle";
-import EventCard from "./EventCard";
-import { SECTION_TOP_PADDING_OFFSET } from "@/lib/constants";
+import Circle from '../icons/Circle';
+import EventCard from './EventCard';
+import { SECTION_TOP_PADDING_OFFSET } from '@/lib/constants';
+import { getAllEvents } from '@/lib/actions/events';
 
-type EventSectionProps = {
-  events: EventType[];
-};
+const EventSection = () => {
+  const events = getAllEvents();
 
-const EventSection: FC<EventSectionProps> = ({ events }) => {
-  const [numberOfEventsToShow, setNumberOfEventsToShow] = useState(3);
-  const increment = 5;
   const now = new Date();
 
   const upcomingEvents = events.filter((event) => new Date(event.date) > now);
   upcomingEvents.sort(
-    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
   );
 
   const pastEvents = events.filter((event) => new Date(event.date) < now);
-  const filteredPastEvents = pastEvents.slice(0, numberOfEventsToShow);
 
   return (
     <section
       id="events"
       style={{ paddingTop: SECTION_TOP_PADDING_OFFSET }}
-      className="max-w-5xl mx-auto mt-24"
+      className="mx-auto mt-24 max-w-5xl"
     >
       <div>
         <div className="relative">
           <div>
             <Circle
               size={250}
-              className="absolute fill-purp-dark -translate-x-24 -translate-y-24 opacity-20"
+              className="absolute -translate-x-24 -translate-y-24 fill-purp-dark opacity-20"
             />
             <Circle
               size={100}
-              className="absolute fill-purp-dark translate-x-40 translate-y-12 opacity-20"
+              className="absolute translate-x-40 translate-y-12 fill-purp-dark opacity-20"
             />
             <Circle
               size={100}
-              className="absolute fill-purp-dark translate-x-64 -translate-y-12 opacity-20 hidden md:block"
+              className="absolute hidden -translate-y-12 translate-x-64 fill-purp-dark opacity-20 md:block"
             />
           </div>
-          <h2 className="relative text-heading-secondary mb-12">
+          <h2 className="text-heading-secondary relative mb-12">
             Upcoming Events
           </h2>
         </div>
@@ -56,43 +49,24 @@ const EventSection: FC<EventSectionProps> = ({ events }) => {
       </div>
       <div className="mt-20">
         <h2 className="text-heading-secondary mb-12">Past Events</h2>
-        <div className="grid gap-6">
-          {filteredPastEvents.map((event, index) => (
+        <div className="grid gap-8 md:grid-cols-2">
+          {pastEvents.map((event, index) => (
             <EventCard key={index} event={event} />
           ))}
         </div>
-        <div className="flex justify-center gap-4 mt-16">
-          {numberOfEventsToShow < pastEvents.length && (
-            <Button
-              onClick={() =>
-                setNumberOfEventsToShow(numberOfEventsToShow + increment)
-              }
-            >
-              Show More
-            </Button>
-          )}
-          {numberOfEventsToShow > 3 && (
-            <Button
-              onClick={() =>
-                setNumberOfEventsToShow(numberOfEventsToShow - increment)
-              }
-            >
-              Show Less
-            </Button>
-          )}
-        </div>
+
         <div className="relative flex justify-center">
           <Circle
             size={125}
-            className="absolute fill-purp-dark translate-x-64 -translate-y-12 opacity-20 hidden md:block"
+            className="absolute hidden -translate-y-12 translate-x-64 fill-purp-dark opacity-20 md:block"
           />
           <Circle
             size={200}
-            className="absolute fill-purp-dark translate-x-12 translate-y-8 opacity-20"
+            className="absolute translate-x-12 translate-y-8 fill-purp-dark opacity-20"
           />
           <Circle
             size={150}
-            className="absolute fill-purp-dark -translate-x-24 -translate-y-24  opacity-20"
+            className="absolute -translate-x-24 -translate-y-24 fill-purp-dark opacity-20"
           />
         </div>
       </div>
