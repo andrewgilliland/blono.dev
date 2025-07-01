@@ -31,7 +31,7 @@ const EventPage = async ({ params }: EventPageProps) => {
             className="grid gap-8"
           >
             <div style={{ gridColumn: 'span 4' }}>
-              <h1 className="border">{title}</h1>
+              <h1>{title}</h1>
               {image && (
                 <Image
                   className="mt-12 border"
@@ -42,12 +42,12 @@ const EventPage = async ({ params }: EventPageProps) => {
                 />
               )}
 
-              <div className="mt-10 border">
-                <h2 className="font-bold text-gray-400">Details</h2>
+              <div className="mt-10">
+                <h2 className="font-bold text-purple-600">Details</h2>
                 <p className="mt-4 text-base">{details}</p>
               </div>
             </div>
-            <div style={{ gridColumn: 'span 2' }} className="border">
+            <div style={{ gridColumn: 'span 2' }}>
               <p>{location}</p>
               <p>{address}</p>
             </div>
