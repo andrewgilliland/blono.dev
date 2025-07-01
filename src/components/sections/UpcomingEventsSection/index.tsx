@@ -1,15 +1,11 @@
-import { FC } from 'react';
-import { EventType } from '@/types';
 import Circle from '@/components/icons/Circle';
 import EventCard from '../EventCard';
 import Container from '@/components/layout/Container';
 import { SECTION_TOP_PADDING_OFFSET } from '@/lib/constants';
+import { getAllEvents } from '@/lib/actions/events';
 
-type EventSectionProps = {
-  events: EventType[];
-};
-
-const UpcomingEventsSection: FC<EventSectionProps> = ({ events }) => {
+const UpcomingEventsSection = () => {
+  const events = getAllEvents();
   const now = new Date();
 
   const upcomingEvents = events.filter((event) => new Date(event.date) > now);
