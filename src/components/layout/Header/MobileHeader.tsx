@@ -1,9 +1,11 @@
-import { FC, useState } from "react";
-import Image from "next/image";
-import Link from "next/link";
-import { ImageType, NavLinkType } from "@/types";
-import MobileNavMenu from "./MobileNavMenu";
-import OpenClose from "../../icons/OpenClose";
+'use client';
+
+import { FC, useState } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+import { ImageType, NavLinkType } from '@/types';
+import MobileNavMenu from './MobileNavMenu';
+import OpenClose from '../../icons/OpenClose';
 
 type MobileHeaderProps = {
   logo: ImageType;
@@ -15,7 +17,7 @@ const MobileHeader: FC<MobileHeaderProps> = ({ logo, navLinks }) => {
 
   return (
     <div className="md:hidden">
-      <div className="flex justify-between items-center w-full px-[10%] py-4">
+      <div className="flex w-full items-center justify-between px-[10%] py-4">
         <Link className="z-10" href="/">
           <Image
             className="h-12"
