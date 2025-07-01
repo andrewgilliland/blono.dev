@@ -3,7 +3,11 @@ import ContactSection from '@/components/sections/ContactSection';
 import { getEventById } from '@/lib/actions/events';
 import Image from 'next/image';
 
-const EventPage = async ({ params }: { params: Promise<{ id: string }> }) => {
+type EventPageProps = {
+  params: Promise<{ id: string }>;
+};
+
+const EventPage = async ({ params }: EventPageProps) => {
   const eventId = (await params).id;
   const event = getEventById(eventId);
 
