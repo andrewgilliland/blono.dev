@@ -1,8 +1,14 @@
 import Container from '@/components/layout/Container';
 import ContactSection from '@/components/sections/ContactSection';
 import EventSection from '@/components/sections/EventSection';
+import { createClient } from '@/lib/supabase/server';
 
-export default function EventsPage() {
+export default async function EventsPage() {
+  const supabase = await createClient();
+  const { data: events } = await supabase.from('events').select();
+
+  console.log('events:', events);
+
   return (
     <>
       <section>
