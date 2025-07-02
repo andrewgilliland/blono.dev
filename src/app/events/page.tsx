@@ -5,9 +5,20 @@ import { createClient } from '@/lib/supabase/server';
 
 export default async function EventsPage() {
   const supabase = await createClient();
-  const { data: events } = await supabase.from('events').select();
+
+  const { data: events, error } = await supabase.from('events').select(`
+    *,
+    location:location_id (
+      *
+    )
+  `);
 
   console.log('events:', events);
+
+  if (error) {
+    console.error('Error fetching events:', error);
+    return <p>Error loading events.</p>;
+  }
 
   return (
     <>
