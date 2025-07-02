@@ -1,7 +1,9 @@
 import Container from '@/components/layout/Container';
 import ContactSection from '@/components/sections/ContactSection';
-import { getEventById } from '@/lib/actions/events';
 import Image from 'next/image';
+import { getEventById as getEvent } from '@/lib/data/events';
+import { SupabaseEvent } from '@/types';
+// import { getEventById } from '@/lib/actions/events';
 
 type EventPageProps = {
   params: Promise<{ id: string }>;
@@ -9,7 +11,28 @@ type EventPageProps = {
 
 const EventPage = async ({ params }: EventPageProps) => {
   const { id } = await params;
-  const event = getEventById(id);
+  const event: SupabaseEvent = await getEvent(id);
+
+  const {
+    title,
+    details,
+    start_time,
+    end_time,
+    cover_image_url,
+    location: { name, street_address, city, state, postal_code, country },
+  } = event;
+
+  const formattedStartTime = new Date(start_time).toLocaleString('en-US', {
+    month: 'long',
+    day: 'numeric',
+    hour: 'numeric',
+  });
+
+  const formattedEndTime = end_time
+    ? new Date(end_time).toLocaleString('en-US', {
+        hour: 'numeric',
+      })
+    : null;
 
   if (!event) {
     return (
@@ -19,8 +42,6 @@ const EventPage = async ({ params }: EventPageProps) => {
       </Container>
     );
   }
-
-  const { title, location, address, details, image } = event;
 
   return (
     <>
@@ -32,11 +53,14 @@ const EventPage = async ({ params }: EventPageProps) => {
           >
             <div style={{ gridColumn: 'span 4' }}>
               <h1>{title}</h1>
-              {image && (
+              <p className="mt-2 font-semibold text-gray-600">
+                {formattedStartTime}-{formattedEndTime ? formattedEndTime : ''}
+              </p>
+              {cover_image_url && (
                 <Image
                   className="mt-12 border"
-                  src={image.src}
-                  alt={image.alt}
+                  src={cover_image_url}
+                  alt={title}
                   width={250}
                   height={250}
                 />
@@ -47,9 +71,15 @@ const EventPage = async ({ params }: EventPageProps) => {
                 <p className="mt-4 text-base">{details}</p>
               </div>
             </div>
-            <div style={{ gridColumn: 'span 2' }}>
-              <p>{location}</p>
-              <p>{address}</p>
+            <div
+              className="font-semibold text-gray-600"
+              style={{ gridColumn: 'span 2' }}
+            >
+              <p>{name}</p>
+              <p>{street_address}</p>
+              <p>
+                {city}, {state} {postal_code}, {country}
+              </p>
             </div>
           </div>
         </Container>

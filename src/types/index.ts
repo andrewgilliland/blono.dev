@@ -55,11 +55,11 @@ export type LocationType = {
 
 export type SupabaseEvent = {
   id: string;
+  cover_image_url?: string;
   title: string;
   location: LocationType;
   details: string;
   date: string;
   start_time: string;
-  end_time: string;
-  image?: ImageType;
+  end_time?: string;
 };
