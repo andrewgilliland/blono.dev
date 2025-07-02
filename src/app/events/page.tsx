@@ -7,18 +7,27 @@ export default async function EventsPage() {
   const supabase = await createClient();
 
   const { data: events, error } = await supabase.from('events').select(`
-    *,
+    title,
+    details,
+    start_time,
+    end_time,
+    cover_image_url,
     location:location_id (
-      *
+      name,
+      street_address,
+      city,
+      state,
+      postal_code,
+      country
     )
   `);
-
-  console.log('events:', events);
 
   if (error) {
     console.error('Error fetching events:', error);
     return <p>Error loading events.</p>;
   }
+
+  console.log('events:', events);
 
   return (
     <>

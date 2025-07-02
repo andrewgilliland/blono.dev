@@ -43,3 +43,23 @@ export type LessonType = {
   description: string;
   number: number;
 };
+
+export type LocationType = {
+  name: string;
+  state: string;
+  city: string;
+  street_address: string;
+  postal_code: string;
+  country: string;
+};
+
+export type SupabaseEvent = {
+  id: string;
+  title: string;
+  location: LocationType;
+  details: string;
+  date: string;
+  start_time: string;
+  end_time: string;
+  image?: ImageType;
+};
