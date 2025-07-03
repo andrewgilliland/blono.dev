@@ -1,12 +1,13 @@
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
-import { serialize } from "next-mdx-remote/serialize";
-import remarkGfm from "remark-gfm";
-import rehypePrettyCode from "rehype-pretty-code";
+import fs from 'fs';
+import path from 'path';
+import matter from 'gray-matter';
+import { serialize } from 'next-mdx-remote/serialize';
+import remarkGfm from 'remark-gfm';
+import rehypePrettyCode from 'rehype-pretty-code';
+import { LessonType } from '@/types';
 
 // POSTS_PATH is useful when you want to get the path to a specific file
-export const LESSONS_PATH = path.join(process.cwd(), "src/markdown/workshops/");
+export const LESSONS_PATH = path.join(process.cwd(), 'src/markdown/workshops/');
 
 export const getMarkdownFiles = async (workshop: string) => {
   const files = fs.readdirSync(path.join(LESSONS_PATH, workshop));
@@ -41,7 +42,7 @@ export const getMarkdownContent = async (filePath: string) => {
     mdxOptions: {
       remarkPlugins: [remarkGfm],
       // ! Plugin theme options: https://shiki.style/themes
-      rehypePlugins: [[rehypePrettyCode, { theme: "tokyo-night" }]],
+      rehypePlugins: [[rehypePrettyCode, { theme: 'tokyo-night' }]],
     },
     scope: data,
   });
