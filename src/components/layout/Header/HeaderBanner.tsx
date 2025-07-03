@@ -1,18 +1,17 @@
-import { EventType } from '@/types';
-import { FC } from 'react';
+import { getEvents } from '@/lib/data/events';
+import { SupabaseEvent } from '@/types';
 
-type HeaderBannerProps = {
-  events?: EventType[];
-};
+const HeaderBanner = async () => {
+  const events = await getEvents();
 
-const HeaderBanner: FC<HeaderBannerProps> = ({ events }) => {
-  const getNextEventDate = (events: EventType[]) => {
+  const getNextEventDate = (events: SupabaseEvent[]) => {
     // Filter out past events
-    events = events.filter((event) => new Date(event.date) > new Date());
+    events = events.filter((event) => new Date(event.start_time) > new Date());
 
     // Sort by date
     events.sort(
-      (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime(),
+      (a, b) =>
+        new Date(a.start_time).getTime() - new Date(b.start_time).getTime(),
     );
 
     const nextEvent = events[0];
@@ -24,7 +23,7 @@ const HeaderBanner: FC<HeaderBannerProps> = ({ events }) => {
     };
 
     return nextEvent
-      ? new Date(nextEvent.date).toLocaleDateString(undefined, options)
+      ? new Date(nextEvent.start_time).toLocaleDateString(undefined, options)
       : null;
   };
 

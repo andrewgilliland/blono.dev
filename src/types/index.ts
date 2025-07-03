@@ -59,7 +59,6 @@ export type SupabaseEvent = {
   title: string;
   location: LocationType;
   details: string;
-  date: string;
   start_time: string;
   end_time?: string;
 };

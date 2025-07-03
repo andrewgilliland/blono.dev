@@ -3,7 +3,6 @@ import type { Metadata } from 'next';
 import { Poppins } from 'next/font/google';
 import '@/styles/globals.css';
 import Layout from '@/components/layout/Layout';
-import { getAllEvents } from '@/lib/actions/events';
 
 const poppins = Poppins({
   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
@@ -24,11 +23,10 @@ type RootLayoutProps = {
 };
 
 export default function RootLayout({ children }: RootLayoutProps) {
-  const events = getAllEvents();
   return (
     <html lang="en" className={`${poppins.variable} scroll-smooth font-brand`}>
       <body className="leading-base bg-gray-900 text-lg text-white antialiased">
-        <Layout events={events}>{children}</Layout>
+        <Layout>{children}</Layout>
       </body>
     </html>
   );
