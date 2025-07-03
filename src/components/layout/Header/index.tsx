@@ -1,15 +1,10 @@
-import { FC } from 'react';
 import MobileHeader from './MobileHeader';
 import DesktopHeader from './DesktopHeader';
 import HeaderBanner from './HeaderBanner';
-import { EventType, NavLinkType } from '@/types';
+import { NavLinkType } from '@/types';
 import { HEADER_HEIGHT } from '@/lib/constants';
 
-type HeaderProps = {
-  events?: EventType[];
-};
-
-const Header: FC<HeaderProps> = ({ events }) => {
+const Header = () => {
   const mainLogo = {
     src: '/bn-logo-1.svg',
     alt: 'Bloomington-Normal Developers Logo',
@@ -32,7 +27,7 @@ const Header: FC<HeaderProps> = ({ events }) => {
       />
       <MobileHeader logo={mainLogo} navLinks={navLinks} />
       <DesktopHeader logo={mainLogo} navLinks={navLinks} />
-      <HeaderBanner events={events} />
+      <HeaderBanner />
     </header>
   );
 };

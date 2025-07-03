@@ -1,12 +1,9 @@
-import { FC } from 'react';
 import Image from 'next/image';
 import Circle from '../../icons/Circle';
 import HeroGrid from './HeroGrid';
 import Container from '@/components/layout/Container';
 
-type HeroSectionProps = {};
-
-const HeroSection: FC<HeroSectionProps> = () => {
+const HeroSection = () => {
   return (
     <section id="hero">
       <Container>
