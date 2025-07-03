@@ -1,6 +1,6 @@
 import { FC, ReactNode } from 'react';
 
-export type BadgeTheme = 'purple' | 'blue' | 'cyan' | 'gray';
+export type BadgeTheme = 'purple' | 'blue' | 'cyan' | 'gray' | 'green';
 
 type BadgeProps = {
   theme: BadgeTheme;
@@ -13,11 +13,12 @@ const Badge: FC<BadgeProps> = ({ children, theme }) => {
     blue: 'bg-blue-500 text-white',
     cyan: 'bg-cyan-500 text-white',
     gray: 'bg-gray-200 text-gray-500',
+    green: 'bg-green-500 text-black',
   };
 
   return (
     <div
-      className={`${themeOptions[theme]} flex justify-center items-center font-semibold text-xs rounded-[10px] px-2 py-1`}
+      className={`${themeOptions[theme]} flex items-center justify-center rounded-[10px] px-2 py-1 text-xs font-semibold`}
     >
       {children}
     </div>

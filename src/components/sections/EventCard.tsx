@@ -1,12 +1,8 @@
-'use client';
-
 import { FC } from 'react';
 import { SupabaseEvent } from '@/types';
 import Image from 'next/image';
-import { google } from 'calendar-link';
 import { CalendarIcon, MapPinIcon, PhotoIcon } from '@heroicons/react/24/solid';
 import Badge from '../ui/Badge';
-import Button from '../ui/Button';
 import Link from 'next/link';
 
 type EventCardProps = {
@@ -38,6 +34,11 @@ const EventCard: FC<EventCardProps> = ({ event }) => {
       })
     : '';
 
+  const daysUntilEvent = Math.ceil(
+    (new Date(start_time).getTime() - new Date().getTime()) /
+      (1000 * 60 * 60 * 24),
+  );
+
   return (
     <Link href={`/events/${id}`} className="relative">
       <div className="relative flex h-full flex-col-reverse rounded-[10px] border border-light border-opacity-75 bg-darker md:flex-row">
@@ -52,32 +53,14 @@ const EventCard: FC<EventCardProps> = ({ event }) => {
                     {end_time ? `- ${formattedEndTime}` : ''}
                   </p>
                 </Badge>
-                <Badge theme="cyan">
-                  <p>
-                    {location.city}, {location.state}
-                  </p>
-                </Badge>
-
                 {isFutureEvent && (
-                  <Button
-                    title="Add to Calendar"
-                    size="xs"
-                    theme="green"
-                    onClick={() =>
-                      window.open(
-                        google({
-                          title,
-                          location: location.name,
-                          description: details,
-                          start: new Date(start_time),
-                          end: end_time ? new Date(end_time) : undefined,
-                        }),
-                        '_blank',
-                      )
-                    }
-                  >
-                    Add To Calendar
-                  </Button>
+                  <Badge theme="green">
+                    <p>
+                      {daysUntilEvent > 0
+                        ? `In ${daysUntilEvent} day${daysUntilEvent > 1 ? 's' : ''}`
+                        : 'Today'}
+                    </p>
+                  </Badge>
                 )}
               </div>
               {/* ! TODO Link to Google Map Location */}
