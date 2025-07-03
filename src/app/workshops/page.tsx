@@ -8,7 +8,7 @@ const WorkshopsPage = () => {
     <>
       <WorkshopsHeroSection />
       <section id="workshops">
-        <Container className="mt-16">
+        <Container className="mt-24">
           <WorkshopCard />
         </Container>
       </section>

@@ -1,4 +1,3 @@
-import { FC } from 'react';
 import Circle from '@/components/icons/Circle';
 import {
   getMarkdownContent,

@@ -1,11 +1,8 @@
 import Container from '@/components/layout/Container';
 import ContactSection from '@/components/sections/ContactSection';
 import EventSection from '@/components/sections/EventSection';
-import { getEvents } from '@/lib/data/events';
 
 export default async function EventsPage() {
-  const events = await getEvents();
-
   return (
     <>
       <section>

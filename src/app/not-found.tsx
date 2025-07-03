@@ -1,5 +1,3 @@
-import Layout from '@/components/layout/Layout';
-
 const NotFoundPage = () => {
   return (
     <div className="flex h-screen items-center justify-center">

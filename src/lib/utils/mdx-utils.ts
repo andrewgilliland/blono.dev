@@ -4,7 +4,6 @@ import matter from 'gray-matter';
 import { serialize } from 'next-mdx-remote/serialize';
 import remarkGfm from 'remark-gfm';
 import rehypePrettyCode from 'rehype-pretty-code';
-import { LessonType } from '@/types';
 
 // POSTS_PATH is useful when you want to get the path to a specific file
 export const LESSONS_PATH = path.join(process.cwd(), 'src/markdown/workshops/');

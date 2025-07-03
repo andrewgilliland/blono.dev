@@ -1,12 +1,18 @@
 'use client';
 
 import { FC } from 'react';
-import { MDXRemote } from 'next-mdx-remote';
+import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote';
 import Link from 'next/link';
 
 type LessonPageProps = {
-  mdxSource: any;
-  lessons: any[];
+  mdxSource: MDXRemoteSerializeResult<
+    Record<string, unknown>,
+    Record<string, unknown>
+  >;
+  lessons: {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    [key: string]: any;
+  }[];
   id: string;
 };
 
