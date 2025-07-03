@@ -6,13 +6,6 @@ import { getEvents } from '@/lib/data/events';
 export default async function EventsPage() {
   const events = await getEvents();
 
-  // if (error) {
-  //   console.error('Error fetching events:', error);
-  //   return <p>Error loading events.</p>;
-  // }
-
-  console.log('events:', events);
-
   return (
     <>
       <section>

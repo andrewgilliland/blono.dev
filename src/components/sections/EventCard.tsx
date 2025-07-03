@@ -1,7 +1,7 @@
 'use client';
 
 import { FC } from 'react';
-import { EventType } from '@/types';
+import { SupabaseEvent } from '@/types';
 import Image from 'next/image';
 import { google } from 'calendar-link';
 import { CalendarIcon, MapPinIcon, PhotoIcon } from '@heroicons/react/24/solid';
@@ -10,18 +10,33 @@ import Button from '../ui/Button';
 import Link from 'next/link';
 
 type EventCardProps = {
-  event: EventType;
+  event: SupabaseEvent;
 };
 
 const EventCard: FC<EventCardProps> = ({ event }) => {
-  const { id, title, date, location, startTime, endTime, details, image } =
-    event;
+  const {
+    id,
+    title,
+    location,
+    start_time,
+    end_time,
+    details,
+    cover_image_url,
+  } = event;
 
-  const dateObj = new Date(date);
-  const month = dateObj.toLocaleString('default', { month: 'short' });
-  const day = dateObj.getDate();
-  const dayOfWeek = dateObj.toLocaleString('default', { weekday: 'short' });
-  const isFutureEvent = new Date() < dateObj;
+  const isFutureEvent = new Date() < new Date(start_time);
+  const formattedStartTime = new Date(start_time).toLocaleString('en-US', {
+    month: 'short',
+    day: 'numeric',
+    hour: 'numeric',
+    minute: '2-digit',
+  });
+  const formattedEndTime = end_time
+    ? new Date(end_time).toLocaleString('en-US', {
+        hour: 'numeric',
+        minute: '2-digit',
+      })
+    : '';
 
   return (
     <Link href={`/events/${id}`} className="relative">
@@ -33,7 +48,13 @@ const EventCard: FC<EventCardProps> = ({ event }) => {
                 <Badge theme="purple">
                   <CalendarIcon className="mr-1 inline-block h-4 w-4" />
                   <p>
-                    {dayOfWeek}, {month} {day} · {startTime} - {endTime} CST
+                    {formattedStartTime}{' '}
+                    {end_time ? `- ${formattedEndTime}` : ''}
+                  </p>
+                </Badge>
+                <Badge theme="cyan">
+                  <p>
+                    {location.city}, {location.state}
                   </p>
                 </Badge>
 
@@ -46,10 +67,10 @@ const EventCard: FC<EventCardProps> = ({ event }) => {
                       window.open(
                         google({
                           title,
-                          location,
+                          location: location.name,
                           description: details,
-                          start: new Date(date),
-                          end: new Date(date),
+                          start: new Date(start_time),
+                          end: end_time ? new Date(end_time) : undefined,
                         }),
                         '_blank',
                       )
@@ -62,7 +83,7 @@ const EventCard: FC<EventCardProps> = ({ event }) => {
               {/* ! TODO Link to Google Map Location */}
               <Badge theme="gray">
                 <MapPinIcon className="mr-1 inline-block h-4 w-4" />
-                <p>{location}</p>
+                <p>{location.name}</p>
               </Badge>
             </div>
             <h3 className="text-heading-tertiary">{title}</h3>
@@ -70,15 +91,15 @@ const EventCard: FC<EventCardProps> = ({ event }) => {
           </div>
         </div>
         <div className="flex w-full items-center justify-center rounded-t-[10px] bg-purp px-10 py-8 md:w-1/3 md:rounded-r-[10px] md:rounded-tl-none">
-          {image ? (
+          {cover_image_url ? (
             <div className="relative">
               <div className="absolute h-full w-full translate-x-1 translate-y-1 rounded-[10px] bg-purp-light" />
               <Image
                 className="relative min-w-24 rounded-[10px] object-cover"
-                src={image.src}
+                src={cover_image_url}
                 width={160}
                 height={160}
-                alt={image.alt}
+                alt={location.name}
                 priority
               />
             </div>

@@ -1,18 +1,21 @@
 import Circle from '../icons/Circle';
 import EventCard from './EventCard';
 import { SECTION_TOP_PADDING_OFFSET } from '@/lib/constants';
-import { getAllEvents } from '@/lib/actions/events';
+import { getEvents } from '@/lib/data/events';
 
-const EventSection = () => {
-  const events = getAllEvents();
+const EventSection = async () => {
+  const events = await getEvents();
   const now = new Date();
 
-  const upcomingEvents = events.filter((event) => new Date(event.date) > now);
+  const upcomingEvents = events.filter(
+    (event) => new Date(event.start_time) > now,
+  );
   upcomingEvents.sort(
-    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
+    (a, b) =>
+      new Date(b.start_time).getTime() - new Date(a.start_time).getTime(),
   );
 
-  const pastEvents = events.filter((event) => new Date(event.date) < now);
+  const pastEvents = events.filter((event) => new Date(event.start_time) < now);
 
   return (
     <section

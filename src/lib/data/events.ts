@@ -1,8 +1,10 @@
 import { createClient } from '@/lib/supabase/server';
 
-export const getEvents = async () => {
+// ! TODO: Fix this
+export const getEvents = async (): Promise<any[]> => {
   const supabase = await createClient();
   const { data: events, error } = await supabase.from('events').select(`
+    id,
     title,
     details,
     start_time,

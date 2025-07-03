@@ -3,7 +3,6 @@ import ContactSection from '@/components/sections/ContactSection';
 import Image from 'next/image';
 import { getEventById as getEvent } from '@/lib/data/events';
 import { SupabaseEvent } from '@/types';
-// import { getEventById } from '@/lib/actions/events';
 
 type EventPageProps = {
   params: Promise<{ id: string }>;
