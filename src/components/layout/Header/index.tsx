@@ -20,6 +20,7 @@ const Header: FC<HeaderProps> = ({ events }) => {
     { href: '/workshops', text: 'Workshops' },
     { href: '/#about', text: 'About' },
     { href: '/#contact', text: 'Contact' },
+
   ];
 
   return (
