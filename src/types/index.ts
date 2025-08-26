@@ -10,10 +10,12 @@ export type NavLinkType = {
 
 export type Post = {
   filePath: string;
+  slug: string;
   data: {
     title: string;
     description: string;
     date: string;
+    author: string
   };
 };
 
