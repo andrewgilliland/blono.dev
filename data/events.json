@@ -1,6 +1,34 @@
 [
   {
-    "id": "1",
+    "id": "35",
+    "title": "Developer Happy Hour",
+    "date": "2025-09-09T23:00:00.000Z",
+    "startTime": "5PM",
+    "endTime": "7PM",
+    "details": "Join us at Keg Grove Brewing Company for our September Developer Happy Hour! Connect with fellow developers and tech enthusiasts over drinks and engaging conversation. All skill levels are welcome!",
+    "location": "Keg Grove Brewing Company",
+    "image": {
+      "src": "/keg-grove-summer-1.webp",
+      "alt": "Keg Grove Brewing Company"
+    },
+    "address": "712 E Empire Street, Bloomington, IL"
+  },
+  {
+    "id": "34",
+    "title": "Developer Happy Hour",
+    "date": "2025-08-05T23:00:00.000Z",
+    "startTime": "5PM",
+    "endTime": "7PM",
+    "details": "Join us at Keg Grove Brewing Company for our August Developer Happy Hour! Connect with fellow developers and tech enthusiasts over drinks and engaging conversation. All skill levels are welcome!",
+    "location": "Keg Grove Brewing Company",
+    "image": {
+      "src": "/keg-grove-summer-1.webp",
+      "alt": "Keg Grove Brewing Company"
+    },
+    "address": "712 E Empire Street, Bloomington, IL"
+  },
+  {
+    "id": "33",
     "title": "Developer Happy Hour",
     "date": "2025-07-08T23:00:00.000Z",
     "startTime": "5PM",
@@ -14,7 +42,7 @@
     "address": "712 E Empire Street, Bloomington, IL"
   },
   {
-    "id": "2",
+    "id": "32",
     "title": "Developer Happy Hour",
     "date": "2025-06-24T23:00:00.000Z",
     "startTime": "5PM",
@@ -28,7 +56,7 @@
     "address": "712 E Empire Street, Bloomington, IL"
   },
   {
-    "id": "3",
+    "id": "31",
     "title": "Developer Happy Hour",
     "date": "2025-05-13T23:00:00.000Z",
     "startTime": "5PM",
@@ -42,7 +70,7 @@
     "address": "712 E Empire Street, Bloomington, IL"
   },
   {
-    "id": "4",
+    "id": "30",
     "title": "Developer Happy Hour",
     "date": "2025-04-22T23:00:00.000Z",
     "startTime": "5PM",
@@ -56,7 +84,7 @@
     "address": "712 E Empire Street, Bloomington, IL"
   },
   {
-    "id": "5",
+    "id": "29",
     "title": "Developer Happy Hour",
     "date": "2025-03-25T23:00:00.000Z",
     "startTime": "5PM",
@@ -70,7 +98,7 @@
     "address": "712 E Empire Street, Bloomington, IL"
   },
   {
-    "id": "6",
+    "id": "28",
     "title": "Developer Happy Hour",
     "date": "2025-02-25T23:00:00.000Z",
     "startTime": "5PM",
@@ -84,7 +112,7 @@
     "address": "712 E Empire Street, Bloomington, IL"
   },
   {
-    "id": "7",
+    "id": "27",
     "title": "Developer Happy Hour",
     "date": "2025-01-25T23:00:00.000Z",
     "startTime": "5PM",
@@ -98,7 +126,7 @@
     "address": "712 E Empire Street, Bloomington, IL"
   },
   {
-    "id": "8",
+    "id": "26",
     "title": "Developer Happy Hour",
     "date": "2024-12-17T23:00:00.000Z",
     "startTime": "5PM",
@@ -112,7 +140,7 @@
     "address": "712 E Empire Street, Bloomington, IL"
   },
   {
-    "id": "9",
+    "id": "25",
     "title": "Developer Happy Hour",
     "date": "2024-11-19T23:00:00.000Z",
     "startTime": "5PM",
@@ -126,7 +154,7 @@
     "address": "712 E Empire Street, Bloomington, IL"
   },
   {
-    "id": "10",
+    "id": "24",
     "title": "Developer Happy Hour",
     "date": "2024-10-22T23:00:00.000Z",
     "startTime": "5PM",
@@ -140,7 +168,7 @@
     "address": "712 E Empire Street, Bloomington, IL"
   },
   {
-    "id": "11",
+    "id": "23",
     "title": "Developer Happy Hour",
     "date": "2024-09-24T23:00:00.000Z",
     "startTime": "5PM",
@@ -154,7 +182,7 @@
     "address": "712 E Empire Street, Bloomington, IL"
   },
   {
-    "id": "12",
+    "id": "22",
     "title": "Developer Happy Hour",
     "date": "2024-08-27T23:00:00.000Z",
     "startTime": "5PM",
@@ -168,7 +196,7 @@
     "address": "1101 Airport Road, Bloomington, IL"
   },
   {
-    "id": "13",
+    "id": "21",
     "title": "July Developer Meetup",
     "date": "2024-07-16T23:00:00.000Z",
     "startTime": "5PM",
@@ -182,7 +210,7 @@
     "address": "1101 Airport Road, Bloomington, IL"
   },
   {
-    "id": "14",
+    "id": "20",
     "title": "Coding Social",
     "date": "2024-03-05T23:00:00.000Z",
     "startTime": "6PM",
@@ -193,7 +221,7 @@
     "address": "1101 Airport Road, Bloomington, IL"
   },
   {
-    "id": "15",
+    "id": "19",
     "title": "Coding Social",
     "date": "2024-02-06T23:00:00.000Z",
     "startTime": "6PM",
@@ -203,7 +231,7 @@
     "address": "1101 Airport Road, Bloomington, IL"
   },
   {
-    "id": "16",
+    "id": "18",
     "title": "Coding Social",
     "date": "2024-01-23T23:00:00.000Z",
     "startTime": "6PM",
@@ -223,7 +251,7 @@
     "address": "1200 Greenbriar Dr, Normal, IL"
   },
   {
-    "id": "18",
+    "id": "16",
     "title": "Biweekly Coding Social",
     "date": "2023-11-28T23:00:00.000Z",
     "startTime": "6PM",
@@ -233,7 +261,7 @@
     "address": "1200 Greenbriar Dr, Normal, IL"
   },
   {
-    "id": "19",
+    "id": "15",
     "title": "Biweekly Coding Social",
     "date": "2023-11-14T23:00:00.000Z",
     "startTime": "6PM",
@@ -243,7 +271,7 @@
     "address": "1200 Greenbriar Dr, Normal, IL"
   },
   {
-    "id": "20",
+    "id": "14",
     "title": "Biweekly Coding Social",
     "date": "2023-11-01T23:00:00.000Z",
     "startTime": "6PM",
@@ -253,7 +281,7 @@
     "address": "1101 Airport Road, Bloomington, IL"
   },
   {
-    "id": "21",
+    "id": "13",
     "title": "Biweekly Coding Social",
     "date": "2023-10-17T23:00:00.000Z",
     "startTime": "6PM",
@@ -263,7 +291,7 @@
     "address": "1200 Greenbriar Dr, Normal, IL"
   },
   {
-    "id": "22",
+    "id": "12",
     "title": "Biweekly Coding Social",
     "date": "2023-09-19T23:00:00.000Z",
     "startTime": "6PM",
@@ -273,7 +301,7 @@
     "address": "1200 Greenbriar Dr, Normal, IL"
   },
   {
-    "id": "23",
+    "id": "11",
     "title": "Biweekly Coding Social",
     "date": "2023-09-05T23:00:00.000Z",
     "startTime": "6PM",
@@ -283,7 +311,7 @@
     "address": "1200 Greenbriar Dr, Normal, IL"
   },
   {
-    "id": "24",
+    "id": "10",
     "title": "Biweekly Coding Social",
     "date": "2023-08-08T23:00:00.000Z",
     "startTime": "6PM",
@@ -293,7 +321,7 @@
     "address": "1200 Greenbriar Dr, Normal, IL"
   },
   {
-    "id": "25",
+    "id": "9",
     "title": "Biweekly Coding Social",
     "date": "2023-07-25T23:00:00.000Z",
     "startTime": "6PM",
@@ -303,7 +331,7 @@
     "address": "1200 Greenbriar Dr, Normal, IL"
   },
   {
-    "id": "26",
+    "id": "8",
     "title": "Biweekly Coding Social",
     "date": "2023-04-25T23:00:00.000Z",
     "startTime": "6PM",
@@ -313,7 +341,7 @@
     "address": "1200 Greenbriar Dr, Normal, IL"
   },
   {
-    "id": "27",
+    "id": "7",
     "title": "Coding Workshop",
     "date": "2023-04-11T23:00:00.000Z",
     "startTime": "6PM",
@@ -323,7 +351,7 @@
     "address": "1401 Commerce Pkwy, Bloomington, IL"
   },
   {
-    "id": "28",
+    "id": "6",
     "title": "Coding Social",
     "date": "2023-02-27T23:00:00.000Z",
     "startTime": "6PM",
@@ -333,7 +361,7 @@
     "address": "1101 Airport Road, Bloomington, IL"
   },
   {
-    "id": "29",
+    "id": "5",
     "title": "Coding Social",
     "date": "2023-01-24T23:00:00.000Z",
     "startTime": "6PM",
@@ -343,7 +371,7 @@
     "address": "1101 Airport Road, Bloomington, IL"
   },
   {
-    "id": "30",
+    "id": "4",
     "title": "Coding Social",
     "date": "2022-09-22T23:00:00.000Z",
     "startTime": "530PM",
@@ -353,7 +381,7 @@
     "address": "712 E Empire St Suite 2, Bloomington, IL"
   },
   {
-    "id": "31",
+    "id": "3",
     "title": "Coding Social",
     "date": "2022-08-25T23:00:00.000Z",
     "startTime": "530PM",
@@ -363,7 +391,7 @@
     "address": "712 E Empire St Suite 2, Bloomington, IL"
   },
   {
-    "id": "32",
+    "id": "2",
     "title": "Coding Social",
     "date": "2022-06-16T23:00:00.000Z",
     "startTime": "530PM",
@@ -373,7 +401,7 @@
     "address": "712 E Empire St Suite 2, Bloomington, IL"
   },
   {
-    "id": "33",
+    "id": "1",
     "title": "Coding Social",
     "date": "2022-04-26T23:00:00.000Z",
     "startTime": "530PM",
@@ -383,7 +411,7 @@
     "address": "712 E Empire St Suite 2, Bloomington, IL"
   },
   {
-    "id": "34",
+    "id": "0",
     "title": "Coding Social",
     "date": "2022-03-23T23:00:00.000Z",
     "startTime": "600PM",
