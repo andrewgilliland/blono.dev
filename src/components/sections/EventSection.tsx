@@ -51,7 +51,7 @@ const EventSection = () => {
       </div>
       <div className="mt-20">
         <h2 className="text-heading-secondary mb-12">Past Events</h2>
-        <div className="grid gap-8 md:grid-cols-2">
+        <div className="grid gap-6">
           {pastEvents.map((event, index) => (
             <EventCard key={index} event={event} />
           ))}

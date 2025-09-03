@@ -7,8 +7,8 @@ export default function EventsPage() {
     <>
       <section>
         <Container className="mt-24">
-          <h1>Events</h1>
-          <p>
+          <h1 className="mb-12">Events</h1>
+          <p className="max-w-2xl">
             From tech meetups to community gatherings, stay updated with our
             upcoming events.
           </p>
