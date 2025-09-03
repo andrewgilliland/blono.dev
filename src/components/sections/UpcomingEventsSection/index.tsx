@@ -8,9 +8,11 @@ const UpcomingEventsSection = () => {
   const events = getAllEvents();
   const now = new Date();
 
-  const upcomingEvents = events.filter((event) => new Date(event.date) > now);
+  const upcomingEvents = events.filter(
+    (event) => new Date(event.startTime) > now,
+  );
   upcomingEvents.sort(
-    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
+    (a, b) => new Date(a.startTime).getTime() - new Date(b.startTime).getTime(),
   );
 
   return (

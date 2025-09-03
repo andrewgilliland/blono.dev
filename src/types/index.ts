@@ -23,7 +23,6 @@ export type EventType = {
   location: string;
   address: string;
   details: string;
-  date: string;
   startTime: string;
   endTime: string;
   image?: ImageType;

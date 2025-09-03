@@ -8,11 +8,12 @@ type HeaderBannerProps = {
 const HeaderBanner: FC<HeaderBannerProps> = ({ events }) => {
   const getNextEventDate = (events: EventType[]) => {
     // Filter out past events
-    events = events.filter((event) => new Date(event.date) > new Date());
+    events = events.filter((event) => new Date(event.startTime) > new Date());
 
     // Sort by date
     events.sort(
-      (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime(),
+      (a, b) =>
+        new Date(a.startTime).getTime() - new Date(b.startTime).getTime(),
     );
 
     const nextEvent = events[0];
@@ -24,7 +25,7 @@ const HeaderBanner: FC<HeaderBannerProps> = ({ events }) => {
     };
 
     return nextEvent
-      ? new Date(nextEvent.date).toLocaleDateString(undefined, options)
+      ? new Date(nextEvent.startTime).toLocaleDateString(undefined, options)
       : null;
   };
 

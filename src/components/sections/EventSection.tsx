@@ -8,12 +8,14 @@ const EventSection = () => {
 
   const now = new Date();
 
-  const upcomingEvents = events.filter((event) => new Date(event.date) > now);
+  const upcomingEvents = events.filter(
+    (event) => new Date(event.startTime) > now,
+  );
   upcomingEvents.sort(
-    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
+    (a, b) => new Date(a.startTime).getTime() - new Date(b.startTime).getTime(),
   );
 
-  const pastEvents = events.filter((event) => new Date(event.date) < now);
+  const pastEvents = events.filter((event) => new Date(event.startTime) < now);
 
   return (
     <section
@@ -49,7 +51,7 @@ const EventSection = () => {
       </div>
       <div className="mt-20">
         <h2 className="text-heading-secondary mb-12">Past Events</h2>
-        <div className="grid gap-8 md:grid-cols-2">
+        <div className="grid gap-6">
           {pastEvents.map((event, index) => (
             <EventCard key={index} event={event} />
           ))}

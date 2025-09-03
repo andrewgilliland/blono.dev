@@ -1,6 +1,8 @@
 import Container from '@/components/layout/Container';
 import ContactSection from '@/components/sections/ContactSection';
+import Badge from '@/components/ui/Badge';
 import { getEventById } from '@/lib/actions/events';
+import { CalendarIcon } from '@heroicons/react/24/solid';
 import Image from 'next/image';
 
 type EventPageProps = {
@@ -20,36 +22,52 @@ const EventPage = async ({ params }: EventPageProps) => {
     );
   }
 
-  const { title, location, address, details, image } = event;
+  const { title, location, address, details, image, startTime, endTime } =
+    event;
+
+  const dateObj = new Date(startTime);
+  const month = dateObj.toLocaleString('default', { month: 'short' });
+  const day = dateObj.getDate();
+  const dayOfWeek = dateObj.toLocaleString('default', { weekday: 'short' });
+
+  const formatTimeString = (dateTime: string) => {
+    const date = new Date(dateTime);
+    return date.toLocaleTimeString([], {
+      hour: '2-digit',
+      minute: '2-digit',
+    });
+  };
 
   return (
     <>
       <section>
         <Container className="mt-24">
-          <div
-            style={{ gridTemplateColumns: 'repeat(6, minmax(0, 1fr))' }}
-            className="grid gap-8"
-          >
-            <div style={{ gridColumn: 'span 4' }}>
-              <h1>{title}</h1>
-              {image && (
-                <Image
-                  className="mt-12 border"
-                  src={image.src}
-                  alt={image.alt}
-                  width={250}
-                  height={250}
-                />
-              )}
-
-              <div className="mt-10">
-                <h2 className="font-bold text-purple-600">Details</h2>
-                <p className="mt-4 text-base">{details}</p>
-              </div>
-            </div>
-            <div style={{ gridColumn: 'span 2' }}>
+          <div>
+            <h1>{title}</h1>
+            {image && (
+              <Image
+                className="mt-12 w-1/2"
+                src={image.src}
+                alt={image.alt}
+                width={250}
+                height={250}
+              />
+            )}
+            <div className="mt-12 flex flex-col items-start gap-2">
+              <Badge theme="purple">
+                <CalendarIcon className="mr-1 inline-block h-4 w-4" />
+                <p>
+                  {dayOfWeek}, {month} {day} · {formatTimeString(startTime)} -{' '}
+                  {formatTimeString(endTime)} CST
+                </p>
+              </Badge>
               <p>{location}</p>
               <p>{address}</p>
+            </div>
+
+            <div className="mt-10">
+              <h2 className="font-bold text-purple-600">Details</h2>
+              <p className="mt-4">{details}</p>
             </div>
           </div>
         </Container>
