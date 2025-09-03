@@ -14,14 +14,25 @@ type EventCardProps = {
 };
 
 const EventCard: FC<EventCardProps> = ({ event }) => {
-  const { id, title, date, location, startTime, endTime, details, image } =
-    event;
+  const { id, title, location, startTime, endTime, details, image } = event;
 
-  const dateObj = new Date(date);
+  const dateObj = new Date(startTime);
+
   const month = dateObj.toLocaleString('default', { month: 'short' });
   const day = dateObj.getDate();
   const dayOfWeek = dateObj.toLocaleString('default', { weekday: 'short' });
   const isFutureEvent = new Date() < dateObj;
+
+  const startTimeString = dateObj.toLocaleTimeString([], {
+    hour: '2-digit',
+    minute: '2-digit',
+  });
+
+  const endTimeObj = new Date(endTime);
+  const endTimeString = endTimeObj.toLocaleTimeString([], {
+    hour: '2-digit',
+    minute: '2-digit',
+  });
 
   return (
     <Link href={`/events/${id}`} className="relative">
@@ -33,7 +44,8 @@ const EventCard: FC<EventCardProps> = ({ event }) => {
                 <Badge theme="purple">
                   <CalendarIcon className="mr-1 inline-block h-4 w-4" />
                   <p>
-                    {dayOfWeek}, {month} {day} · {startTime} - {endTime} CST
+                    {dayOfWeek}, {month} {day} · {startTimeString} -
+                    {endTimeString} CST
                   </p>
                 </Badge>
 
@@ -48,8 +60,8 @@ const EventCard: FC<EventCardProps> = ({ event }) => {
                           title,
                           location,
                           description: details,
-                          start: new Date(date),
-                          end: new Date(date),
+                          start: new Date(startTime),
+                          end: new Date(endTime),
                         }),
                         '_blank',
                       )

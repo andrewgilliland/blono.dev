@@ -2,9 +2,8 @@
   {
     "id": "35",
     "title": "Developer Happy Hour",
-    "date": "2025-09-09T23:00:00.000Z",
-    "startTime": "5PM",
-    "endTime": "7PM",
+    "startTime": "2025-09-09T17:00:00-05:00",
+    "endTime": "2025-09-09T19:00:00-05:00",
     "details": "Join us at Keg Grove Brewing Company for our September Developer Happy Hour! Connect with fellow developers and tech enthusiasts over drinks and engaging conversation. All skill levels are welcome!",
     "location": "Keg Grove Brewing Company",
     "image": {
@@ -16,9 +15,8 @@
   {
     "id": "34",
     "title": "Developer Happy Hour",
-    "date": "2025-08-05T23:00:00.000Z",
-    "startTime": "5PM",
-    "endTime": "7PM",
+    "startTime": "2025-08-05T17:00:00-05:00",
+    "endTime": "2025-08-05T19:00:00-05:00",
     "details": "Join us at Keg Grove Brewing Company for our August Developer Happy Hour! Connect with fellow developers and tech enthusiasts over drinks and engaging conversation. All skill levels are welcome!",
     "location": "Keg Grove Brewing Company",
     "image": {
@@ -30,9 +28,8 @@
   {
     "id": "33",
     "title": "Developer Happy Hour",
-    "date": "2025-07-08T23:00:00.000Z",
-    "startTime": "5PM",
-    "endTime": "7PM",
+    "startTime": "2025-07-08T17:00:00-05:00",
+    "endTime": "2025-07-08T19:00:00-05:00",
     "details": "Celebrate summer with us at Keg Grove Brewing Company for our July Developer Happy Hour! Join fellow software developers and tech enthusiasts for a relaxed evening of drinks, conversation, and community. All experience levels welcome—come as you are and talk about the tech that inspires you.",
     "location": "Keg Grove Brewing Company",
     "image": {
@@ -44,9 +41,8 @@
   {
     "id": "32",
     "title": "Developer Happy Hour",
-    "date": "2025-06-24T23:00:00.000Z",
-    "startTime": "5PM",
-    "endTime": "7PM",
+    "startTime": "2025-06-24T17:00:00-05:00",
+    "endTime": "2025-06-24T19:00:00-05:00",
     "details": "Kick off summer with us at Keg Grove Brewing Company for our June Developer Happy Hour! Connect with local coders and tech enthusiasts over drinks and great conversation. Whether you’re deep into your career or just starting out, all skill levels are welcome to join the fun.",
     "location": "Keg Grove Brewing Company",
     "image": {
@@ -58,9 +54,8 @@
   {
     "id": "31",
     "title": "Developer Happy Hour",
-    "date": "2025-05-13T23:00:00.000Z",
-    "startTime": "5PM",
-    "endTime": "7PM",
+    "startTime": "2025-05-13T17:00:00-05:00",
+    "endTime": "2025-05-13T19:00:00-05:00",
     "details": "Come hang out with fellow software developers at Keg Grove Brewing Company for a relaxed tech meetup and happy hour! Whether you’re a seasoned coder or just starting out, join us to share ideas, swap stories, and talk about the technologies you’re passionate about. All skill levels are welcome!",
     "location": "Keg Grove Brewing Company",
     "image": {
@@ -72,9 +67,8 @@
   {
     "id": "30",
     "title": "Developer Happy Hour",
-    "date": "2025-04-22T23:00:00.000Z",
-    "startTime": "5PM",
-    "endTime": "7PM",
+    "startTime": "2025-04-22T17:00:00-05:00",
+    "endTime": "2025-04-22T19:00:00-05:00",
     "details": "Join us at Keg Grove Brewery to mingle with local software developers and discuss the tech that excites you! We welcome coders and tech enthusiasts of all skill levels.",
     "location": "Keg Grove Brewing Company",
     "image": {
@@ -86,9 +80,8 @@
   {
     "id": "29",
     "title": "Developer Happy Hour",
-    "date": "2025-03-25T23:00:00.000Z",
-    "startTime": "5PM",
-    "endTime": "7PM",
+    "startTime": "2025-03-25T17:00:00-05:00",
+    "endTime": "2025-03-25T19:00:00-05:00",
     "details": "Join us at Keg Grove Brewery to mingle with local software developers and discuss the tech that excites you! We welcome coders and tech enthusiasts of all skill levels.",
     "location": "Keg Grove Brewing Company",
     "image": {
@@ -100,9 +93,8 @@
   {
     "id": "28",
     "title": "Developer Happy Hour",
-    "date": "2025-02-25T23:00:00.000Z",
-    "startTime": "5PM",
-    "endTime": "7PM",
+    "startTime": "2025-02-25T17:00:00-06:00",
+    "endTime": "2025-02-25T19:00:00-06:00",
     "details": "Join us at Keg Grove Brewery to mingle with local software developers and discuss the tech that excites you! We welcome coders and tech enthusiasts of all skill levels.",
     "location": "Keg Grove Brewery",
     "image": {
@@ -114,9 +106,8 @@
   {
     "id": "27",
     "title": "Developer Happy Hour",
-    "date": "2025-01-25T23:00:00.000Z",
-    "startTime": "5PM",
-    "endTime": "7PM",
+    "startTime": "2025-01-25T17:00:00-06:00",
+    "endTime": "2025-01-25T19:00:00-06:00",
     "details": "Join us at Keg Grove Brewery to mingle with local software developers and discuss the tech that excites you! We welcome coders and tech enthusiasts of all skill levels.",
     "location": "Keg Grove Brewery",
     "image": {
@@ -128,9 +119,8 @@
   {
     "id": "26",
     "title": "Developer Happy Hour",
-    "date": "2024-12-17T23:00:00.000Z",
-    "startTime": "5PM",
-    "endTime": "7PM",
+    "startTime": "2024-12-17T17:00:00-06:00",
+    "endTime": "2024-12-17T19:00:00-06:00",
     "details": "Join us at Keg Grove Brewery to mingle with local software developers and discuss the tech that excites you! We welcome coders and tech enthusiasts of all skill levels.",
     "location": "Keg Grove Brewery",
     "image": {
@@ -142,9 +132,8 @@
   {
     "id": "25",
     "title": "Developer Happy Hour",
-    "date": "2024-11-19T23:00:00.000Z",
-    "startTime": "5PM",
-    "endTime": "7PM",
+    "startTime": "2024-11-19T17:00:00-06:00",
+    "endTime": "2024-11-19T19:00:00-06:00",
     "details": "Join us at Keg Grove Brewery to mingle with local software developers and discuss the tech that excites you! We welcome coders and tech enthusiasts of all skill levels.",
     "location": "Keg Grove Brewery",
     "image": {
@@ -156,9 +145,8 @@
   {
     "id": "24",
     "title": "Developer Happy Hour",
-    "date": "2024-10-22T23:00:00.000Z",
-    "startTime": "5PM",
-    "endTime": "7PM",
+    "startTime": "2024-10-22T17:00:00-05:00",
+    "endTime": "2024-10-22T19:00:00-05:00",
     "details": "Join us at Keg Grove Brewery to mingle with local software developers and discuss the tech that excites you! We welcome coders and tech enthusiasts of all skill levels.",
     "location": "Keg Grove Brewery",
     "image": {
@@ -170,9 +158,8 @@
   {
     "id": "23",
     "title": "Developer Happy Hour",
-    "date": "2024-09-24T23:00:00.000Z",
-    "startTime": "5PM",
-    "endTime": "7PM",
+    "startTime": "2024-09-24T17:00:00-05:00",
+    "endTime": "2024-09-24T19:00:00-05:00",
     "details": "Join us at Keg Grove Brewery to mingle with local software developers and discuss the tech that excites you! We welcome coders and tech enthusiasts of all skill levels.",
     "location": "Keg Grove Brewery",
     "image": {
@@ -184,9 +171,8 @@
   {
     "id": "22",
     "title": "Developer Happy Hour",
-    "date": "2024-08-27T23:00:00.000Z",
-    "startTime": "5PM",
-    "endTime": "7PM",
+    "startTime": "2024-08-27T17:00:00-05:00",
+    "endTime": "2024-08-27T19:00:00-05:00",
     "details": "Come hang out, meet other developers in the area, and talk about whatever tech piques your interest! Coders and tech enthusiasts of all levels are invited.",
     "location": "Crafted",
     "image": {
@@ -198,9 +184,8 @@
   {
     "id": "21",
     "title": "July Developer Meetup",
-    "date": "2024-07-16T23:00:00.000Z",
-    "startTime": "5PM",
-    "endTime": "7PM",
+    "startTime": "2024-07-16T17:00:00-05:00",
+    "endTime": "2024-07-16T19:00:00-05:00",
     "details": "Come hang out, talk about what you've been coding, and get to know other developers in BloNo!",
     "location": "Crafted",
     "image": {
@@ -212,9 +197,8 @@
   {
     "id": "20",
     "title": "Coding Social",
-    "date": "2024-03-05T23:00:00.000Z",
-    "startTime": "6PM",
-    "endTime": "8PM",
+    "startTime": "2024-03-05T18:00:00-06:00",
+    "endTime": "2024-03-05T20:00:00-06:00",
     "details": "We're going back to CRAFTED in Bloomington! Coders of all levels feel free to come talk projects, share resources, or just learn more about people in the community.",
     "location": "Crafted",
 
@@ -223,9 +207,8 @@
   {
     "id": "19",
     "title": "Coding Social",
-    "date": "2024-02-06T23:00:00.000Z",
-    "startTime": "6PM",
-    "endTime": "8PM",
+    "startTime": "2024-02-06T18:00:00-06:00",
+    "endTime": "2024-02-06T20:00:00-06:00",
     "details": "We're going back to CRAFTED in Bloomington! Coders of all levels feel free to come talk projects, share resources, or just learn more about people in the community.",
     "location": "Crafted",
     "address": "1101 Airport Road, Bloomington, IL"
@@ -233,9 +216,8 @@
   {
     "id": "18",
     "title": "Coding Social",
-    "date": "2024-01-23T23:00:00.000Z",
-    "startTime": "6PM",
-    "endTime": "8PM",
+    "startTime": "2024-01-23T18:00:00-06:00",
+    "endTime": "2024-01-23T20:00:00-06:00",
     "details": "We're going back to CRAFTED in Bloomington! Coders of all levels feel free to come talk projects, share resources, or just learn more about people in the community.",
     "location": "Crafted",
     "address": "1101 Airport Road, Bloomington, IL"
@@ -243,9 +225,8 @@
   {
     "id": "17",
     "title": "Biweekly Coding Social",
-    "date": "2024-01-09T23:00:00.000Z",
-    "startTime": "6PM",
-    "endTime": "8PM",
+    "startTime": "2024-01-09T18:00:00-06:00",
+    "endTime": "2024-01-09T20:00:00-06:00",
     "details": "Come hang out at the Destihl Brewery in Bloomington! Coders of all levels feel free to come talk projects, share resources, or just learn more about people in the community.",
     "location": "Destihl Brewery",
     "address": "1200 Greenbriar Dr, Normal, IL"
@@ -253,9 +234,8 @@
   {
     "id": "16",
     "title": "Biweekly Coding Social",
-    "date": "2023-11-28T23:00:00.000Z",
-    "startTime": "6PM",
-    "endTime": "8PM",
+    "startTime": "2023-11-28T18:00:00-06:00",
+    "endTime": "2023-11-28T20:00:00-06:00",
     "details": "Come hang out at the Destihl Brewery in Bloomington! Coders of all levels feel free to come talk projects, share resources, or just learn more about people in the community.",
     "location": "Destihl Brewery",
     "address": "1200 Greenbriar Dr, Normal, IL"
@@ -263,9 +243,8 @@
   {
     "id": "15",
     "title": "Biweekly Coding Social",
-    "date": "2023-11-14T23:00:00.000Z",
-    "startTime": "6PM",
-    "endTime": "8PM",
+    "startTime": "2023-11-14T18:00:00-06:00",
+    "endTime": "2023-11-14T20:00:00-06:00",
     "details": "Come hang out at the Destihl Brewery in Bloomington! Coders of all levels feel free to come talk projects, share resources, or just learn more about people in the community.",
     "location": "Destihl Brewery",
     "address": "1200 Greenbriar Dr, Normal, IL"
@@ -273,9 +252,8 @@
   {
     "id": "14",
     "title": "Biweekly Coding Social",
-    "date": "2023-11-01T23:00:00.000Z",
-    "startTime": "6PM",
-    "endTime": "8PM",
+    "startTime": "2023-11-01T18:00:00-05:00",
+    "endTime": "2023-11-01T20:00:00-05:00",
     "details": "Different location! Event moved bc I didn't realize I planned one on Halloween 🎃 Come hang out at the Crafted in Bloomington! Coders of all levels feel free to come talk projects, share resources, or just learn more about people in the community.",
     "location": "Crafted",
     "address": "1101 Airport Road, Bloomington, IL"
@@ -283,9 +261,8 @@
   {
     "id": "13",
     "title": "Biweekly Coding Social",
-    "date": "2023-10-17T23:00:00.000Z",
-    "startTime": "6PM",
-    "endTime": "8PM",
+    "startTime": "2023-10-17T18:00:00-05:00",
+    "endTime": "2023-10-17T20:00:00-05:00",
     "details": "Come hang out at the Destihl Brewery in Bloomington! Coders of all levels feel free to come talk projects, share resources, or just learn more about people in the community.",
     "location": "Destihl Brewery",
     "address": "1200 Greenbriar Dr, Normal, IL"
@@ -293,9 +270,8 @@
   {
     "id": "12",
     "title": "Biweekly Coding Social",
-    "date": "2023-09-19T23:00:00.000Z",
-    "startTime": "6PM",
-    "endTime": "8PM",
+    "startTime": "2023-09-19T18:00:00-05:00",
+    "endTime": "2023-09-19T20:00:00-05:00",
     "details": "Come hang out at the Destihl Brewery in Bloomington! Coders of all levels feel free to come talk projects, share resources, or just learn more about people in the community.",
     "location": "Destihl Brewery",
     "address": "1200 Greenbriar Dr, Normal, IL"
@@ -303,9 +279,8 @@
   {
     "id": "11",
     "title": "Biweekly Coding Social",
-    "date": "2023-09-05T23:00:00.000Z",
-    "startTime": "6PM",
-    "endTime": "8PM",
+    "startTime": "2023-09-05T18:00:00-05:00",
+    "endTime": "2023-09-05T20:00:00-05:00",
     "details": "Come hang out at the Destihl Brewery in Bloomington! Coders of all levels feel free to come talk projects, share resources, or just learn more about people in the community.",
     "location": "Destihl Brewery",
     "address": "1200 Greenbriar Dr, Normal, IL"
@@ -313,9 +288,8 @@
   {
     "id": "10",
     "title": "Biweekly Coding Social",
-    "date": "2023-08-08T23:00:00.000Z",
-    "startTime": "6PM",
-    "endTime": "8PM",
+    "startTime": "2023-08-08T18:00:00-05:00",
+    "endTime": "2023-08-08T20:00:00-05:00",
     "details": "Come one come all to Destihl Brewery in Normal! This week there's an optional focus to talk about, share, and work on any non-work projects you've made/are interested in coding up yourself. Coders of all levels feel free to come and share resources or get to know others people in the community.",
     "location": "Destihl Brewery",
     "address": "1200 Greenbriar Dr, Normal, IL"
@@ -323,9 +297,8 @@
   {
     "id": "9",
     "title": "Biweekly Coding Social",
-    "date": "2023-07-25T23:00:00.000Z",
-    "startTime": "6PM",
-    "endTime": "8PM",
+    "startTime": "2023-07-25T18:00:00-05:00",
+    "endTime": "2023-07-25T20:00:00-05:00",
     "details": "Come hang out at the Destihl Brewery in Bloomington! Coders of all levels feel free to come talk projects, share resources, or just learn more about people in the community.",
     "location": "Destihl Brewery",
     "address": "1200 Greenbriar Dr, Normal, IL"
@@ -333,9 +306,8 @@
   {
     "id": "8",
     "title": "Biweekly Coding Social",
-    "date": "2023-04-25T23:00:00.000Z",
-    "startTime": "6PM",
-    "endTime": "8PM",
+    "startTime": "2023-04-25T18:00:00-06:00",
+    "endTime": "2023-04-25T20:00:00-06:00",
     "details": "Come hang out at the Destihl Brewery in Bloomington! Coders of all levels feel free to come talk projects, share resources, or just learn more about people in the community.",
     "location": "Destihl Brewery",
     "address": "1200 Greenbriar Dr, Normal, IL"
@@ -343,9 +315,8 @@
   {
     "id": "7",
     "title": "Coding Workshop",
-    "date": "2023-04-11T23:00:00.000Z",
-    "startTime": "6PM",
-    "endTime": "8PM",
+    "startTime": "2023-04-11T18:00:00-06:00",
+    "endTime": "2023-04-11T20:00:00-06:00",
     "details": "This is a night dedicated to playing with and discussing the data visualization tool D3.js. Come by to hear presentations from fellow coders. Anyone is welcome to be an audience member -- reach out to me if there's a topic you'd like to hear about or present on!",
     "location": "1401 Commerce Pkwy",
     "address": "1401 Commerce Pkwy, Bloomington, IL"
@@ -353,9 +324,8 @@
   {
     "id": "6",
     "title": "Coding Social",
-    "date": "2023-02-27T23:00:00.000Z",
-    "startTime": "6PM",
-    "endTime": "8PM",
+    "startTime": "2023-02-27T18:00:00-06:00",
+    "endTime": "2023-02-27T20:00:00-06:00",
     "details": "Coding social for anyone in Bloomington-Normal and beyond. Come hang out, talk about your passions, and talk trash about Objective-C (if you wish). I doubled checked to make sure there wasn't trivia on this night. Bring ideas for what you'd like to get out of this group - whether it be demos, workshops, questions, personal projects, networking, school, general interest, or what have you",
     "location": "Crafted",
     "address": "1101 Airport Road, Bloomington, IL"
@@ -363,9 +333,8 @@
   {
     "id": "5",
     "title": "Coding Social",
-    "date": "2023-01-24T23:00:00.000Z",
-    "startTime": "6PM",
-    "endTime": "8PM",
+    "startTime": "2023-01-24T18:00:00-06:00",
+    "endTime": "2023-01-24T20:00:00-06:00",
     "details": "Coding social for anyone in Bloomington-Normal and beyond. Come hang out, talk about your passions, and talk trash about Objective-C (if you wish). I doubled checked to make sure there wasn't trivia on this night. Bring ideas for what you'd like to get out of this group - whether it be demos, workshops, questions, personal projects, networking, school, general interest, or what have you",
     "location": "Crafted",
     "address": "1101 Airport Road, Bloomington, IL"
@@ -373,9 +342,8 @@
   {
     "id": "4",
     "title": "Coding Social",
-    "date": "2022-09-22T23:00:00.000Z",
-    "startTime": "530PM",
-    "endTime": "730PM",
+    "startTime": "2022-09-22T17:30:00-06:00",
+    "endTime": "2022-09-22T19:30:00-06:00",
     "details": "Come hang out and talk shop! Veteran and newbie coders feel free to come talk projects, share resources, and cut loose!",
     "location": "Keg Grove Brewing Company",
     "address": "712 E Empire St Suite 2, Bloomington, IL"
@@ -383,9 +351,8 @@
   {
     "id": "3",
     "title": "Coding Social",
-    "date": "2022-08-25T23:00:00.000Z",
-    "startTime": "530PM",
-    "endTime": "730PM",
+    "startTime": "2022-08-25T17:30:00-06:00",
+    "endTime": "2022-08-25T19:30:00-06:00",
     "details": "Come hang out and talk shop! Veteran and newbie coders feel free to come talk projects, share resources, and cut loose!",
     "location": "Keg Grove Brewing Company",
     "address": "712 E Empire St Suite 2, Bloomington, IL"
@@ -393,9 +360,8 @@
   {
     "id": "2",
     "title": "Coding Social",
-    "date": "2022-06-16T23:00:00.000Z",
-    "startTime": "530PM",
-    "endTime": "730PM",
+    "startTime": "2022-06-16T17:30:00-06:00",
+    "endTime": "2022-06-16T19:30:00-06:00",
     "details": "Come hang out and talk shop! Veteran and newbie coders feel free to come talk projects, share resources, and cut loose!",
     "location": "Keg Grove Brewing Company",
     "address": "712 E Empire St Suite 2, Bloomington, IL"
@@ -403,9 +369,8 @@
   {
     "id": "1",
     "title": "Coding Social",
-    "date": "2022-04-26T23:00:00.000Z",
-    "startTime": "530PM",
-    "endTime": "730PM",
+    "startTime": "2022-04-26T17:30:00-06:00",
+    "endTime": "2022-04-26T19:30:00-06:00",
     "details": "Come hang out and talk shop! Veteran and newbie coders feel free to come talk projects, share resources, and cut loose!",
     "location": "Keg Grove Brewing Company",
     "address": "712 E Empire St Suite 2, Bloomington, IL"
@@ -413,9 +378,8 @@
   {
     "id": "0",
     "title": "Coding Social",
-    "date": "2022-03-23T23:00:00.000Z",
-    "startTime": "600PM",
-    "endTime": "800PM",
+    "startTime": "2022-03-23T18:00:00-06:00",
+    "endTime": "2022-03-23T20:00:00-06:00",
     "details": "Come hang out and talk shop! Veteran and newbie coders feel free to come talk projects, share resources, and cut loose!",
     "location": "Keg Grove Brewing Company",
     "address": "712 E Empire St Suite 2, Bloomington, IL"
