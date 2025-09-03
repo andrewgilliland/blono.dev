@@ -20,7 +20,6 @@ const EventCard: FC<EventCardProps> = ({ event }) => {
   const month = dateObj.toLocaleString('default', { month: 'short' });
   const day = dateObj.getDate();
   const dayOfWeek = dateObj.toLocaleString('default', { weekday: 'short' });
-  const isUpcomingEvent = new Date() < dateObj;
 
   const formatTimeString = (dateTime: string) => {
     const date = new Date(dateTime);
@@ -29,6 +28,8 @@ const EventCard: FC<EventCardProps> = ({ event }) => {
       minute: '2-digit',
     });
   };
+
+  const isUpcomingEvent = new Date() < dateObj;
 
   return (
     <Link href={`/events/${id}`} className="relative">
