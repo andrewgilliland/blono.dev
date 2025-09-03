@@ -4,10 +4,11 @@ import { FC } from 'react';
 import { EventType } from '@/types';
 import Image from 'next/image';
 import { google } from 'calendar-link';
-import { CalendarIcon, MapPinIcon, PhotoIcon } from '@heroicons/react/24/solid';
+import { MapPinIcon, PhotoIcon } from '@heroicons/react/24/solid';
 import Badge from '../ui/Badge';
 import Button from '../ui/Button';
 import Link from 'next/link';
+import DateTimeBadge from '../ui/EventBadge';
 
 type EventCardProps = {
   event: EventType;
@@ -17,18 +18,6 @@ const EventCard: FC<EventCardProps> = ({ event }) => {
   const { id, title, location, startTime, endTime, details, image } = event;
 
   const dateObj = new Date(startTime);
-  const month = dateObj.toLocaleString('default', { month: 'short' });
-  const day = dateObj.getDate();
-  const dayOfWeek = dateObj.toLocaleString('default', { weekday: 'short' });
-
-  const formatTimeString = (dateTime: string) => {
-    const date = new Date(dateTime);
-    return date.toLocaleTimeString([], {
-      hour: '2-digit',
-      minute: '2-digit',
-    });
-  };
-
   const isUpcomingEvent = new Date() < dateObj;
 
   return (
@@ -38,13 +27,7 @@ const EventCard: FC<EventCardProps> = ({ event }) => {
           <div className="flex max-w-2xl flex-col items-start gap-3">
             <div className="flex flex-wrap items-start gap-3">
               <div className="flex flex-col gap-3">
-                <Badge theme="purple">
-                  <CalendarIcon className="mr-1 inline-block h-4 w-4" />
-                  <p>
-                    {dayOfWeek}, {month} {day} · {formatTimeString(startTime)} -{' '}
-                    {formatTimeString(endTime)} CST
-                  </p>
-                </Badge>
+                <DateTimeBadge startTime={startTime} endTime={endTime} />
 
                 {isUpcomingEvent && (
                   <Button
