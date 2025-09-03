@@ -12,7 +12,7 @@ const UpcomingEventsSection = () => {
     (event) => new Date(event.startTime) > now,
   );
   upcomingEvents.sort(
-    (a, b) => new Date(b.startTime).getTime() - new Date(a.startTime).getTime(),
+    (a, b) => new Date(a.startTime).getTime() - new Date(b.startTime).getTime(),
   );
 
   return (

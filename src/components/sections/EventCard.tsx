@@ -17,22 +17,18 @@ const EventCard: FC<EventCardProps> = ({ event }) => {
   const { id, title, location, startTime, endTime, details, image } = event;
 
   const dateObj = new Date(startTime);
-
   const month = dateObj.toLocaleString('default', { month: 'short' });
   const day = dateObj.getDate();
   const dayOfWeek = dateObj.toLocaleString('default', { weekday: 'short' });
-  const isFutureEvent = new Date() < dateObj;
+  const isUpcomingEvent = new Date() < dateObj;
 
-  const startTimeString = dateObj.toLocaleTimeString([], {
-    hour: '2-digit',
-    minute: '2-digit',
-  });
-
-  const endTimeObj = new Date(endTime);
-  const endTimeString = endTimeObj.toLocaleTimeString([], {
-    hour: '2-digit',
-    minute: '2-digit',
-  });
+  const formatTimeString = (dateTime: string) => {
+    const date = new Date(dateTime);
+    return date.toLocaleTimeString([], {
+      hour: '2-digit',
+      minute: '2-digit',
+    });
+  };
 
   return (
     <Link href={`/events/${id}`} className="relative">
@@ -44,12 +40,12 @@ const EventCard: FC<EventCardProps> = ({ event }) => {
                 <Badge theme="purple">
                   <CalendarIcon className="mr-1 inline-block h-4 w-4" />
                   <p>
-                    {dayOfWeek}, {month} {day} · {startTimeString} -
-                    {endTimeString} CST
+                    {dayOfWeek}, {month} {day} · {formatTimeString(startTime)} -{' '}
+                    {formatTimeString(endTime)} CST
                   </p>
                 </Badge>
 
-                {isFutureEvent && (
+                {isUpcomingEvent && (
                   <Button
                     title="Add to Calendar"
                     size="xs"
