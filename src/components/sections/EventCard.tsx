@@ -9,6 +9,7 @@ import Badge from '../ui/Badge';
 import Button from '../ui/Button';
 import Link from 'next/link';
 import DateTimeBadge from '../ui/EventBadge';
+import LocationBadge from '../ui/LocationBadge';
 
 type EventCardProps = {
   event: EventType;
@@ -51,11 +52,7 @@ const EventCard: FC<EventCardProps> = ({ event }) => {
                   </Button>
                 )}
               </div>
-              {/* ! TODO Link to Google Map Location */}
-              <Badge theme="gray">
-                <MapPinIcon className="mr-1 inline-block h-4 w-4" />
-                <p>{location}</p>
-              </Badge>
+              <LocationBadge location={location} />
             </div>
             <h3 className="text-heading-tertiary">{title}</h3>
             <div className="text-copy">{details}</div>

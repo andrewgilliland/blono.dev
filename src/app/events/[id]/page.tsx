@@ -1,6 +1,7 @@
 import Container from '@/components/layout/Container';
 import ContactSection from '@/components/sections/ContactSection';
 import DateTimeBadge from '@/components/ui/EventBadge';
+import LocationBadge from '@/components/ui/LocationBadge';
 import { getEventById } from '@/lib/actions/events';
 import Image from 'next/image';
 
@@ -41,7 +42,7 @@ const EventPage = async ({ params }: EventPageProps) => {
             )}
             <div className="mt-12 flex flex-col items-start gap-2">
               <DateTimeBadge startTime={startTime} endTime={endTime} />
-              <p>{location}</p>
+              <LocationBadge location={location} />
               <p>{address}</p>
             </div>
 
