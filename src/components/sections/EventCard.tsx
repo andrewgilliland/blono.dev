@@ -10,6 +10,7 @@ import Button from '../ui/Button';
 import Link from 'next/link';
 import DateTimeBadge from '../ui/EventBadge';
 import LocationBadge from '../ui/LocationBadge';
+import AddToCalendarButton from '../ui/AddToCalendarButton';
 
 type EventCardProps = {
   event: EventType;
@@ -18,40 +19,13 @@ type EventCardProps = {
 const EventCard: FC<EventCardProps> = ({ event }) => {
   const { id, title, location, startTime, endTime, details, image } = event;
 
-  const dateObj = new Date(startTime);
-  const isUpcomingEvent = new Date() < dateObj;
-
   return (
     <Link href={`/events/${id}`} className="relative">
       <div className="relative flex h-full flex-col-reverse rounded-[10px] border border-light border-opacity-75 bg-darker md:flex-row">
         <div className="flex flex-col gap-10 px-6 py-10 md:flex-row">
           <div className="flex max-w-2xl flex-col items-start gap-3">
             <div className="flex flex-wrap items-start gap-3">
-              <div className="flex flex-col gap-3">
-                <DateTimeBadge startTime={startTime} endTime={endTime} />
-
-                {isUpcomingEvent && (
-                  <Button
-                    title="Add to Calendar"
-                    size="xs"
-                    theme="green"
-                    onClick={() =>
-                      window.open(
-                        google({
-                          title,
-                          location,
-                          description: details,
-                          start: new Date(startTime),
-                          end: new Date(endTime),
-                        }),
-                        '_blank',
-                      )
-                    }
-                  >
-                    Add To Calendar
-                  </Button>
-                )}
-              </div>
+              <DateTimeBadge startTime={startTime} endTime={endTime} />
               <LocationBadge location={location} />
             </div>
             <h3 className="text-heading-tertiary">{title}</h3>
