@@ -55,7 +55,9 @@ const EventCard: FC<EventCardProps> = ({ event }) => {
               <LocationBadge location={location} />
             </div>
             <h3 className="text-heading-tertiary">{title}</h3>
-            <div className="text-copy">{details}</div>
+            <p className="text-copy line-clamp-2 overflow-hidden text-ellipsis">
+              {details}
+            </p>
           </div>
         </div>
         <div className="flex w-full items-center justify-center rounded-t-[10px] bg-purp px-10 py-8 md:w-1/3 md:rounded-r-[10px] md:rounded-tl-none">

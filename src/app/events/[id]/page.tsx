@@ -31,24 +31,28 @@ const EventPage = async ({ params }: EventPageProps) => {
         <Container className="mt-24">
           <div>
             <h1>{title}</h1>
-            {image && (
-              <Image
-                className="mt-12 w-1/2"
-                src={image.src}
-                alt={image.alt}
-                width={250}
-                height={250}
-              />
-            )}
-            <div className="mt-12 flex flex-col items-start gap-2">
-              <DateTimeBadge startTime={startTime} endTime={endTime} />
-              <LocationBadge location={location} />
-              <p>{address}</p>
-            </div>
+            <div className="mt-12 grid grid-cols-1 gap-12 md:grid-cols-2">
+              {image && (
+                <Image
+                  className="relative w-full rounded-[10px] border-2 border-purple-600 object-cover"
+                  src={image.src}
+                  alt={image.alt}
+                  width={250}
+                  height={250}
+                />
+              )}
+              <div>
+                <div className="flex flex-col items-start gap-2">
+                  <DateTimeBadge startTime={startTime} endTime={endTime} />
+                  <LocationBadge location={location} />
+                  <p className="text-sm">{address}</p>
+                </div>
 
-            <div className="mt-10">
-              <h2 className="font-bold text-purple-600">Details</h2>
-              <p className="mt-4">{details}</p>
+                <div className="mt-10">
+                  <h2 className="font-bold text-purple-600">Details</h2>
+                  <p className="mt-4">{details}</p>
+                </div>
+              </div>
             </div>
           </div>
         </Container>
