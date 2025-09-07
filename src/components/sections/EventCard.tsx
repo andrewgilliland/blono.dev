@@ -4,10 +4,12 @@ import { FC } from 'react';
 import { EventType } from '@/types';
 import Image from 'next/image';
 import { google } from 'calendar-link';
-import { CalendarIcon, MapPinIcon, PhotoIcon } from '@heroicons/react/24/solid';
+import { MapPinIcon, PhotoIcon } from '@heroicons/react/24/solid';
 import Badge from '../ui/Badge';
 import Button from '../ui/Button';
 import Link from 'next/link';
+import DateTimeBadge from '../ui/EventBadge';
+import LocationBadge from '../ui/LocationBadge';
 
 type EventCardProps = {
   event: EventType;
@@ -17,18 +19,6 @@ const EventCard: FC<EventCardProps> = ({ event }) => {
   const { id, title, location, startTime, endTime, details, image } = event;
 
   const dateObj = new Date(startTime);
-  const month = dateObj.toLocaleString('default', { month: 'short' });
-  const day = dateObj.getDate();
-  const dayOfWeek = dateObj.toLocaleString('default', { weekday: 'short' });
-
-  const formatTimeString = (dateTime: string) => {
-    const date = new Date(dateTime);
-    return date.toLocaleTimeString([], {
-      hour: '2-digit',
-      minute: '2-digit',
-    });
-  };
-
   const isUpcomingEvent = new Date() < dateObj;
 
   return (
@@ -38,13 +28,7 @@ const EventCard: FC<EventCardProps> = ({ event }) => {
           <div className="flex max-w-2xl flex-col items-start gap-3">
             <div className="flex flex-wrap items-start gap-3">
               <div className="flex flex-col gap-3">
-                <Badge theme="purple">
-                  <CalendarIcon className="mr-1 inline-block h-4 w-4" />
-                  <p>
-                    {dayOfWeek}, {month} {day} · {formatTimeString(startTime)} -{' '}
-                    {formatTimeString(endTime)} CST
-                  </p>
-                </Badge>
+                <DateTimeBadge startTime={startTime} endTime={endTime} />
 
                 {isUpcomingEvent && (
                   <Button
@@ -68,14 +52,12 @@ const EventCard: FC<EventCardProps> = ({ event }) => {
                   </Button>
                 )}
               </div>
-              {/* ! TODO Link to Google Map Location */}
-              <Badge theme="gray">
-                <MapPinIcon className="mr-1 inline-block h-4 w-4" />
-                <p>{location}</p>
-              </Badge>
+              <LocationBadge location={location} />
             </div>
             <h3 className="text-heading-tertiary">{title}</h3>
-            <div className="text-copy">{details}</div>
+            <p className="text-copy line-clamp-2 overflow-hidden text-ellipsis">
+              {details}
+            </p>
           </div>
         </div>
         <div className="flex w-full items-center justify-center rounded-t-[10px] bg-purp px-10 py-8 md:w-1/3 md:rounded-r-[10px] md:rounded-tl-none">
