@@ -1,5 +1,6 @@
 import Container from '@/components/layout/Container';
 import ContactSection from '@/components/sections/ContactSection';
+import AddToCalendarButton from '@/components/ui/AddToCalendarButton';
 import DateTimeBadge from '@/components/ui/EventBadge';
 import LocationBadge from '@/components/ui/LocationBadge';
 import { getEventById } from '@/lib/actions/events';
@@ -25,6 +26,9 @@ const EventPage = async ({ params }: EventPageProps) => {
   const { title, location, address, details, image, startTime, endTime } =
     event;
 
+  const dateObj = new Date(startTime);
+  const isUpcomingEvent = new Date() < dateObj;
+
   return (
     <>
       <section>
@@ -48,6 +52,11 @@ const EventPage = async ({ params }: EventPageProps) => {
                   <p className="text-sm">{address}</p>
                 </div>
 
+                {isUpcomingEvent && (
+                  <div className="mt-4">
+                    <AddToCalendarButton event={event} />
+                  </div>
+                )}
                 <div className="mt-10">
                   <h2 className="font-bold text-purple-600">Details</h2>
                   <p className="mt-4">{details}</p>
