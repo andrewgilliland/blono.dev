@@ -3,8 +3,12 @@ type ContainerProps = {
   children: React.ReactNode;
 };
 
-const Container = ({ className = "", children }: ContainerProps) => {
-  return <div className={`max-w-5xl mx-auto ${className}`}>{children}</div>;
+const Container = ({ className = '', children }: ContainerProps) => {
+  return (
+    <div className={`mx-auto max-w-5xl px-0 md:px-4 ${className}`}>
+      {children}
+    </div>
+  );
 };
 
 export default Container;
