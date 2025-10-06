@@ -1,12 +1,3 @@
-src/
-components/
-ui/ Atomic, reusable components used anywhere
-layout/ App-wide layout components
-sections/ Composable blocks used on pages, not reusable everywhere
-icons/ Local SVG/icon React components
-forms/ Self-contained form components
-shared/ Helpers or widgets used by multiple features/pages
-
 # blono.dev
 
 A community-driven website for Bloomington-Normal developers, featuring event listings, workshops, and resources for local tech enthusiasts.
