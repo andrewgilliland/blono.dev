@@ -1,4 +1,3 @@
-import { FC } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import DiscordIcon from '@/components/icons/DiscordIcon';
@@ -6,9 +5,7 @@ import LinkedInIcon from '@/components/icons/LinkedInIcon';
 import MeetupIcon from '@/components/icons/MeetupIcon';
 import Container from './Container';
 
-type FooterProps = {};
-
-const Footer: FC<FooterProps> = () => {
+const Footer = () => {
   const mainLogo = {
     src: '/bn-logo-1.svg',
     alt: 'Bloomington-Normal Developers Logo',

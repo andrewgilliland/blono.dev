@@ -3,14 +3,10 @@
 import { FC } from 'react';
 import { EventType } from '@/types';
 import Image from 'next/image';
-import { google } from 'calendar-link';
-import { MapPinIcon, PhotoIcon } from '@heroicons/react/24/solid';
-import Badge from '../ui/Badge';
-import Button from '../ui/Button';
+import { PhotoIcon } from '@heroicons/react/24/solid';
 import Link from 'next/link';
 import DateTimeBadge from '../ui/EventBadge';
 import LocationBadge from '../ui/LocationBadge';
-import AddToCalendarButton from '../ui/AddToCalendarButton';
 
 type EventCardProps = {
   event: EventType;
