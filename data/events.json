@@ -2,8 +2,8 @@
   {
     "id": "38",
     "title": "Developer Happy Hour",
-    "startTime": "2025-12-03T17:00:00-05:00",
-    "endTime": "2025-12-03T19:00:00-05:00",
+    "startTime": "2025-12-04T17:00:00-06:00",
+    "endTime": "2025-12-04T19:00:00-06:00",
     "details": "Wrap up the year with our December Developer Happy Hour at Keg Grove Brewing Company, where you can connect with local tech professionals and enthusiasts. Enjoy a relaxed evening of drinks, networking, and sharing your favorite projects from the past year.",
     "location": "Keg Grove Brewing Company",
     "image": {
@@ -15,8 +15,8 @@
   {
     "id": "37",
     "title": "Developer Happy Hour",
-    "startTime": "2025-11-05T17:00:00-05:00",
-    "endTime": "2025-11-05T19:00:00-05:00",
+    "startTime": "2025-11-05T17:00:00-06:00",
+    "endTime": "2025-11-05T19:00:00-06:00",
     "details": "Celebrate autumn with fellow developers at our November Happy Hour, hosted at Keg Grove Brewing Company. Enjoy great company, drinks, and engaging tech conversations. Everyone is welcome, regardless of experience level.",
     "location": "Keg Grove Brewing Company",
     "image": {
