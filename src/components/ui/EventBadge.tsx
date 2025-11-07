@@ -17,6 +17,7 @@ const DateTimeBadge = ({ startTime, endTime }: DateTimeBadgeProps) => {
     return date.toLocaleTimeString([], {
       hour: '2-digit',
       minute: '2-digit',
+      timeZone: 'America/Chicago', // Force Central Time
     });
   };
 
