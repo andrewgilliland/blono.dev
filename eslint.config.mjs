@@ -1,16 +1,17 @@
 // @ts-check
 import js from '@eslint/js';
+import { defineConfig } from 'eslint/config';
 import astro from 'eslint-plugin-astro';
 import prettier from 'eslint-config-prettier';
 import unusedImports from 'eslint-plugin-unused-imports';
 import globals from 'globals';
 import tseslint from 'typescript-eslint';
 
-export default tseslint.config(
+export default defineConfig(
   { ignores: ['dist/', '.astro/', 'node_modules/'] },
   js.configs.recommended,
-  ...tseslint.configs.recommended,
-  ...astro.configs.recommended,
+  tseslint.configs.recommended,
+  astro.configs.recommended,
   {
     languageOptions: { globals: { ...globals.browser, ...globals.node } },
     plugins: { 'unused-imports': unusedImports },
