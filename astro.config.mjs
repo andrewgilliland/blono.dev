@@ -6,6 +6,8 @@ import { satteri } from '@astrojs/markdown-satteri';
 export default defineConfig({
   site: 'https://blono.dev',
   output: 'static',
+  // URLs never end in a slash, matching wrangler.jsonc's html_handling
+  trailingSlash: 'never',
   markdown: {
     // Themes: https://shiki.style/themes
     shikiConfig: { theme: 'tokyo-night' },
