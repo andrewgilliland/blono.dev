@@ -1,5 +1,6 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
+import { satteri } from '@astrojs/markdown-satteri';
 
 // https://docs.astro.build/en/reference/configuration-reference/
 export default defineConfig({
@@ -9,6 +10,6 @@ export default defineConfig({
     // Themes: https://shiki.style/themes
     shikiConfig: { theme: 'tokyo-night' },
     // Keep quotes as written, matching the previous site
-    smartypants: false,
+    processor: satteri({ features: { smartPunctuation: false } }),
   },
 });
