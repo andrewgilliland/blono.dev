@@ -8,6 +8,7 @@ import ContactSection from '@/components/sections/ContactSection.astro';
 import AddToCalendarButton from '@/components/ui/AddToCalendarButton.astro';
 import EventBadge from '@/components/ui/EventBadge.astro';
 import LocationBadge from '@/components/ui/LocationBadge.astro';
+import { hasEnded } from '@/lib/events';
 
 export const getStaticPaths = (async () => {
   const events = await getCollection('events');
@@ -20,8 +21,8 @@ const { event } = Astro.props;
 const { title, location, address, details, image, startTime, endTime } =
   event.data;
 
-// Upcoming as of the build; the upcoming check (#26) hides the button once the Event ends
-const isUpcomingEvent = endTime > new Date();
+// Upcoming as of the build; the upcoming check (ADR-0001) hides the button once the Event ends
+const isUpcomingEvent = !hasEnded(endTime, new Date());
 ---
 
 <BaseLayout title={`${title} | Bloomington-Normal Developers`}>
@@ -50,9 +51,7 @@ const isUpcomingEvent = endTime > new Date();
 
             {
               isUpcomingEvent && (
-                <div class="mt-4">
-                  <AddToCalendarButton event={event} />
-                </div>
+                <AddToCalendarButton event={event} class="mt-4" />
               )
             }
             <div class="mt-10">

@@ -5,7 +5,7 @@ import { SECTION_TOP_PADDING_OFFSET } from '@/lib/constants';
 import { splitEvents } from '@/lib/events';
 import UpcomingEventsList from './UpcomingEventsList.astro';
 
-// Upcoming as of the build; the upcoming check (#26) hides Events that end later
+// Upcoming as of the build; the upcoming check (ADR-0001) hides Events that end later
 const { upcoming } = splitEvents(await getCollection('events'), new Date());
 ---
 

@@ -2,11 +2,14 @@
 import type { CollectionEntry } from 'astro:content';
 import Button from '@/components/ui/Button.astro';
 
-// The menu's links are built in the browser (#26): Outlook links use the
-// viewer's local time, so they can't be generated at build time
-type Props = { event: CollectionEntry<'events'> };
+// The menu's links are built in the browser: Outlook links use the viewer's
+// local time, so they can't be generated at build time
+type Props = { event: CollectionEntry<'events'>; class?: string };
 
-const { title, location, details, startTime, endTime } = Astro.props.event.data;
+const { event, class: className } = Astro.props;
+const { id, data } = event;
+const { title, location, details, startTime, endTime } = data;
+const menuId = `calendar-menu-${id}`;
 
 const providers = [
   { name: 'Google Calendar', provider: 'google' },
@@ -16,7 +19,7 @@ const providers = [
 ---
 
 <div
-  class="relative inline-block"
+  class:list={['relative inline-block', className]}
   data-add-to-calendar
   data-event-end={endTime.toISOString()}
   data-title={title}
@@ -28,7 +31,7 @@ const providers = [
     size="sm"
     theme="green"
     title="Add to Calendar"
-    aria-haspopup="true"
+    aria-controls={menuId}
     aria-expanded="false"
     data-calendar-toggle
   >
@@ -36,14 +39,13 @@ const providers = [
   </Button>
   <div
     class="absolute z-10 mt-2 hidden w-48 overflow-hidden rounded-[10px] border border-light border-opacity-75 bg-purp"
-    role="menu"
+    id={menuId}
     data-calendar-menu
   >
     {
       providers.map(({ name, provider }) => (
         <button
           class="block w-full px-4 py-2 text-left font-semibold text-white transition-colors hover:bg-purp-light hover:text-black"
-          role="menuitem"
           data-calendar-provider={provider}
         >
           {name}
@@ -52,3 +54,56 @@ const providers = [
     }
   </div>
 </div>
+
+<script>
+  import { calendarLink, type CalendarProvider } from '@/scripts/calendar';
+
+  for (const root of document.querySelectorAll<HTMLElement>(
+    '[data-add-to-calendar]',
+  )) {
+    const toggle = root.querySelector<HTMLElement>('[data-calendar-toggle]')!;
+    const menu = root.querySelector<HTMLElement>('[data-calendar-menu]')!;
+
+    const setOpen = (open: boolean) => {
+      menu.classList.toggle('hidden', !open);
+      toggle.setAttribute('aria-expanded', String(open));
+    };
+
+    toggle.addEventListener('click', () => setOpen(menu.classList.contains('hidden')));
+
+    root.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') {
+        setOpen(false);
+        toggle.focus();
+      }
+    });
+
+    document.addEventListener('click', (event) => {
+      if (!root.contains(event.target as Node)) setOpen(false);
+    });
+
+    for (const item of menu.querySelectorAll<HTMLElement>(
+      '[data-calendar-provider]',
+    )) {
+      item.addEventListener('click', () => {
+        const provider = item.dataset.calendarProvider as CalendarProvider;
+        const link = calendarLink(provider, root.dataset);
+
+        if (provider === 'ics') {
+          // Browsers block opening data: URLs in a new tab, so download the file
+          const download = document.createElement('a');
+          download.href = link;
+          // Keep the file name to characters every OS accepts
+          const name = (root.dataset.title ?? 'event').replace(/[^\w -]+/g, '');
+          download.download = `${name.trim() || 'event'}.ics`;
+          download.click();
+        } else {
+          window.open(link, '_blank', 'noopener');
+        }
+        setOpen(false);
+        // The chosen item is now hidden, so keep keyboard focus on the button
+        toggle.focus();
+      });
+    }
+  }
+</script>

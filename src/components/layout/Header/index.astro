@@ -17,5 +17,5 @@ const { upcoming } = splitEvents(await getCollection('events'), new Date());
   </div>
   <MobileHeader />
   <DesktopHeader />
-  <HeaderBanner nextEvent={upcoming[0]} />
+  <HeaderBanner upcoming={upcoming} />
 </header>

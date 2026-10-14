@@ -34,5 +34,11 @@ const {
       </main>
       <Footer />
     </div>
+    <script>
+      // ADR-0001: re-evaluate Upcoming vs Past against the viewer's clock
+      import { applyUpcomingCheck } from '@/scripts/upcoming';
+
+      applyUpcomingCheck(document, new Date());
+    </script>
   </body>
 </html>

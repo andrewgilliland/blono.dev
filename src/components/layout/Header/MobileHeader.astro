@@ -4,7 +4,7 @@ import { HEADER_HEIGHT } from '@/lib/constants';
 import NavLink from './NavLink.astro';
 import { logo, navLinks } from './navLinks';
 
-// Closed by default; the toggle script (#26) flips data-open
+// Closed by default; the script below flips data-open
 ---
 
 <div class="group/menu md:hidden" data-mobile-menu data-open="false">
@@ -22,7 +22,7 @@ import { logo, navLinks } from './navLinks';
     </button>
   </div>
 
-  <nav id="mobile-nav">
+  <nav id="mobile-nav" inert>
     {
       navLinks.map((link, index) => (
         <div
@@ -40,3 +40,30 @@ import { logo, navLinks } from './navLinks';
     }
   </nav>
 </div>
+
+<script>
+  const menu = document.querySelector<HTMLElement>('[data-mobile-menu]')!;
+  const toggle = menu.querySelector<HTMLElement>('[data-mobile-menu-toggle]')!;
+  const nav = menu.querySelector<HTMLElement>('#mobile-nav')!;
+
+  const setOpen = (open: boolean) => {
+    menu.dataset.open = String(open);
+    toggle.setAttribute('aria-expanded', String(open));
+    // Off-screen links shouldn't be reachable with the keyboard while closed
+    nav.inert = !open;
+  };
+
+  toggle.addEventListener('click', () => setOpen(menu.dataset.open !== 'true'));
+
+  // Links like /#about stay on the same page, so close the menu behind them
+  nav.addEventListener('click', (event) => {
+    if ((event.target as Element).closest('a')) setOpen(false);
+  });
+
+  menu.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && menu.dataset.open === 'true') {
+      setOpen(false);
+      toggle.focus();
+    }
+  });
+</script>

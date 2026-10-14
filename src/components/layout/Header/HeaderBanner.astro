@@ -1,11 +1,16 @@
 ---
 import type { CollectionEntry } from 'astro:content';
-import { formatEventDate } from '@/lib/events';
+import { nextEventBannerText } from '@/lib/events';
 
-// The Next Event as of the build; the upcoming check (#26) re-evaluates it in the browser
-type Props = { nextEvent?: CollectionEntry<'events'> };
+// The Next Event as of the build. The upcoming check re-evaluates it in the
+// browser from data-upcoming, the Upcoming Events' times soonest first.
+type Props = { upcoming: CollectionEntry<'events'>[] };
 
-const { nextEvent } = Astro.props;
+const { upcoming } = Astro.props;
+const upcomingTimes = upcoming.map(({ data }) => ({
+  start: data.startTime.toISOString(),
+  end: data.endTime.toISOString(),
+}));
 ---
 
 <div class="flex justify-center bg-green-500 px-[10%] pb-1 pt-2">
@@ -13,12 +18,9 @@ const { nextEvent } = Astro.props;
     <div
       class="text-balance text-center text-sm font-semibold text-black"
       data-next-event-banner
+      data-upcoming={JSON.stringify(upcomingTimes)}
     >
-      {
-        nextEvent
-          ? `Bloomington-Normal Developer's next event is on ${formatEventDate(nextEvent.data.startTime)}`
-          : 'No upcoming events'
-      }
+      {nextEventBannerText(upcoming[0]?.data.startTime)}
     </div>
     <div
       class="h-[2px] w-[0%] rounded-full bg-black transition-all group-hover:w-full"

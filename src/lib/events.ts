@@ -41,14 +41,25 @@ export const formatEventDate = (start: Date) => longDayFormat.format(start);
 
 type Schedulable = { data: { startTime: Date; endTime: Date } };
 
+// A Past Event has ended; an Upcoming Event hasn't (it may be in progress).
+// The single rule used by the build and by the upcoming check in the browser.
+export const hasEnded = (endTime: Date, now: Date) => endTime <= now;
+
 const byStart = (a: Schedulable, b: Schedulable) =>
   a.data.startTime.getTime() - b.data.startTime.getTime();
 
-// An Upcoming Event hasn't ended yet (it may be in progress); a Past Event has ended.
 // Upcoming is soonest first, so upcoming[0] is the Next Event. Past is most recent first.
 export const splitEvents = <T extends Schedulable>(events: T[], now: Date) => ({
-  upcoming: events.filter(({ data }) => data.endTime > now).sort(byStart),
+  upcoming: events
+    .filter(({ data }) => !hasEnded(data.endTime, now))
+    .sort(byStart),
   past: events
-    .filter(({ data }) => data.endTime <= now)
+    .filter(({ data }) => hasEnded(data.endTime, now))
     .sort((a, b) => byStart(b, a)),
 });
+
+// The Next Event banner's text, shared by the build and the upcoming check
+export const nextEventBannerText = (nextEventStart?: Date) =>
+  nextEventStart
+    ? `Bloomington-Normal Developer's next event is on ${formatEventDate(nextEventStart)}`
+    : 'No upcoming events';

@@ -6,7 +6,7 @@ import { splitEvents } from '@/lib/events';
 import EventCard from './EventCard.astro';
 import UpcomingEventsList from './UpcomingEventsList.astro';
 
-// Split as of the build; the upcoming check (#26) moves Events that end later to Past
+// Split as of the build; the upcoming check (ADR-0001) moves Events that end later to Past
 const { upcoming, past } = splitEvents(await getCollection('events'), new Date());
 ---
 
