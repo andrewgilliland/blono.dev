@@ -20,26 +20,22 @@ const currentYear = new Date().getFullYear();
 
 <footer class="bg-darkish-blue/50">
   <Container class="flex w-full flex-col py-20">
-    <div
-      class="flex flex-col items-center justify-between gap-12 md:flex-row"
-    >
+    <div class="flex flex-col items-center justify-between gap-12 md:flex-row">
       <a href="/">
         <img src={logo.src} width={120} height={100} alt={logo.alt} />
       </a>
       <div class="flex gap-5">
-        {
-          socialLinks.map(({ href, text, Icon }) => (
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              class="transition-transform hover:rotate-12 hover:scale-110"
-              href={href}
-              aria-label={text}
-            >
-              <Icon />
-            </a>
-          ))
-        }
+        {socialLinks.map(({ href, text, Icon }) => (
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            class="transition-transform hover:rotate-12 hover:scale-110"
+            href={href}
+            aria-label={text}
+          >
+            <Icon />
+          </a>
+        ))}
       </div>
     </div>
     <div class="mt-12 flex flex-col items-center">

@@ -49,15 +49,21 @@ const developerCards = [
     <div>
       <h2 class="text-heading-secondary">About Us</h2>
       <p class="text-copy mt-4 md:w-2/3">
-        Join us for the quirkiest software developer meetup in Bloomington-Normal, Illinois, where code and coffee flow in equal measure! Whether you're a Pythonista, a Java junkie, or just someone who thinks "Hello World" is a great conversation starter, you'll fit right in. Come for the tech talks, stay for the inevitable debate on tabs vs. spaces – and maybe even win a prize for the best debugging horror story!
+        Join us for the quirkiest software developer meetup in
+        Bloomington-Normal, Illinois, where code and coffee flow in equal
+        measure! Whether you're a Pythonista, a Java junkie, or just someone who
+        thinks "Hello World" is a great conversation starter, you'll fit right
+        in. Come for the tech talks, stay for the inevitable debate on tabs vs.
+        spaces – and maybe even win a prize for the best debugging horror story!
       </p>
     </div>
     <div class="mt-8 grid grid-cols-1 gap-8 md:grid-cols-3">
-      {
-        developerCards.map(({ developer, color }) => (
-          <DeveloperCard developer={{ ...developer, skills: [...developer.skills] }} color={color} />
-        ))
-      }
+      {developerCards.map(({ developer, color }) => (
+        <DeveloperCard
+          developer={{ ...developer, skills: [...developer.skills] }}
+          color={color}
+        />
+      ))}
     </div>
   </Container>
 </section>

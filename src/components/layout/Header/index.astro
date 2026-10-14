@@ -13,8 +13,7 @@ const { upcoming } = splitEvents(await getCollection('events'), new Date());
   <div
     class="absolute z-0 w-full bg-darkish-blue/50"
     style={{ height: `${HEADER_HEIGHT}px` }}
-  >
-  </div>
+  ></div>
   <MobileHeader />
   <DesktopHeader />
   <HeaderBanner upcoming={upcoming} />

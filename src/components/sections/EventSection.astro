@@ -7,7 +7,10 @@ import EventCard from './EventCard.astro';
 import UpcomingEventsList from './UpcomingEventsList.astro';
 
 // Split as of the build; the upcoming check (ADR-0001) moves Events that end later to Past
-const { upcoming, past } = splitEvents(await getCollection('events'), new Date());
+const { upcoming, past } = splitEvents(
+  await getCollection('events'),
+  new Date(),
+);
 ---
 
 <section
@@ -19,7 +22,9 @@ const { upcoming, past } = splitEvents(await getCollection('events'), new Date()
   <div class="mt-20">
     <h2 class="text-heading-secondary mb-12">Past Events</h2>
     <div class="grid gap-6" data-events="past">
-      {past.map((event) => <EventCard event={event} />)}
+      {past.map((event) => (
+        <EventCard event={event} />
+      ))}
     </div>
 
     <div class="relative flex justify-center">

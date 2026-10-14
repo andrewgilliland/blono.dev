@@ -29,7 +29,10 @@ const {
   <body class="leading-base bg-gray-900 text-lg text-white antialiased">
     <div class="flex flex-col bg-dark">
       <Header />
-      <main class="min-h-screen px-8" style={{ marginTop: `${HEADER_HEIGHT}px` }}>
+      <main
+        class="min-h-screen px-8"
+        style={{ marginTop: `${HEADER_HEIGHT}px` }}
+      >
         <slot />
       </main>
       <Footer />

@@ -17,20 +17,20 @@ body {
 }
 
 h1 {
-  @apply text-green-500 font-bold text-4xl;
+  @apply text-4xl font-bold text-green-500;
 }
 
 @layer components {
   .text-heading-secondary {
-    @apply font-brand font-bold text-purp-light text-4xl;
+    @apply font-brand text-4xl font-bold text-purp-light;
   }
 
   .text-heading-tertiary {
-    @apply font-brand font-bold text-purp-light text-2xl;
+    @apply font-brand text-2xl font-bold text-purp-light;
   }
 
   .text-copy {
-    @apply font-brand font-semibold text-base text-white;
+    @apply font-brand text-base font-semibold text-white;
   }
 }
 

@@ -23,21 +23,19 @@ import { logo, navLinks } from './navLinks';
   </div>
 
   <nav id="mobile-nav" inert>
-    {
-      navLinks.map((link, index) => (
-        <div
-          class="absolute flex h-24 w-full translate-x-full items-center justify-center bg-black text-white transition-transform [transition-delay:var(--close-delay)] group-data-[open=true]/menu:translate-x-0 group-data-[open=true]/menu:[transition-delay:var(--open-delay)]"
-          style={{
-            top: `${HEADER_HEIGHT + index * 64}px`,
-            '--open-delay': `${index * 0.1}s`,
-            '--close-delay': `${(navLinks.length - index) * 0.1}s`,
-          }}
-        >
-          <div class="absolute z-0 h-full w-full bg-dark-blue opacity-50" />
-          <NavLink {...link} />
-        </div>
-      ))
-    }
+    {navLinks.map((link, index) => (
+      <div
+        class="absolute flex h-24 w-full translate-x-full items-center justify-center bg-black text-white transition-transform [transition-delay:var(--close-delay)] group-data-[open=true]/menu:translate-x-0 group-data-[open=true]/menu:[transition-delay:var(--open-delay)]"
+        style={{
+          top: `${HEADER_HEIGHT + index * 64}px`,
+          '--open-delay': `${index * 0.1}s`,
+          '--close-delay': `${(navLinks.length - index) * 0.1}s`,
+        }}
+      >
+        <div class="absolute z-0 h-full w-full bg-dark-blue opacity-50" />
+        <NavLink {...link} />
+      </div>
+    ))}
   </nav>
 </div>
 

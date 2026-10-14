@@ -11,7 +11,9 @@ import { logo, navLinks } from './navLinks';
     </a>
 
     <nav class="flex gap-12">
-      {navLinks.map((link) => <NavLink {...link} />)}
+      {navLinks.map((link) => (
+        <NavLink {...link} />
+      ))}
     </nav>
   </Container>
 </div>

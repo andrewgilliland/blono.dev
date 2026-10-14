@@ -28,6 +28,8 @@ const { events } = Astro.props;
     <h2 class="text-heading-secondary relative mb-12">Upcoming Events</h2>
   </div>
   <div class="grid gap-6" data-events="upcoming">
-    {events.map((event) => <EventCard event={event} />)}
+    {events.map((event) => (
+      <EventCard event={event} />
+    ))}
   </div>
 </div>

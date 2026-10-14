@@ -18,7 +18,9 @@ const lessons = await getWorkshopLessons('react-fundamentals');
   <section id="lessons">
     <Container>
       <div class="my-12 grid grid-cols-1 gap-8 md:grid-cols-2">
-        {lessons.map((lesson) => <LessonCard lesson={lesson} />)}
+        {lessons.map((lesson) => (
+          <LessonCard lesson={lesson} />
+        ))}
       </div>
     </Container>
   </section>

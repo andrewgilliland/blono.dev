@@ -42,16 +42,14 @@ const providers = [
     id={menuId}
     data-calendar-menu
   >
-    {
-      providers.map(({ name, provider }) => (
-        <button
-          class="block w-full px-4 py-2 text-left font-semibold text-white transition-colors hover:bg-purp-light hover:text-black"
-          data-calendar-provider={provider}
-        >
-          {name}
-        </button>
-      ))
-    }
+    {providers.map(({ name, provider }) => (
+      <button
+        class="block w-full px-4 py-2 text-left font-semibold text-white transition-colors hover:bg-purp-light hover:text-black"
+        data-calendar-provider={provider}
+      >
+        {name}
+      </button>
+    ))}
   </div>
 </div>
 
@@ -69,7 +67,9 @@ const providers = [
       toggle.setAttribute('aria-expanded', String(open));
     };
 
-    toggle.addEventListener('click', () => setOpen(menu.classList.contains('hidden')));
+    toggle.addEventListener('click', () =>
+      setOpen(menu.classList.contains('hidden')),
+    );
 
     root.addEventListener('keydown', (event) => {
       if (event.key === 'Escape') {

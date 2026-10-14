@@ -29,15 +29,15 @@ Requires Node.js 22.12 or later (see `.nvmrc`).
 
 ## Scripts
 
-| Command              | What it does                                  |
-| -------------------- | --------------------------------------------- |
-| `npm run dev`        | Start the dev server                          |
-| `npm run build`      | Build the static site into `dist/`            |
-| `npm run preview`    | Serve the built site locally                  |
-| `npm test`           | Run the unit tests (Vitest)                   |
-| `npm run type-check` | Type-check with `astro check`                 |
-| `npm run lint`       | Lint with ESLint                              |
-| `npm run format`     | Format with Prettier                          |
+| Command              | What it does                       |
+| -------------------- | ---------------------------------- |
+| `npm run dev`        | Start the dev server               |
+| `npm run build`      | Build the static site into `dist/` |
+| `npm run preview`    | Serve the built site locally       |
+| `npm test`           | Run the unit tests (Vitest)        |
+| `npm run type-check` | Type-check with `astro check`      |
+| `npm run lint`       | Lint with ESLint                   |
+| `npm run format`     | Format with Prettier               |
 
 A pre-commit hook runs type-check, lint, and tests.
 

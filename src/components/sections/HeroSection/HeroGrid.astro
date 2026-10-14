@@ -9,7 +9,10 @@ import HeroGridCard from './HeroGridCard.astro';
 const heroGridItems = [
   {
     span: 'md:col-span-3',
-    image: { src: bndPeeps, alt: 'Bloomington-Normal Developers Meetup People' },
+    image: {
+      src: bndPeeps,
+      alt: 'Bloomington-Normal Developers Meetup People',
+    },
     heading: 'Networking Opportunities',
     tagline:
       'Meet and network with fellow software engineers, developers, and tech enthusiasts in your area.',
@@ -46,5 +49,7 @@ const heroGridItems = [
 ---
 
 <div class="mt-20 grid grid-cols-1 gap-6 md:grid-cols-6">
-  {heroGridItems.map((item) => <HeroGridCard {...item} />)}
+  {heroGridItems.map((item) => (
+    <HeroGridCard {...item} />
+  ))}
 </div>
