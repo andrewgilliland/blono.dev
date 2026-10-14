@@ -1,6 +1,5 @@
 ---
 title: "Rendering Lists"
-slug: "rendering-lists"
 description: "Rendering list basics in React."
 number: 7
 ---

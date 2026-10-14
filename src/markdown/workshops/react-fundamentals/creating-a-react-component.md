@@ -1,6 +1,5 @@
 ---
 title: "Creating a React Component"
-slug: "creating-a-react-component"
 description: "Learn how to create a React component."
 number: 1
 ---

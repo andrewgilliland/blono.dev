@@ -5,4 +5,8 @@ import { defineConfig } from 'astro/config';
 export default defineConfig({
   site: 'https://blono.dev',
   output: 'static',
+  markdown: {
+    // Themes: https://shiki.style/themes
+    shikiConfig: { theme: 'tokyo-night' },
+  },
 });
