@@ -1,21 +1,10 @@
 {
   "extends": "astro/tsconfigs/strict",
   "include": [".astro/types.d.ts", "**/*"],
-  "exclude": [
-    "dist",
-    // Legacy Next.js/React code, no longer built. Removed in #28.
-    "src/app",
-    "src/pages/**/*.tsx",
-    "src/components/**/*.tsx",
-    "src/lib/actions",
-    "src/lib/utils/mdx-utils.ts",
-    "next-env.d.ts"
-  ],
+  "exclude": ["dist"],
   "compilerOptions": {
     "paths": {
-      "@/*": ["./src/*"],
-      "@components/*": ["./src/components/*"],
-      "@lib/*": ["./src/lib/*"]
+      "@/*": ["./src/*"]
     }
   }
 }

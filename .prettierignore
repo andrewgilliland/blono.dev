@@ -1,0 +1,5 @@
+dist/
+.astro/
+package-lock.json
+# Lessons are written by hand; don't reflow their prose
+src/markdown/
