@@ -1,0 +1,37 @@
+---
+import Circle from '@/components/icons/Circle.astro';
+import Container from '@/components/layout/Container.astro';
+import DecorativeCircles from './DecorativeCircles.astro';
+
+// Hero used by the home, workshop and lesson pages: a title on the left
+// (the default slot) and a tagline on the right
+type Props = { tagline: string; containerClass?: string; centered?: boolean };
+
+const { tagline, containerClass, centered = false } = Astro.props;
+---
+
+<section id="hero">
+  <Container class={containerClass}>
+    <div
+      class:list={[
+        'mt-20 flex flex-col justify-center gap-12 md:flex-row md:gap-20',
+        { 'items-center': centered },
+      ]}
+    >
+      <div class="relative">
+        <DecorativeCircles />
+        <slot />
+      </div>
+      <div class="group relative flex w-full md:w-1/2">
+        <Circle
+          size={250}
+          class="absolute -translate-x-5 fill-theme-indigo opacity-20 md:-translate-y-20"
+        />
+        <p class="relative text-2xl font-semibold text-white md:mt-10">
+          {tagline}
+        </p>
+      </div>
+    </div>
+    <slot name="after" />
+  </Container>
+</section>

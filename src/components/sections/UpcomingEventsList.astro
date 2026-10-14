@@ -1,0 +1,33 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import Circle from '@/components/icons/Circle.astro';
+import EventCard from './EventCard.astro';
+
+// The "Upcoming Events" heading and cards, shared by the home and events pages
+type Props = { events: CollectionEntry<'events'>[] };
+
+const { events } = Astro.props;
+---
+
+<div>
+  <div class="relative">
+    <div>
+      <Circle
+        size={250}
+        class="absolute -translate-x-24 -translate-y-24 fill-purp-dark opacity-20"
+      />
+      <Circle
+        size={100}
+        class="absolute translate-x-40 translate-y-12 fill-purp-dark opacity-20"
+      />
+      <Circle
+        size={100}
+        class="absolute hidden -translate-y-12 translate-x-64 fill-purp-dark opacity-20 md:block"
+      />
+    </div>
+    <h2 class="text-heading-secondary relative mb-12">Upcoming Events</h2>
+  </div>
+  <div class="grid gap-6" data-events="upcoming">
+    {events.map((event) => <EventCard event={event} />)}
+  </div>
+</div>

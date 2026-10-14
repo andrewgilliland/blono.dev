@@ -1,0 +1,54 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import Button from '@/components/ui/Button.astro';
+
+// The menu's links are built in the browser (#26): Outlook links use the
+// viewer's local time, so they can't be generated at build time
+type Props = { event: CollectionEntry<'events'> };
+
+const { title, location, details, startTime, endTime } = Astro.props.event.data;
+
+const providers = [
+  { name: 'Google Calendar', provider: 'google' },
+  { name: 'Outlook', provider: 'outlook' },
+  { name: 'Apple Calendar', provider: 'ics' },
+];
+---
+
+<div
+  class="relative inline-block"
+  data-add-to-calendar
+  data-event-end={endTime.toISOString()}
+  data-title={title}
+  data-location={location}
+  data-details={details}
+  data-start={startTime.toISOString()}
+>
+  <Button
+    size="sm"
+    theme="green"
+    title="Add to Calendar"
+    aria-haspopup="true"
+    aria-expanded="false"
+    data-calendar-toggle
+  >
+    Add To Calendar
+  </Button>
+  <div
+    class="absolute z-10 mt-2 hidden w-48 overflow-hidden rounded-[10px] border border-light border-opacity-75 bg-purp"
+    role="menu"
+    data-calendar-menu
+  >
+    {
+      providers.map(({ name, provider }) => (
+        <button
+          class="block w-full px-4 py-2 text-left font-semibold text-white transition-colors hover:bg-purp-light hover:text-black"
+          role="menuitem"
+          data-calendar-provider={provider}
+        >
+          {name}
+        </button>
+      ))
+    }
+  </div>
+</div>

@@ -1,0 +1,28 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { formatEventDate } from '@/lib/events';
+
+// The Next Event as of the build; the upcoming check (#26) re-evaluates it in the browser
+type Props = { nextEvent?: CollectionEntry<'events'> };
+
+const { nextEvent } = Astro.props;
+---
+
+<div class="flex justify-center bg-green-500 px-[10%] pb-1 pt-2">
+  <a class="group" href="/#events">
+    <div
+      class="text-balance text-center text-sm font-semibold text-black"
+      data-next-event-banner
+    >
+      {
+        nextEvent
+          ? `Bloomington-Normal Developer's next event is on ${formatEventDate(nextEvent.data.startTime)}`
+          : 'No upcoming events'
+      }
+    </div>
+    <div
+      class="h-[2px] w-[0%] rounded-full bg-black transition-all group-hover:w-full"
+    >
+    </div>
+  </a>
+</div>

@@ -1,0 +1,9 @@
+---
+type Props = { size: number; class?: string };
+
+const { size, class: className } = Astro.props;
+---
+
+<svg class={className} width={size} height={size}>
+  <circle cx={size / 2} cy={size / 2} r={size / 2}></circle>
+</svg>

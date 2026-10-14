@@ -1,0 +1,41 @@
+---
+import Badge from '@/components/ui/Badge.astro';
+import Button from '@/components/ui/Button.astro';
+
+type Props = { lessonCount: number };
+
+const { lessonCount } = Astro.props;
+---
+
+<div class="mx-auto max-w-3xl">
+  <div
+    class="relative h-full rounded-[10px] border border-light border-opacity-75 bg-purp px-8 py-10"
+  >
+    <div class="flex flex-col items-start gap-6 sm:flex-row sm:items-center">
+      <div class="rounded-[10px] border bg-dark p-2">
+        <img
+          class="h-full w-full object-cover"
+          src="/react.svg"
+          width={100}
+          height={100}
+          alt="React logo"
+        />
+      </div>
+      <h3 class="font-brand text-2xl font-bold text-white">
+        React Fundamentals
+      </h3>
+    </div>
+    <div class="mt-6 flex flex-col items-start gap-4">
+      <Badge theme="gray">{lessonCount} Lessons</Badge>
+      <p class="text-copy">
+        Learn the fundamental concepts of React. React is an open source
+        JavaScript UI library. This workshop is perfect for beginners with React
+        and JavaScript.
+      </p>
+
+      <Button href="/workshops/react-fundamentals" theme="green" size="md">
+        Get Started
+      </Button>
+    </div>
+  </div>
+</div>

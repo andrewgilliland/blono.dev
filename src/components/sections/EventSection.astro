@@ -1,0 +1,40 @@
+---
+import { getCollection } from 'astro:content';
+import Circle from '@/components/icons/Circle.astro';
+import { SECTION_TOP_PADDING_OFFSET } from '@/lib/constants';
+import { splitEvents } from '@/lib/events';
+import EventCard from './EventCard.astro';
+import UpcomingEventsList from './UpcomingEventsList.astro';
+
+// Split as of the build; the upcoming check (#26) moves Events that end later to Past
+const { upcoming, past } = splitEvents(await getCollection('events'), new Date());
+---
+
+<section
+  id="events"
+  style={{ paddingTop: `${SECTION_TOP_PADDING_OFFSET}px` }}
+  class="mx-auto mt-24 max-w-5xl"
+>
+  <UpcomingEventsList events={upcoming} />
+  <div class="mt-20">
+    <h2 class="text-heading-secondary mb-12">Past Events</h2>
+    <div class="grid gap-6" data-events="past">
+      {past.map((event) => <EventCard event={event} />)}
+    </div>
+
+    <div class="relative flex justify-center">
+      <Circle
+        size={125}
+        class="absolute hidden -translate-y-12 translate-x-64 fill-purp-dark opacity-20 md:block"
+      />
+      <Circle
+        size={200}
+        class="absolute translate-x-12 translate-y-8 fill-purp-dark opacity-20"
+      />
+      <Circle
+        size={150}
+        class="absolute -translate-x-24 -translate-y-24 fill-purp-dark opacity-20"
+      />
+    </div>
+  </div>
+</section>

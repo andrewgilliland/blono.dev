@@ -1,0 +1,25 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import Badge from '@/components/ui/Badge.astro';
+import Button from '@/components/ui/Button.astro';
+
+type Props = { lesson: CollectionEntry<'lessons'> };
+
+const { id, data } = Astro.props.lesson;
+const { title, description, number } = data;
+---
+
+<div
+  class="relative flex h-full flex-col justify-between rounded-[10px] border border-light border-opacity-75 bg-darker px-8 py-10"
+>
+  <div class="flex flex-col items-start">
+    <Badge theme="purple">Lesson {number}</Badge>
+    <h3 class="text-heading-tertiary mt-2">{title}</h3>
+    <p class="text-copy mt-2">{description}</p>
+  </div>
+  <div class="mt-6 flex flex-col gap-4">
+    <Button href={`/workshops/${id}`} theme="purp" size="md" class="mt-6 self-start">
+      Get Started
+    </Button>
+  </div>
+</div>

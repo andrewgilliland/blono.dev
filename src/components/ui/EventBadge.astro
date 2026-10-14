@@ -1,0 +1,14 @@
+---
+import Badge from '@/components/ui/Badge.astro';
+import HeroIcon from '@/components/icons/HeroIcon.astro';
+import { formatEventDateTime } from '@/lib/events';
+
+type Props = { startTime: Date; endTime: Date };
+
+const { startTime, endTime } = Astro.props;
+---
+
+<Badge theme="purple">
+  <HeroIcon name="calendar" class="mr-1 inline-block h-4 w-4" />
+  <p>{formatEventDateTime(startTime, endTime)}</p>
+</Badge>

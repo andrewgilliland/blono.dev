@@ -1,0 +1,21 @@
+---
+import { getCollection } from 'astro:content';
+import { HEADER_HEIGHT } from '@/lib/constants';
+import { splitEvents } from '@/lib/events';
+import DesktopHeader from './DesktopHeader.astro';
+import MobileHeader from './MobileHeader.astro';
+import HeaderBanner from './HeaderBanner.astro';
+
+const { upcoming } = splitEvents(await getCollection('events'), new Date());
+---
+
+<header class="fixed z-20 w-full bg-black">
+  <div
+    class="absolute z-0 w-full bg-darkish-blue/50"
+    style={{ height: `${HEADER_HEIGHT}px` }}
+  >
+  </div>
+  <MobileHeader />
+  <DesktopHeader />
+  <HeaderBanner nextEvent={upcoming[0]} />
+</header>

@@ -1,14 +1,26 @@
 ---
-// Placeholder until the home page is ported (#25)
 import BaseLayout from '@/layouts/BaseLayout.astro';
+import PageHero from '@/components/sections/PageHero.astro';
+import HeroGrid from '@/components/sections/HeroSection/HeroGrid.astro';
+import UpcomingEventsSection from '@/components/sections/UpcomingEventsSection.astro';
+import AboutSection from '@/components/sections/AboutSection/index.astro';
+import ContactSection from '@/components/sections/ContactSection.astro';
 ---
 
 <BaseLayout>
-  <section class="mx-auto mt-24 max-w-5xl">
-    <h1>Bloomington-Normal Developers</h1>
-    <h2 class="text-heading-secondary mt-12">Astro migration in progress</h2>
-    <p class="text-copy mt-6">
-      This page will be replaced when the site's pages are ported.
-    </p>
-  </section>
+  <PageHero
+    tagline="Bloomington-Normal's group for professional software developers and designers."
+  >
+    <img
+      class="relative"
+      src="/bn-logo-1.svg"
+      width={190}
+      height={100}
+      alt="Bloomington-Normal Developers Logo"
+    />
+    <HeroGrid slot="after" />
+  </PageHero>
+  <UpcomingEventsSection />
+  <AboutSection />
+  <ContactSection />
 </BaseLayout>

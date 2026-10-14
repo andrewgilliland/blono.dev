@@ -1,0 +1,25 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Container from '@/components/layout/Container.astro';
+import PageHero from '@/components/sections/PageHero.astro';
+import WorkshopCard from '@/components/sections/WorkshopCard.astro';
+import ContactSection from '@/components/sections/ContactSection.astro';
+import { getWorkshopLessons } from '@/lib/content/workshops';
+
+const lessons = await getWorkshopLessons('react-fundamentals');
+---
+
+<BaseLayout title="Workshops | Bloomington-Normal Developers">
+  <PageHero
+    centered
+    tagline="Get some hands on programming knowledge with Bloomington-Normal Developer's workshops."
+  >
+    <h1 class="relative">Workshops</h1>
+  </PageHero>
+  <section id="workshops">
+    <Container class="mt-16">
+      <WorkshopCard lessonCount={lessons.length} />
+    </Container>
+  </section>
+  <ContactSection />
+</BaseLayout>

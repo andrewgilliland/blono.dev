@@ -1,0 +1,42 @@
+---
+import OpenClose from '@/components/icons/OpenClose.astro';
+import { HEADER_HEIGHT } from '@/lib/constants';
+import NavLink from './NavLink.astro';
+import { logo, navLinks } from './navLinks';
+
+// Closed by default; the toggle script (#26) flips data-open
+---
+
+<div class="group/menu md:hidden" data-mobile-menu data-open="false">
+  <div class="flex w-full items-center justify-between px-[10%] py-4">
+    <a class="z-10" href="/">
+      <img class="h-12" src={logo.src} width={80} height={100} alt={logo.alt} />
+    </a>
+    <button
+      aria-label="Menu"
+      aria-expanded="false"
+      aria-controls="mobile-nav"
+      data-mobile-menu-toggle
+    >
+      <OpenClose />
+    </button>
+  </div>
+
+  <nav id="mobile-nav">
+    {
+      navLinks.map((link, index) => (
+        <div
+          class="absolute flex h-24 w-full translate-x-full items-center justify-center bg-black text-white transition-transform [transition-delay:var(--close-delay)] group-data-[open=true]/menu:translate-x-0 group-data-[open=true]/menu:[transition-delay:var(--open-delay)]"
+          style={{
+            top: `${HEADER_HEIGHT + index * 64}px`,
+            '--open-delay': `${index * 0.1}s`,
+            '--close-delay': `${(navLinks.length - index) * 0.1}s`,
+          }}
+        >
+          <div class="absolute z-0 h-full w-full bg-dark-blue opacity-50" />
+          <NavLink {...link} />
+        </div>
+      ))
+    }
+  </nav>
+</div>

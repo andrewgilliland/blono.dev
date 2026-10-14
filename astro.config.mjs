@@ -8,5 +8,7 @@ export default defineConfig({
   markdown: {
     // Themes: https://shiki.style/themes
     shikiConfig: { theme: 'tokyo-night' },
+    // Keep quotes as written, matching the previous site
+    smartypants: false,
   },
 });

@@ -1,15 +1,13 @@
 import { z } from 'astro/zod';
 
-// Astro's image() helper is only available inside content.config.ts, so it's passed in
-type ImageHelper = () => z.ZodType;
-
 // ISO 8601 with an explicit offset (e.g. 2025-12-04T17:00:00-06:00), so the instant
 // doesn't depend on the timezone of the machine running the build
 const eventTime = z.iso
   .datetime({ offset: true })
   .transform((value) => new Date(value));
 
-export const eventSchema = (image: ImageHelper) =>
+// `image` is Astro's image() helper, which only exists inside content.config.ts
+export const eventSchema = <Image extends z.ZodType>(image: () => Image) =>
   z
     .object({
       id: z.string(),

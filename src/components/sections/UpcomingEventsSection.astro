@@ -1,0 +1,16 @@
+---
+import { getCollection } from 'astro:content';
+import Container from '@/components/layout/Container.astro';
+import { SECTION_TOP_PADDING_OFFSET } from '@/lib/constants';
+import { splitEvents } from '@/lib/events';
+import UpcomingEventsList from './UpcomingEventsList.astro';
+
+// Upcoming as of the build; the upcoming check (#26) hides Events that end later
+const { upcoming } = splitEvents(await getCollection('events'), new Date());
+---
+
+<section id="events" style={{ paddingTop: `${SECTION_TOP_PADDING_OFFSET}px` }}>
+  <Container class="mt-24">
+    <UpcomingEventsList events={upcoming} />
+  </Container>
+</section>

@@ -1,0 +1,68 @@
+---
+import type { GetStaticPaths } from 'astro';
+import { getCollection, type CollectionEntry } from 'astro:content';
+import { Image } from 'astro:assets';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Container from '@/components/layout/Container.astro';
+import ContactSection from '@/components/sections/ContactSection.astro';
+import AddToCalendarButton from '@/components/ui/AddToCalendarButton.astro';
+import EventBadge from '@/components/ui/EventBadge.astro';
+import LocationBadge from '@/components/ui/LocationBadge.astro';
+
+export const getStaticPaths = (async () => {
+  const events = await getCollection('events');
+  return events.map((event) => ({ params: { id: event.id }, props: { event } }));
+}) satisfies GetStaticPaths;
+
+type Props = { event: CollectionEntry<'events'> };
+
+const { event } = Astro.props;
+const { title, location, address, details, image, startTime, endTime } =
+  event.data;
+
+// Upcoming as of the build; the upcoming check (#26) hides the button once the Event ends
+const isUpcomingEvent = endTime > new Date();
+---
+
+<BaseLayout title={`${title} | Bloomington-Normal Developers`}>
+  <section>
+    <Container class="mt-24">
+      <div>
+        <h1>{title}</h1>
+        <div class="mt-12 grid grid-cols-1 gap-12 md:grid-cols-2">
+          {
+            image && (
+              <Image
+                class="relative w-full rounded-[10px] border-2 border-purple-600 object-cover"
+                src={image.src}
+                alt={image.alt}
+                width={500}
+                densities={[1, 2]}
+              />
+            )
+          }
+          <div>
+            <div class="flex flex-col items-start gap-2">
+              <EventBadge startTime={startTime} endTime={endTime} />
+              <LocationBadge location={location} />
+              <p class="text-sm">{address}</p>
+            </div>
+
+            {
+              isUpcomingEvent && (
+                <div class="mt-4">
+                  <AddToCalendarButton event={event} />
+                </div>
+              )
+            }
+            <div class="mt-10">
+              <h2 class="font-bold text-purple-600">Details</h2>
+              <p class="mt-4">{details}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </Container>
+  </section>
+  <ContactSection />
+</BaseLayout>
