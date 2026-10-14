@@ -1,0 +1,44 @@
+---
+import '@/styles/fonts.css';
+import '@/styles/globals.css';
+import { HEADER_HEIGHT } from '@/lib/constants';
+
+type Props = {
+  title?: string;
+  description?: string;
+};
+
+const {
+  title = 'Bloomington-Normal Developers',
+  description = "Bloomington-Normal's group for professional software developers and designers.",
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth font-brand">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="/favicon.ico" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={title} />
+  </head>
+  <body class="leading-base bg-gray-900 text-lg text-white antialiased">
+    <div class="flex flex-col bg-dark">
+      <header class="fixed z-20 w-full bg-black">
+        <div
+          class="absolute z-0 w-full bg-darkish-blue/50"
+          style={{ height: `${HEADER_HEIGHT}px` }}
+        >
+        </div>
+        <slot name="header" />
+        <slot name="banner" />
+      </header>
+      <main class="min-h-screen px-8" style={{ marginTop: `${HEADER_HEIGHT}px` }}>
+        <slot />
+      </main>
+      <slot name="footer" />
+    </div>
+  </body>
+</html>

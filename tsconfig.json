@@ -1,47 +1,21 @@
 {
-  "compilerOptions": {
-    "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
-    "noEmit": true,
-    "incremental": true,
-    "paths": {
-      "@/*": [
-        "./src/*"
-      ],
-      "@components/*": [
-        "./src/components/*"
-      ],
-      "@lib/*": [
-        "./src/lib/*"
-      ]
-    },
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ]
-  },
-  "include": [
-    "src",
-    ".next/types/**/*.ts"
-  ],
+  "extends": "astro/tsconfigs/strict",
+  "include": [".astro/types.d.ts", "**/*"],
   "exclude": [
-    "node_modules"
-  ]
+    "dist",
+    // Legacy Next.js/React code, no longer built. Removed in #28.
+    "src/app",
+    "src/pages/**/*.tsx",
+    "src/components/**/*.tsx",
+    "src/lib/actions",
+    "src/lib/utils/mdx-utils.ts",
+    "next-env.d.ts"
+  ],
+  "compilerOptions": {
+    "paths": {
+      "@/*": ["./src/*"],
+      "@components/*": ["./src/components/*"],
+      "@lib/*": ["./src/lib/*"]
+    }
+  }
 }

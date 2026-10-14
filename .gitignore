@@ -38,3 +38,7 @@ yarn-error.log*
 .netlify
 
 *.tsbuildinfo
+
+# astro
+/dist/
+/.astro/

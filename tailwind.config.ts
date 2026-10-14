@@ -1,10 +1,13 @@
 import pluginTypography from "@tailwindcss/typography";
+import type { Config } from "tailwindcss";
+import type { PluginUtils } from "tailwindcss/types/config";
 
-module.exports = {
+export default {
   mode: "jit",
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx}",
     "./src/components/**/*.{js,ts,jsx,tsx}",
+    "./src/**/*.astro",
   ],
   theme: {
     extend: {
@@ -31,7 +34,7 @@ module.exports = {
       fontFamily: {
         brand: ["var(--font-poppins)"],
       },
-      typography: (theme) => ({
+      typography: (theme: PluginUtils["theme"]) => ({
         DEFAULT: {
           css: {
             code: {
@@ -65,4 +68,4 @@ module.exports = {
     },
   ],
   plugins: [pluginTypography],
-};
+} satisfies Config;
