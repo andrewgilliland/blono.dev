@@ -1,13 +1,16 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import { satteri } from '@astrojs/markdown-satteri';
+import sitemap from '@astrojs/sitemap';
 
 // https://docs.astro.build/en/reference/configuration-reference/
 export default defineConfig({
-  site: 'https://blono.dev',
+  // Canonical host; blono.dev redirects here
+  site: 'https://www.blono.dev',
   output: 'static',
   // URLs never end in a slash, matching wrangler.jsonc's html_handling
   trailingSlash: 'never',
+  integrations: [sitemap({ filter: (page) => !page.endsWith('/404') })],
   markdown: {
     // Themes: https://shiki.style/themes
     shikiConfig: { theme: 'tokyo-night' },

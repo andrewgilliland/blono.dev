@@ -28,7 +28,7 @@ const { title, location, address, details, image, startTime, endTime } =
 const isUpcomingEvent = !hasEnded(endTime, new Date());
 ---
 
-<BaseLayout title={`${title} | Bloomington-Normal Developers`}>
+<BaseLayout title={title} description={details} image={image?.src}>
   <section>
     <Container class="mt-24">
       <div>
