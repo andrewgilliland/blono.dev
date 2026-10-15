@@ -1,6 +1,6 @@
 # blono.dev
 
-A community-driven website for Bloomington-Normal developers, featuring event listings, workshops, and resources for local tech enthusiasts.
+A sweet community-driven website for Bloomington-Normal developers, featuring event listings, workshops, and resources for local tech enthusiasts.
 
 ## Live Demo
 
