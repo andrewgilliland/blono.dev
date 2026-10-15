@@ -1,0 +1,30 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Container from '@/components/layout/Container.astro';
+import PageHero from '@/components/sections/PageHero.astro';
+import LessonCard from '@/components/sections/LessonCard.astro';
+import { getWorkshopLessons } from '@/lib/content/workshops';
+
+const lessons = await getWorkshopLessons('react-fundamentals');
+---
+
+<BaseLayout
+  title="React Fundamentals"
+  description="Learn the fundamental concepts of React. React is an open source JavaScript UI library. This workshop is perfect for beginners with React and JavaScript."
+>
+  <PageHero
+    centered
+    tagline="Learn the fundamental concepts of React. React is an open source JavaScript UI library. This workshop is perfect for beginners with React and JavaScript."
+  >
+    <h1 class="relative">React Fundamentals</h1>
+  </PageHero>
+  <section id="lessons">
+    <Container>
+      <div class="my-12 grid grid-cols-1 gap-8 md:grid-cols-2">
+        {lessons.map((lesson) => (
+          <LessonCard lesson={lesson} />
+        ))}
+      </div>
+    </Container>
+  </section>
+</BaseLayout>

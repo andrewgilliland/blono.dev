@@ -1,63 +1,66 @@
-import pluginTypography from "@tailwindcss/typography";
+import pluginTypography from '@tailwindcss/typography';
+import type { Config } from 'tailwindcss';
+import type { PluginUtils } from 'tailwindcss/types/config';
 
-module.exports = {
-  mode: "jit",
+export default {
+  mode: 'jit',
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx}",
-    "./src/components/**/*.{js,ts,jsx,tsx}",
+    './src/pages/**/*.{js,ts,jsx,tsx}',
+    './src/components/**/*.{js,ts,jsx,tsx}',
+    './src/**/*.astro',
   ],
   theme: {
     extend: {
       colors: {
-        light: "#ABABAB",
-        dark: "#141313",
-        darker: "#1E1E1E",
-        "dark-blue": "#101F55",
-        purp: "#7400B8",
-        "purp-light": "#D041FF",
-        "purp-dark": "#651F7D",
-        "purple-heart": "#6930C3",
-        "theme-indigo": "#5E60CE",
-        "havelock-blue": {
-          1: "#4EA8DE",
-          2: "#5390D9",
+        light: '#ABABAB',
+        dark: '#141313',
+        darker: '#1E1E1E',
+        'dark-blue': '#101F55',
+        purp: '#7400B8',
+        'purp-light': '#D041FF',
+        'purp-dark': '#651F7D',
+        'purple-heart': '#6930C3',
+        'theme-indigo': '#5E60CE',
+        'havelock-blue': {
+          1: '#4EA8DE',
+          2: '#5390D9',
         },
-        "picton-blue": "#48BFE3",
-        "viking-blue": "#56CFE1",
-        "darkish-blue": "#101F55",
-        blueish: "#0B097C",
-        pinkish: "#D041FF",
+        'picton-blue': '#48BFE3',
+        'viking-blue': '#56CFE1',
+        'darkish-blue': '#101F55',
+        blueish: '#0B097C',
+        pinkish: '#D041FF',
       },
       fontFamily: {
-        brand: ["var(--font-poppins)"],
+        brand: ['var(--font-poppins)'],
       },
-      typography: (theme) => ({
+      typography: (theme: PluginUtils['theme']) => ({
         DEFAULT: {
           css: {
             code: {
-              color: theme("colors.green.500"),
-              backgroundColor: theme("colors.darker"),
-              borderRadius: theme("borderRadius.lg"),
-              padding: theme("padding.1"),
+              color: theme('colors.green.500'),
+              backgroundColor: theme('colors.darker'),
+              borderRadius: theme('borderRadius.lg'),
+              padding: theme('padding.1'),
             },
-            "code::before": {
-              content: "none",
+            'code::before': {
+              content: 'none',
             },
-            "code::after": {
-              content: "none",
+            'code::after': {
+              content: 'none',
             },
             li: {
-              color: theme("colors.gray.100"),
+              color: theme('colors.gray.100'),
             },
             pre: {
-              border: `1px solid ${theme("colors.light")}`,
+              border: `1px solid ${theme('colors.light')}`,
             },
           },
         },
       }),
     },
   },
-  darkMode: "class", // or 'media' or 'class'
+  darkMode: 'class', // or 'media' or 'class'
   safelist: [
     {
       pattern:
@@ -65,4 +68,4 @@ module.exports = {
     },
   ],
   plugins: [pluginTypography],
-};
+} satisfies Config;

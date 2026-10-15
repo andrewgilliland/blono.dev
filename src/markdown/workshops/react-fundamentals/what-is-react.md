@@ -1,6 +1,5 @@
 ---
 title: "What is React?"
-slug: "what-is-react"
 description: "Getting Started with React."
 number: 0
 ---

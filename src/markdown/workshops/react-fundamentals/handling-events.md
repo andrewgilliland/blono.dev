@@ -1,6 +1,5 @@
 ---
 title: "Handling Events"
-slug: "handling-events"
 description: "Handling events in applications is pretty useful. So let's learn about it."
 number: 9
 ---

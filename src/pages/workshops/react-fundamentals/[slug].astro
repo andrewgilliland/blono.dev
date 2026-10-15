@@ -1,0 +1,70 @@
+---
+import type { GetStaticPaths } from 'astro';
+import { render, type CollectionEntry } from 'astro:content';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PageHero from '@/components/sections/PageHero.astro';
+import { getWorkshopLessons, lessonSlug } from '@/lib/content/workshops';
+
+export const getStaticPaths = (async () => {
+  const lessons = await getWorkshopLessons('react-fundamentals');
+
+  return lessons.map((lesson, index) => ({
+    params: { slug: lessonSlug(lesson.id) },
+    props: {
+      lesson,
+      prevLesson: lessons[index - 1],
+      nextLesson: lessons[index + 1],
+    },
+  }));
+}) satisfies GetStaticPaths;
+
+type Props = {
+  lesson: CollectionEntry<'lessons'>;
+  prevLesson?: CollectionEntry<'lessons'>;
+  nextLesson?: CollectionEntry<'lessons'>;
+};
+
+const { lesson, prevLesson, nextLesson } = Astro.props;
+const { title, description, number } = lesson.data;
+const { Content } = await render(lesson);
+
+const navLinkClass =
+  'hover:underline-green-500 rounded-[10px] border-2 border-green-500 px-2 py-1 text-lg font-semibold text-green-500 hover:underline';
+---
+
+<BaseLayout title={`${title} | React Fundamentals`} description={description}>
+  <PageHero
+    centered
+    containerClass="max-w-[30ch] md:max-w-[65ch]"
+    tagline={description}
+  >
+    <div>
+      <h2 class="text-copy">Lesson {number}</h2>
+      <h1 class="relative">{title}</h1>
+    </div>
+  </PageHero>
+  <section
+    id="content"
+    class="mx-auto my-20 flex max-w-[30ch] flex-col items-center md:max-w-[65ch]"
+  >
+    <div class="prose md:prose-lg prose-h2:text-purp prose-h3:text-purp prose-h4:text-purp prose-p:text-gray-100 prose-a:font-semibold prose-a:text-blue-500 prose-a:no-underline prose-strong:text-purple-heart prose-em:font-semibold prose-em:text-orange-500">
+      <Content />
+    </div>
+    <div class="mt-10 flex w-full justify-between">
+      {prevLesson ? (
+        <a href={`/workshops/${prevLesson.id}`} class={navLinkClass}>
+          Prev Lesson
+        </a>
+      ) : (
+        <div />
+      )}
+      {nextLesson ? (
+        <a href={`/workshops/${nextLesson.id}`} class={navLinkClass}>
+          Next Lesson
+        </a>
+      ) : (
+        <div />
+      )}
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,13 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "blono-dev",
+  // Fully static site (ADR-0001): no Worker script, Cloudflare serves dist/ directly
+  "compatibility_date": "2026-10-13",
+  "assets": {
+    "directory": "./dist",
+    // Unknown paths get dist/404.html with a 404 status
+    "not_found_handling": "404-page",
+    // Match the previous site: /events/37/ redirects to /events/37
+    "html_handling": "drop-trailing-slash",
+  },
+}

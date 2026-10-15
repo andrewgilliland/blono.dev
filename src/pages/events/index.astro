@@ -1,0 +1,23 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Container from '@/components/layout/Container.astro';
+import EventSection from '@/components/sections/EventSection.astro';
+import ContactSection from '@/components/sections/ContactSection.astro';
+---
+
+<BaseLayout
+  title="Events"
+  description="From tech meetups to community gatherings, stay updated with our upcoming events."
+>
+  <section>
+    <Container class="mt-24">
+      <h1 class="mb-12">Events</h1>
+      <p class="max-w-2xl">
+        From tech meetups to community gatherings, stay updated with our
+        upcoming events.
+      </p>
+    </Container>
+  </section>
+  <EventSection />
+  <ContactSection />
+</BaseLayout>

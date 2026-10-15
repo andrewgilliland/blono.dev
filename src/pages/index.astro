@@ -1,0 +1,24 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PageHero from '@/components/sections/PageHero.astro';
+import HeroGrid from '@/components/sections/HeroSection/HeroGrid.astro';
+import UpcomingEventsSection from '@/components/sections/UpcomingEventsSection.astro';
+import AboutSection from '@/components/sections/AboutSection/index.astro';
+import ContactSection from '@/components/sections/ContactSection.astro';
+---
+
+<BaseLayout>
+  <PageHero tagline="Bloomington-Normal's group for professional software developers and designers.">
+    <img
+      class="relative"
+      src="/bn-logo-1.svg"
+      width={190}
+      height={100}
+      alt="Bloomington-Normal Developers Logo"
+    />
+    <HeroGrid slot="after" />
+  </PageHero>
+  <UpcomingEventsSection />
+  <AboutSection />
+  <ContactSection />
+</BaseLayout>

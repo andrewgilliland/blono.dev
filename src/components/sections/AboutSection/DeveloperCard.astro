@@ -1,0 +1,56 @@
+---
+import type { ImageMetadata } from 'astro';
+import { Image } from 'astro:assets';
+import Badge, { type BadgeTheme } from '@/components/ui/Badge.astro';
+
+type Props = {
+  developer: {
+    image: { src: ImageMetadata; alt: string };
+    role: string;
+    skills: string[];
+    name: string;
+    bio: string;
+  };
+  color: Exclude<BadgeTheme, 'gray'>;
+};
+
+const { developer, color } = Astro.props;
+const { image, role, skills, name, bio } = developer;
+
+const headerColor = {
+  blue: 'bg-blue-500',
+  purple: 'bg-purple-500',
+  cyan: 'bg-cyan-500',
+};
+---
+
+<div class="rounded-[10px] border border-light border-opacity-75 bg-darker shadow-lg">
+  <div
+    class:list={[
+      'flex justify-center rounded-t-[10px] py-10',
+      headerColor[color],
+    ]}
+  >
+    <div class="relative">
+      <div class="absolute h-full w-full translate-x-1 translate-y-1 rounded-full bg-purp-light"></div>
+      <Image
+        class="relative h-48 w-48 rounded-full bg-blue-300 object-cover"
+        src={image.src}
+        alt={image.alt}
+        width={192}
+        height={192}
+        densities={[1, 2]}
+      />
+    </div>
+  </div>
+  <div class="p-6">
+    <div class="flex flex-wrap gap-2">
+      <Badge theme={color}>{role}</Badge>
+      {skills.map((skill) => (
+        <Badge theme="gray">{skill}</Badge>
+      ))}
+    </div>
+    <h3 class="text-heading-tertiary mt-4">{name}</h3>
+    <p class="text-copy mt-4">{bio}</p>
+  </div>
+</div>

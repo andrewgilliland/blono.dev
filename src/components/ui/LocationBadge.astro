@@ -1,0 +1,13 @@
+---
+import Badge from '@/components/ui/Badge.astro';
+import HeroIcon from '@/components/icons/HeroIcon.astro';
+
+type Props = { location: string };
+
+const { location } = Astro.props;
+---
+
+<Badge theme="gray">
+  <HeroIcon name="map-pin" class="mr-1 inline-block h-4 w-4" />
+  <p>{location}</p>
+</Badge>

@@ -1,6 +1,5 @@
 ---
 title: "Managing State"
-slug: "managing-state"
 description: "Learn how to create state variables in React."
 number: 10
 ---

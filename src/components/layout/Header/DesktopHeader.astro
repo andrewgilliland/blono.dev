@@ -1,0 +1,19 @@
+---
+import Container from '@/components/layout/Container.astro';
+import NavLink from './NavLink.astro';
+import { logo, navLinks } from './navLinks';
+---
+
+<div class="hidden md:flex">
+  <Container class="flex w-full items-center justify-between py-4">
+    <a class="z-10" href="/">
+      <img class="h-12" src={logo.src} width={62} height={48} alt={logo.alt} />
+    </a>
+
+    <nav class="flex gap-12">
+      {navLinks.map((link) => (
+        <NavLink {...link} />
+      ))}
+    </nav>
+  </Container>
+</div>
